@@ -1028,21 +1028,25 @@ function About() {
 
 function Experience() {
   const roles = [
-    { period: "Jul 2026 — Aug 2026", role: "AI Intern, FlyRank AI", note: "Remote." },
+    {
+      period: "Jul 2026 — Aug 2026",
+      role: "AI Intern, FlyRank AI",
+      note: "Remote, on the AI side of the product.",
+    },
     {
       period: "Mar 2025 — Jul 2025",
       role: "Intern, De Marke Agency",
-      note: "Digital marketing and on-site organization for international tournaments.",
+      note: "Digital marketing, and running the on-site organization at international tournaments.",
     },
     {
       period: "Jan 2025 — Feb 2025",
       role: "Product Intern, BTCTurk Technology",
-      note: "Built internal dashboards and reporting tools.",
+      note: "Built the internal dashboards and reporting tools the team used to see what was actually happening.",
     },
     {
       period: "Jun 2024 — Jul 2024",
       role: "Product Engineering Intern, Toyota Motor Manufacturing Turkey",
-      note: "Assembly line logistics and Kaizen improvement projects. On-site, Sakarya.",
+      note: "Assembly line logistics and Kaizen projects — my first real look at how a factory floor keeps moving. On-site, Sakarya.",
     },
   ];
   return (
