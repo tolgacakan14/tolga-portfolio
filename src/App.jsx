@@ -48,7 +48,7 @@ const STYLES = `
   min-height: 100vh;
   line-height: 1.6;
   position: relative;
-  overflow-x: hidden;
+  overflow-x: clip;
   transition: background .5s ease, color .5s ease;
 }
 .tc-root[data-theme="carbon"] {
@@ -158,6 +158,7 @@ const STYLES = `
   padding: 6px 9px; cursor: pointer; transition: color .2s, border-color .2s, transform .2s;
 }
 .tc-chip:hover { color: var(--ribbon); border-color: var(--ribbon); transform: translateY(-1px); }
+.tc-narrow-only { display: none; }
 .tc-progress { height: 2px; background: transparent; }
 .tc-progress span { display: block; height: 100%; background: linear-gradient(90deg, var(--ribbon), var(--volt)); transform-origin: 0 50%; }
 
@@ -423,6 +424,8 @@ const STYLES = `
 /* ---------- responsive ---------- */
 @media (max-width: 820px) {
   .tc-nav-links { display: none; }
+  .tc-wide-only { display: none; }
+  .tc-narrow-only { display: inline; }
   .tc-hero { padding: 64px 0 48px; }
   .tc-section { padding: 56px 0; }
   .tc-tl-item { grid-template-columns: 1fr; gap: 6px; }
@@ -1276,7 +1279,8 @@ function Nav({ active, progress, theme, onToggleTheme, onOpenCmd }) {
         </ul>
         <div className="tc-nav-tools">
           <button type="button" className="tc-chip" onClick={onOpenCmd} aria-label="Open command palette">
-            ⌘K
+            <span className="tc-wide-only">⌘K</span>
+            <span className="tc-narrow-only">MENU</span>
           </button>
           <button type="button" className="tc-chip" onClick={onToggleTheme} aria-label="Toggle carbon mode">
             {theme === "carbon" ? "◐ PAPER" : "◑ CARBON"}
