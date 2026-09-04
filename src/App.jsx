@@ -1029,11 +1029,6 @@ function About() {
 function Experience() {
   const roles = [
     {
-      period: "Jul 2026 — Aug 2026",
-      role: "AI Intern, FlyRank AI",
-      note: "A remote, self-paced program built around shipping real artifacts: five reviewed assignments and a capstone, with mentor feedback at each step.",
-    },
-    {
       period: "Mar 2025 — Jul 2025",
       role: "Intern, De Marke Agency",
       note: "Digital marketing, and running the on-site organization at international tournaments.",
@@ -1246,7 +1241,8 @@ function Background() {
             blockchain's impact sector by sector.
           </p>
           <p className="tc-p tc-mono" style={{ fontSize: 12.5, letterSpacing: ".03em" }}>
-            Nobel Bilimsel Eserler · October 2022 · 302 pp. · ISBN 978-625-433-825-0
+            Published as Mehmet Tolga Çakan · Nobel Bilimsel Eserler · October 2022 · 302 pp. ·
+            ISBN 978-625-433-825-0
           </p>
           <a
             className="tc-link"
@@ -1258,8 +1254,12 @@ function Background() {
           </a>
         </div>
 
-        <h3 className="tc-h3 tc-reveal" style={{ "--i": 8 }}>Certificates &amp; awards</h3>
+        <h3 className="tc-h3 tc-reveal" style={{ "--i": 8 }}>Programs, certificates &amp; awards</h3>
         <ul className="tc-list tc-reveal" style={{ "--i": 9 }}>
+          <li>
+            AI Engineering Internship, FlyRank AI (2026) — a remote, project-based program:
+            five reviewed assignments and a capstone
+          </li>
           <li>AI Fluency: Framework &amp; Foundations, Anthropic (2026)</li>
           <li>Claude 101, Anthropic (2026)</li>
           <li>Award, ÖRS Textile senior design project, CSRP 2026</li>
