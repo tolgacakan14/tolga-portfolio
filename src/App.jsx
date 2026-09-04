@@ -1031,7 +1031,7 @@ function Experience() {
     {
       period: "Jul 2026 — Aug 2026",
       role: "AI Intern, FlyRank AI",
-      note: "Remote, on the AI side of the product.",
+      note: "A remote, self-paced program built around shipping real artifacts: five reviewed assignments and a capstone, with mentor feedback at each step.",
     },
     {
       period: "Mar 2025 — Jul 2025",
