@@ -20,7 +20,7 @@ const ROLES = [
   "Industrial Engineer",
   "Co-founder, TAB Marketing",
   "Web Builder",
-  "Guitarist, son sek'",
+  "Drummer & Songwriter",
 ];
 
 const INK_RGB = { paper: "24, 21, 17", carbon: "228, 223, 210" };
@@ -338,7 +338,16 @@ const STYLES = `
   transition: transform .35s cubic-bezier(.2,.8,.2,1), border-color .35s, box-shadow .35s;
   transform-style: preserve-3d;
 }
-.tc-card:hover { border-color: var(--ink-faint); box-shadow: 0 26px 50px -34px var(--shadow); }
+.tc-card { --accent: var(--ribbon); }
+.tc-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--accent); transform: scaleX(0); transform-origin: 0 50%;
+  transition: transform .45s cubic-bezier(.2,.8,.2,1);
+}
+.tc-card:hover::before { transform: scaleX(1); }
+.tc-card:hover { border-color: var(--accent); box-shadow: 0 26px 50px -34px var(--shadow); }
+.tc-card:hover .tc-card-title { color: var(--accent); }
+.tc-card-title { transition: color .3s ease; }
 .tc-card-top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
 .tc-card-title { font-size: 17px; margin: 0; }
 .tc-card-desc { font-size: 14px; color: var(--ink-soft); margin: 0 0 16px; max-width: 56ch; }
@@ -356,15 +365,43 @@ const STYLES = `
 .tc-link:hover { color: var(--ribbon); border-color: var(--ribbon); gap: 12px; }
 .tc-shot {
   width: 100%; display: block; border: 1px solid var(--rule); margin-bottom: 16px;
-  filter: grayscale(100%) contrast(1.06); transition: filter .5s ease, transform .5s ease;
+  transition: transform .6s cubic-bezier(.2,.8,.2,1), box-shadow .5s ease;
 }
-.tc-card:hover .tc-shot, .tc-shot:hover { filter: grayscale(0%) contrast(1); }
+.tc-shot-frame { overflow: hidden; border: 1px solid var(--rule); margin-bottom: 16px; position: relative; }
+.tc-shot-frame .tc-shot { border: 0; margin: 0; }
+.tc-shot-frame:hover .tc-shot { transform: scale(1.03); }
+
+/* product mosaic */
+.tc-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(178px, 1fr));
+  gap: 10px; margin: 22px 0 8px;
+}
+.tc-grid figure {
+  margin: 0; position: relative; overflow: hidden;
+  border: 1px solid var(--rule); background: var(--paper-2);
+}
+.tc-grid img {
+  width: 100%; height: 176px; object-fit: cover; display: block;
+  transition: transform .6s cubic-bezier(.2,.8,.2,1);
+}
+.tc-grid figure:hover img { transform: scale(1.07); }
+.tc-grid figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 22px 11px 9px;
+  font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: .12em;
+  color: #fff; background: linear-gradient(transparent, rgba(0,0,0,.8));
+  opacity: 0; transform: translateY(5px); transition: opacity .3s ease, transform .3s ease;
+}
+.tc-grid figure:hover figcaption, .tc-grid figure:focus-within figcaption { opacity: 1; transform: none; }
+.tc-grid-note {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .1em;
+  color: var(--ink-faint); margin: 0 0 26px;
+}
 
 /* music */
 .tc-music { display: flex; align-items: center; gap: 22px; margin-top: 24px; flex-wrap: wrap; }
-.tc-vinyl { flex-shrink: 0; animation: tc-spin 8s linear infinite; animation-play-state: paused; }
-.tc-music:hover .tc-vinyl { animation-play-state: running; }
-@keyframes tc-spin { to { transform: rotate(360deg); } }
+.tc-vinyl { flex-shrink: 0; color: var(--ink-soft); transition: color .3s ease, transform .3s ease; }
+.tc-music:hover .tc-vinyl { color: var(--ink); animation: tc-thump 1.1s ease-in-out infinite; }
+@keyframes tc-thump { 0%,100% { transform: scale(1); } 22% { transform: scale(1.05); } 40% { transform: scale(.99); } }
 .tc-music-links { display: flex; flex-direction: column; gap: 10px; }
 
 /* footer */
@@ -883,7 +920,7 @@ function Marquee() {
     ["REACT", "VITE"],
     ["ISTANBUL", "SAKARYA"],
     ["INDUSTRIAL ENGINEERING", "BILGI UNIVERSITY"],
-    ["SON SEK'", "GUITAR"],
+    ["SON SEK'", "DRUMS & SONGWRITING"],
     ["BLOCKCHAIN", "PUBLISHED 2022"],
   ];
   const doubled = [...items, ...items];
@@ -945,9 +982,9 @@ function Hero({ reduced }) {
         <StruckName text="Tolga Çakan" reduced={reduced} />
         <RoleTicker reduced={reduced} />
         <p className="tc-hero-sub tc-reveal" style={{ "--i": 2 }}>
-          I'm an industrial engineer, but most of my work these days is building web products
-          and marketing systems for small businesses through TAB Marketing, plus a few personal
-          projects on the side.
+          Industrial engineering taught me to find the constraint in a system. I use that on the
+          web now — building the products, sites, and NFC systems that small businesses in
+          Istanbul and Sakarya run on every day.
         </p>
         <div className="tc-hero-actions tc-reveal" style={{ "--i": 3 }}>
           <button type="button" className="tc-btn tc-btn--ribbon" onClick={() => scrollToId("work")}>
@@ -969,15 +1006,20 @@ function About() {
       <div className="tc-container">
         <SectionHead index={1} title="About" />
         <p className="tc-p tc-reveal" style={{ "--i": 1 }}>
-          I graduated in Industrial Engineering from Istanbul Bilgi University. Along the way I
-          worked across an AI platform, a crypto exchange, a digital agency, and a Toyota
-          assembly line, which is a strange combination, but it's how I learned most of what I
-          actually use today.
+          I studied Industrial Engineering at Istanbul Bilgi University. Before I finished, I had
+          already worked on a Toyota assembly line, inside a crypto exchange, at a digital agency,
+          and on an AI platform. It reads like a strange list, but each one taught me something
+          the others could not — how a line actually moves, how a product team decides, how a
+          brand gets sold.
         </p>
         <p className="tc-p tc-reveal" style={{ "--i": 2 }}>
-          I co-founded <strong>TAB Marketing</strong> with two friends, Burak Akkaya and Atahan
-          Yüksel. We build NFC, QR, and web products for cafes, restaurants, and hotels. Outside
-          of that I build personal projects, and I play guitar in a band called son sek'.
+          Most of my time now goes to <strong>TAB Marketing</strong>, the studio I co-founded with
+          Burak Akkaya and Atahan Yüksel. We build the layer where a physical touch turns into a
+          digital result: tap a card and a Google review page opens, scan a table and the menu
+          loads. Seven products, fifteen-plus businesses across Istanbul and Sakarya.
+        </p>
+        <p className="tc-p tc-reveal" style={{ "--i": 3 }}>
+          The rest goes to things I build for myself, and to the drums.
         </p>
       </div>
     </section>
@@ -1023,43 +1065,74 @@ function Experience() {
   );
 }
 
+const TAB_PRODUCTS = [
+  { src: "/work/tab-main-card.png", label: "GOOGLE REVIEW NFC / TAB MAIN CARD", alt: "TAB Marketing NFC Google review card, front and back" },
+  { src: "/work/italyanisi-menu-card.jpg", label: "QR MENU + NFC / İTALYAN İŞİ", alt: "İtalyan İşi tabletop QR menu and NFC review card" },
+  { src: "/work/pehlivan-gold.webp", label: "NFC STAND / PEHLIVAN ET LOKANTASI", alt: "Black and gold NFC review stand for Pehlivan Et Lokantası" },
+  { src: "/work/loren-nfc-stand.jpg", label: "FRAMED NFC STAND / LOREN", alt: "Framed burgundy and gold NFC review stand for Loren" },
+  { src: "/work/hotel-cabir.jpg", label: "HOTEL KEY CARD / CABIR DELUXE", alt: "Hotel room key card with NFC for Cabir Deluxe" },
+  { src: "/work/soft-feedback.png", label: "FEEDBACK CARD / SOFT COFFEE LOUNGE", alt: "Private feedback NFC card for Soft Coffee Lounge" },
+];
+
 function ClientWork({ reduced }) {
   return (
     <section className="tc-section" id="work">
       <div className="tc-container">
         <SectionHead index={3} title="Client work" />
-        <div className="tc-reveal" style={{ "--i": 1 }}>
-          <img
-            className="tc-shot"
-            src="https://tab-marketing-site.vercel.app/work/tab-main-card.png"
-            alt="TAB Marketing NFC Google review card"
-            loading="lazy"
-          />
-          <p className="tc-p">
-            Most of my client work happens through <strong>TAB Marketing</strong>, a studio I
-            co-founded with Burak Akkaya and Atahan Yüksel. We build NFC review cards, QR menus,
-            hotel key cards, and websites for local businesses in Istanbul and Sakarya.
-          </p>
-          <a className="tc-link" href="https://tab-marketing-site.vercel.app/#top" target="_blank" rel="noreferrer">
-            tab-marketing-site.vercel.app <span>→</span>
-          </a>
+
+        <p className="tc-p tc-reveal" style={{ "--i": 1 }}>
+          Most of my client work runs through <strong>TAB Marketing</strong>. We design and
+          produce the physical-meets-digital layer for cafes, restaurants, and hotels: NFC review
+          cards, QR menus, hotel key cards, feedback cards, and the websites behind them. Every
+          piece below is a real product, made for a real business.
+        </p>
+
+        <div className="tc-grid tc-reveal" style={{ "--i": 2 }}>
+          {TAB_PRODUCTS.map((prod) => (
+            <figure key={prod.src}>
+              <img src={prod.src} alt={prod.alt} loading="lazy" />
+              <figcaption>{prod.label}</figcaption>
+            </figure>
+          ))}
         </div>
+        <p className="tc-grid-note tc-reveal" style={{ "--i": 3 }}>
+          SEVEN PRODUCTS · 15+ BUSINESSES · ISTANBUL &amp; SAKARYA
+        </p>
 
-        <h3 className="tc-h3 tc-reveal" style={{ "--i": 2 }}>Selected web builds</h3>
+        <a
+          className="tc-link tc-reveal"
+          style={{ "--i": 4 }}
+          href="https://tab-marketing-site.vercel.app/#top"
+          target="_blank"
+          rel="noreferrer"
+        >
+          See the full TAB Marketing showroom <span>→</span>
+        </a>
 
-        <TiltCard reduced={reduced} style={{ "--i": 3 }}>
-          <img
-            className="tc-shot"
-            src="https://tab-marketing-site.vercel.app/work/franco-cover.png"
-            alt="Franco Coffee & Gelato digital menu"
-            loading="lazy"
-          />
+        <h3 className="tc-h3 tc-reveal" style={{ "--i": 5 }}>Selected web builds</h3>
+        <p className="tc-p tc-reveal" style={{ "--i": 5 }}>
+          The sites I design and build myself, start to finish.
+        </p>
+
+        <TiltCard reduced={reduced} style={{ "--i": 6, "--accent": "#d97706" }}>
+          <div className="tc-shot-frame">
+            <img
+              className="tc-shot"
+              src="/work/franco-cover.png"
+              alt="Franco Coffee & Gelato digital menu"
+              loading="lazy"
+            />
+          </div>
           <div className="tc-card-top">
             <h4 className="tc-card-title">Franco Coffee &amp; Gelato</h4>
             <span className="tc-tag tc-tag--soft">LIVE</span>
           </div>
+          <div className="tc-tags">
+            <span className="tc-tag tc-tag--soft">DIGITAL MENU</span>
+            <span className="tc-tag tc-tag--soft">FLAVOR PICKER</span>
+          </div>
           <p className="tc-card-desc">
-            A digital menu with a build-your-own gelato flavor picker. It's the feature customers
+            A digital menu with a build-your-own gelato flavor picker. It is the feature customers
             ask about by name.
           </p>
           <a className="tc-link" href="https://francoserdivan.com" target="_blank" rel="noreferrer">
@@ -1067,14 +1140,26 @@ function ClientWork({ reduced }) {
           </a>
         </TiltCard>
 
-        <TiltCard reduced={reduced} style={{ "--i": 4 }}>
+        <TiltCard reduced={reduced} style={{ "--i": 7, "--accent": "#2563eb" }}>
+          <div className="tc-shot-frame">
+            <img
+              className="tc-shot"
+              src="/work/melis-klinik.jpg"
+              alt="Diş Hekimi Melis Çakan dental clinic team"
+              loading="lazy"
+            />
+          </div>
           <div className="tc-card-top">
             <h4 className="tc-card-title">Diş Hekimi Melis Çakan</h4>
             <span className="tc-tag tc-tag--soft">LIVE</span>
           </div>
+          <div className="tc-tags">
+            <span className="tc-tag tc-tag--soft">CLINIC SITE</span>
+            <span className="tc-tag tc-tag--soft">SEO</span>
+          </div>
           <p className="tc-card-desc">
-            A clean, mobile-friendly site for a dental practice, built around trust and easy
-            contact.
+            A calm, mobile-first site for a Sakarya dental practice running since 2003. Built
+            around trust, clear treatment pages, and one-tap contact.
           </p>
           <a className="tc-link" href="https://dishekimimeliscakan.com" target="_blank" rel="noreferrer">
             dishekimimeliscakan.com <span>→</span>
@@ -1091,7 +1176,7 @@ function Projects({ reduced }) {
       <div className="tc-container">
         <SectionHead index={4} title="Personal projects" />
 
-        <TiltCard reduced={reduced} style={{ "--i": 1 }}>
+        <TiltCard reduced={reduced} style={{ "--i": 1, "--accent": "#7c3aed" }}>
           <div className="tc-card-top">
             <h4 className="tc-card-title">Krone</h4>
             <span className="tc-tag tc-tag--soft">LIVE</span>
@@ -1102,22 +1187,22 @@ function Projects({ reduced }) {
             <span className="tc-tag tc-tag--soft">MULTIPLAYER</span>
           </div>
           <p className="tc-card-desc">
-            A mobile-friendly web game with a handful of mini-games, multiplayer rooms, daily
-            challenges, and leaderboards.
+            A web game built for the phone: a handful of mini-games, rooms you can play with
+            friends, daily challenges, and leaderboards.
           </p>
           <a className="tc-link" href="https://innerclock.vercel.app" target="_blank" rel="noreferrer">
             innerclock.vercel.app <span>→</span>
           </a>
         </TiltCard>
 
-        <TiltCard reduced={reduced} style={{ "--i": 2 }}>
+        <TiltCard reduced={reduced} style={{ "--i": 2, "--accent": "#0d9488" }}>
           <div className="tc-card-top">
             <h4 className="tc-card-title">FeedDetox</h4>
             <span className="tc-tag">IN DEVELOPMENT</span>
           </div>
           <p className="tc-card-desc">
-            A tool to help people manage, and maybe redirect, their own social feed algorithm.
-            Still finding its final shape, no live link yet.
+            A tool for taking back your own feed algorithm — seeing what it has learned about you,
+            and pointing it somewhere better. Still finding its final shape, no live link yet.
           </p>
         </TiltCard>
       </div>
@@ -1180,14 +1265,14 @@ function Background() {
   );
 }
 
-function VinylIcon() {
+function DrumIcon() {
   return (
-    <svg className="tc-vinyl" width="56" height="56" viewBox="0 0 56 56" aria-hidden="true">
-      <circle cx="28" cy="28" r="26" fill="none" stroke="currentColor" strokeWidth="1" opacity=".8" />
-      <circle cx="28" cy="28" r="19" fill="none" stroke="currentColor" strokeWidth=".7" opacity=".35" />
-      <circle cx="28" cy="28" r="13" fill="none" stroke="currentColor" strokeWidth=".7" opacity=".35" />
-      <circle cx="28" cy="28" r="7" fill="none" stroke="currentColor" strokeWidth=".7" opacity=".35" />
-      <circle cx="28" cy="28" r="3" fill="var(--ribbon)" />
+    <svg className="tc-vinyl" width="58" height="58" viewBox="0 0 58 58" aria-hidden="true">
+      <ellipse cx="29" cy="20" rx="20" ry="7.5" fill="none" stroke="currentColor" strokeWidth="1.1" />
+      <path d="M9 20v14c0 4.1 9 7.5 20 7.5s20-3.4 20-7.5V20" fill="none" stroke="currentColor" strokeWidth="1.1" />
+      <path d="M9 22l40 10M49 22L9 32" stroke="var(--ribbon)" strokeWidth=".8" opacity=".65" />
+      <ellipse cx="29" cy="20" rx="9" ry="3.4" fill="none" stroke="currentColor" strokeWidth=".7" opacity=".4" />
+      <path d="M44 11l9-5M46 13l10-3" stroke="currentColor" strokeWidth="1" opacity=".55" />
     </svg>
   );
 }
@@ -1198,11 +1283,11 @@ function Music() {
       <div className="tc-container">
         <SectionHead index={6} title="Music" />
         <p className="tc-p tc-reveal" style={{ "--i": 1 }}>
-          I play guitar in a band called <strong>son sek'</strong>. We've released an album and
-          two singles, and played a handful of live shows.
+          I play drums in a band called <strong>son sek'</strong>, and I write our songs. One
+          album, two singles, and a handful of live shows so far.
         </p>
         <div className="tc-music tc-reveal" style={{ "--i": 2 }}>
-          <VinylIcon />
+          <DrumIcon />
           <div className="tc-music-links">
             <a
               className="tc-link"
