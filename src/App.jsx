@@ -290,6 +290,9 @@ const STYLES = `
 
 @media (max-width: 900px) {
   .split { grid-template-columns: 1fr; }
+  .chip { padding: 12px 13px; font-size: 11px; }
+  .tools { gap: 8px; flex-wrap: wrap; }
+  .pane-nav a { padding: 9px 0; }
   .pane-left {
     position: static; height: auto; justify-content: flex-start;
     padding: 34px 24px 30px; border-right: 0; border-bottom: 1px solid var(--rule);
@@ -970,14 +973,23 @@ export default function CV() {
   // keep <html lang> honest for screen readers and search engines
   useEffect(() => { document.documentElement.lang = lang; }, [lang]);
 
+  // paint the page background behind the app, so overscroll matches the theme
+  useEffect(() => {
+    const paper = theme === "night" ? "#14140f" : "#fcfbf8";
+    document.documentElement.style.background = paper;
+    document.body.style.background = paper;
+    const meta = document.querySelector('meta[name="theme-color"]:not([media])')
+      || (() => { const m = document.createElement("meta"); m.name = "theme-color"; document.head.appendChild(m); return m; })();
+    meta.setAttribute("content", paper);
+  }, [theme]);
+
   const flip = useCallback(() => {
     const swap = () => setTheme((x) => {
       const next = x === "paper" ? "night" : "paper";
       try { window.localStorage.setItem("cv-theme", next); } catch (err) { /* ignore */ }
       return next;
     });
-    if (document.startViewTransition) document.startViewTransition(swap);
-    else swap();
+    swap();
   }, []);
 
   const flipLang = useCallback(() => {
@@ -990,8 +1002,7 @@ export default function CV() {
       window.history.replaceState(null, "", url.pathname + url.search + url.hash);
       return next;
     });
-    if (document.startViewTransition) document.startViewTransition(swap);
-    else swap();
+    swap();
   }, []);
 
   useEffect(() => {
