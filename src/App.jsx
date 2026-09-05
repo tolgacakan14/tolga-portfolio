@@ -158,7 +158,7 @@ const SECTION_IDS = ["about", "experience", "skills", "work", "background", "con
 
 const PHONE_DISPLAY = "+90 542 262 00 42";
 const PHONE_HREF = "tel:+905422620042";
-const EMAIL = "tolga@tolgacakan.dev";
+const EMAIL = "tolgacakan@gmail.com";
 
 const STYLES = `
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=JetBrains+Mono:wght@400;500&display=swap');
@@ -425,28 +425,12 @@ a.chip { display: inline-flex; align-items: center; text-decoration: none; }
   color: var(--ink-faint);
 }
 
-/* contact line + copy button */
-.contact { display: inline-flex; align-items: center; gap: 5px; }
-.contact > a {
+/* contact lines */
+.contact-link {
   color: var(--ink-soft); border-bottom: 1px solid transparent;
   transition: color .25s ease, border-color .25s ease;
 }
-.contact > a:hover { color: var(--accent); border-color: var(--accent); }
-.contact-copy {
-  background: none; border: 0; padding: 1px 2px; cursor: pointer; position: relative;
-  color: var(--ink-faint); opacity: .45; line-height: 0;
-  transition: opacity .25s ease, color .25s ease;
-}
-.contact:hover .contact-copy { opacity: .85; }
-.contact-copy:hover { color: var(--accent); opacity: 1; }
-.copy-flag {
-  position: absolute; left: 50%; bottom: calc(100% + 6px); transform: translateX(-50%) translateY(3px);
-  font-family: 'JetBrains Mono', monospace; font-size: 8.5px; letter-spacing: .12em; text-transform: uppercase;
-  background: var(--ink); color: var(--paper); padding: 3px 6px; white-space: nowrap; line-height: 1.4;
-  opacity: 0; pointer-events: none; transition: opacity .2s ease, transform .2s ease;
-}
-.contact-copy:hover .copy-flag,
-.contact-copy[data-copied="true"] .copy-flag { opacity: 1; transform: translateX(-50%) translateY(0); }
+.contact-link:hover { color: var(--accent); border-color: var(--accent); }
 
 /* section anchors */
 .anchor {
@@ -471,7 +455,7 @@ a.chip { display: inline-flex; align-items: center; text-decoration: none; }
 
 /* print — the page becomes a clean CV sheet */
 @media print {
-  .nav, .cmd-bg, .chip, .anchor, .foot, .contact-copy { display: none !important; }
+  .nav, .cmd-bg, .chip, .anchor, .foot { display: none !important; }
   .cv { background: #fff; color: #000; font-size: 11pt; }
   .cv[data-theme="night"] { --paper: #fff; --ink: #000; --ink-soft: #333; --rule: #ccc; }
   .wrap { max-width: 100%; padding: 0; }
@@ -583,27 +567,6 @@ function useScrollState(ids) {
 
 const go = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
 
-async function writeToClipboard(text) {
-  try {
-    await navigator.clipboard.writeText(text);
-    return true;
-  } catch (err) {
-    try {
-      const ta = document.createElement("textarea");
-      ta.value = text;
-      ta.setAttribute("readonly", "");
-      ta.style.cssText = "position:fixed;top:-999px;opacity:0";
-      document.body.appendChild(ta);
-      ta.select();
-      const ok = document.execCommand("copy");
-      document.body.removeChild(ta);
-      return ok;
-    } catch (err2) {
-      return false;
-    }
-  }
-}
-
 /** Roles that type themselves in and out, one after another. */
 function RoleTicker({ roles }) {
   const [text, setText] = useState("");
@@ -687,29 +650,13 @@ function SnapCursor() {
   return <div className="snap" ref={box} aria-hidden="true"><i /><i /><i /><i /></div>;
 }
 
-function ContactLine({ value, href, children }) {
-  const [done, setDone] = useState(false);
-  const copy = async (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    const ok = await writeToClipboard(value);
-    if (!ok) return;
-    setDone(true);
-    window.setTimeout(() => setDone(false), 1400);
-  };
+function ContactLine({ href, children }) {
   return (
-    <span className="contact">
-      <a href={href} target={href.startsWith("http") ? "_blank" : undefined}
-        rel={href.startsWith("http") ? "noreferrer" : undefined}>{children}</a>
-      <button type="button" className="contact-copy" onClick={copy}
-        data-copied={done ? "true" : "false"} aria-label={"Copy " + value}>
-        <span className="copy-flag">{done ? "copied" : "copy"}</span>
-        <svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true">
-          <rect x="3.2" y="3.2" width="7" height="7" rx="1.2" fill="none" stroke="currentColor" strokeWidth="1" />
-          <path d="M8.4 1.8H2.4c-.55 0-1 .45-1 1v6" fill="none" stroke="currentColor" strokeWidth="1" />
-        </svg>
-      </button>
-    </span>
+    <a className="contact-link" href={href}
+      target={href.startsWith("http") ? "_blank" : undefined}
+      rel={href.startsWith("http") ? "noreferrer" : undefined}>
+      {children}
+    </a>
   );
 }
 
@@ -821,8 +768,8 @@ function LeftPane({ active, theme, onTheme, onMenu, onLang, t, lang }) {
 
       <div className="pane-foot rise" style={{ "--i": 3 }}>
         <div className="meta mono">
-          <ContactLine value={EMAIL} href={"mailto:" + EMAIL}>{EMAIL}</ContactLine>
-          <ContactLine value="+905422620042" href={PHONE_HREF}>{PHONE_DISPLAY}</ContactLine>
+          <ContactLine href={"mailto:" + EMAIL}>{EMAIL}</ContactLine>
+          <ContactLine href={PHONE_HREF}>{PHONE_DISPLAY}</ContactLine>
           <a href="https://github.com/tolgacakan14" target="_blank" rel="noreferrer">github.com/tolgacakan14</a>
         </div>
         <div className="tools">
@@ -982,8 +929,8 @@ function Contact({ t }) {
         <SecHead num="06" title={t.nav.contact} id="contact" />
         <p className="p rise" style={{ "--i": 1 }}>{t.contactText}</p>
         <div className="meta mono rise" style={{ "--i": 2 }}>
-          <ContactLine value={EMAIL} href={"mailto:" + EMAIL}>{EMAIL}</ContactLine>
-          <ContactLine value="+905422620042" href={PHONE_HREF}>{PHONE_DISPLAY}</ContactLine>
+          <ContactLine href={"mailto:" + EMAIL}>{EMAIL}</ContactLine>
+          <ContactLine href={PHONE_HREF}>{PHONE_DISPLAY}</ContactLine>
           <a href="https://github.com/tolgacakan14" target="_blank" rel="noreferrer">github.com/tolgacakan14</a>
         </div>
       </div>
