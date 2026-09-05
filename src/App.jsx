@@ -14,15 +14,15 @@ const COPY = {
     place: "Istanbul, Turkey",
     roles: ["Industrial engineer", "Process improvement", "Builder", "Blockchain researcher", "Drummer & songwriter"],
     about: [
-      "I studied industrial engineering at Istanbul Bilgi University and graduated in June 2026. What I actually like is finding the place a system gives way and fixing it — on a factory floor, inside a product, or in a spreadsheet nobody wants to open.",
-      "I am not a designer by trade. I am an engineer who can specify a thing and then build it, which is where most of what follows comes from: client sites, a web game, and the NFC and QR products I make with two friends as TAB Marketing.",
-      "Away from all that: drums, and writing songs.",
+      "I studied industrial engineering at Istanbul Bilgi University and graduated in June 2026. What I like most is finding where a system breaks and then fixing it, whether that turns out to be a factory floor, a product, or a spreadsheet nobody wants to open.",
+      "I work across a fair amount of ground: engineering, product, design, operations, research. I have worked with teams here and abroad, in Turkey, Estonia and Czechia, and I am at my most useful when a problem is still vague and somebody has to turn it into something people can actually use.",
+      "Away from all that: drums, and making songs.",
     ],
     expIntro: "Before I finished my degree I had worked a Toyota assembly line, a crypto exchange, a digital agency and an AI platform. Each taught a different part of the same job: how work really flows, how a product team decides what matters, how a thing gets sold, and how to put AI to work without hand-waving.",
     jobs: [
-      { when: "Mar — Jul 2025", what: "Intern, De Marke Agency", note: "Digital marketing, and running the on-site organisation at international tournaments." },
-      { when: "Jan — Feb 2025", what: "Product Intern, BTCTurk Technology", note: "Where I learned product management properly: benchmarking, market research and user testing, alongside the internal dashboards and reporting the team read every day." },
-      { when: "Jun — Jul 2024", what: "Engineering Intern, Toyota Motor Manufacturing Turkey", note: "Assembly line logistics and continuous improvement through Kaizen, 5S, root cause analysis and standard work instructions. Built an internship process improvement project and presented it to Toyota's senior management. On-site, Sakarya." },
+      { when: "Mar-Jul 2025", what: "Intern, De Marke Agency", note: "Digital marketing, and running the on-site organisation at international tournaments." },
+      { when: "Jan-Feb 2025", what: "Product Intern, BTCTurk Technology", note: "Where I learned product management properly: benchmarking, market research and user testing, alongside the internal dashboards and reporting the team read every day." },
+      { when: "Jun-Jul 2024", what: "Engineering Intern, Toyota Motor Manufacturing Turkey", note: "Assembly line logistics and continuous improvement through Kaizen, 5S, root cause analysis and standard work instructions. Built an internship process improvement project and presented it to Toyota's senior management. On-site, Sakarya." },
     ],
     skills: [
       ["Product & research", "Benchmarking · market and competitor research · user testing · scoping and requirements · dashboards and reporting"],
@@ -34,8 +34,8 @@ const COPY = {
       ["Physical × digital", "NFC and QR systems · print and production · rollouts across cafés, restaurants and hotels"],
       ["Languages", "Turkish (native) · English (professional)"],
     ],
-    workIntro: "Most of it runs through TAB Marketing, the NFC and QR business I run with two friends: review cards, QR menus, hotel key cards and feedback cards for cafés, restaurants and hotels — each made for a particular business, from the brief through design and production to the site behind it.",
-    tabLink: "tab-marketing-site.vercel.app",
+    workIntro: "Most of it runs through TAB Marketing, the NFC and QR business I run with two friends: review cards, QR menus, hotel key cards and feedback cards for cafés, restaurants and hotels. Each is made for a particular business, from the brief through design and production to the site behind it.",
+    tabLink: "See the website",
     sites: "Sites",
     own: "Own projects",
     rows: [
@@ -48,16 +48,16 @@ const COPY = {
     ],
     bg: {
       education: "Education",
-      edu: [["Istanbul Bilgi University", " — BSc Industrial Engineering, graduated June 2026"], ["Fen Lisesi", " — Sakarya, Turkey"]],
+      edu: [["Istanbul Bilgi University", ", BSc Industrial Engineering. Graduated June 2026"], ["Fen Lisesi", ", Sakarya, Turkey"]],
       international: "International",
       intl: [
-        ["He For She", ", Erasmus+ Youth Exchange — Saaremaa, Estonia (December 2023). A week with an international group on gender equality and how it tracks with a country's development. Hosted by Artemis Women's Power MTÜ; Youthpass certified."],
-        ["European Summer School", ", Blockchain to Financial Markets — Prague, Czechia (2025). A week on where distributed ledgers meet market infrastructure: settlement, tokenised assets and the regulation around them."],
+        ["He For She", ", Erasmus+ Youth Exchange in Saaremaa, Estonia (December 2023). A week with an international group on gender equality and how it tracks with a country's development. Hosted by Artemis Women's Power MTÜ; Youthpass certified."],
+        ["European Summer School", ", Blockchain to Financial Markets. Prague, Czechia (2025). A week on where distributed ledgers meet market infrastructure: settlement, tokenised assets and the regulation around them."],
       ],
       involvement: "Involvement",
       inv: [
-        ["Vice President & Operations Lead", ", Atatürkçü Düşünce Kulübü, Bilgi University (2021—2024). Led 10+ large-scale forums and conferences for students across Istanbul — the largest a live panel drawing 4,000+ attendees — from programme and speakers to sponsorship, budget, venue logistics and the team working the floor on the day."],
-        ["Editorial Director", ", Bilgi Blockchain Club (2021—2024). Commissioned and edited what the club published, and helped put together its forums and speaker evenings."],
+        ["Vice President & Operations Lead", ", Atatürkçü Düşünce Kulübü, Bilgi University (2021-2024). Led 10+ large-scale forums and conferences for students across Istanbul. The largest was a live panel that drew over 4,000 people. Everything from programme and speakers to sponsorship, budget, venue logistics and the team working the floor on the day."],
+        ["Editorial Director", ", Bilgi Blockchain Club (2021-2024). Commissioned and edited what the club published, and helped put together its forums and speaker evenings."],
       ],
       publication: "Publication",
       pub: "Chapter XI, \u201cBlockchain ve E\u011flence Sekt\u00f6r\u00fc\u201d (Blockchain and the Entertainment Industry), in ",
@@ -66,15 +66,15 @@ const COPY = {
       pubMeta: "Written as an independent researcher, published as Mehmet Tolga Çakan · ISBN 978-625-433-825-0 · ORCID 0000-0001-7444-9079",
       programmes: "Awards, programmes & certificates",
       prog: [
-        ["Best Senior Design Project Award", ", Department of Industrial Engineering, Istanbul Bilgi University (2026) — for \u201cImprovement of Precision, Quality and Worker Well-Being in Sock Manufacturing: Case of \u00d6RS Textile\u201d \u2014 an ergonomic and process redesign on a live production line that cut material waste and scrap and more than doubled line efficiency. Selected among the top five projects of its term; also presented at CSRP 2026."],
-        ["AI Engineering Internship", ", FlyRank AI (2026) — a remote, project-based programme: five reviewed assignments and a capstone, built around shipping real work rather than coursework."],
+        ["Best Senior Design Project Award", ", Department of Industrial Engineering, Istanbul Bilgi University (2026), for \u201cImprovement of Precision, Quality and Worker Well-Being in Sock Manufacturing: Case of \u00d6RS Textile\u201d. An ergonomic and process redesign on a live production line that cut material waste and scrap and more than doubled line efficiency. Selected among the top five projects of its term; also presented at CSRP 2026."],
+        ["AI Engineering Internship", ", FlyRank AI (2026). A remote, project-based programme: five reviewed assignments and a capstone, built around shipping real work rather than coursework."],
         ["AI Fluency: Framework & Foundations", ", Anthropic Education (July 2026)", "https://verify.skilljar.com/c/xvnv3q5pttvf"],
         ["Claude 101", ", Anthropic Education (July 2026)", "https://verify.skilljar.com/c/j8cq55wxfnwn"],
       ],
       music: "Music",
       musicText: "Drums and songwriting in ",
       band: "son sek'",
-      musicRest: " — one album, two singles, a handful of live shows.",
+      musicRest: ". One album, two singles and a handful of live shows.",
     },
     contactText: "Based in Istanbul, open to new projects and roles.",
     cv: "CV ↓",
@@ -87,15 +87,15 @@ const COPY = {
     place: "İstanbul, Türkiye",
     roles: ["Endüstri mühendisi", "Süreç iyileştirme", "Geliştirici", "Blockchain araştırmacısı", "Davulcu & söz yazarı"],
     about: [
-      "İstanbul Bilgi Üniversitesi'nde endüstri mühendisliği okudum, Haziran 2026'da mezun oldum. Asıl sevdiğim şey bir sistemin tıkandığı yeri bulup düzeltmek — bir fabrika sahasında, bir ürünün içinde ya da kimsenin açmak istemediği bir tabloda.",
-      "Mesleğim tasarımcılık değil. Bir şeyi tanımlayıp sonra onu kurabilen bir mühendisim; aşağıdakilerin çoğu da buradan çıktı: müşteri siteleri, bir web oyunu ve iki arkadaşımla TAB Marketing adıyla yaptığımız NFC ve QR ürünleri.",
-      "Bunların dışında: davul ve şarkı yazmak.",
+      "İstanbul Bilgi Üniversitesi'nde endüstri mühendisliği okudum, Haziran 2026'da mezun oldum. En sevdiğim şey bir sistemin nerede çöktüğünü bulup onu düzeltmek; bu bir fabrika sahası da olabilir, bir ürünün içi de, kimsenin açmak istemediği bir tablo da.",
+      "Epeyce geniş bir alanda çalışıyorum: mühendislik, ürün, tasarım, operasyon, araştırma. Türkiye'de ve yurt dışında, Estonya ve Çekya'da ekiplerle çalıştım. En işe yaradığım an, bir problem hâlâ bulanıkken ve birinin onu insanların gerçekten kullanabileceği bir şeye çevirmesi gerektiği andır.",
+      "Bunların dışında: davul çalmak ve şarkı yazmak.",
     ],
     expIntro: "Mezun olmadan önce bir Toyota montaj hattında, bir kripto borsasında, bir dijital ajansta ve bir yapay zekâ platformunda çalışmıştım. Her biri aynı işin farklı bir parçasını öğretti: işin gerçekte nasıl aktığını, bir ürün ekibinin neye öncelik verdiğini, bir şeyin nasıl satıldığını ve yapay zekânın laf kalabalığı olmadan nasıl işe koşulacağını.",
     jobs: [
-      { when: "Mar — Tem 2025", what: "Stajyer, De Marke Ajans", note: "Dijital pazarlama ve uluslararası turnuvalarda saha organizasyonunun yürütülmesi." },
-      { when: "Oca — Şub 2025", what: "Ürün Stajyeri, BTCTurk Teknoloji", note: "Ürün yönetimini asıl burada öğrendim: kıyaslama, pazar araştırması ve kullanıcı testleri; bir yandan da ekibin her gün baktığı iç panolar ve raporlama." },
-      { when: "Haz — Tem 2024", what: "Mühendislik Stajyeri, Toyota Motor Manufacturing Türkiye", note: "Montaj hattı lojistiği ve sürekli iyileştirme: Kaizen, 5S, root cause analysis ve standard work talimatları. Staj süreci iyileştirme projesi hazırlayıp Toyota üst yönetimine sundum. Sahada, Sakarya." },
+      { when: "Mar-Tem 2025", what: "Stajyer, De Marke Ajans", note: "Dijital pazarlama ve uluslararası turnuvalarda saha organizasyonunun yürütülmesi." },
+      { when: "Oca-Şub 2025", what: "Ürün Stajyeri, BTCTurk Teknoloji", note: "Ürün yönetimini asıl burada öğrendim: kıyaslama, pazar araştırması ve kullanıcı testleri; bir yandan da ekibin her gün baktığı iç panolar ve raporlama." },
+      { when: "Haz-Tem 2024", what: "Mühendislik Stajyeri, Toyota Motor Manufacturing Türkiye", note: "Montaj hattı lojistiği ve sürekli iyileştirme: Kaizen, 5S, root cause analysis ve standard work talimatları. Staj süreci iyileştirme projesi hazırlayıp Toyota üst yönetimine sundum. Sahada, Sakarya." },
     ],
     skills: [
       ["Ürün & araştırma", "Benchmarking · market ve competitor research · user testing · scoping ve requirements · dashboard ve raporlama"],
@@ -107,8 +107,8 @@ const COPY = {
       ["Fiziksel × dijital", "NFC ve QR sistemleri · baskı ve üretim · kafe, restoran ve otellerde saha kurulumu"],
       ["Diller", "Türkçe (ana dil) · İngilizce (profesyonel)"],
     ],
-    workIntro: "İşlerin çoğu, iki arkadaşımla yürüttüğüm NFC ve QR işi TAB Marketing üzerinden gidiyor: kafeler, restoranlar ve oteller için yorum kartları, QR menüler, otel oda kartları ve geri bildirim kartları — her biri belirli bir işletme için, brief'ten tasarıma, üretimden arkasındaki siteye kadar.",
-    tabLink: "tab-marketing-site.vercel.app",
+    workIntro: "İşlerin çoğu, iki arkadaşımla yürüttüğüm NFC ve QR işi TAB Marketing üzerinden gidiyor: kafeler, restoranlar ve oteller için yorum kartları, QR menüler, otel oda kartları ve geri bildirim kartları. Her biri belirli bir işletme için, brief'ten tasarıma, üretimden arkasındaki siteye kadar.",
+    tabLink: "Siteye git",
     sites: "Siteler",
     own: "Kendi projelerim",
     rows: [
@@ -121,33 +121,33 @@ const COPY = {
     ],
     bg: {
       education: "Eğitim",
-      edu: [["İstanbul Bilgi Üniversitesi", " — Endüstri Mühendisliği, Haziran 2026 mezunu"], ["Fen Lisesi", " — Sakarya"]],
+      edu: [["İstanbul Bilgi Üniversitesi", ", Endüstri Mühendisliği. Haziran 2026 mezunu"], ["Fen Lisesi", ", Sakarya"]],
       international: "Uluslararası",
       intl: [
-        ["He For She", ", Erasmus+ Youth Exchange — Saaremaa, Estonya (Aralık 2023). Uluslararası bir grupla bir hafta: toplumsal cinsiyet eşitliği ve bunun bir ülkenin gelişmişliğiyle ilişkisi. Artemis Women's Power MTÜ ev sahipliğinde; Youthpass sertifikalı."],
-        ["European Summer School", ", Blockchain to Financial Markets — Prag, Çekya (2025). Distributed ledger teknolojilerinin piyasa altyapısıyla kesiştiği yer üzerine bir hafta: settlement, tokenized assets ve bunları çevreleyen regülasyon."],
+        ["He For She", ", Erasmus+ Youth Exchange, Saaremaa, Estonya (Aralık 2023). Uluslararası bir grupla bir hafta: toplumsal cinsiyet eşitliği ve bunun bir ülkenin gelişmişliğiyle ilişkisi. Artemis Women's Power MTÜ ev sahipliğinde; Youthpass sertifikalı."],
+        ["European Summer School", ", Blockchain to Financial Markets. Prag, Çekya (2025). Distributed ledger teknolojilerinin piyasa altyapısıyla kesiştiği yer üzerine bir hafta: settlement, tokenized assets ve bunları çevreleyen regülasyon."],
       ],
       involvement: "Kulüpler & topluluk",
       inv: [
-        ["Başkan Yardımcısı & Operasyon Lideri", ", Atatürkçü Düşünce Kulübü, Bilgi Üniversitesi (2021—2024). İstanbul'daki öğrenciler için 10'dan fazla büyük ölçekli forum ve konferans yürüttüm — en büyüğü 4.000'den fazla katılımcılı canlı panel — programdan konuşmacılara, sponsorluktan bütçeye, mekân lojistiğinden gün içinde sahada çalışan ekibe kadar."],
-        ["Yayın Direktörü", ", Bilgi Blockchain Kulübü (2021—2024). Kulübün yayımladığı içeriği yönlendirdim ve düzenledim; forumlarının ve konuşmacı akşamlarının kurgusunda yer aldım."],
+        ["Başkan Yardımcısı & Operasyon Lideri", ", Atatürkçü Düşünce Kulübü, Bilgi Üniversitesi (2021-2024). İstanbul'daki öğrenciler için 10'dan fazla büyük ölçekli forum ve konferans yürüttüm. En büyüğü 4.000'den fazla katılımcının geldiği canlı paneldi. Programdan konuşmacılara, sponsorluktan bütçeye, mekân lojistiğinden gün içinde sahada çalışan ekibe kadar."],
+        ["Yayın Direktörü", ", Bilgi Blockchain Kulübü (2021-2024). Kulübün yayımladığı içeriği yönlendirdim ve düzenledim; forumlarının ve konuşmacı akşamlarının kurgusunda yer aldım."],
       ],
       publication: "Yayın",
-      pub: "Bölüm XI, “Blockchain ve Eğlence Sektörü” — ",
+      pub: "Bölüm XI, “Blockchain ve Eğlence Sektörü”. Kitap: ",
       pubBook: "Blockchain Teknolojileri ve Sektörel Etkileri",
       pubLink: "Nobel, 2022",
       pubMeta: "Bağımsız araştırmacı olarak yazıldı, Mehmet Tolga Çakan adıyla yayımlandı · ISBN 978-625-433-825-0 · ORCID 0000-0001-7444-9079",
       programmes: "Ödüller, programlar & sertifikalar",
       prog: [
-        ["En İyi Bitirme Projesi Ödülü", ", Endüstri Mühendisliği Bölümü, İstanbul Bilgi Üniversitesi (2026) — \u201cImprovement of Precision, Quality and Worker Well-Being in Sock Manufacturing: Case of \u00d6RS Textile\u201d çalışmasıyla — çalışan bir üretim hattında ergonomi ve süreç yeniden tasarımı; malzeme firesi ve ıskarta azaldı, hat verimliliği iki katının üzerine çıktı. Dönemin en iyi beş projesi arasına seçildi; ayrıca CSRP 2026\u2019da sunuldu."],
-        ["Yapay Zekâ Mühendisliği Stajı", ", FlyRank AI (2026) — uzaktan, proje temelli bir program: değerlendirilen beş ödev ve bir bitirme projesi; ders çözmek yerine gerçek iş çıkarmak üzerine kurulu."],
+        ["En İyi Bitirme Projesi Ödülü", ", Endüstri Mühendisliği Bölümü, İstanbul Bilgi Üniversitesi (2026), \u201cImprovement of Precision, Quality and Worker Well-Being in Sock Manufacturing: Case of \u00d6RS Textile\u201d çalışmasıyla. Çalışan bir üretim hattında ergonomi ve süreç yeniden tasarımı; malzeme firesi ve ıskarta azaldı, hat verimliliği iki katının üzerine çıktı. Dönemin en iyi beş projesi arasına seçildi; ayrıca CSRP 2026\u2019da sunuldu."],
+        ["Yapay Zekâ Mühendisliği Stajı", ", FlyRank AI (2026). Uzaktan, proje temelli bir program: değerlendirilen beş ödev ve bir bitirme projesi; ders çözmek yerine gerçek iş çıkarmak üzerine kurulu."],
         ["AI Fluency: Framework & Foundations", ", Anthropic Education (July 2026)", "https://verify.skilljar.com/c/xvnv3q5pttvf"],
         ["Claude 101", ", Anthropic Education (July 2026)", "https://verify.skilljar.com/c/j8cq55wxfnwn"],
       ],
       music: "Müzik",
       musicText: "",
       band: "son sek'",
-      musicRest: " grubunda davul çalıyor ve şarkıları yazıyorum — bir albüm, iki single ve birkaç canlı sahne.",
+      musicRest: " grubunda davul çalıyor, şarkıları yazıyorum. Bir albüm, iki single ve birkaç canlı sahne.",
     },
     contactText: "İstanbul'da yaşıyorum, yeni projelere ve rollere açığım.",
     cv: "CV ↓",
@@ -411,7 +411,7 @@ a.chip { display: inline-flex; align-items: center; text-decoration: none; }
   color: var(--ink-faint); margin: 12px 0 18px;
 }
 
-/* reveal — barely there */
+/* reveal, barely there */
 .rise {
   opacity: 0; transform: translateY(8px);
   transition: opacity .55s ease, transform .55s cubic-bezier(.2,.7,.2,1);
@@ -455,7 +455,7 @@ a.chip { display: inline-flex; align-items: center; text-decoration: none; }
   outline: 1px solid var(--accent); outline-offset: 3px; border-radius: 1px;
 }
 
-/* print — the page becomes a clean CV sheet */
+/* print: the page becomes a clean CV sheet */
 @media print {
   .nav, .cmd-bg, .chip, .anchor, .foot { display: none !important; }
   .cv { background: #fff; color: #000; font-size: 11pt; }
