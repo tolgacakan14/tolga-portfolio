@@ -182,7 +182,6 @@ const STYLES = `
   line-height: 1.62;
   min-height: 100vh;
   overflow-x: clip;
-  transition: background .4s ease, color .4s ease;
 }
 .cv[data-theme="night"] {
   --paper: #14140f;
