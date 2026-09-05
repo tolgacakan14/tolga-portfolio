@@ -1,0 +1,5 @@
+# Every crawler is welcome on the whole site.
+User-agent: *
+Allow: /
+
+Sitemap: https://tolgacakan.vercel.app/sitemap.xml

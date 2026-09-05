@@ -6,46 +6,157 @@ import { Analytics } from "@vercel/analytics/react";
  * parts (palette, command menu, scroll state) stay out of the way.
  * ------------------------------------------------------------------ */
 
-const SECTIONS = [
-  { id: "about", label: "About" },
-  { id: "experience", label: "Experience" },
-  { id: "skills", label: "Skills" },
-  { id: "work", label: "Work" },
-  { id: "background", label: "Background" },
-  { id: "contact", label: "Contact" },
-];
+const LANGS = ["en", "tr"];
 
-const SKILLS = [
-  ["Product management", "Benchmarking · market and competitor research · user testing · scoping and requirements · dashboards and reporting"],
-  ["Engineering", "Python · SQL · React · TypeScript · Next.js · Vite · Git · Vercel"],
-  ["Analysis & tools", "Excel and VBA · Figma · Kaizen and process improvement · vendor and production logistics"],
-  ["AI in practice", "LLM-assisted workflows · prompt design and iteration · Anthropic tooling"],
-  ["Blockchain & Web3", "Protocol and token economics · exchange and DeFi mechanics · wallets and on-chain fundamentals · sector research, published · club and community leadership"],
-  ["Physical × digital", "NFC and QR systems · print and production · rollouts across cafés, restaurants and hotels"],
-  ["Domains", "Fintech and crypto exchange · hospitality, retail and clinics · manufacturing"],
-  ["Languages", "Turkish (native) · English (professional)"],
-];
+const COPY = {
+  en: {
+    nav: { about: "About", experience: "Experience", skills: "Skills", work: "Work", background: "Background", contact: "Contact" },
+    place: "Istanbul, Turkey",
+    roles: ["Industrial engineer", "Product manager", "Blockchain researcher", "Builder", "Drummer & songwriter"],
+    about: [
+      "I read industrial engineering at Istanbul Bilgi University: the study of where a system gives way, and what it costs to put right. I am not a designer by trade — I am an engineer who can specify a product and then build it.",
+      "Today I co-run TAB Marketing, where a physical touch becomes a digital result: tap a card and a review page opens, scan a table and the menu loads. Seven products, more than fifteen businesses across Istanbul and Sakarya.",
+    ],
+    expIntro: "Before I finished my degree I had worked a Toyota assembly line, a crypto exchange, a digital agency and an AI platform. Each taught a different part of the same job: how work really flows, how a product team decides what matters, how a thing gets sold, and how to put AI to work without hand-waving.",
+    jobs: [
+      { when: "Mar — Jul 2025", what: "Intern, De Marke Agency", note: "Digital marketing, and running the on-site organisation at international tournaments." },
+      { when: "Jan — Feb 2025", what: "Product Intern, BTCTurk Technology", note: "Where I learned product management properly: benchmarking, market research and user testing, alongside the internal dashboards and reporting the team read every day." },
+      { when: "Jun — Jul 2024", what: "Engineering Intern, Toyota Motor Manufacturing Turkey", note: "Assembly line logistics and Kaizen projects. On-site, Sakarya." },
+    ],
+    skills: [
+      ["Product management", "Benchmarking · market and competitor research · user testing · scoping and requirements · dashboards and reporting"],
+      ["Engineering", "Python · SQL · React · TypeScript · Next.js · Vite · Git · Vercel"],
+      ["Analysis & tools", "Excel and VBA · Figma · Kaizen and process improvement · vendor and production logistics"],
+      ["AI in practice", "LLM-assisted workflows · prompt design and iteration · Anthropic tooling"],
+      ["Blockchain & Web3", "Protocol and token economics · exchange and DeFi mechanics · wallets and on-chain fundamentals · sector research, published · club and community leadership"],
+      ["Events & operations", "Large-scale forums and conferences · programme and speaker planning · sponsorship · on-the-day operations and teams"],
+      ["Physical × digital", "NFC and QR systems · print and production · rollouts across cafés, restaurants and hotels"],
+      ["Languages", "Turkish (native) · English (professional)"],
+    ],
+    workIntro: "Most of it runs through TAB Marketing: NFC review cards, QR menus, hotel key cards and feedback cards for cafés, restaurants and hotels — each one made for a particular business, from the brief through design and production to the site behind it.",
+    tabLink: "tab-marketing-site.vercel.app",
+    sites: "Sites",
+    own: "Own projects",
+    rows: [
+      { title: "Franco Coffee & Gelato", note: "A digital menu with a build-your-own gelato flavour picker.", href: "https://francoserdivan.com", label: "francoserdivan.com" },
+      { title: "Diş Hekimi Melis Çakan", note: "A calm, mobile-first site for a dental practice in Sakarya.", href: "https://dishekimimeliscakan.com", label: "dishekimimeliscakan.com" },
+    ],
+    projects: [
+      { title: "Krone", note: "A web game for the phone: mini-games, rooms, daily challenges, leaderboards.", href: "https://innerclock.vercel.app", label: "innerclock.vercel.app" },
+      { title: "FeedDetox", tag: "IN PROGRESS", note: "Taking back your own feed algorithm: seeing what it has learned, and pointing it elsewhere." },
+    ],
+    bg: {
+      education: "Education",
+      edu: [["Istanbul Bilgi University", " — Industrial Engineering"], ["Fen Lisesi", " — Sakarya, Turkey"]],
+      international: "International",
+      intl: [
+        ["Volunteer researcher", ", He For She / Erasmus+ — Saaremaa, Estonia (2023—2024). Field research with an international team on gender equality, carried out across a small island community and written up for the programme."],
+        ["European Summer School", ", Blockchain to Financial Markets — Prague, Czechia (2025). A week on where distributed ledgers meet market infrastructure: settlement, tokenised assets and the regulation around them."],
+      ],
+      involvement: "Involvement",
+      inv: [
+        ["Vice President & Operations Lead", ", Atatürkçü Düşünce Kulübü, Bilgi University (2022—2024). Ran the club's largest events end to end — forums, panels and conferences — from programme and speakers to sponsorship, budget, venue logistics and the team working the floor on the day."],
+        ["Editorial Director", ", Bilgi Blockchain Club (2021—2024). Commissioned and edited what the club published, and helped put together its forums and speaker evenings."],
+      ],
+      publication: "Publication",
+      pub: "Chapter on blockchain and the entertainment industry in ",
+      pubBook: "Blockchain Teknolojileri ve Sektörel Etkileri",
+      pubLink: "Nobel, 2022",
+      pubMeta: "Published as Mehmet Tolga Çakan · ISBN 978-625-433-825-0",
+      programmes: "Programmes & certificates",
+      prog: [
+        ["AI Engineering Internship", ", FlyRank AI (2026) — a remote, project-based programme: five reviewed assignments and a capstone, built around shipping real work rather than coursework."],
+        ["AI Fluency: Framework & Foundations", ", Anthropic (2026)"],
+        ["Claude 101", ", Anthropic (2026)"],
+        ["Award", ", ÖRS Textile senior design project, CSRP (2026)"],
+      ],
+      music: "Music",
+      musicText: "Drums and songwriting in ",
+      band: "son sek'",
+      musicRest: " — one album, two singles, a handful of live shows.",
+    },
+    contactText: "Based in Istanbul, open to new projects and roles.",
+    cv: "CV ↓",
+    setIn: "Set in Newsreader",
+  },
 
-const ROLES = [
-  "Industrial engineer",
-  "Product manager",
-  "Blockchain researcher",
-  "Builder",
-  "Drummer & songwriter",
-];
+  tr: {
+    nav: { about: "Hakkımda", experience: "Deneyim", skills: "Yetkinlikler", work: "İşler", background: "Geçmiş", contact: "İletişim" },
+    place: "İstanbul, Türkiye",
+    roles: ["Endüstri mühendisi", "Ürün yöneticisi", "Blockchain araştırmacısı", "Geliştirici", "Davulcu & söz yazarı"],
+    about: [
+      "İstanbul Bilgi Üniversitesi'nde endüstri mühendisliği okudum: bir sistemin nerede tıkandığını ve bunu düzeltmenin neye mal olduğunu inceleyen bir disiplin. Mesleğim tasarımcılık değil — bir ürünü tanımlayıp sonra onu kurabilen bir mühendisim.",
+      "Bugün TAB Marketing'i ortaklarımla yürütüyorum: fiziksel bir temasın dijital bir sonuca döndüğü yer. Karta dokunuyorsunuz, yorum sayfası açılıyor; masayı okutuyorsunuz, menü geliyor. Yedi ürün, İstanbul ve Sakarya'da on beşten fazla işletme.",
+    ],
+    expIntro: "Mezun olmadan önce bir Toyota montaj hattında, bir kripto borsasında, bir dijital ajansta ve bir yapay zekâ platformunda çalışmıştım. Her biri aynı işin farklı bir parçasını öğretti: işin gerçekte nasıl aktığını, bir ürün ekibinin neye öncelik verdiğini, bir şeyin nasıl satıldığını ve yapay zekânın laf kalabalığı olmadan nasıl işe koşulacağını.",
+    jobs: [
+      { when: "Mar — Tem 2025", what: "Stajyer, De Marke Ajans", note: "Dijital pazarlama ve uluslararası turnuvalarda saha organizasyonunun yürütülmesi." },
+      { when: "Oca — Şub 2025", what: "Ürün Stajyeri, BTCTurk Teknoloji", note: "Ürün yönetimini asıl burada öğrendim: kıyaslama, pazar araştırması ve kullanıcı testleri; bir yandan da ekibin her gün baktığı iç panolar ve raporlama." },
+      { when: "Haz — Tem 2024", what: "Mühendislik Stajyeri, Toyota Motor Manufacturing Türkiye", note: "Montaj hattı lojistiği ve Kaizen projeleri. Sahada, Sakarya." },
+    ],
+    skills: [
+      ["Ürün yönetimi", "Kıyaslama · pazar ve rakip araştırması · kullanıcı testi · kapsam ve gereksinim belirleme · pano ve raporlama"],
+      ["Mühendislik", "Python · SQL · React · TypeScript · Next.js · Vite · Git · Vercel"],
+      ["Analiz & araçlar", "Excel ve VBA · Figma · Kaizen ve süreç iyileştirme · tedarikçi ve üretim lojistiği"],
+      ["Pratikte yapay zekâ", "LLM destekli iş akışları · prompt tasarımı ve iterasyon · Anthropic araçları"],
+      ["Blockchain & Web3", "Protokol ve token ekonomisi · borsa ve DeFi mekanikleri · cüzdanlar ve zincir üstü temeller · yayımlanmış sektör araştırması · kulüp ve topluluk liderliği"],
+      ["Etkinlik & operasyon", "Büyük ölçekli forum ve konferanslar · program ve konuşmacı planlaması · sponsorluk · gün içi operasyon ve ekip yönetimi"],
+      ["Fiziksel × dijital", "NFC ve QR sistemleri · baskı ve üretim · kafe, restoran ve otellerde saha kurulumu"],
+      ["Diller", "Türkçe (ana dil) · İngilizce (profesyonel)"],
+    ],
+    workIntro: "İşlerin çoğu TAB Marketing üzerinden yürüyor: kafeler, restoranlar ve oteller için NFC yorum kartları, QR menüler, otel oda kartları ve geri bildirim kartları — her biri belirli bir işletme için, brief'ten tasarıma, üretimden arkasındaki siteye kadar.",
+    tabLink: "tab-marketing-site.vercel.app",
+    sites: "Siteler",
+    own: "Kendi projelerim",
+    rows: [
+      { title: "Franco Coffee & Gelato", note: "Kendi dondurmanı kurabildiğin aroma seçicili dijital menü.", href: "https://francoserdivan.com", label: "francoserdivan.com" },
+      { title: "Diş Hekimi Melis Çakan", note: "Sakarya'daki bir diş kliniği için sakin, mobil öncelikli bir site.", href: "https://dishekimimeliscakan.com", label: "dishekimimeliscakan.com" },
+    ],
+    projects: [
+      { title: "Krone", note: "Telefon için bir web oyunu: mini oyunlar, odalar, günlük görevler, liderlik tabloları.", href: "https://innerclock.vercel.app", label: "innerclock.vercel.app" },
+      { title: "FeedDetox", tag: "GELİŞTİRİLİYOR", note: "Kendi akış algoritmanı geri almak: senin hakkında ne öğrendiğini görmek ve onu başka bir yöne çevirmek." },
+    ],
+    bg: {
+      education: "Eğitim",
+      edu: [["İstanbul Bilgi Üniversitesi", " — Endüstri Mühendisliği"], ["Fen Lisesi", " — Sakarya"]],
+      international: "Uluslararası",
+      intl: [
+        ["Gönüllü araştırmacı", ", He For She / Erasmus+ — Saaremaa, Estonya (2023—2024). Uluslararası bir ekiple toplumsal cinsiyet eşitliği üzerine saha araştırması; küçük bir ada topluluğunda yürütüldü ve program için raporlandı."],
+        ["Avrupa Yaz Okulu", ", Blockchain to Financial Markets — Prag, Çekya (2025). Dağıtık defterlerin piyasa altyapısıyla kesiştiği yer üzerine bir hafta: takas, tokenlaştırılmış varlıklar ve bunları çevreleyen düzenlemeler."],
+      ],
+      involvement: "Kulüpler & topluluk",
+      inv: [
+        ["Başkan Yardımcısı & Operasyon Lideri", ", Atatürkçü Düşünce Kulübü, Bilgi Üniversitesi (2022—2024). Kulübün en büyük etkinliklerini baştan sona yürüttüm — forumlar, paneller ve konferanslar — programdan konuşmacılara, sponsorluktan bütçeye, mekân lojistiğinden gün içinde sahada çalışan ekibe kadar."],
+        ["Yayın Direktörü", ", Bilgi Blockchain Kulübü (2021—2024). Kulübün yayımladığı içeriği yönlendirdim ve düzenledim; forumlarının ve konuşmacı akşamlarının kurgusunda yer aldım."],
+      ],
+      publication: "Yayın",
+      pub: "Blockchain ve eğlence sektörü üzerine bir bölüm — ",
+      pubBook: "Blockchain Teknolojileri ve Sektörel Etkileri",
+      pubLink: "Nobel, 2022",
+      pubMeta: "Mehmet Tolga Çakan adıyla yayımlandı · ISBN 978-625-433-825-0",
+      programmes: "Programlar & sertifikalar",
+      prog: [
+        ["Yapay Zekâ Mühendisliği Stajı", ", FlyRank AI (2026) — uzaktan, proje temelli bir program: değerlendirilen beş ödev ve bir bitirme projesi; ders çözmek yerine gerçek iş çıkarmak üzerine kurulu."],
+        ["AI Fluency: Framework & Foundations", ", Anthropic (2026)"],
+        ["Claude 101", ", Anthropic (2026)"],
+        ["Ödül", ", ÖRS Tekstil bitirme projesi, CSRP (2026)"],
+      ],
+      music: "Müzik",
+      musicText: "",
+      band: "son sek'",
+      musicRest: " grubunda davul çalıyor ve şarkıları yazıyorum — bir albüm, iki single ve birkaç canlı sahne.",
+    },
+    contactText: "İstanbul'da yaşıyorum, yeni projelere ve rollere açığım.",
+    cv: "CV ↓",
+    setIn: "Newsreader ile dizildi",
+  },
+};
+
+const SECTION_IDS = ["about", "experience", "skills", "work", "background", "contact"];
 
 const PHONE_DISPLAY = "+90 542 262 00 42";
 const PHONE_HREF = "tel:+905422620042";
 const EMAIL = "tolga@tolgacakan.dev";
-
-const TAB_PRODUCTS = [
-  { src: "/work/tab-main-card.png", label: "Google review card", alt: "TAB Marketing NFC Google review card" },
-  { src: "/work/italyanisi-menu-card.jpg", label: "QR menu + NFC", alt: "Tabletop QR menu and NFC review card" },
-  { src: "/work/pehlivan-gold.webp", label: "NFC stand", alt: "Black and gold NFC review stand" },
-  { src: "/work/loren-nfc-stand.jpg", label: "Framed stand", alt: "Framed burgundy and gold NFC stand" },
-  { src: "/work/hotel-cabir.jpg", label: "Hotel key card", alt: "Hotel room key card with NFC" },
-  { src: "/work/soft-feedback.png", label: "Feedback card", alt: "Private feedback NFC card" },
-];
 
 const STYLES = `
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=JetBrains+Mono:wght@400;500&display=swap');
@@ -284,24 +395,9 @@ a.chip { display: inline-flex; align-items: center; text-decoration: none; }
 .row-title { font-size: 16px; margin: 0 0 3px; }
 .row-note { font-size: 14.5px; color: var(--ink-soft); margin: 0 0 8px; }
 
-/* compact product strip */
-.strip {
-  display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; margin: 16px 0 14px;
-}
-.strip figure { margin: 0; overflow: hidden; border: 1px solid var(--rule); background: var(--paper-2); }
-.strip img {
-  width: 100%; height: 74px; object-fit: cover; display: block;
-  transition: transform .5s cubic-bezier(.2,.8,.2,1), opacity .4s ease;
-  opacity: .93;
-}
-.strip figure:hover img { transform: scale(1.06); opacity: 1; }
 .strip-note {
   font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .08em;
-  color: var(--ink-faint); margin: 0 0 16px;
-}
-@media (max-width: 620px) {
-  .strip { grid-template-columns: repeat(3, 1fr); }
-  .strip img { height: 88px; }
+  color: var(--ink-faint); margin: 12px 0 18px;
 }
 
 /* reveal — barely there */
@@ -435,7 +531,7 @@ a.chip { display: inline-flex; align-items: center; text-decoration: none; }
 
 /* ---------------------------------------------------------------- */
 
-function useRise() {
+function useRise(dep) {
   useEffect(() => {
     const io = new IntersectionObserver(
       (es) => es.forEach((e) => {
@@ -445,7 +541,7 @@ function useRise() {
     );
     document.querySelectorAll(".rise").forEach((el) => io.observe(el));
     return () => io.disconnect();
-  }, []);
+  }, [dep]);
 }
 
 function useScrollState(ids) {
@@ -478,7 +574,6 @@ function useScrollState(ids) {
 
 const go = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
 
-/** Clipboard with a fallback for browsers that refuse the async API. */
 async function writeToClipboard(text) {
   try {
     await navigator.clipboard.writeText(text);
@@ -500,9 +595,8 @@ async function writeToClipboard(text) {
   }
 }
 
-/** A contact line: the link behaves normally, a small button copies it. */
 /** Roles that type themselves in and out, one after another. */
-function RoleTicker() {
+function RoleTicker({ roles }) {
   const [text, setText] = useState("");
   const [still, setStill] = useState(false);
 
@@ -511,26 +605,28 @@ function RoleTicker() {
       setStill(true);
       return undefined;
     }
+    setStill(false);
+    setText("");
     let role = 0;
     let pos = 0;
     let deleting = false;
     let timer = 0;
     const step = () => {
-      const full = ROLES[role];
+      const full = roles[role];
       pos += deleting ? -1 : 1;
       setText(full.slice(0, pos));
       let wait = deleting ? 30 : 58;
       if (!deleting && pos === full.length) { deleting = true; wait = 1900; }
-      else if (deleting && pos === 0) { deleting = false; role = (role + 1) % ROLES.length; wait = 300; }
+      else if (deleting && pos === 0) { deleting = false; role = (role + 1) % roles.length; wait = 300; }
       timer = window.setTimeout(step, wait);
     };
     timer = window.setTimeout(step, 700);
     return () => window.clearTimeout(timer);
-  }, []);
+  }, [roles]);
 
   return (
     <p className="role-slot" aria-hidden={still ? undefined : "true"}>
-      {still ? ROLES.join(" · ") : text}
+      {still ? roles.join(" · ") : text}
       {!still && <span className="caret" />}
     </p>
   );
@@ -545,16 +641,13 @@ function SnapCursor() {
     if (window.matchMedia("(pointer: coarse)").matches) return undefined;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
 
-    const SELECTOR = "a, button, .strip figure, .entry, .row-main";
+    const SELECTOR = "a, button, .entry, .row-main";
 
     const paint = () => {
       const el = box.current;
       const t = target.current;
       if (!el) return;
-      if (!t || !t.isConnected) {
-        el.style.opacity = "0";
-        return;
-      }
+      if (!t || !t.isConnected) { el.style.opacity = "0"; return; }
       const r = t.getBoundingClientRect();
       el.style.opacity = "1";
       el.style.transform = "translate(" + (r.left - 5) + "px," + (r.top - 5) + "px)";
@@ -617,25 +710,25 @@ function SecHead({ num, title, id }) {
       <span className="sec-num">{num}</span>
       <h2 className="h2">
         {title}
-        <a className="anchor" href={"#" + id} aria-label={"Link to " + title}
+        <a className="anchor" href={"#" + id} aria-label={title}
           onClick={(e) => { e.preventDefault(); go(id); history.replaceState(null, "", "#" + id); }}>§</a>
       </h2>
     </div>
   );
 }
 
-function CommandMenu({ open, onClose, onTheme }) {
+function CommandMenu({ open, onClose, onTheme, onLang, t, lang }) {
   const [q, setQ] = useState("");
   const [sel, setSel] = useState(0);
   const ref = useRef(null);
 
   const items = [
-    ...SECTIONS.slice(1).map((s) => ({ k: s.id, label: s.label, hint: "Section", run: () => go(s.id) })),
-    { k: "theme", label: "Switch palette", hint: "View", run: onTheme },
-    { k: "mail", label: "Write an email", hint: "Contact", run: () => { window.location.href = "mailto:" + EMAIL; } },
-    { k: "tel", label: "Call", hint: "Contact", run: () => { window.location.href = PHONE_HREF; } },
-    { k: "cv", label: "Download CV (PDF)", hint: "File", run: () => { window.location.href = "/tolga-cakan-cv.pdf"; } },
-    { k: "print", label: "Print this page", hint: "Page", run: () => window.print() },
+    ...SECTION_IDS.slice(1).map((id) => ({ k: id, label: t.nav[id], hint: lang === "tr" ? "Bölüm" : "Section", run: () => go(id) })),
+    { k: "lang", label: lang === "en" ? "Türkçe'ye geç" : "Switch to English", hint: lang === "tr" ? "Dil" : "Language", run: onLang },
+    { k: "theme", label: lang === "tr" ? "Paleti değiştir" : "Switch palette", hint: lang === "tr" ? "Görünüm" : "View", run: onTheme },
+    { k: "cv", label: lang === "tr" ? "CV indir (PDF)" : "Download CV (PDF)", hint: lang === "tr" ? "Dosya" : "File", run: () => { window.location.href = "/tolga-cakan-cv.pdf"; } },
+    { k: "mail", label: lang === "tr" ? "E-posta yaz" : "Write an email", hint: lang === "tr" ? "İletişim" : "Contact", run: () => { window.location.href = "mailto:" + EMAIL; } },
+    { k: "print", label: lang === "tr" ? "Sayfayı yazdır" : "Print this page", hint: lang === "tr" ? "Sayfa" : "Page", run: () => window.print() },
   ];
   const hits = items.filter((i) => i.label.toLowerCase().includes(q.toLowerCase()));
 
@@ -646,8 +739,8 @@ function CommandMenu({ open, onClose, onTheme }) {
   if (!open) return null;
 
   const onKey = (e) => {
-    if (e.key === "ArrowDown") { e.preventDefault(); setSel((s) => (s + 1) % Math.max(hits.length, 1)); }
-    else if (e.key === "ArrowUp") { e.preventDefault(); setSel((s) => (s - 1 + hits.length) % Math.max(hits.length, 1)); }
+    if (e.key === "ArrowDown") { e.preventDefault(); setSel((x) => (x + 1) % Math.max(hits.length, 1)); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); setSel((x) => (x - 1 + hits.length) % Math.max(hits.length, 1)); }
     else if (e.key === "Enter") { e.preventDefault(); hits[sel]?.run(); onClose(); }
     else if (e.key === "Escape") onClose();
   };
@@ -655,7 +748,7 @@ function CommandMenu({ open, onClose, onTheme }) {
   return (
     <div className="cmd-bg" onClick={onClose} role="presentation">
       <div className="cmd" onClick={(e) => e.stopPropagation()} role="dialog" aria-label="Menu">
-        <input ref={ref} value={q} placeholder="jump to…" onKeyDown={onKey}
+        <input ref={ref} value={q} placeholder={lang === "tr" ? "git…" : "jump to…"} onKeyDown={onKey}
           onChange={(e) => { setQ(e.target.value); setSel(0); }} />
         <ul>
           {hits.map((it, n) => (
@@ -667,7 +760,7 @@ function CommandMenu({ open, onClose, onTheme }) {
             </li>
           ))}
         </ul>
-        <div className="cmd-foot"><span>↑↓</span><span>↵ open</span><span>esc</span></div>
+        <div className="cmd-foot"><span>↑↓</span><span>↵</span><span>esc</span></div>
       </div>
     </div>
   );
@@ -688,7 +781,7 @@ function ProgressRail({ progress, label }) {
   );
 }
 
-function LeftPane({ active, theme, onTheme, onMenu }) {
+function LeftPane({ active, theme, onTheme, onMenu, onLang, t, lang }) {
   return (
     <aside className="pane-left" id="about">
       <div className="id-row rise">
@@ -696,31 +789,22 @@ function LeftPane({ active, theme, onTheme, onMenu }) {
           <img src="/tolga.png" alt="Tolga Çakan" width="560" height="560" />
         </div>
         <div>
-          <p className="tag">Istanbul, Turkey</p>
+          <p className="tag">{t.place}</p>
           <h1 className="name">Tolga Çakan</h1>
-          <RoleTicker />
+          <RoleTicker roles={t.roles} />
         </div>
       </div>
 
       <div className="rise" style={{ "--i": 1 }}>
-        <p className="p">
-          I read industrial engineering at Istanbul Bilgi University: the study of where a system
-          gives way, and what it costs to put right. I am not a designer by trade — I am an
-          engineer who can specify a product and then build it.
-        </p>
-        <p className="p">
-          Today I co-run <em>TAB Marketing</em>, where a physical touch becomes a digital result:
-          tap a card and a review page opens, scan a table and the menu loads. Seven products,
-          more than fifteen businesses across Istanbul and Sakarya.
-        </p>
+        {t.about.map((para, n) => <p className="p" key={n}>{para}</p>)}
       </div>
 
       <nav className="pane-nav rise" style={{ "--i": 2 }}>
-        {SECTIONS.slice(1).map((sec, n) => (
-          <a key={sec.id} href={"#" + sec.id} data-on={SECTIONS[active]?.id === sec.id ? "true" : "false"}
-            onClick={(e) => { e.preventDefault(); go(sec.id); }}>
+        {SECTION_IDS.slice(1).map((id, n) => (
+          <a key={id} href={"#" + id} data-on={SECTION_IDS[active] === id ? "true" : "false"}
+            onClick={(e) => { e.preventDefault(); go(id); }}>
             <span className="pane-nav-num">{String(n + 2).padStart(2, "0")}</span>
-            <span>{sec.label}</span>
+            <span>{t.nav[id]}</span>
             <span className="pane-nav-rule" />
           </a>
         ))}
@@ -733,50 +817,27 @@ function LeftPane({ active, theme, onTheme, onMenu }) {
           <a href="https://github.com/tolgacakan14" target="_blank" rel="noreferrer">github.com/tolgacakan14</a>
         </div>
         <div className="tools">
-          <button type="button" className="chip" onClick={onMenu} aria-label="Open menu">⌘K</button>
-          <button type="button" className="chip" onClick={onTheme} aria-label="Switch palette">
-            {theme === "night" ? "Day" : "Night"}
+          <button type="button" className="chip" onClick={onMenu} aria-label="Menu">⌘K</button>
+          <button type="button" className="chip" onClick={onLang} aria-label="Change language">
+            {lang === "en" ? "TR" : "EN"}
           </button>
-          <a className="chip" href="/tolga-cakan-cv.pdf" download aria-label="Download CV as PDF">CV ↓</a>
+          <button type="button" className="chip" onClick={onTheme} aria-label="Switch palette">
+            {theme === "night" ? (lang === "tr" ? "Gündüz" : "Day") : (lang === "tr" ? "Gece" : "Night")}
+          </button>
+          <a className="chip" href="/tolga-cakan-cv.pdf" download>{t.cv}</a>
         </div>
       </div>
     </aside>
   );
 }
 
-function Skills() {
-  return (
-    <section className="sec" id="skills">
-      <div className="wrap">
-        <SecHead num="03" title="Skills" id="skills" />
-        {SKILLS.map(([key, val], n) => (
-          <div className="entry rise" key={key} style={{ "--i": n + 1 }}>
-            <span className="entry-when">{key}</span>
-            <p className="entry-note">{val}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-function Experience() {
-  const rows = [
-    { when: "Mar — Jul 2025", what: "Intern, De Marke Agency", note: "Digital marketing, and the on-site organisation at international tournaments." },
-    { when: "Jan — Feb 2025", what: "Product Intern, BTCTurk Technology", note: "Where I learned product management properly: benchmarking, market research and user testing, alongside the internal dashboards and reporting the team read every day." },
-    { when: "Jun — Jul 2024", what: "Engineering Intern, Toyota Motor Manufacturing Turkey", note: "Assembly line logistics and Kaizen projects. On-site, Sakarya." },
-  ];
+function Experience({ t }) {
   return (
     <section className="sec" id="experience">
       <div className="wrap">
-        <SecHead num="02" title="Experience" id="experience" />
-        <p className="p rise">
-          Before I finished my degree I had worked a Toyota assembly line, a crypto exchange, a
-          digital agency and an AI platform. Each taught a different part of the same job: how
-          work really flows, how a product team decides what matters, how a thing gets sold, and
-          how to put AI to work without hand-waving.
-        </p>
-        {rows.map((r, n) => (
+        <SecHead num="02" title={t.nav.experience} id="experience" />
+        <p className="p rise">{t.expIntro}</p>
+        {t.jobs.map((r, n) => (
           <div className="entry rise" key={r.what} style={{ "--i": n + 2 }}>
             <span className="entry-when">{r.when}</span>
             <div>
@@ -790,121 +851,102 @@ function Experience() {
   );
 }
 
-function Work() {
+function Skills({ t }) {
   return (
-    <section className="sec" id="work">
+    <section className="sec" id="skills">
       <div className="wrap">
-        <SecHead num="04" title="Work" id="work" />
-
-        <p className="p rise" style={{ "--i": 1 }}>
-          Most of it runs through <em>TAB Marketing</em>: NFC review cards, QR menus, hotel key
-          cards and feedback cards for cafés, restaurants and hotels — each one made for a
-          particular business.
-        </p>
-
-        <div className="strip rise" style={{ "--i": 2 }}>
-          {TAB_PRODUCTS.map((p) => (
-            <figure key={p.src}>
-              <img src={p.src} alt={p.alt} title={p.label} loading="lazy" />
-            </figure>
-          ))}
-        </div>
-        <p className="strip-note rise" style={{ "--i": 3 }}>
-          <a className="link link-mono" href="https://tab-marketing-site.vercel.app/#top" target="_blank" rel="noreferrer">
-            tab-marketing-site.vercel.app <span>→</span>
-          </a>
-        </p>
-
-        <h3 className="h3 rise" style={{ "--i": 4 }}>Sites</h3>
-        <div className="row rise" style={{ "--i": 5 }}>
-          <div className="row-main">
-            <p className="row-title">Franco Coffee &amp; Gelato</p>
-            <p className="row-note">A digital menu with a build-your-own gelato flavour picker.</p>
-            <a className="link link-mono" href="https://francoserdivan.com" target="_blank" rel="noreferrer">
-              francoserdivan.com <span>→</span>
-            </a>
+        <SecHead num="03" title={t.nav.skills} id="skills" />
+        {t.skills.map(([key, val], n) => (
+          <div className="entry rise" key={key} style={{ "--i": n + 1 }}>
+            <span className="entry-when">{key}</span>
+            <p className="entry-note">{val}</p>
           </div>
-        </div>
-        <div className="row rise" style={{ "--i": 6 }}>
-          <div className="row-main">
-            <p className="row-title">Diş Hekimi Melis Çakan</p>
-            <p className="row-note">A calm, mobile-first site for a dental practice in Sakarya.</p>
-            <a className="link link-mono" href="https://dishekimimeliscakan.com" target="_blank" rel="noreferrer">
-              dishekimimeliscakan.com <span>→</span>
-            </a>
-          </div>
-        </div>
-
-        <h3 className="h3 rise" style={{ "--i": 7 }}>Own projects</h3>
-        <div className="row rise" style={{ "--i": 8 }}>
-          <div className="row-main">
-            <p className="row-title">Krone</p>
-            <p className="row-note">A web game for the phone: mini-games, rooms, daily challenges, leaderboards.</p>
-            <a className="link link-mono" href="https://innerclock.vercel.app" target="_blank" rel="noreferrer">
-              innerclock.vercel.app <span>→</span>
-            </a>
-          </div>
-        </div>
-        <div className="row rise" style={{ "--i": 9 }}>
-          <div className="row-main">
-            <p className="row-title">FeedDetox <span className="mono" style={{ fontSize: 10, letterSpacing: ".1em", color: "var(--ink-faint)" }}>IN PROGRESS</span></p>
-            <p className="row-note">Taking back your own feed algorithm: seeing what it has learned, and pointing it elsewhere.</p>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );
 }
 
-function Background() {
+function Work({ t }) {
+  return (
+    <section className="sec" id="work">
+      <div className="wrap">
+        <SecHead num="04" title={t.nav.work} id="work" />
+        <p className="p rise" style={{ "--i": 1 }}>{t.workIntro}</p>
+        <p className="strip-note rise" style={{ "--i": 2 }}>
+          <a className="link link-mono" href="https://tab-marketing-site.vercel.app/#top" target="_blank" rel="noreferrer">
+            {t.tabLink} <span>→</span>
+          </a>
+        </p>
+
+        <h3 className="h3 rise" style={{ "--i": 3 }}>{t.sites}</h3>
+        {t.rows.map((r, n) => (
+          <div className="row rise" key={r.title} style={{ "--i": n + 4 }}>
+            <div className="row-main">
+              <p className="row-title">{r.title}</p>
+              <p className="row-note">{r.note}</p>
+              <a className="link link-mono" href={r.href} target="_blank" rel="noreferrer">{r.label} <span>→</span></a>
+            </div>
+          </div>
+        ))}
+
+        <h3 className="h3 rise" style={{ "--i": 6 }}>{t.own}</h3>
+        {t.projects.map((r, n) => (
+          <div className="row rise" key={r.title} style={{ "--i": n + 7 }}>
+            <div className="row-main">
+              <p className="row-title">
+                {r.title}
+                {r.tag && <span className="mono" style={{ fontSize: 10, letterSpacing: ".1em", color: "var(--ink-faint)", marginLeft: 8 }}>{r.tag}</span>}
+              </p>
+              <p className="row-note">{r.note}</p>
+              {r.href && <a className="link link-mono" href={r.href} target="_blank" rel="noreferrer">{r.label} <span>→</span></a>}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function Background({ t }) {
+  const b = t.bg;
+  const list = (items, base) => (
+    <ul className="list rise" style={{ "--i": base }}>
+      {items.map(([lead, rest], n) => <li key={n}><b>{lead}</b>{rest}</li>)}
+    </ul>
+  );
   return (
     <section className="sec" id="background">
       <div className="wrap">
-        <SecHead num="05" title="Background" id="background" />
+        <SecHead num="05" title={t.nav.background} id="background" />
 
-        <h3 className="h3 rise">Education</h3>
-        <ul className="list rise" style={{ "--i": 1 }}>
-          <li><b>Istanbul Bilgi University</b> — Industrial Engineering</li>
-          <li><b>Fen Lisesi</b> — Sakarya, Turkey</li>
-        </ul>
+        <h3 className="h3 rise">{b.education}</h3>
+        {list(b.edu, 1)}
 
-        <h3 className="h3 rise" style={{ "--i": 2 }}>International</h3>
-        <ul className="list rise" style={{ "--i": 3 }}>
-          <li><b>Volunteer researcher</b>, He For She / Erasmus+ — Saaremaa, Estonia (2023—2024)</li>
-          <li><b>European Summer School</b>, Blockchain to Financial Markets — Prague, Czechia (2025)</li>
-        </ul>
+        <h3 className="h3 rise" style={{ "--i": 2 }}>{b.international}</h3>
+        {list(b.intl, 3)}
 
-        <h3 className="h3 rise" style={{ "--i": 4 }}>Involvement</h3>
-        <ul className="list rise" style={{ "--i": 5 }}>
-          <li><b>Editorial Director</b>, Bilgi Blockchain Club (2021—2024)</li>
-          <li><b>Vice President</b>, Atatürkçü Düşünce Kulübü, Bilgi University (2022—2024)</li>
-        </ul>
+        <h3 className="h3 rise" style={{ "--i": 4 }}>{b.involvement}</h3>
+        {list(b.inv, 5)}
 
-        <h3 className="h3 rise" style={{ "--i": 6 }}>Publication</h3>
-        <p className="p rise" style={{ "--i": 7 }}>
-          Chapter on blockchain and the entertainment industry in{" "}
-          <em>Blockchain Teknolojileri ve Sektörel Etkileri</em>.{" "}
-          <a className="link link-mono" href="https://www.nobelyayin.com/blockchain-teknolojileri-ve-sektorel-etkileri-19020.html" target="_blank" rel="noreferrer">
-            Nobel, 2022 <span>→</span>
-          </a>
-          <br />
-          <span className="mono" style={{ fontSize: 11, color: "var(--ink-faint)", letterSpacing: ".02em" }}>
-            Published as Mehmet Tolga Çakan · ISBN 978-625-433-825-0
-          </span>
-        </p>
+        <h3 className="h3 rise" style={{ "--i": 6 }}>{b.publication}</h3>
+        <div className="rise" style={{ "--i": 7 }}>
+          <p className="p">
+            {b.pub}<em>{b.pubBook}</em>.{" "}
+            <a className="link link-mono" href="https://www.nobelyayin.com/blockchain-teknolojileri-ve-sektorel-etkileri-19020.html" target="_blank" rel="noreferrer">
+              {b.pubLink} <span>→</span>
+            </a>
+            <br />
+            <span className="mono" style={{ fontSize: 11, color: "var(--ink-faint)", letterSpacing: ".02em" }}>{b.pubMeta}</span>
+          </p>
+        </div>
 
-        <h3 className="h3 rise" style={{ "--i": 8 }}>Programmes &amp; certificates</h3>
-        <ul className="list rise" style={{ "--i": 9 }}>
-          <li><b>AI Engineering Internship</b>, FlyRank AI (2026) — remote, project-based</li>
-          <li><b>AI Fluency: Framework &amp; Foundations</b>, Anthropic (2026)</li>
-          <li><b>Claude 101</b>, Anthropic (2026)</li>
-          <li><b>Award</b>, ÖRS Textile senior design project, CSRP (2026)</li>
-        </ul>
+        <h3 className="h3 rise" style={{ "--i": 8 }}>{b.programmes}</h3>
+        {list(b.prog, 9)}
 
-        <h3 className="h3 rise" style={{ "--i": 10 }}>Music</h3>
+        <h3 className="h3 rise" style={{ "--i": 10 }}>{b.music}</h3>
         <p className="p rise" style={{ "--i": 11 }}>
-          Drums and songwriting in <em>son sek'</em> — one album, two singles, a handful of live
-          shows.{" "}
+          {b.musicText}<em>{b.band}</em>{b.musicRest}{" "}
           <a className="link link-mono" href="https://open.spotify.com/intl-tr/artist/1ILN8doPYd0l4l9ME6Rtce" target="_blank" rel="noreferrer">
             Spotify <span>→</span>
           </a>
@@ -914,15 +956,13 @@ function Background() {
   );
 }
 
-function Contact() {
+function Contact({ t }) {
   return (
     <section className="sec" id="contact">
       <div className="wrap">
-        <SecHead num="06" title="Contact" id="contact" />
-        <p className="p rise" style={{ "--i": 1 }}>
-          Based in Istanbul, open to new projects and roles.
-        </p>
-        <div className="meta mono rise" style={{ "--i": 2, borderTop: 0, paddingTop: 0 }}>
+        <SecHead num="06" title={t.nav.contact} id="contact" />
+        <p className="p rise" style={{ "--i": 1 }}>{t.contactText}</p>
+        <div className="meta mono rise" style={{ "--i": 2 }}>
           <ContactLine value={EMAIL} href={"mailto:" + EMAIL}>{EMAIL}</ContactLine>
           <ContactLine value="+905422620042" href={PHONE_HREF}>{PHONE_DISPLAY}</ContactLine>
           <a href="https://github.com/tolgacakan14" target="_blank" rel="noreferrer">github.com/tolgacakan14</a>
@@ -934,48 +974,54 @@ function Contact() {
 
 export default function CV() {
   const [theme, setTheme] = useState("paper");
+  const [lang, setLang] = useState("en");
   const [menu, setMenu] = useState(false);
-  const { i, p } = useScrollState(SECTIONS.map((s) => s.id));
-  useRise();
+  const { i, p } = useScrollState(SECTION_IDS);
+  const t = COPY[lang];
 
+  useRise(lang);
+
+  // palette: stored choice, else the reader's system setting
   useEffect(() => {
     let saved = null;
-    try {
-      saved = window.localStorage.getItem("cv-theme");
-    } catch (err) { /* storage unavailable */ }
-    if (saved === "night" || saved === "paper") {
-      setTheme(saved);
-      return;
-    }
-    // no stored choice — follow the reader's system setting
+    try { saved = window.localStorage.getItem("cv-theme"); } catch (err) { /* blocked */ }
+    if (saved === "night" || saved === "paper") { setTheme(saved); return; }
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) setTheme("night");
   }, []);
 
-  // keep the address bar on the section in view, so links are shareable
+  // language: ?lang= wins, then a stored choice, then the browser's
   useEffect(() => {
-    const id = SECTIONS[i]?.id;
-    if (!id) return;
-    const next = i === 0 ? window.location.pathname : "#" + id;
-    if (window.location.hash !== ("#" + id) || i === 0) {
-      window.history.replaceState(null, "", next);
-    }
-  }, [i]);
-
-  // deep link on arrival
-  useEffect(() => {
-    const hash = window.location.hash.slice(1);
-    if (!hash) return;
-    const el = document.getElementById(hash);
-    if (el) window.setTimeout(() => el.scrollIntoView({ behavior: "auto", block: "start" }), 60);
+    const asked = new URLSearchParams(window.location.search).get("lang");
+    if (LANGS.includes(asked)) { setLang(asked); return; }
+    let saved = null;
+    try { saved = window.localStorage.getItem("cv-lang"); } catch (err) { /* blocked */ }
+    if (LANGS.includes(saved)) { setLang(saved); return; }
+    if ((navigator.language || "").toLowerCase().startsWith("tr")) setLang("tr");
   }, []);
 
+  // keep <html lang> honest for screen readers and search engines
+  useEffect(() => { document.documentElement.lang = lang; }, [lang]);
+
   const flip = useCallback(() => {
-    const swap = () => setTheme((t) => {
-      const next = t === "paper" ? "night" : "paper";
+    const swap = () => setTheme((x) => {
+      const next = x === "paper" ? "night" : "paper";
       try { window.localStorage.setItem("cv-theme", next); } catch (err) { /* ignore */ }
       return next;
     });
-    // cross-fade the whole page where the browser supports it
+    if (document.startViewTransition) document.startViewTransition(swap);
+    else swap();
+  }, []);
+
+  const flipLang = useCallback(() => {
+    const swap = () => setLang((x) => {
+      const next = x === "en" ? "tr" : "en";
+      try { window.localStorage.setItem("cv-lang", next); } catch (err) { /* ignore */ }
+      const url = new URL(window.location.href);
+      if (next === "en") url.searchParams.delete("lang");
+      else url.searchParams.set("lang", next);
+      window.history.replaceState(null, "", url.pathname + url.search + url.hash);
+      return next;
+    });
     if (document.startViewTransition) document.startViewTransition(swap);
     else swap();
   }, []);
@@ -988,30 +1034,48 @@ export default function CV() {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
+  // the address bar follows the section in view
+  useEffect(() => {
+    const id = SECTION_IDS[i];
+    if (!id) return;
+    const url = new URL(window.location.href);
+    url.hash = i === 0 ? "" : id;
+    window.history.replaceState(null, "", url.pathname + url.search + url.hash);
+  }, [i]);
+
+  // arriving on a #hash lands on that section
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (!hash) return;
+    const el = document.getElementById(hash);
+    if (el) window.setTimeout(() => el.scrollIntoView({ behavior: "auto", block: "start" }), 60);
+  }, []);
+
   return (
     <div className="cv" data-theme={theme}>
       <style>{STYLES}</style>
       <SnapCursor />
 
       <div className="split">
-        <LeftPane active={i} theme={theme} onTheme={flip} onMenu={() => setMenu(true)} />
+        <LeftPane active={i} theme={theme} lang={lang} t={t}
+          onTheme={flip} onLang={flipLang} onMenu={() => setMenu(true)} />
 
         <main className="pane-right">
-          <ProgressRail progress={p} label={SECTIONS[i]?.label ?? "About"} />
-          <Experience />
-          <Skills />
-          <Work />
-          <Background />
-          <Contact />
+          <ProgressRail progress={p} label={t.nav[SECTION_IDS[i]] ?? t.nav.about} />
+          <Experience t={t} />
+          <Skills t={t} />
+          <Work t={t} />
+          <Background t={t} />
+          <Contact t={t} />
 
           <footer className="foot">
             <span>© {new Date().getFullYear()} Tolga Çakan</span>
-            <span>Set in Newsreader</span>
+            <span>{t.setIn}</span>
           </footer>
         </main>
       </div>
 
-      <CommandMenu open={menu} onClose={() => setMenu(false)} onTheme={flip} />
+      <CommandMenu open={menu} onClose={() => setMenu(false)} onTheme={flip} onLang={flipLang} t={t} lang={lang} />
       <Analytics />
     </div>
   );
