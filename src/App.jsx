@@ -12,10 +12,11 @@ const COPY = {
   en: {
     nav: { about: "About", experience: "Experience", skills: "Skills", work: "Work", background: "Background", contact: "Contact" },
     place: "Istanbul, Turkey",
-    roles: ["Industrial engineer", "Product manager", "Blockchain researcher", "Builder", "Drummer & songwriter"],
+    roles: ["Industrial engineer", "Process improvement", "Builder", "Blockchain researcher", "Drummer & songwriter"],
     about: [
-      "I read industrial engineering at Istanbul Bilgi University: the study of where a system gives way, and what it costs to put right. I am not a designer by trade — I am an engineer who can specify a product and then build it.",
-      "Today I co-run TAB Marketing, where a physical touch becomes a digital result: tap a card and a review page opens, scan a table and the menu loads. Seven products, more than fifteen businesses across Istanbul and Sakarya.",
+      "I studied industrial engineering at Istanbul Bilgi University and graduated in June 2026. What I actually like is finding the place a system gives way and fixing it — on a factory floor, inside a product, or in a spreadsheet nobody wants to open.",
+      "I am not a designer by trade. I am an engineer who can specify a thing and then build it, which is where most of what follows comes from: client sites, a web game, and the NFC and QR products I make with two friends as TAB Marketing.",
+      "Away from all that: drums, and writing songs.",
     ],
     expIntro: "Before I finished my degree I had worked a Toyota assembly line, a crypto exchange, a digital agency and an AI platform. Each taught a different part of the same job: how work really flows, how a product team decides what matters, how a thing gets sold, and how to put AI to work without hand-waving.",
     jobs: [
@@ -24,7 +25,7 @@ const COPY = {
       { when: "Jun — Jul 2024", what: "Engineering Intern, Toyota Motor Manufacturing Turkey", note: "Assembly line logistics and continuous improvement through Kaizen, 5S, root cause analysis and standard work instructions. Built an internship process improvement project and presented it to Toyota's senior management. On-site, Sakarya." },
     ],
     skills: [
-      ["Product management", "Benchmarking · market and competitor research · user testing · scoping and requirements · dashboards and reporting"],
+      ["Product & research", "Benchmarking · market and competitor research · user testing · scoping and requirements · dashboards and reporting"],
       ["Engineering", "Python · SQL · React · TypeScript · Next.js · Vite · Git · Vercel"],
       ["Analysis & tools", "Excel and VBA · Figma · Kaizen · 5S · root cause analysis · standard work · ergonomics · waste reduction · vendor and production logistics"],
       ["AI in practice", "LLM-assisted workflows · prompt design and iteration · Anthropic tooling"],
@@ -33,7 +34,7 @@ const COPY = {
       ["Physical × digital", "NFC and QR systems · print and production · rollouts across cafés, restaurants and hotels"],
       ["Languages", "Turkish (native) · English (professional)"],
     ],
-    workIntro: "Most of it runs through TAB Marketing: NFC review cards, QR menus, hotel key cards and feedback cards for cafés, restaurants and hotels — each one made for a particular business, from the brief through design and production to the site behind it.",
+    workIntro: "Most of it runs through TAB Marketing, the NFC and QR business I run with two friends: review cards, QR menus, hotel key cards and feedback cards for cafés, restaurants and hotels — each made for a particular business, from the brief through design and production to the site behind it.",
     tabLink: "tab-marketing-site.vercel.app",
     sites: "Sites",
     own: "Own projects",
@@ -47,7 +48,7 @@ const COPY = {
     ],
     bg: {
       education: "Education",
-      edu: [["Istanbul Bilgi University", " — Industrial Engineering"], ["Fen Lisesi", " — Sakarya, Turkey"]],
+      edu: [["Istanbul Bilgi University", " — BSc Industrial Engineering, graduated June 2026"], ["Fen Lisesi", " — Sakarya, Turkey"]],
       international: "International",
       intl: [
         ["He For She", ", Erasmus+ Youth Exchange — Saaremaa, Estonia (December 2023). A week with an international group on gender equality and how it tracks with a country's development. Hosted by Artemis Women's Power MTÜ; Youthpass certified."],
@@ -84,10 +85,11 @@ const COPY = {
   tr: {
     nav: { about: "Hakkımda", experience: "Deneyim", skills: "Yetkinlikler", work: "İşler", background: "Geçmiş", contact: "İletişim" },
     place: "İstanbul, Türkiye",
-    roles: ["Endüstri mühendisi", "Ürün yöneticisi", "Blockchain araştırmacısı", "Geliştirici", "Davulcu & söz yazarı"],
+    roles: ["Endüstri mühendisi", "Süreç iyileştirme", "Geliştirici", "Blockchain araştırmacısı", "Davulcu & söz yazarı"],
     about: [
-      "İstanbul Bilgi Üniversitesi'nde endüstri mühendisliği okudum: bir sistemin nerede tıkandığını ve bunu düzeltmenin neye mal olduğunu inceleyen bir disiplin. Mesleğim tasarımcılık değil — bir ürünü tanımlayıp sonra onu kurabilen bir mühendisim.",
-      "Bugün TAB Marketing'i ortaklarımla yürütüyorum: fiziksel bir temasın dijital bir sonuca döndüğü yer. Karta dokunuyorsunuz, yorum sayfası açılıyor; masayı okutuyorsunuz, menü geliyor. Yedi ürün, İstanbul ve Sakarya'da on beşten fazla işletme.",
+      "İstanbul Bilgi Üniversitesi'nde endüstri mühendisliği okudum, Haziran 2026'da mezun oldum. Asıl sevdiğim şey bir sistemin tıkandığı yeri bulup düzeltmek — bir fabrika sahasında, bir ürünün içinde ya da kimsenin açmak istemediği bir tabloda.",
+      "Mesleğim tasarımcılık değil. Bir şeyi tanımlayıp sonra onu kurabilen bir mühendisim; aşağıdakilerin çoğu da buradan çıktı: müşteri siteleri, bir web oyunu ve iki arkadaşımla TAB Marketing adıyla yaptığımız NFC ve QR ürünleri.",
+      "Bunların dışında: davul ve şarkı yazmak.",
     ],
     expIntro: "Mezun olmadan önce bir Toyota montaj hattında, bir kripto borsasında, bir dijital ajansta ve bir yapay zekâ platformunda çalışmıştım. Her biri aynı işin farklı bir parçasını öğretti: işin gerçekte nasıl aktığını, bir ürün ekibinin neye öncelik verdiğini, bir şeyin nasıl satıldığını ve yapay zekânın laf kalabalığı olmadan nasıl işe koşulacağını.",
     jobs: [
@@ -96,7 +98,7 @@ const COPY = {
       { when: "Haz — Tem 2024", what: "Mühendislik Stajyeri, Toyota Motor Manufacturing Türkiye", note: "Montaj hattı lojistiği ve sürekli iyileştirme: Kaizen, 5S, root cause analysis ve standard work talimatları. Staj süreci iyileştirme projesi hazırlayıp Toyota üst yönetimine sundum. Sahada, Sakarya." },
     ],
     skills: [
-      ["Ürün yönetimi", "Benchmarking · market ve competitor research · user testing · scoping ve requirements · dashboard ve raporlama"],
+      ["Ürün & araştırma", "Benchmarking · market ve competitor research · user testing · scoping ve requirements · dashboard ve raporlama"],
       ["Mühendislik", "Python · SQL · React · TypeScript · Next.js · Vite · Git · Vercel"],
       ["Analiz & araçlar", "Excel ve VBA · Figma · Kaizen · 5S · root cause analysis · standard work · ergonomi · waste reduction · tedarikçi ve üretim lojistiği · supply chain"],
       ["Pratikte yapay zekâ", "LLM destekli workflow'lar · prompt design ve iterasyon · Anthropic araçları"],
@@ -105,7 +107,7 @@ const COPY = {
       ["Fiziksel × dijital", "NFC ve QR sistemleri · baskı ve üretim · kafe, restoran ve otellerde saha kurulumu"],
       ["Diller", "Türkçe (ana dil) · İngilizce (profesyonel)"],
     ],
-    workIntro: "İşlerin çoğu TAB Marketing üzerinden yürüyor: kafeler, restoranlar ve oteller için NFC yorum kartları, QR menüler, otel oda kartları ve geri bildirim kartları — her biri belirli bir işletme için, brief'ten tasarıma, üretimden arkasındaki siteye kadar.",
+    workIntro: "İşlerin çoğu, iki arkadaşımla yürüttüğüm NFC ve QR işi TAB Marketing üzerinden gidiyor: kafeler, restoranlar ve oteller için yorum kartları, QR menüler, otel oda kartları ve geri bildirim kartları — her biri belirli bir işletme için, brief'ten tasarıma, üretimden arkasındaki siteye kadar.",
     tabLink: "tab-marketing-site.vercel.app",
     sites: "Siteler",
     own: "Kendi projelerim",
@@ -119,7 +121,7 @@ const COPY = {
     ],
     bg: {
       education: "Eğitim",
-      edu: [["İstanbul Bilgi Üniversitesi", " — Endüstri Mühendisliği"], ["Fen Lisesi", " — Sakarya"]],
+      edu: [["İstanbul Bilgi Üniversitesi", " — Endüstri Mühendisliği, Haziran 2026 mezunu"], ["Fen Lisesi", " — Sakarya"]],
       international: "Uluslararası",
       intl: [
         ["He For She", ", Erasmus+ Youth Exchange — Saaremaa, Estonya (Aralık 2023). Uluslararası bir grupla bir hafta: toplumsal cinsiyet eşitliği ve bunun bir ülkenin gelişmişliğiyle ilişkisi. Artemis Women's Power MTÜ ev sahipliğinde; Youthpass sertifikalı."],
