@@ -36,7 +36,7 @@ const COPY = {
     ],
     workIntro: "Most of it runs through TAB Marketing, the NFC and QR business I run with two friends: review cards, QR menus, hotel key cards and feedback cards for cafés, restaurants and hotels. Each is made for a particular business, from the brief through design and production to the site behind it.",
     tabLink: "See the website",
-    sites: "Sites",
+    sites: "Sites built through TAB",
     own: "Own projects",
     rows: [
       { title: "Franco Coffee & Gelato", note: "A digital menu with a build-your-own gelato flavour picker.", href: "https://francoserdivan.com", label: "francoserdivan.com" },
@@ -109,7 +109,7 @@ const COPY = {
     ],
     workIntro: "İşlerin çoğu, iki arkadaşımla yürüttüğüm NFC ve QR işi TAB Marketing üzerinden gidiyor: kafeler, restoranlar ve oteller için yorum kartları, QR menüler, otel oda kartları ve geri bildirim kartları. Her biri belirli bir işletme için, brief'ten tasarıma, üretimden arkasındaki siteye kadar.",
     tabLink: "Siteye git",
-    sites: "Siteler",
+    sites: "TAB kapsamında yaptığım siteler",
     own: "Kendi projelerim",
     rows: [
       { title: "Franco Coffee & Gelato", note: "Kendi dondurmanı kurabildiğin aroma seçicili dijital menü.", href: "https://francoserdivan.com", label: "francoserdivan.com" },
@@ -397,6 +397,18 @@ a.chip { display: inline-flex; align-items: center; text-decoration: none; }
 }
 .link:hover { color: var(--accent); border-color: var(--accent); gap: 10px; }
 .link-mono { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; }
+
+/* work: sites that sit under TAB */
+.under {
+  margin-left: 14px; padding-left: 20px; border-left: 1px solid var(--rule);
+  position: relative;
+}
+.under::before {
+  content: ''; position: absolute; left: -1px; top: 0; width: 1px; height: 22px;
+  background: var(--accent); opacity: .45;
+}
+.under .h3 { margin-top: 18px; }
+@media (max-width: 560px) { .under { margin-left: 4px; padding-left: 14px; } }
 
 /* work rows */
 .row {
@@ -839,16 +851,18 @@ function Work({ t }) {
           </a>
         </p>
 
-        <h3 className="h3 rise" style={{ "--i": 3 }}>{t.sites}</h3>
-        {t.rows.map((r, n) => (
-          <div className="row rise" key={r.title} style={{ "--i": n + 4 }}>
-            <div className="row-main">
-              <p className="row-title">{r.title}</p>
-              <p className="row-note">{r.note}</p>
-              <a className="link link-mono" href={r.href} target="_blank" rel="noreferrer">{r.label} <span>→</span></a>
+        <div className="under">
+          <h3 className="h3 rise" style={{ "--i": 3 }}>{t.sites}</h3>
+          {t.rows.map((r, n) => (
+            <div className="row rise" key={r.title} style={{ "--i": n + 4 }}>
+              <div className="row-main">
+                <p className="row-title">{r.title}</p>
+                <p className="row-note">{r.note}</p>
+                <a className="link link-mono" href={r.href} target="_blank" rel="noreferrer">{r.label} <span>→</span></a>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
 
         <h3 className="h3 rise" style={{ "--i": 6 }}>{t.own}</h3>
         {t.projects.map((r, n) => (
