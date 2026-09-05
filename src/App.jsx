@@ -8,24 +8,25 @@ import { useCallback, useEffect, useRef, useState } from "react";
 const SECTIONS = [
   { id: "top", label: "Top" },
   { id: "about", label: "About" },
-  { id: "skills", label: "Skills" },
   { id: "experience", label: "Experience" },
+  { id: "skills", label: "Skills" },
   { id: "work", label: "Work" },
   { id: "background", label: "Background" },
   { id: "contact", label: "Contact" },
 ];
 
 const SKILLS = [
-  ["Product & process", "Scoping and requirements · dashboards and reporting · process improvement (Kaizen) · line, vendor and production logistics"],
-  ["Engineering", "React · TypeScript · Next.js · Vite · Tailwind · Git · Vercel"],
+  ["Product management", "Benchmarking · market and competitor research · user testing · scoping and requirements · dashboards and reporting"],
+  ["Engineering", "Python · SQL · React · TypeScript · Next.js · Vite · Git · Vercel"],
+  ["Analysis & tools", "Excel and VBA · Figma · Kaizen and process improvement · vendor and production logistics"],
   ["AI in practice", "LLM-assisted workflows · prompt design and iteration · Anthropic tooling"],
-  ["Physical × digital", "NFC and QR systems · print and production · deployment across cafés, restaurants and hotels"],
+  ["Physical × digital", "NFC and QR systems · print and production · rollouts across cafés, restaurants and hotels"],
   ["Domains", "Fintech and crypto exchange · blockchain · hospitality, retail and clinics"],
   ["Languages", "Turkish (native) · English (professional)"],
 ];
 
-const PHONE_DISPLAY = "0652 262 00 42";
-const PHONE_HREF = "tel:+906522620042";
+const PHONE_DISPLAY = "+90 542 262 00 42";
+const PHONE_HREF = "tel:+905422620042";
 const EMAIL = "tolga@tolgacakan.dev";
 
 const TAB_PRODUCTS = [
@@ -241,6 +242,64 @@ const STYLES = `
   color: var(--ink-faint);
 }
 
+/* contact line + copy button */
+.contact { display: inline-flex; align-items: center; gap: 5px; }
+.contact > a {
+  color: var(--ink-soft); border-bottom: 1px solid transparent;
+  transition: color .25s ease, border-color .25s ease;
+}
+.contact > a:hover { color: var(--accent); border-color: var(--accent); }
+.contact-copy {
+  background: none; border: 0; padding: 1px 2px; cursor: pointer; position: relative;
+  color: var(--ink-faint); opacity: .45; line-height: 0;
+  transition: opacity .25s ease, color .25s ease;
+}
+.contact:hover .contact-copy { opacity: .85; }
+.contact-copy:hover { color: var(--accent); opacity: 1; }
+.copy-flag {
+  position: absolute; left: 50%; bottom: calc(100% + 6px); transform: translateX(-50%) translateY(3px);
+  font-family: 'JetBrains Mono', monospace; font-size: 8.5px; letter-spacing: .12em; text-transform: uppercase;
+  background: var(--ink); color: var(--paper); padding: 3px 6px; white-space: nowrap; line-height: 1.4;
+  opacity: 0; pointer-events: none; transition: opacity .2s ease, transform .2s ease;
+}
+.contact-copy:hover .copy-flag,
+.contact-copy[data-copied="true"] .copy-flag { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* section anchors */
+.anchor {
+  font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--ink-faint);
+  opacity: 0; margin-left: 8px; transition: opacity .25s ease, color .25s ease;
+}
+.sec-head:hover .anchor { opacity: .6; }
+.anchor:hover { opacity: 1 !important; color: var(--accent); }
+
+/* skills rows respond to the cursor */
+.entry { transition: border-color .3s ease; }
+#skills .entry { transition: background .3s ease, padding-left .3s ease; }
+#skills .entry:hover {
+  background: color-mix(in srgb, var(--paper-2) 70%, transparent);
+  padding-left: 8px;
+}
+
+/* keyboard focus */
+.cv a:focus-visible, .cv button:focus-visible {
+  outline: 1px solid var(--accent); outline-offset: 3px; border-radius: 1px;
+}
+
+/* print — the page becomes a clean CV sheet */
+@media print {
+  .nav, .cmd-bg, .chip, .anchor, .foot, .contact-copy { display: none !important; }
+  .cv { background: #fff; color: #000; font-size: 11pt; }
+  .cv[data-theme="night"] { --paper: #fff; --ink: #000; --ink-soft: #333; --rule: #ccc; }
+  .wrap { max-width: 100%; padding: 0; }
+  .sec { padding: 14pt 0; break-inside: avoid; }
+  .rise { opacity: 1 !important; transform: none !important; }
+  .strip { display: none; }
+  .portrait { filter: grayscale(1); }
+  .head { padding: 0 0 14pt; }
+  a { color: #000 !important; }
+}
+
 /* command menu */
 .cmd-bg {
   position: fixed; inset: 0; z-index: 60; display: grid; place-items: start center;
@@ -334,6 +393,68 @@ function useScrollState(ids) {
 
 const go = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
 
+/** Clipboard with a fallback for browsers that refuse the async API. */
+async function writeToClipboard(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch (err) {
+    try {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.setAttribute("readonly", "");
+      ta.style.cssText = "position:fixed;top:-999px;opacity:0";
+      document.body.appendChild(ta);
+      ta.select();
+      const ok = document.execCommand("copy");
+      document.body.removeChild(ta);
+      return ok;
+    } catch (err2) {
+      return false;
+    }
+  }
+}
+
+/** A contact line: the link behaves normally, a small button copies it. */
+function ContactLine({ value, href, children }) {
+  const [done, setDone] = useState(false);
+  const copy = async (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const ok = await writeToClipboard(value);
+    if (!ok) return;
+    setDone(true);
+    window.setTimeout(() => setDone(false), 1400);
+  };
+  return (
+    <span className="contact">
+      <a href={href} target={href.startsWith("http") ? "_blank" : undefined}
+        rel={href.startsWith("http") ? "noreferrer" : undefined}>{children}</a>
+      <button type="button" className="contact-copy" onClick={copy}
+        data-copied={done ? "true" : "false"} aria-label={"Copy " + value}>
+        <span className="copy-flag">{done ? "copied" : "copy"}</span>
+        <svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true">
+          <rect x="3.2" y="3.2" width="7" height="7" rx="1.2" fill="none" stroke="currentColor" strokeWidth="1" />
+          <path d="M8.4 1.8H2.4c-.55 0-1 .45-1 1v6" fill="none" stroke="currentColor" strokeWidth="1" />
+        </svg>
+      </button>
+    </span>
+  );
+}
+
+function SecHead({ num, title, id }) {
+  return (
+    <div className="sec-head rise">
+      <span className="sec-num">{num}</span>
+      <h2 className="h2">
+        {title}
+        <a className="anchor" href={"#" + id} aria-label={"Link to " + title}
+          onClick={(e) => { e.preventDefault(); go(id); history.replaceState(null, "", "#" + id); }}>§</a>
+      </h2>
+    </div>
+  );
+}
+
 function CommandMenu({ open, onClose, onTheme }) {
   const [q, setQ] = useState("");
   const [sel, setSel] = useState(0);
@@ -344,6 +465,7 @@ function CommandMenu({ open, onClose, onTheme }) {
     { k: "theme", label: "Switch palette", hint: "View", run: onTheme },
     { k: "mail", label: "Write an email", hint: "Contact", run: () => { window.location.href = "mailto:" + EMAIL; } },
     { k: "tel", label: "Call", hint: "Contact", run: () => { window.location.href = PHONE_HREF; } },
+    { k: "print", label: "Save as PDF", hint: "Page", run: () => window.print() },
   ];
   const hits = items.filter((i) => i.label.toLowerCase().includes(q.toLowerCase()));
 
@@ -391,8 +513,8 @@ function Head({ index }) {
           Industrial engineer — product and systems, built end to end
         </p>
         <div className="meta mono rise" style={{ "--i": 3 }}>
-          <a href={"mailto:" + EMAIL}>{EMAIL}</a>
-          <a href={PHONE_HREF}>{PHONE_DISPLAY}</a>
+          <ContactLine value={EMAIL} href={"mailto:" + EMAIL}>{EMAIL}</ContactLine>
+          <ContactLine value="+905422620042" href={PHONE_HREF}>{PHONE_DISPLAY}</ContactLine>
           <a href="https://github.com/tolgacakan14" target="_blank" rel="noreferrer">github.com/tolgacakan14</a>
         </div>
       </div>
@@ -404,10 +526,7 @@ function About() {
   return (
     <section className="sec" id="about">
       <div className="wrap">
-        <div className="sec-head rise">
-          <span className="sec-num">01</span>
-          <h2 className="h2">About</h2>
-        </div>
+        <SecHead num="01" title="About" id="about" />
 
         <div className="about-top rise" style={{ "--i": 1 }}>
           <div className="portrait">
@@ -445,10 +564,7 @@ function Skills() {
   return (
     <section className="sec" id="skills">
       <div className="wrap">
-        <div className="sec-head rise">
-          <span className="sec-num">02</span>
-          <h2 className="h2">Skills</h2>
-        </div>
+        <SecHead num="03" title="Skills" id="skills" />
         {SKILLS.map(([key, val], n) => (
           <div className="entry rise" key={key} style={{ "--i": n + 1 }}>
             <span className="entry-when">{key}</span>
@@ -463,16 +579,13 @@ function Skills() {
 function Experience() {
   const rows = [
     { when: "Mar — Jul 2025", what: "Intern, De Marke Agency", note: "Digital marketing, and the on-site organisation at international tournaments." },
-    { when: "Jan — Feb 2025", what: "Product Intern, BTCTurk Technology", note: "Built the internal dashboards and reporting the team read every day." },
+    { when: "Jan — Feb 2025", what: "Product Intern, BTCTurk Technology", note: "Where I learned product management properly: benchmarking, market research and user testing, alongside the internal dashboards and reporting the team read every day." },
     { when: "Jun — Jul 2024", what: "Product Engineering Intern, Toyota Motor Manufacturing Turkey", note: "Assembly line logistics and Kaizen projects. On-site, Sakarya." },
   ];
   return (
     <section className="sec" id="experience">
       <div className="wrap">
-        <div className="sec-head rise">
-          <span className="sec-num">03</span>
-          <h2 className="h2">Experience</h2>
-        </div>
+        <SecHead num="02" title="Experience" id="experience" />
         {rows.map((r, n) => (
           <div className="entry rise" key={r.what} style={{ "--i": n + 1 }}>
             <span className="entry-when">{r.when}</span>
@@ -491,10 +604,7 @@ function Work() {
   return (
     <section className="sec" id="work">
       <div className="wrap">
-        <div className="sec-head rise">
-          <span className="sec-num">04</span>
-          <h2 className="h2">Work</h2>
-        </div>
+        <SecHead num="04" title="Work" id="work" />
 
         <p className="p rise" style={{ "--i": 1 }}>
           Most of it runs through <em>TAB Marketing</em>: NFC review cards, QR menus, hotel key
@@ -560,10 +670,7 @@ function Background() {
   return (
     <section className="sec" id="background">
       <div className="wrap">
-        <div className="sec-head rise">
-          <span className="sec-num">05</span>
-          <h2 className="h2">Background</h2>
-        </div>
+        <SecHead num="05" title="Background" id="background" />
 
         <h3 className="h3 rise">Education</h3>
         <ul className="list rise" style={{ "--i": 1 }}>
@@ -621,16 +728,13 @@ function Contact() {
   return (
     <section className="sec" id="contact">
       <div className="wrap">
-        <div className="sec-head rise">
-          <span className="sec-num">06</span>
-          <h2 className="h2">Contact</h2>
-        </div>
+        <SecHead num="06" title="Contact" id="contact" />
         <p className="p rise" style={{ "--i": 1 }}>
           Based in Istanbul, open to new projects and roles.
         </p>
         <div className="meta mono rise" style={{ "--i": 2, borderTop: 0, paddingTop: 0 }}>
-          <a href={"mailto:" + EMAIL}>{EMAIL}</a>
-          <a href={PHONE_HREF}>{PHONE_DISPLAY}</a>
+          <ContactLine value={EMAIL} href={"mailto:" + EMAIL}>{EMAIL}</ContactLine>
+          <ContactLine value="+905422620042" href={PHONE_HREF}>{PHONE_DISPLAY}</ContactLine>
           <a href="https://github.com/tolgacakan14" target="_blank" rel="noreferrer">github.com/tolgacakan14</a>
         </div>
       </div>
@@ -652,11 +756,14 @@ export default function CV() {
   }, []);
 
   const flip = useCallback(() => {
-    setTheme((t) => {
+    const swap = () => setTheme((t) => {
       const next = t === "paper" ? "night" : "paper";
       try { window.localStorage.setItem("cv-theme", next); } catch (err) { /* ignore */ }
       return next;
     });
+    // cross-fade the whole page where the browser supports it
+    if (document.startViewTransition) document.startViewTransition(swap);
+    else swap();
   }, []);
 
   useEffect(() => {
@@ -689,6 +796,9 @@ export default function CV() {
             <button type="button" className="chip" onClick={flip} aria-label="Switch palette">
               {theme === "night" ? "Day" : "Night"}
             </button>
+            <button type="button" className="chip" onClick={() => window.print()} aria-label="Print or save as PDF">
+              PDF
+            </button>
           </div>
         </div>
         <div className="bar" style={{ transform: "scaleX(" + p + ")" }} />
@@ -697,8 +807,8 @@ export default function CV() {
       <main>
         <Head index={i} />
         <About />
-        <Skills />
         <Experience />
+        <Skills />
         <Work />
         <Background />
         <Contact />
