@@ -19,14 +19,16 @@ const SKILLS = [
   ["Engineering", "Python · SQL · React · TypeScript · Next.js · Vite · Git · Vercel"],
   ["Analysis & tools", "Excel and VBA · Figma · Kaizen and process improvement · vendor and production logistics"],
   ["AI in practice", "LLM-assisted workflows · prompt design and iteration · Anthropic tooling"],
+  ["Blockchain & Web3", "Protocol and token fundamentals · exchange and DeFi mechanics · wallets and on-chain basics · smart-contract literacy · published research on sectoral impact"],
   ["Physical × digital", "NFC and QR systems · print and production · rollouts across cafés, restaurants and hotels"],
-  ["Domains", "Fintech and crypto exchange · blockchain · hospitality, retail and clinics"],
+  ["Domains", "Fintech and crypto exchange · hospitality, retail and clinics · manufacturing"],
   ["Languages", "Turkish (native) · English (professional)"],
 ];
 
 const ROLES = [
   "Industrial engineer",
   "Product manager",
+  "Blockchain researcher",
   "Builder",
   "Drummer & songwriter",
 ];
@@ -137,6 +139,25 @@ const STYLES = `
 .pane-foot { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
 .tools { display: flex; gap: 6px; }
 
+/* progress rail at the top of the scrolling column */
+.rail {
+  position: sticky; top: 0; z-index: 20;
+  background: color-mix(in srgb, var(--paper) 92%, transparent);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  padding: 14px 0 10px; margin-bottom: -4px;
+}
+.rail-line { height: 1px; background: var(--rule); position: relative; overflow: hidden; }
+.rail-fill {
+  position: absolute; inset: 0; background: var(--accent); transform-origin: 0 50%;
+  transition: transform .12s linear;
+}
+.rail-meta {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+  margin-top: 7px; font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint);
+}
+.rail-meta b { color: var(--ink-soft); font-weight: 400; }
+
 /* pointer snaps to whatever it is over */
 .snap {
   position: fixed; top: 0; left: 0; z-index: 50; pointer-events: none;
@@ -181,7 +202,7 @@ const STYLES = `
 
 /* sections */
 .sec { padding: 40px 0; border-top: 1px solid var(--rule); }
-.pane-right .sec:first-child { border-top: 0; padding-top: 44px; }
+.pane-right .sec:first-of-type { border-top: 0; padding-top: 26px; }
 .sec-head { display: flex; align-items: baseline; gap: 12px; margin: 0 0 20px; }
 .sec-num {
   font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .1em;
@@ -353,7 +374,7 @@ const STYLES = `
     border-bottom: 1pt solid #ccc;
   }
   .pane-right { padding: 0; }
-  .pane-nav, .snap { display: none !important; }
+  .pane-nav, .snap, .rail { display: none !important; }
   .sec { padding: 14pt 0; break-inside: avoid; }
   .rise { opacity: 1 !important; transform: none !important; }
   .strip { display: none; }
@@ -649,6 +670,21 @@ function CommandMenu({ open, onClose, onTheme }) {
   );
 }
 
+function ProgressRail({ progress, label }) {
+  const pct = Math.round(progress * 100);
+  return (
+    <div className="rail" aria-hidden="true">
+      <div className="rail-line">
+        <span className="rail-fill" style={{ transform: "scaleX(" + progress + ")" }} />
+      </div>
+      <div className="rail-meta">
+        <b>{label}</b>
+        <span>{String(pct).padStart(3, "0")}%</span>
+      </div>
+    </div>
+  );
+}
+
 function LeftPane({ active, theme, onTheme, onMenu }) {
   return (
     <aside className="pane-left" id="about">
@@ -725,7 +761,7 @@ function Experience() {
   const rows = [
     { when: "Mar — Jul 2025", what: "Intern, De Marke Agency", note: "Digital marketing, and the on-site organisation at international tournaments." },
     { when: "Jan — Feb 2025", what: "Product Intern, BTCTurk Technology", note: "Where I learned product management properly: benchmarking, market research and user testing, alongside the internal dashboards and reporting the team read every day." },
-    { when: "Jun — Jul 2024", what: "Product Engineering Intern, Toyota Motor Manufacturing Turkey", note: "Assembly line logistics and Kaizen projects. On-site, Sakarya." },
+    { when: "Jun — Jul 2024", what: "Engineering Intern, Toyota Motor Manufacturing Turkey", note: "Assembly line logistics and Kaizen projects. On-site, Sakarya." },
   ];
   return (
     <section className="sec" id="experience">
@@ -900,10 +936,34 @@ export default function CV() {
   useRise();
 
   useEffect(() => {
+    let saved = null;
     try {
-      const saved = window.localStorage.getItem("cv-theme");
-      if (saved === "night" || saved === "paper") setTheme(saved);
+      saved = window.localStorage.getItem("cv-theme");
     } catch (err) { /* storage unavailable */ }
+    if (saved === "night" || saved === "paper") {
+      setTheme(saved);
+      return;
+    }
+    // no stored choice — follow the reader's system setting
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) setTheme("night");
+  }, []);
+
+  // keep the address bar on the section in view, so links are shareable
+  useEffect(() => {
+    const id = SECTIONS[i]?.id;
+    if (!id) return;
+    const next = i === 0 ? window.location.pathname : "#" + id;
+    if (window.location.hash !== ("#" + id) || i === 0) {
+      window.history.replaceState(null, "", next);
+    }
+  }, [i]);
+
+  // deep link on arrival
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (!hash) return;
+    const el = document.getElementById(hash);
+    if (el) window.setTimeout(() => el.scrollIntoView({ behavior: "auto", block: "start" }), 60);
   }, []);
 
   const flip = useCallback(() => {
@@ -934,6 +994,7 @@ export default function CV() {
         <LeftPane active={i} theme={theme} onTheme={flip} onMenu={() => setMenu(true)} />
 
         <main className="pane-right">
+          <ProgressRail progress={p} label={SECTIONS[i]?.label ?? "About"} />
           <Experience />
           <Skills />
           <Work />
