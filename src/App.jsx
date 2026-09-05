@@ -29,7 +29,7 @@ const COPY = {
       ["Analysis & tools", "Excel and VBA · Figma · Kaizen and process improvement · vendor and production logistics"],
       ["AI in practice", "LLM-assisted workflows · prompt design and iteration · Anthropic tooling"],
       ["Blockchain & Web3", "Protocol and token economics · exchange and DeFi mechanics · wallets and on-chain fundamentals · sector research, published · club and community leadership"],
-      ["Events & operations", "Large-scale forums and conferences · programme and speaker planning · sponsorship · on-the-day operations and teams"],
+      ["Events & operations", "Large-scale forums and conferences · programme and speaker planning · sponsorship · budget · venue logistics · on-the-day operations and teams"],
       ["Physical × digital", "NFC and QR systems · print and production · rollouts across cafés, restaurants and hotels"],
       ["Languages", "Turkish (native) · English (professional)"],
     ],
@@ -50,12 +50,12 @@ const COPY = {
       edu: [["Istanbul Bilgi University", " — Industrial Engineering"], ["Fen Lisesi", " — Sakarya, Turkey"]],
       international: "International",
       intl: [
-        ["Volunteer researcher", ", He For She / Erasmus+ — Saaremaa, Estonia (2023—2024). Field research with an international team on gender equality, carried out across a small island community and written up for the programme."],
+        ["He For She", ", Erasmus+ Youth Exchange — Saaremaa, Estonia (December 2023). A week with an international group on gender equality and how it tracks with a country's development. Hosted by Artemis Women's Power MTÜ; Youthpass certified."],
         ["European Summer School", ", Blockchain to Financial Markets — Prague, Czechia (2025). A week on where distributed ledgers meet market infrastructure: settlement, tokenised assets and the regulation around them."],
       ],
       involvement: "Involvement",
       inv: [
-        ["Vice President & Operations Lead", ", Atatürkçü Düşünce Kulübü, Bilgi University (2022—2024). Ran the club's largest events end to end — forums, panels and conferences — from programme and speakers to sponsorship, budget, venue logistics and the team working the floor on the day."],
+        ["Vice President & Operations Lead", ", Atatürkçü Düşünce Kulübü, Bilgi University (2021—2024). Ran the club's largest events end to end — forums, panels and conferences — from programme and speakers to sponsorship, budget, venue logistics and the team working the floor on the day."],
         ["Editorial Director", ", Bilgi Blockchain Club (2021—2024). Commissioned and edited what the club published, and helped put together its forums and speaker evenings."],
       ],
       publication: "Publication",
@@ -66,9 +66,9 @@ const COPY = {
       programmes: "Programmes & certificates",
       prog: [
         ["AI Engineering Internship", ", FlyRank AI (2026) — a remote, project-based programme: five reviewed assignments and a capstone, built around shipping real work rather than coursework."],
-        ["AI Fluency: Framework & Foundations", ", Anthropic (2026)"],
-        ["Claude 101", ", Anthropic (2026)"],
-        ["Award", ", ÖRS Textile senior design project, CSRP (2026)"],
+        ["AI Fluency: Framework & Foundations", ", Anthropic Education (July 2026)", "https://verify.skilljar.com/c/xvnv3q5pttvf"],
+        ["Claude 101", ", Anthropic Education (July 2026)", "https://verify.skilljar.com/c/j8cq55wxfnwn"],
+        ["Senior design project", ", \u201cHuman-Centered Ergonomic and Operational Improvement Project in Sock Manufacturing: The \u00d6RS Textile Application\u201d \u2014 industrial engineering methods applied to a live sock manufacturing line. Presented at CSRP 2026, the 4th Conference on Student Research Projects, Faculty of Engineering and Natural Sciences, Istanbul Bilgi University (June 2026)."],
       ],
       music: "Music",
       musicText: "Drums and songwriting in ",
@@ -77,6 +77,7 @@ const COPY = {
     },
     contactText: "Based in Istanbul, open to new projects and roles.",
     cv: "CV ↓",
+    verify: "verify ↗",
     setIn: "Set in Newsreader",
   },
 
@@ -95,12 +96,12 @@ const COPY = {
       { when: "Haz — Tem 2024", what: "Mühendislik Stajyeri, Toyota Motor Manufacturing Türkiye", note: "Montaj hattı lojistiği ve Kaizen projeleri. Sahada, Sakarya." },
     ],
     skills: [
-      ["Ürün yönetimi", "Kıyaslama · pazar ve rakip araştırması · kullanıcı testi · kapsam ve gereksinim belirleme · pano ve raporlama"],
+      ["Ürün yönetimi", "Benchmarking · market ve competitor research · user testing · scoping ve requirements · dashboard ve raporlama"],
       ["Mühendislik", "Python · SQL · React · TypeScript · Next.js · Vite · Git · Vercel"],
-      ["Analiz & araçlar", "Excel ve VBA · Figma · Kaizen ve süreç iyileştirme · tedarikçi ve üretim lojistiği"],
-      ["Pratikte yapay zekâ", "LLM destekli iş akışları · prompt tasarımı ve iterasyon · Anthropic araçları"],
-      ["Blockchain & Web3", "Protokol ve token ekonomisi · borsa ve DeFi mekanikleri · cüzdanlar ve zincir üstü temeller · yayımlanmış sektör araştırması · kulüp ve topluluk liderliği"],
-      ["Etkinlik & operasyon", "Büyük ölçekli forum ve konferanslar · program ve konuşmacı planlaması · sponsorluk · gün içi operasyon ve ekip yönetimi"],
+      ["Analiz & araçlar", "Excel ve VBA · Figma · Kaizen ve süreç iyileştirme · tedarikçi ve üretim lojistiği · supply chain"],
+      ["Pratikte yapay zekâ", "LLM destekli workflow'lar · prompt design ve iterasyon · Anthropic araçları"],
+      ["Blockchain & Web3", "Protokol ve token economics · exchange ve DeFi mekanikleri · wallet'lar ve on-chain temeller · yayımlanmış sektör araştırması · kulüp ve topluluk liderliği"],
+      ["Etkinlik & operasyon", "Büyük ölçekli forum ve konferanslar · program ve konuşmacı planlaması · sponsorluk · bütçe · venue lojistiği · gün içi operasyon ve ekip yönetimi"],
       ["Fiziksel × dijital", "NFC ve QR sistemleri · baskı ve üretim · kafe, restoran ve otellerde saha kurulumu"],
       ["Diller", "Türkçe (ana dil) · İngilizce (profesyonel)"],
     ],
@@ -114,19 +115,19 @@ const COPY = {
     ],
     projects: [
       { title: "Krone", note: "Telefon için bir web oyunu: mini oyunlar, odalar, günlük görevler, liderlik tabloları.", href: "https://innerclock.vercel.app", label: "innerclock.vercel.app" },
-      { title: "FeedDetox", tag: "GELİŞTİRİLİYOR", note: "Kendi akış algoritmanı geri almak: senin hakkında ne öğrendiğini görmek ve onu başka bir yöne çevirmek." },
+      { title: "FeedDetox", tag: "GELİŞTİRİLİYOR", note: "Kendi feed algoritmanı geri almak: senin hakkında ne öğrendiğini görmek ve onu başka bir yöne çevirmek." },
     ],
     bg: {
       education: "Eğitim",
       edu: [["İstanbul Bilgi Üniversitesi", " — Endüstri Mühendisliği"], ["Fen Lisesi", " — Sakarya"]],
       international: "Uluslararası",
       intl: [
-        ["Gönüllü araştırmacı", ", He For She / Erasmus+ — Saaremaa, Estonya (2023—2024). Uluslararası bir ekiple toplumsal cinsiyet eşitliği üzerine saha araştırması; küçük bir ada topluluğunda yürütüldü ve program için raporlandı."],
-        ["Avrupa Yaz Okulu", ", Blockchain to Financial Markets — Prag, Çekya (2025). Dağıtık defterlerin piyasa altyapısıyla kesiştiği yer üzerine bir hafta: takas, tokenlaştırılmış varlıklar ve bunları çevreleyen düzenlemeler."],
+        ["He For She", ", Erasmus+ Youth Exchange — Saaremaa, Estonya (Aralık 2023). Uluslararası bir grupla bir hafta: toplumsal cinsiyet eşitliği ve bunun bir ülkenin gelişmişliğiyle ilişkisi. Artemis Women's Power MTÜ ev sahipliğinde; Youthpass sertifikalı."],
+        ["European Summer School", ", Blockchain to Financial Markets — Prag, Çekya (2025). Distributed ledger teknolojilerinin piyasa altyapısıyla kesiştiği yer üzerine bir hafta: settlement, tokenized assets ve bunları çevreleyen regülasyon."],
       ],
       involvement: "Kulüpler & topluluk",
       inv: [
-        ["Başkan Yardımcısı & Operasyon Lideri", ", Atatürkçü Düşünce Kulübü, Bilgi Üniversitesi (2022—2024). Kulübün en büyük etkinliklerini baştan sona yürüttüm — forumlar, paneller ve konferanslar — programdan konuşmacılara, sponsorluktan bütçeye, mekân lojistiğinden gün içinde sahada çalışan ekibe kadar."],
+        ["Başkan Yardımcısı & Operasyon Lideri", ", Atatürkçü Düşünce Kulübü, Bilgi Üniversitesi (2021—2024). Kulübün en büyük etkinliklerini baştan sona yürüttüm — forumlar, paneller ve konferanslar — programdan konuşmacılara, sponsorluktan bütçeye, mekân lojistiğinden gün içinde sahada çalışan ekibe kadar."],
         ["Yayın Direktörü", ", Bilgi Blockchain Kulübü (2021—2024). Kulübün yayımladığı içeriği yönlendirdim ve düzenledim; forumlarının ve konuşmacı akşamlarının kurgusunda yer aldım."],
       ],
       publication: "Yayın",
@@ -137,9 +138,9 @@ const COPY = {
       programmes: "Programlar & sertifikalar",
       prog: [
         ["Yapay Zekâ Mühendisliği Stajı", ", FlyRank AI (2026) — uzaktan, proje temelli bir program: değerlendirilen beş ödev ve bir bitirme projesi; ders çözmek yerine gerçek iş çıkarmak üzerine kurulu."],
-        ["AI Fluency: Framework & Foundations", ", Anthropic (2026)"],
-        ["Claude 101", ", Anthropic (2026)"],
-        ["Ödül", ", ÖRS Tekstil bitirme projesi, CSRP (2026)"],
+        ["AI Fluency: Framework & Foundations", ", Anthropic Education (July 2026)", "https://verify.skilljar.com/c/xvnv3q5pttvf"],
+        ["Claude 101", ", Anthropic Education (July 2026)", "https://verify.skilljar.com/c/j8cq55wxfnwn"],
+        ["Bitirme projesi", ", \u201cHuman-Centered Ergonomic and Operational Improvement Project in Sock Manufacturing: The \u00d6RS Textile Application\u201d \u2014 end\u00fcstri m\u00fchendisli\u011fi y\u00f6ntemlerinin \u00e7al\u0131\u015fan bir \u00e7orap \u00fcretim hatt\u0131na uygulanmas\u0131. CSRP 2026\u2019da sunuldu (4th Conference on Student Research Projects, M\u00fchendislik ve Do\u011fa Bilimleri Fak\u00fcltesi, \u0130stanbul Bilgi \u00dcniversitesi, Haziran 2026)."],
       ],
       music: "Müzik",
       musicText: "",
@@ -148,6 +149,7 @@ const COPY = {
     },
     contactText: "İstanbul'da yaşıyorum, yeni projelere ve rollere açığım.",
     cv: "CV ↓",
+    verify: "doğrula ↗",
     setIn: "Newsreader ile dizildi",
   },
 };
@@ -374,6 +376,13 @@ a.chip { display: inline-flex; align-items: center; text-decoration: none; }
   content: '·'; position: absolute; left: 3px; color: var(--ink-faint);
 }
 .list li b { font-weight: 400; color: var(--ink); }
+
+.verify {
+  font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: .08em;
+  color: var(--ink-faint); border-bottom: 1px solid var(--rule); padding-bottom: 1px;
+  white-space: nowrap; transition: color .25s ease, border-color .25s ease;
+}
+.verify:hover { color: var(--accent); border-color: var(--accent); }
 
 /* links */
 .link {
@@ -912,7 +921,17 @@ function Background({ t }) {
   const b = t.bg;
   const list = (items, base) => (
     <ul className="list rise" style={{ "--i": base }}>
-      {items.map(([lead, rest], n) => <li key={n}><b>{lead}</b>{rest}</li>)}
+      {items.map(([lead, rest, href], n) => (
+        <li key={n}>
+          <b>{lead}</b>{rest}
+          {href && (
+            <>
+              {" "}
+              <a className="verify" href={href} target="_blank" rel="noreferrer">{t.verify}</a>
+            </>
+          )}
+        </li>
+      ))}
     </ul>
   );
   return (
