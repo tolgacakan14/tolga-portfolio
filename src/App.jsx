@@ -363,14 +363,6 @@ const STYLES = `
   border-bottom: 1px solid var(--rule); padding-bottom: 3px; transition: color .25s, border-color .25s, gap .25s;
 }
 .tc-link:hover { color: var(--ribbon); border-color: var(--ribbon); gap: 12px; }
-.tc-shot {
-  width: 100%; display: block; border: 1px solid var(--rule); margin-bottom: 16px;
-  transition: transform .6s cubic-bezier(.2,.8,.2,1), box-shadow .5s ease;
-}
-.tc-shot-frame { overflow: hidden; border: 1px solid var(--rule); margin-bottom: 16px; position: relative; }
-.tc-shot-frame .tc-shot { border: 0; margin: 0; }
-.tc-shot-frame:hover .tc-shot { transform: scale(1.03); }
-
 /* product mosaic */
 .tc-grid {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(178px, 1fr));
@@ -1114,14 +1106,6 @@ function ClientWork({ reduced }) {
         </p>
 
         <TiltCard reduced={reduced} style={{ "--i": 6, "--accent": "#d97706" }}>
-          <div className="tc-shot-frame">
-            <img
-              className="tc-shot"
-              src="/work/franco-cover.png"
-              alt="Franco Coffee & Gelato digital menu"
-              loading="lazy"
-            />
-          </div>
           <div className="tc-card-top">
             <h4 className="tc-card-title">Franco Coffee &amp; Gelato</h4>
             <span className="tc-tag tc-tag--soft">LIVE</span>
@@ -1140,14 +1124,6 @@ function ClientWork({ reduced }) {
         </TiltCard>
 
         <TiltCard reduced={reduced} style={{ "--i": 7, "--accent": "#2563eb" }}>
-          <div className="tc-shot-frame">
-            <img
-              className="tc-shot"
-              src="/work/melis-klinik.jpg"
-              alt="Diş Hekimi Melis Çakan dental clinic team"
-              loading="lazy"
-            />
-          </div>
           <div className="tc-card-top">
             <h4 className="tc-card-title">Diş Hekimi Melis Çakan</h4>
             <span className="tc-tag tc-tag--soft">LIVE</span>
