@@ -6,7 +6,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
  * ------------------------------------------------------------------ */
 
 const SECTIONS = [
-  { id: "top", label: "Top" },
   { id: "about", label: "About" },
   { id: "experience", label: "Experience" },
   { id: "skills", label: "Skills" },
@@ -23,6 +22,13 @@ const SKILLS = [
   ["Physical × digital", "NFC and QR systems · print and production · rollouts across cafés, restaurants and hotels"],
   ["Domains", "Fintech and crypto exchange · blockchain · hospitality, retail and clinics"],
   ["Languages", "Turkish (native) · English (professional)"],
+];
+
+const ROLES = [
+  "Industrial engineer",
+  "Product manager",
+  "Builder",
+  "Drummer & songwriter",
 ];
 
 const PHONE_DISPLAY = "+90 542 262 00 42";
@@ -77,57 +83,105 @@ const STYLES = `
 
 .wrap { max-width: 660px; margin: 0 auto; padding: 0 28px; }
 
-/* nav */
-.nav {
-  position: sticky; top: 0; z-index: 30;
-  background: color-mix(in srgb, var(--paper) 90%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--rule);
+/* split: a fixed identity panel, a scrolling record beside it */
+.split {
+  display: grid; grid-template-columns: minmax(330px, 40%) 1fr;
+  max-width: 1280px; margin: 0 auto; align-items: start;
 }
-.nav-in {
-  max-width: 660px; margin: 0 auto; padding: 13px 28px;
-  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+.pane-left {
+  position: sticky; top: 0; height: 100vh;
+  display: flex; flex-direction: column; justify-content: center;
+  gap: 22px; padding: 40px 40px 40px 34px;
+  border-right: 1px solid var(--rule);
+  overflow-y: auto; scrollbar-width: none;
 }
-.nav-name { font-size: 15px; letter-spacing: .01em; }
-.nav-links { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; }
-.nav-links a {
-  font-size: 11px; letter-spacing: .11em; text-transform: uppercase;
-  color: var(--ink-faint); padding-bottom: 2px; border-bottom: 1px solid transparent;
-  transition: color .25s ease, border-color .25s ease;
+.pane-left::-webkit-scrollbar { display: none; }
+.pane-right { padding: 0 34px 0 40px; min-width: 0; }
+.pane-right .wrap { max-width: none; margin: 0; padding: 0; }
+
+.id-row { display: flex; align-items: center; gap: 18px; }
+.tag {
+  font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--ink-faint); margin: 0;
 }
-.nav-links a:hover { color: var(--ink); }
-.nav-links a[data-on="true"] { color: var(--ink); border-color: var(--accent); }
-.nav-tools { display: flex; gap: 6px; }
+
+/* the roles type themselves, as before */
+.role-slot {
+  font-size: 15px; color: var(--accent); margin: 4px 0 0;
+  font-family: 'JetBrains Mono', monospace; letter-spacing: -.01em;
+  min-height: 1.5em;
+}
+.caret {
+  display: inline-block; width: 1px; height: .95em; background: var(--accent);
+  margin-left: 3px; vertical-align: -.12em; animation: blink 1.05s steps(1) infinite;
+}
+@keyframes blink { 50% { opacity: 0 } }
+
+/* left-hand index */
+.pane-nav { display: flex; flex-direction: column; gap: 1px; margin: 4px 0; }
+.pane-nav a {
+  display: flex; align-items: baseline; gap: 10px; padding: 5px 0;
+  font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .07em;
+  color: var(--ink-faint); transition: color .25s ease, padding-left .3s cubic-bezier(.2,.8,.2,1);
+}
+.pane-nav a:hover { color: var(--ink-soft); padding-left: 5px; }
+.pane-nav a[data-on="true"] { color: var(--ink); }
+.pane-nav a[data-on="true"] .pane-nav-num { color: var(--accent); }
+.pane-nav-num { color: var(--ink-faint); transition: color .25s ease; }
+.pane-nav-rule {
+  flex: 1; height: 1px; background: var(--rule); align-self: center;
+  transform: scaleX(0); transform-origin: 0 50%; transition: transform .35s cubic-bezier(.2,.8,.2,1);
+}
+.pane-nav a[data-on="true"] .pane-nav-rule { transform: scaleX(1); background: var(--accent); opacity: .5; }
+
+.pane-foot { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+.tools { display: flex; gap: 6px; }
+
+/* pointer snaps to whatever it is over */
+.snap {
+  position: fixed; top: 0; left: 0; z-index: 50; pointer-events: none;
+  opacity: 0; will-change: transform, width, height;
+  transition: opacity .2s ease, transform .17s cubic-bezier(.2,.9,.25,1),
+              width .17s cubic-bezier(.2,.9,.25,1), height .17s cubic-bezier(.2,.9,.25,1);
+}
+.snap i { position: absolute; width: 5px; height: 5px; border: 1px solid var(--accent); opacity: .75; }
+.snap i:nth-child(1) { top: 0; left: 0; border-right: 0; border-bottom: 0; }
+.snap i:nth-child(2) { top: 0; right: 0; border-left: 0; border-bottom: 0; }
+.snap i:nth-child(3) { bottom: 0; left: 0; border-right: 0; border-top: 0; }
+.snap i:nth-child(4) { bottom: 0; right: 0; border-left: 0; border-top: 0; }
+@media (hover: none), (pointer: coarse) { .snap { display: none; } }
+
+@media (max-width: 900px) {
+  .split { grid-template-columns: 1fr; }
+  .pane-left {
+    position: static; height: auto; justify-content: flex-start;
+    padding: 34px 24px 30px; border-right: 0; border-bottom: 1px solid var(--rule);
+  }
+  .pane-right { padding: 0 24px; }
+}
+
+/* controls */
 .chip {
   font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .08em;
   color: var(--ink-faint); background: none; border: 1px solid var(--rule);
   padding: 5px 8px; cursor: pointer; transition: color .25s, border-color .25s;
 }
 .chip:hover { color: var(--ink); border-color: var(--ink-faint); }
-.bar { height: 1px; background: var(--accent); transform-origin: 0 50%; opacity: .5; }
 
-/* header */
-.head { padding: 68px 0 44px; }
-.eyebrow {
-  font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: .16em;
-  text-transform: uppercase; color: var(--ink-faint); margin: 0 0 18px;
-}
+/* identity */
 .name {
-  font-size: clamp(34px, 5.4vw, 46px); font-weight: 400; letter-spacing: -.015em;
-  line-height: 1.1; margin: 0 0 8px;
+  font-size: clamp(27px, 2.6vw, 33px); font-weight: 400; letter-spacing: -.015em;
+  line-height: 1.12; margin: 0;
 }
-.role { font-size: 18px; color: var(--ink-soft); font-style: italic; margin: 0 0 26px; }
 .meta {
-  display: flex; flex-wrap: wrap; gap: 6px 20px;
-  font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: .02em;
-  padding-top: 18px; border-top: 1px solid var(--rule);
+  display: flex; flex-direction: column; gap: 7px;
+  font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .02em;
 }
 .meta a, .meta span { color: var(--ink-soft); }
-.meta a { border-bottom: 1px solid transparent; transition: color .25s, border-color .25s; }
-.meta a:hover { color: var(--accent); border-color: var(--accent); }
 
 /* sections */
 .sec { padding: 40px 0; border-top: 1px solid var(--rule); }
+.pane-right .sec:first-child { border-top: 0; padding-top: 44px; }
 .sec-head { display: flex; align-items: baseline; gap: 12px; margin: 0 0 20px; }
 .sec-num {
   font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .1em;
@@ -145,8 +199,9 @@ const STYLES = `
 
 /* portrait */
 .about-top { display: flex; gap: 24px; align-items: flex-start; margin-bottom: 14px; }
+.pane-left .p { font-size: 15px; margin-bottom: 12px; }
 .portrait {
-  flex: 0 0 116px; width: 116px; height: 116px; border-radius: 50%;
+  flex: 0 0 92px; width: 92px; height: 92px; border-radius: 50%;
   overflow: hidden; position: relative;
   background: radial-gradient(circle at 50% 34%, var(--paper-2) 0%, transparent 72%);
   box-shadow: inset 0 0 0 1px var(--rule);
@@ -292,6 +347,13 @@ const STYLES = `
   .cv { background: #fff; color: #000; font-size: 11pt; }
   .cv[data-theme="night"] { --paper: #fff; --ink: #000; --ink-soft: #333; --rule: #ccc; }
   .wrap { max-width: 100%; padding: 0; }
+  .split { display: block; }
+  .pane-left {
+    position: static; height: auto; border-right: 0; padding: 0 0 12pt;
+    border-bottom: 1pt solid #ccc;
+  }
+  .pane-right { padding: 0; }
+  .pane-nav, .snap { display: none !important; }
   .sec { padding: 14pt 0; break-inside: avoid; }
   .rise { opacity: 1 !important; transform: none !important; }
   .strip { display: none; }
@@ -416,6 +478,90 @@ async function writeToClipboard(text) {
 }
 
 /** A contact line: the link behaves normally, a small button copies it. */
+/** Roles that type themselves in and out, one after another. */
+function RoleTicker() {
+  const [text, setText] = useState("");
+  const [still, setStill] = useState(false);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setStill(true);
+      return undefined;
+    }
+    let role = 0;
+    let pos = 0;
+    let deleting = false;
+    let timer = 0;
+    const step = () => {
+      const full = ROLES[role];
+      pos += deleting ? -1 : 1;
+      setText(full.slice(0, pos));
+      let wait = deleting ? 30 : 58;
+      if (!deleting && pos === full.length) { deleting = true; wait = 1900; }
+      else if (deleting && pos === 0) { deleting = false; role = (role + 1) % ROLES.length; wait = 300; }
+      timer = window.setTimeout(step, wait);
+    };
+    timer = window.setTimeout(step, 700);
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  return (
+    <p className="role-slot" aria-hidden={still ? undefined : "true"}>
+      {still ? ROLES.join(" · ") : text}
+      {!still && <span className="caret" />}
+    </p>
+  );
+}
+
+/** The pointer gains corner brackets that snap onto whatever it is over. */
+function SnapCursor() {
+  const box = useRef(null);
+  const target = useRef(null);
+
+  useEffect(() => {
+    if (window.matchMedia("(pointer: coarse)").matches) return undefined;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
+
+    const SELECTOR = "a, button, .strip figure, .entry, .row-main";
+
+    const paint = () => {
+      const el = box.current;
+      const t = target.current;
+      if (!el) return;
+      if (!t || !t.isConnected) {
+        el.style.opacity = "0";
+        return;
+      }
+      const r = t.getBoundingClientRect();
+      el.style.opacity = "1";
+      el.style.transform = "translate(" + (r.left - 5) + "px," + (r.top - 5) + "px)";
+      el.style.width = (r.width + 10) + "px";
+      el.style.height = (r.height + 10) + "px";
+    };
+
+    const onMove = (e) => {
+      const next = e.target instanceof Element ? e.target.closest(SELECTOR) : null;
+      if (next === target.current) return;
+      target.current = next;
+      paint();
+    };
+    const onOut = () => { target.current = null; paint(); };
+
+    document.addEventListener("pointermove", onMove, { passive: true });
+    document.addEventListener("pointerleave", onOut);
+    window.addEventListener("scroll", paint, { passive: true });
+    window.addEventListener("resize", paint);
+    return () => {
+      document.removeEventListener("pointermove", onMove);
+      document.removeEventListener("pointerleave", onOut);
+      window.removeEventListener("scroll", paint);
+      window.removeEventListener("resize", paint);
+    };
+  }, []);
+
+  return <div className="snap" ref={box} aria-hidden="true"><i /><i /><i /><i /></div>;
+}
+
 function ContactLine({ value, href, children }) {
   const [done, setDone] = useState(false);
   const copy = async (e) => {
@@ -503,60 +649,59 @@ function CommandMenu({ open, onClose, onTheme }) {
   );
 }
 
-function Head({ index }) {
+function LeftPane({ active, theme, onTheme, onMenu }) {
   return (
-    <header className="head" id="top">
-      <div className="wrap">
-        <p className="eyebrow rise">Istanbul, Turkey</p>
-        <h1 className="name rise" style={{ "--i": 1 }}>Tolga Çakan</h1>
-        <p className="role rise" style={{ "--i": 2 }}>
-          Industrial engineer — product and systems, built end to end
+    <aside className="pane-left" id="about">
+      <div className="id-row rise">
+        <div className="portrait">
+          <img src="/tolga.png" alt="Tolga Çakan" width="560" height="560" />
+        </div>
+        <div>
+          <p className="tag">Istanbul, Turkey</p>
+          <h1 className="name">Tolga Çakan</h1>
+          <RoleTicker />
+        </div>
+      </div>
+
+      <div className="rise" style={{ "--i": 1 }}>
+        <p className="p">
+          I read industrial engineering at Istanbul Bilgi University: the study of where a system
+          gives way, and what it costs to put right. I am not a designer by trade — I am an
+          engineer who can specify a product and then build it.
         </p>
-        <div className="meta mono rise" style={{ "--i": 3 }}>
+        <p className="p">
+          Today I co-run <em>TAB Marketing</em>, where a physical touch becomes a digital result:
+          tap a card and a review page opens, scan a table and the menu loads. Seven products,
+          more than fifteen businesses across Istanbul and Sakarya.
+        </p>
+      </div>
+
+      <nav className="pane-nav rise" style={{ "--i": 2 }}>
+        {SECTIONS.slice(1).map((sec, n) => (
+          <a key={sec.id} href={"#" + sec.id} data-on={SECTIONS[active]?.id === sec.id ? "true" : "false"}
+            onClick={(e) => { e.preventDefault(); go(sec.id); }}>
+            <span className="pane-nav-num">{String(n + 2).padStart(2, "0")}</span>
+            <span>{sec.label}</span>
+            <span className="pane-nav-rule" />
+          </a>
+        ))}
+      </nav>
+
+      <div className="pane-foot rise" style={{ "--i": 3 }}>
+        <div className="meta mono">
           <ContactLine value={EMAIL} href={"mailto:" + EMAIL}>{EMAIL}</ContactLine>
           <ContactLine value="+905422620042" href={PHONE_HREF}>{PHONE_DISPLAY}</ContactLine>
           <a href="https://github.com/tolgacakan14" target="_blank" rel="noreferrer">github.com/tolgacakan14</a>
         </div>
-      </div>
-    </header>
-  );
-}
-
-function About() {
-  return (
-    <section className="sec" id="about">
-      <div className="wrap">
-        <SecHead num="01" title="About" id="about" />
-
-        <div className="about-top rise" style={{ "--i": 1 }}>
-          <div className="portrait">
-            <img src="/tolga.png" alt="Tolga Çakan" width="560" height="560" />
-          </div>
-          <p className="p">
-            I read industrial engineering at Istanbul Bilgi University: the study of where a system
-            gives way, and what it costs to put right. I am not a designer by trade — I am an
-            engineer who can specify a product and then build it, which turns out to be the useful
-            combination when a business needs the thing to actually work.
-          </p>
+        <div className="tools">
+          <button type="button" className="chip" onClick={onMenu} aria-label="Open menu">⌘K</button>
+          <button type="button" className="chip" onClick={onTheme} aria-label="Switch palette">
+            {theme === "night" ? "Day" : "Night"}
+          </button>
+          <button type="button" className="chip" onClick={() => window.print()} aria-label="Save as PDF">PDF</button>
         </div>
-
-        <p className="p rise" style={{ "--i": 2 }}>
-          Before I finished I had worked a Toyota assembly line, a crypto exchange, a digital
-          agency and an AI platform. Each taught a different part of the same job: how work really
-          flows, how a product team decides what matters, how a thing gets sold, and how to put AI
-          to work without hand-waving.
-        </p>
-        <p className="p rise" style={{ "--i": 3 }}>
-          Today I co-run <em>TAB Marketing</em>, a small studio building the layer where a physical
-          touch becomes a digital result: tap a card and a review page opens, scan a table and the
-          menu loads. I carry those from the brief through the design and production to the site
-          behind them — seven products, more than fifteen businesses across Istanbul and Sakarya.
-        </p>
-        <p className="p rise" style={{ "--i": 4 }}>
-          What is left of the week goes to my own projects, and to the drums.
-        </p>
       </div>
-    </section>
+    </aside>
   );
 }
 
@@ -586,8 +731,14 @@ function Experience() {
     <section className="sec" id="experience">
       <div className="wrap">
         <SecHead num="02" title="Experience" id="experience" />
+        <p className="p rise">
+          Before I finished my degree I had worked a Toyota assembly line, a crypto exchange, a
+          digital agency and an AI platform. Each taught a different part of the same job: how
+          work really flows, how a product team decides what matters, how a thing gets sold, and
+          how to put AI to work without hand-waving.
+        </p>
         {rows.map((r, n) => (
-          <div className="entry rise" key={r.what} style={{ "--i": n + 1 }}>
+          <div className="entry rise" key={r.what} style={{ "--i": n + 2 }}>
             <span className="entry-when">{r.when}</span>
             <div>
               <p className="entry-what">{r.what}</p>
@@ -777,49 +928,24 @@ export default function CV() {
   return (
     <div className="cv" data-theme={theme}>
       <style>{STYLES}</style>
+      <SnapCursor />
 
-      <nav className="nav">
-        <div className="nav-in">
-          <a className="nav-name" href="#top" onClick={(e) => { e.preventDefault(); go("top"); }}>
-            Tolga Çakan
-          </a>
-          <ul className="nav-links">
-            {SECTIONS.slice(1).map((s) => (
-              <li key={s.id}>
-                <a href={"#" + s.id} data-on={SECTIONS[i]?.id === s.id ? "true" : "false"}
-                  onClick={(e) => { e.preventDefault(); go(s.id); }}>{s.label}</a>
-              </li>
-            ))}
-          </ul>
-          <div className="nav-tools">
-            <button type="button" className="chip" onClick={() => setMenu(true)} aria-label="Open menu">⌘K</button>
-            <button type="button" className="chip" onClick={flip} aria-label="Switch palette">
-              {theme === "night" ? "Day" : "Night"}
-            </button>
-            <button type="button" className="chip" onClick={() => window.print()} aria-label="Print or save as PDF">
-              PDF
-            </button>
-          </div>
-        </div>
-        <div className="bar" style={{ transform: "scaleX(" + p + ")" }} />
-      </nav>
+      <div className="split">
+        <LeftPane active={i} theme={theme} onTheme={flip} onMenu={() => setMenu(true)} />
 
-      <main>
-        <Head index={i} />
-        <About />
-        <Experience />
-        <Skills />
-        <Work />
-        <Background />
-        <Contact />
-      </main>
+        <main className="pane-right">
+          <Experience />
+          <Skills />
+          <Work />
+          <Background />
+          <Contact />
 
-      <footer className="foot">
-        <div className="wrap" style={{ display: "flex", justifyContent: "space-between", width: "100%", flexWrap: "wrap", gap: 10 }}>
-          <span>© {new Date().getFullYear()} Tolga Çakan</span>
-          <span>Set in Newsreader</span>
-        </div>
-      </footer>
+          <footer className="foot">
+            <span>© {new Date().getFullYear()} Tolga Çakan</span>
+            <span>Set in Newsreader</span>
+          </footer>
+        </main>
+      </div>
 
       <CommandMenu open={menu} onClose={() => setMenu(false)} onTheme={flip} />
     </div>
