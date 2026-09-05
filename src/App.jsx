@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 /* ------------------------------------------------------------------ *
  * A quiet one-page CV. Oxford restraint on the surface; the modern
@@ -19,7 +20,7 @@ const SKILLS = [
   ["Engineering", "Python · SQL · React · TypeScript · Next.js · Vite · Git · Vercel"],
   ["Analysis & tools", "Excel and VBA · Figma · Kaizen and process improvement · vendor and production logistics"],
   ["AI in practice", "LLM-assisted workflows · prompt design and iteration · Anthropic tooling"],
-  ["Blockchain & Web3", "Protocol and token fundamentals · exchange and DeFi mechanics · wallets and on-chain basics · smart-contract literacy · published research on sectoral impact"],
+  ["Blockchain & Web3", "Protocol and token economics · exchange and DeFi mechanics · wallets and on-chain fundamentals · sector research, published · club and community leadership"],
   ["Physical × digital", "NFC and QR systems · print and production · rollouts across cafés, restaurants and hotels"],
   ["Domains", "Fintech and crypto exchange · hospitality, retail and clinics · manufacturing"],
   ["Languages", "Turkish (native) · English (professional)"],
@@ -188,6 +189,7 @@ const STYLES = `
   padding: 5px 8px; cursor: pointer; transition: color .25s, border-color .25s;
 }
 .chip:hover { color: var(--ink); border-color: var(--ink-faint); }
+a.chip { display: inline-flex; align-items: center; text-decoration: none; }
 
 /* identity */
 .name {
@@ -632,7 +634,8 @@ function CommandMenu({ open, onClose, onTheme }) {
     { k: "theme", label: "Switch palette", hint: "View", run: onTheme },
     { k: "mail", label: "Write an email", hint: "Contact", run: () => { window.location.href = "mailto:" + EMAIL; } },
     { k: "tel", label: "Call", hint: "Contact", run: () => { window.location.href = PHONE_HREF; } },
-    { k: "print", label: "Save as PDF", hint: "Page", run: () => window.print() },
+    { k: "cv", label: "Download CV (PDF)", hint: "File", run: () => { window.location.href = "/tolga-cakan-cv.pdf"; } },
+    { k: "print", label: "Print this page", hint: "Page", run: () => window.print() },
   ];
   const hits = items.filter((i) => i.label.toLowerCase().includes(q.toLowerCase()));
 
@@ -734,7 +737,7 @@ function LeftPane({ active, theme, onTheme, onMenu }) {
           <button type="button" className="chip" onClick={onTheme} aria-label="Switch palette">
             {theme === "night" ? "Day" : "Night"}
           </button>
-          <button type="button" className="chip" onClick={() => window.print()} aria-label="Save as PDF">PDF</button>
+          <a className="chip" href="/tolga-cakan-cv.pdf" download aria-label="Download CV as PDF">CV ↓</a>
         </div>
       </div>
     </aside>
@@ -1009,6 +1012,7 @@ export default function CV() {
       </div>
 
       <CommandMenu open={menu} onClose={() => setMenu(false)} onTheme={flip} />
+      <Analytics />
     </div>
   );
 }
