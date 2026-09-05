@@ -21,12 +21,12 @@ const COPY = {
     jobs: [
       { when: "Mar — Jul 2025", what: "Intern, De Marke Agency", note: "Digital marketing, and running the on-site organisation at international tournaments." },
       { when: "Jan — Feb 2025", what: "Product Intern, BTCTurk Technology", note: "Where I learned product management properly: benchmarking, market research and user testing, alongside the internal dashboards and reporting the team read every day." },
-      { when: "Jun — Jul 2024", what: "Engineering Intern, Toyota Motor Manufacturing Turkey", note: "Assembly line logistics and Kaizen projects. On-site, Sakarya." },
+      { when: "Jun — Jul 2024", what: "Engineering Intern, Toyota Motor Manufacturing Turkey", note: "Assembly line logistics and continuous improvement through Kaizen, 5S, root cause analysis and standard work instructions. Built an internship process improvement project and presented it to Toyota's senior management. On-site, Sakarya." },
     ],
     skills: [
       ["Product management", "Benchmarking · market and competitor research · user testing · scoping and requirements · dashboards and reporting"],
       ["Engineering", "Python · SQL · React · TypeScript · Next.js · Vite · Git · Vercel"],
-      ["Analysis & tools", "Excel and VBA · Figma · Kaizen and process improvement · vendor and production logistics"],
+      ["Analysis & tools", "Excel and VBA · Figma · Kaizen · 5S · root cause analysis · standard work · ergonomics · waste reduction · vendor and production logistics"],
       ["AI in practice", "LLM-assisted workflows · prompt design and iteration · Anthropic tooling"],
       ["Blockchain & Web3", "Protocol and token economics · exchange and DeFi mechanics · wallets and on-chain fundamentals · sector research, published · club and community leadership"],
       ["Events & operations", "Large-scale forums and conferences · programme and speaker planning · sponsorship · budget · venue logistics · on-the-day operations and teams"],
@@ -55,7 +55,7 @@ const COPY = {
       ],
       involvement: "Involvement",
       inv: [
-        ["Vice President & Operations Lead", ", Atatürkçü Düşünce Kulübü, Bilgi University (2021—2024). Ran the club's largest events end to end — forums, panels and conferences — from programme and speakers to sponsorship, budget, venue logistics and the team working the floor on the day."],
+        ["Vice President & Operations Lead", ", Atatürkçü Düşünce Kulübü, Bilgi University (2021—2024). Led 10+ large-scale forums and conferences for students across Istanbul — the largest a live panel drawing 4,000+ attendees — from programme and speakers to sponsorship, budget, venue logistics and the team working the floor on the day."],
         ["Editorial Director", ", Bilgi Blockchain Club (2021—2024). Commissioned and edited what the club published, and helped put together its forums and speaker evenings."],
       ],
       publication: "Publication",
@@ -65,7 +65,7 @@ const COPY = {
       pubMeta: "Written as an independent researcher, published as Mehmet Tolga Çakan · ISBN 978-625-433-825-0 · ORCID 0000-0001-7444-9079",
       programmes: "Awards, programmes & certificates",
       prog: [
-        ["Best Senior Design Project Award", ", Department of Industrial Engineering, Istanbul Bilgi University (2026) — for \u201cImprovement of Precision, Quality and Worker Well-Being in Sock Manufacturing: Case of \u00d6RS Textile\u201d. Selected among the top five projects of its term; also presented at CSRP 2026, the 4th Conference on Student Research Projects."],
+        ["Best Senior Design Project Award", ", Department of Industrial Engineering, Istanbul Bilgi University (2026) — for \u201cImprovement of Precision, Quality and Worker Well-Being in Sock Manufacturing: Case of \u00d6RS Textile\u201d \u2014 an ergonomic and process redesign on a live production line that cut material waste and scrap and more than doubled line efficiency. Selected among the top five projects of its term; also presented at CSRP 2026."],
         ["AI Engineering Internship", ", FlyRank AI (2026) — a remote, project-based programme: five reviewed assignments and a capstone, built around shipping real work rather than coursework."],
         ["AI Fluency: Framework & Foundations", ", Anthropic Education (July 2026)", "https://verify.skilljar.com/c/xvnv3q5pttvf"],
         ["Claude 101", ", Anthropic Education (July 2026)", "https://verify.skilljar.com/c/j8cq55wxfnwn"],
@@ -93,12 +93,12 @@ const COPY = {
     jobs: [
       { when: "Mar — Tem 2025", what: "Stajyer, De Marke Ajans", note: "Dijital pazarlama ve uluslararası turnuvalarda saha organizasyonunun yürütülmesi." },
       { when: "Oca — Şub 2025", what: "Ürün Stajyeri, BTCTurk Teknoloji", note: "Ürün yönetimini asıl burada öğrendim: kıyaslama, pazar araştırması ve kullanıcı testleri; bir yandan da ekibin her gün baktığı iç panolar ve raporlama." },
-      { when: "Haz — Tem 2024", what: "Mühendislik Stajyeri, Toyota Motor Manufacturing Türkiye", note: "Montaj hattı lojistiği ve Kaizen projeleri. Sahada, Sakarya." },
+      { when: "Haz — Tem 2024", what: "Mühendislik Stajyeri, Toyota Motor Manufacturing Türkiye", note: "Montaj hattı lojistiği ve sürekli iyileştirme: Kaizen, 5S, root cause analysis ve standard work talimatları. Staj süreci iyileştirme projesi hazırlayıp Toyota üst yönetimine sundum. Sahada, Sakarya." },
     ],
     skills: [
       ["Ürün yönetimi", "Benchmarking · market ve competitor research · user testing · scoping ve requirements · dashboard ve raporlama"],
       ["Mühendislik", "Python · SQL · React · TypeScript · Next.js · Vite · Git · Vercel"],
-      ["Analiz & araçlar", "Excel ve VBA · Figma · Kaizen ve süreç iyileştirme · tedarikçi ve üretim lojistiği · supply chain"],
+      ["Analiz & araçlar", "Excel ve VBA · Figma · Kaizen · 5S · root cause analysis · standard work · ergonomi · waste reduction · tedarikçi ve üretim lojistiği · supply chain"],
       ["Pratikte yapay zekâ", "LLM destekli workflow'lar · prompt design ve iterasyon · Anthropic araçları"],
       ["Blockchain & Web3", "Protokol ve token economics · exchange ve DeFi mekanikleri · wallet'lar ve on-chain temeller · yayımlanmış sektör araştırması · kulüp ve topluluk liderliği"],
       ["Etkinlik & operasyon", "Büyük ölçekli forum ve konferanslar · program ve konuşmacı planlaması · sponsorluk · bütçe · venue lojistiği · gün içi operasyon ve ekip yönetimi"],
@@ -127,7 +127,7 @@ const COPY = {
       ],
       involvement: "Kulüpler & topluluk",
       inv: [
-        ["Başkan Yardımcısı & Operasyon Lideri", ", Atatürkçü Düşünce Kulübü, Bilgi Üniversitesi (2021—2024). Kulübün en büyük etkinliklerini baştan sona yürüttüm — forumlar, paneller ve konferanslar — programdan konuşmacılara, sponsorluktan bütçeye, mekân lojistiğinden gün içinde sahada çalışan ekibe kadar."],
+        ["Başkan Yardımcısı & Operasyon Lideri", ", Atatürkçü Düşünce Kulübü, Bilgi Üniversitesi (2021—2024). İstanbul'daki öğrenciler için 10'dan fazla büyük ölçekli forum ve konferans yürüttüm — en büyüğü 4.000'den fazla katılımcılı canlı panel — programdan konuşmacılara, sponsorluktan bütçeye, mekân lojistiğinden gün içinde sahada çalışan ekibe kadar."],
         ["Yayın Direktörü", ", Bilgi Blockchain Kulübü (2021—2024). Kulübün yayımladığı içeriği yönlendirdim ve düzenledim; forumlarının ve konuşmacı akşamlarının kurgusunda yer aldım."],
       ],
       publication: "Yayın",
@@ -137,7 +137,7 @@ const COPY = {
       pubMeta: "Bağımsız araştırmacı olarak yazıldı, Mehmet Tolga Çakan adıyla yayımlandı · ISBN 978-625-433-825-0 · ORCID 0000-0001-7444-9079",
       programmes: "Ödüller, programlar & sertifikalar",
       prog: [
-        ["En İyi Bitirme Projesi Ödülü", ", Endüstri Mühendisliği Bölümü, İstanbul Bilgi Üniversitesi (2026) — \u201cImprovement of Precision, Quality and Worker Well-Being in Sock Manufacturing: Case of \u00d6RS Textile\u201d çalışmasıyla. Dönemin en iyi beş projesi arasına seçildi; ayrıca CSRP 2026\u2019da (4th Conference on Student Research Projects) sunuldu."],
+        ["En İyi Bitirme Projesi Ödülü", ", Endüstri Mühendisliği Bölümü, İstanbul Bilgi Üniversitesi (2026) — \u201cImprovement of Precision, Quality and Worker Well-Being in Sock Manufacturing: Case of \u00d6RS Textile\u201d çalışmasıyla — çalışan bir üretim hattında ergonomi ve süreç yeniden tasarımı; malzeme firesi ve ıskarta azaldı, hat verimliliği iki katının üzerine çıktı. Dönemin en iyi beş projesi arasına seçildi; ayrıca CSRP 2026\u2019da sunuldu."],
         ["Yapay Zekâ Mühendisliği Stajı", ", FlyRank AI (2026) — uzaktan, proje temelli bir program: değerlendirilen beş ödev ve bir bitirme projesi; ders çözmek yerine gerçek iş çıkarmak üzerine kurulu."],
         ["AI Fluency: Framework & Foundations", ", Anthropic Education (July 2026)", "https://verify.skilljar.com/c/xvnv3q5pttvf"],
         ["Claude 101", ", Anthropic Education (July 2026)", "https://verify.skilljar.com/c/j8cq55wxfnwn"],
