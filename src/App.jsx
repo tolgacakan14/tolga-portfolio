@@ -21,7 +21,7 @@ const COPY = {
     expIntro: "Before I graduated I had worked in Toyota's assembly logistics, at a crypto exchange and a sports marketing agency, and in a project-based AI engineering programme. Each taught a different part of the same job: how work really flows, how a product team decides what matters, how a thing gets sold, and how to put AI to work without hand-waving.",
     jobs: [
       { when: "Mar-Jul 2025", what: "Intern, Sports Marketing, De Marke Agency", note: "A sports marketing agency. I built the monthly social media reports for Sosyal Lig, a football manager game with 115K Instagram followers, covering what worked on each platform and what to try next. I also benchmarked how the NBA and EuroLeague talk to fans against Basketbol Süper Ligi, proposed a content plan for BSL, and pitched fan activations for Carlsberg's UEFA sponsorship." },
-      { when: "Jan-Feb 2025", what: "Product Intern, BTCTurk Technology", note: "On the product management team. We benchmarked BtcTurk against the largest exchanges in Turkey and abroad; my part included a screen-by-screen teardown of Binance in Figma, from the order screen and futures to the Web3 wallet, and turning the gaps into recommendations for the team. I also worked on dashboards and market-trend reports, inside a Scrum team running on Jira and Confluence." },
+      { when: "Jan-Feb 2025", what: "Product Intern, BTCTurk Technology", note: "On the product management team of one of Turkey's largest crypto exchanges. My main project was benchmarking BtcTurk against the biggest exchanges at home and abroad: I took Binance apart screen by screen in Figma, from the order screen and futures to the Web3 wallet, and turned the gaps into recommendations for the team. I also worked on dashboards and market-trend reports, and on an inventory of the company's internal tools with IT. Above all I learned how a product team really runs: Scrum sprints from planning to retro, a backlog written as user stories with acceptance criteria, prioritising by impact, and Jira and Confluence as the team's memory." },
       { when: "Jun-Jul 2024", what: "Engineering Intern, Toyota Motor Manufacturing Turkey", note: "In assembly logistics at the Sakarya plant, learning the flow on the gemba: dock receiving, imported-parts ordering, Devan, SPS line feeding and the M&I parts flow. With two fellow interns I treated the internship itself as a Kaizen case: we measured a 21-point efficiency gap (61% against an ideal 82%), traced it to four root causes with a 4M fishbone, and proposed a standard programme flow, an İSF standard work form and a TPS handbook covering JIT, Jidoka, 5S and the Dojo skills. We presented it to management." },
     ],
     skills: [
@@ -32,17 +32,18 @@ const COPY = {
       ["Domain", "Crypto exchanges and DeFi · published blockchain research · NFC and QR systems in hospitality"],
       ["Languages", "Turkish (native) · English (professional working proficiency)"],
     ],
-    workIntro: "Most of it runs through TAB Marketing, a small NFC and QR venture I started with two friends in 2026. We have designed and delivered more than 250 custom cards and stands, from review cards and QR menus to hotel key cards and feedback cards, for 15+ cafés, restaurants and hotels in Istanbul and Sakarya, and found every one of those clients ourselves. I turn what an owner needs into a design, get it made with our suppliers, set it up on site, and build the website behind it where there is one.",
+    workIntro: "Most of it runs through TAB Marketing, the marketing and customer-experience studio I started with two friends in 2026. We help cafés, restaurants and hotels manage how guests find them, rate them and talk to them: NFC and QR review stands, private feedback cards that send complaints straight to the owner instead of to Google, QR and digital menus, brand-matched print and visuals, websites, and the PR work around them. Clients include Pehlivan Et Lokantası, İtalyan İşi, BREAK, Soft Coffee Lounge, Elbis Hotel and Cabir Deluxe. We found every one of them ourselves and have delivered more than 250 custom pieces across Istanbul, Sakarya and beyond. I run design, supplier production and on-site setup, and I build our websites.",
     tabLink: "See the website",
     sites: "Sites built through TAB",
     own: "Own projects",
     rows: [
-      { title: "Franco Coffee & Gelato", note: "A digital menu with a build-your-own gelato flavour picker.", href: "https://francoserdivan.com", label: "francoserdivan.com" },
-      { title: "Diş Hekimi Melis Çakan", note: "A calm, mobile-first site for a dental practice in Sakarya.", href: "https://dishekimimeliscakan.com", label: "dishekimimeliscakan.com" },
+      { title: "Franco Coffee & Gelato", note: "A mobile-first digital menu for a café in Serdivan: 88 products in 10 categories, updated by staff from a Google Sheet. Guests get a three-question taste quiz, a build-your-own gelato picker with a match score, pairings and saved favourites. Next.js, TypeScript.", href: "https://francoserdivan.com", label: "francoserdivan.com" },
+      { title: "Diş Hekimi Melis Çakan", note: "A calm, mobile-first site for a dental practice in Sakarya: six treatment pages, a symptom picker that points patients to the right one, FAQ, WhatsApp booking and structured data for search.", href: "https://dishekimimeliscakan.com", label: "dishekimimeliscakan.com" },
     ],
     projects: [
-      { title: "Krone", note: "A web game for the phone: mini-games, rooms, daily challenges, leaderboards.", href: "https://innerclock.vercel.app", label: "innerclock.vercel.app" },
-      { title: "FeedDetox", tag: "IN PROGRESS", note: "Taking back your own feed algorithm: seeing what it has learned, and pointing it elsewhere." },
+      { title: "Krone", note: "A mobile party game with nine mini-games, from reflex and colour tests to golf and a maze of arrows. Friends join a room with a code, everyone starts on the same server-timed 3-2-1, and scores go to a shared board. A Daily Challenge seeds the date into a random generator so every player in the world gets the same five games that day. First version shipped in six days. React, TypeScript, Supabase.", href: "https://innerclock.vercel.app", label: "innerclock.vercel.app" },
+      { title: "Feed Detox", note: "Type what you want to see online and Feed Detox builds a pack of creators, searches and mute keywords for X, Instagram, TikTok and YouTube. It pulls real results from the YouTube API and web search, ranks them for relevance and noise, and shares the pack as a link. Bilingual, EN/TR. Next.js.", href: "https://feed-detox.vercel.app", label: "feed-detox.vercel.app" },
+      { title: "NICOTINE", tag: "IN PROGRESS", note: "A storefront for an Istanbul streetwear label: scrolling dresses a figure layer by layer, drops and an archive, and a points club that rewards returning buyers. Next.js, GSAP." },
     ],
     bg: {
       education: "Education",
@@ -54,8 +55,8 @@ const COPY = {
       ],
       involvement: "Involvement",
       inv: [
-        ["Vice President & Operations Lead", ", Atatürkçü Düşünce Kulübü, Bilgi University (2021-2024). Led 10+ large-scale forums and conferences for students across Istanbul. The largest was a live panel that drew over 4,000 people. Everything from programme and speakers to sponsorship, budget, venue logistics and the team working the floor on the day."],
-        ["Editorial Director", ", Bilgi Blockchain Club (2021-2024). Commissioned and edited what the club published, and helped put together its forums and speaker evenings."],
+        ["Editorial Director", ", Bilgi Blockchain Club (2021-2024). Ran the club's editorial side: commissioned and edited what it published, and shaped the programme of its forums and speaker evenings. The same years led to my own research on blockchain in the entertainment industry, published as a book chapter in 2022."],
+        ["Vice President & Operations Lead", ", Atatürkçü Düşünce Kulübü, Bilgi University (2021-2024). Ran 10+ forums and conferences for students across Istanbul, the largest a live panel of 4,000+."],
       ],
       publication: "Publication",
       pub: "Chapter XI, \u201cBlockchain ve E\u011flence Sekt\u00f6r\u00fc\u201d (Blockchain and the Entertainment Industry), in ",
@@ -64,7 +65,15 @@ const COPY = {
       pubMeta: "Written as an independent researcher, published as Mehmet Tolga Çakan · ISBN 978-625-433-825-0 · ORCID 0000-0001-7444-9079",
       programmes: "Awards, programmes & certificates",
       prog: [
-        ["Best Senior Design Project Award", ", Department of Industrial Engineering, Istanbul Bilgi University (2026), for \u201cImprovement of Processes, Quality and Worker Well-Being in Sock Manufacturing: Case of \u00d6RS Textile\u201d, in a team of five. Pareto analysis of 2.68M pairs traced 87.8% of scrap to three causes, and a preventive maintenance model came out 57.7% cheaper over 40 weeks. A labelling station redesigned with MTM cut modelled cycle time by 42.9%, and a new layout, modelled in a Blender and Python digital twin of the warehouse, would more than double lower-floor storage volume (+112%, 2.3\u00d7 yarn-bag capacity). Heart-rate, RULA and NIOSH studies backed a proposed ergonomic redesign. Selected among the top five projects of its term; also presented at CSRP 2026."],
+        ["Best Senior Design Project Award", ", Department of Industrial Engineering, Istanbul Bilgi University (2026), for \u201cImprovement of Processes, Quality and Worker Well-Being in Sock Manufacturing: Case of \u00d6RS Textile\u201d. With a team of five, we took on a custom sock maker that had produced 2.68M pairs and scrapped 120,794 of them. We traced the scrap to its causes, attacked the two biggest, rebuilt the labelling station and both warehouse floors, and put quality, traceability and ergonomics on a measured footing. Selected among the top five projects of its term; also presented at CSRP 2026.", null, [
+          ["Scrap", "Pareto analysis of 2.68M pairs: needle breakage (44.4%), yarn moisture (26.7%) and machine faults drove 87.8% of scrap"],
+          ["Maintenance", "From run-to-failure to preventive maintenance: 40-week needle cost $34,372 \u2192 $14,538 (\u221257.7%)"],
+          ["Moisture", "A yarn moisture meter: 76,711 TL outlay against 692,558 TL a year in avoided scrap, paid back in about 40 days"],
+          ["Labelling", "Station redesigned with MTM (PMTS): 13.55 s \u2192 7.74 s per piece (\u221242.9%), about 75% more output an hour"],
+          ["Warehouse", "Both floors re-laid out in a Blender and Python digital twin with ABC slotting: storage volume +27.6% upstairs and +112% downstairs, yarn-bag capacity 804 \u2192 1,830"],
+          ["Quality", "An ISO 2859-1 incoming quality control web app (React, TypeScript) and QR carton traceability"],
+          ["Ergonomics", "Heart-rate, RULA and NIOSH studies (lifting index up to 5.9) behind a rotation plan and a lifting aid"],
+        ]],
         ["AI Engineering Internship", ", FlyRank AI (2026). A remote, project-based programme: five reviewed assignments and a capstone, built around shipping real work rather than coursework."],
         ["AI Fluency: Framework & Foundations", ", Anthropic Education (July 2026)", "https://verify.skilljar.com/c/xvnv3q5pttvf"],
         ["Claude 101", ", Anthropic Education (July 2026)", "https://verify.skilljar.com/c/j8cq55wxfnwn"],
@@ -92,7 +101,7 @@ const COPY = {
     expIntro: "Mezun olmadan önce Toyota'nın montaj lojistiğinde, bir kripto borsasında, bir spor pazarlama ajansında ve proje temelli bir yapay zekâ mühendisliği programında çalışmıştım. Her biri bana aynı işin farklı bir parçasını öğretti: işin gerçekte nasıl aktığını, bir ürün ekibinin neye öncelik verdiğini, bir şeyin nasıl satıldığını ve yapay zekânın laf kalabalığı olmadan nasıl işe koşulacağını.",
     jobs: [
       { when: "Mar-Tem 2025", what: "Stajyer, Spor Pazarlama, De Marke Ajans", note: "Bir spor pazarlama ajansı. Instagram'da 115 bin takipçisi olan futbol menajerlik oyunu Sosyal Lig'in aylık sosyal medya raporlarını hazırladım; her platformda neyin işe yaradığını ve sırada neyin denenmesi gerektiğini yazdım. NBA ve EuroLeague'in taraftarla nasıl konuştuğunu Basketbol Süper Ligi ile karşılaştırıp BSL için bir içerik planı önerdim, Carlsberg'ün UEFA sponsorluğu için taraftar aktivasyonu fikirleri sundum." },
-      { when: "Oca-Şub 2025", what: "Ürün Stajyeri, BTCTurk Teknoloji", note: "Ürün yönetimi ekibindeydim. BtcTurk'ü Türkiye'deki ve dünyadaki en büyük borsalarla karşılaştırdık; ben Binance'i Figma'da emir ekranından futures'a, Web3 cüzdana kadar ekran ekran inceledim ve bulduğum eksikleri ekibe öneri olarak sundum. Jira ve Confluence ile çalışan bir Scrum ekibinin içinde dashboard'lar ve piyasa trend raporları üzerinde de çalıştım." },
+      { when: "Oca-Şub 2025", what: "Ürün Stajyeri, BTCTurk Teknoloji", note: "Türkiye'nin en büyük kripto borsalarından birinin ürün yönetimi ekibindeydim. Ana projem BtcTurk'ü Türkiye'deki ve dünyadaki en büyük borsalarla karşılaştırmaktı: Binance'i Figma'da emir ekranından futures'a, Web3 cüzdana kadar ekran ekran inceledim ve bulduğum eksikleri ekibe öneri olarak sundum. Dashboard'lar ve piyasa trend raporları üzerinde çalıştım, IT ile şirketin iç araç envanterini çıkardım. En çok da bir ürün ekibinin gerçekte nasıl işlediğini öğrendim: planning'den retro'ya Scrum sprint'leri, acceptance criteria'sı yazılmış user story'lerden oluşan bir backlog, etkiye göre önceliklendirme ve ekibin hafızası olarak Jira ile Confluence." },
       { when: "Haz-Tem 2024", what: "Mühendislik Stajyeri, Toyota Motor Manufacturing Türkiye", note: "Sakarya fabrikasında montaj lojistiğindeydim; akışı gemba'da öğrendim: dock kabulü, ithal parça siparişi, Devan, SPS hat besleme ve M&I parça akışı. İki stajyer arkadaşımla stajın kendisini bir Kaizen vakası olarak ele aldık: 21 puanlık verim farkını ölçtük (ideal %82'ye karşı %61), 4M balık kılçığıyla dört kök nedene indik; standart bir program akışı, İSF standart iş formu ve JIT, Jidoka, 5S ile Dojo becerilerini anlatan bir TPS el kitapçığı önerdik. Çalışmayı yönetime sunduk." },
     ],
     skills: [
@@ -103,17 +112,18 @@ const COPY = {
       ["Alan bilgisi", "Kripto borsaları ve DeFi · yayımlanmış blockchain araştırması · konaklama ve yeme-içmede NFC ve QR sistemleri"],
       ["Diller", "Türkçe (ana dil) · İngilizce (profesyonel çalışma yetkinliği)"],
     ],
-    workIntro: "İşlerin çoğu, 2026'da iki arkadaşımla kurduğum küçük NFC ve QR girişimi TAB Marketing üzerinden gidiyor. İstanbul ve Sakarya'da 15'ten fazla kafe, restoran ve otel için yorum kartlarından QR menülere, otel oda kartlarından geri bildirim kartlarına 250'den fazla özel kart ve stant tasarlayıp teslim ettik; bu müşterilerin hepsini kendimiz bulduk. İşletmenin ihtiyacını tasarıma çeviriyor, tedarikçilerimizle ürettiriyor, sahada kuruyor ve gerekiyorsa arkasındaki siteyi yapıyorum.",
+    workIntro: "İşlerin çoğu, 2026'da iki arkadaşımla kurduğum pazarlama ve müşteri deneyimi stüdyosu TAB Marketing üzerinden gidiyor. Kafe, restoran ve otellerin misafirleri tarafından nasıl bulunduğunu, puanlandığını ve konuşulduğunu yönetmelerine yardım ediyoruz: NFC ve QR yorum standları, şikâyeti Google yerine doğrudan işletmeye ileten özel geri bildirim kartları, QR ve dijital menüler, markaya uygun baskı ve görseller, web siteleri ve bunların etrafındaki PR çalışmaları. Pehlivan Et Lokantası, İtalyan İşi, BREAK, Soft Coffee Lounge, Elbis Hotel ve Cabir Deluxe gibi işletmelerle çalışıyoruz. Müşterilerin hepsini kendimiz bulduk; İstanbul, Sakarya ve ötesinde 250'den fazla özel iş teslim ettik. Tasarımı, tedarikçiyle üretimi ve sahada kurulumu ben yürütüyorum, web sitelerimizi de ben yapıyorum.",
     tabLink: "Siteye git",
     sites: "TAB kapsamında yaptığım siteler",
     own: "Kendi projelerim",
     rows: [
-      { title: "Franco Coffee & Gelato", note: "Kendi dondurmanı kurabildiğin aroma seçicili dijital menü.", href: "https://francoserdivan.com", label: "francoserdivan.com" },
-      { title: "Diş Hekimi Melis Çakan", note: "Sakarya'daki bir diş kliniği için sakin, mobil öncelikli bir site.", href: "https://dishekimimeliscakan.com", label: "dishekimimeliscakan.com" },
+      { title: "Franco Coffee & Gelato", note: "Serdivan'daki bir kafe için mobile-first dijital menü: 10 kategoride 88 ürün, personel tarafından bir Google Sheet'ten güncelleniyor. Misafirler için üç soruluk lezzet quiz'i, uyum puanlı kendi dondurmanı oluştur, eşleşme önerileri ve kaydedilen favoriler. Next.js, TypeScript.", href: "https://francoserdivan.com", label: "francoserdivan.com" },
+      { title: "Diş Hekimi Melis Çakan", note: "Sakarya'daki bir diş kliniği için sakin, mobile-first bir site: altı tedavi sayfası, hastayı doğru sayfaya yönlendiren bir şikâyet seçici, SSS, WhatsApp randevu ve arama motorları için yapılandırılmış veri.", href: "https://dishekimimeliscakan.com", label: "dishekimimeliscakan.com" },
     ],
     projects: [
-      { title: "Krone", note: "Telefon için bir web oyunu: mini oyunlar, odalar, günlük görevler, liderlik tabloları.", href: "https://innerclock.vercel.app", label: "innerclock.vercel.app" },
-      { title: "FeedDetox", tag: "GELİŞTİRİLİYOR", note: "Kendi feed algoritmanı geri almak: senin hakkında ne öğrendiğini görmek ve onu başka bir yöne çevirmek." },
+      { title: "Krone", note: "Dokuz mini oyundan oluşan bir parti oyunu: refleks ve renk testlerinden golfe, ok labirentine kadar. Arkadaşlar kodla aynı odaya giriyor, sunucunun belirlediği aynı 3-2-1 ile birlikte başlıyor, skorlar ortak tabloya düşüyor. Günlük Meydan Okuma, tarihi bir rastgele üreticiye tohum olarak veriyor; böylece dünyadaki herkes o gün aynı beş oyunu oynuyor. İlk sürümü altı günde çıkardım. React, TypeScript, Supabase.", href: "https://innerclock.vercel.app", label: "innerclock.vercel.app" },
+      { title: "Feed Detox", note: "Görmek istediğin şeyi yazıyorsun, Feed Detox da X, Instagram, TikTok ve YouTube için takip edilecek hesapları, aramaları ve susturulacak kelimeleri bir paket halinde çıkarıyor. Sonuçları YouTube API'si ve web aramasından canlı çekip alaka ve gürültüye göre sıralıyor, paketi bir linkle paylaştırıyor. Türkçe ve İngilizce. Next.js.", href: "https://feed-detox.vercel.app", label: "feed-detox.vercel.app" },
+      { title: "NICOTINE", tag: "GELİŞTİRİLİYOR", note: "İstanbul'daki bir streetwear markası için vitrin: scroll ettikçe bir figür katman katman giyiniyor; drop'lar, arşiv ve geri gelen alıcıyı ödüllendiren puanlı bir kulüp. Next.js, GSAP." },
     ],
     bg: {
       education: "Eğitim",
@@ -125,8 +135,8 @@ const COPY = {
       ],
       involvement: "Kulüpler & topluluk",
       inv: [
-        ["Başkan Yardımcısı & Operasyon Lideri", ", Atatürkçü Düşünce Kulübü, Bilgi Üniversitesi (2021-2024). İstanbul'daki öğrenciler için 10'dan fazla büyük ölçekli forum ve konferans yürüttüm. En büyüğü 4.000'den fazla katılımcının geldiği canlı paneldi. Programdan konuşmacılara, sponsorluktan bütçeye, mekân lojistiğinden gün içinde sahada çalışan ekibe kadar."],
-        ["Yayın Direktörü", ", Bilgi Blockchain Kulübü (2021-2024). Kulübün yayımladığı içeriği yönlendirdim ve düzenledim; forumlarının ve konuşmacı akşamlarının kurgusunda yer aldım."],
+        ["Yayın Direktörü", ", Bilgi Blockchain Kulübü (2021-2024). Kulübün yayın tarafını yürüttüm: yayımlanan içeriği yönlendirip düzenledim, forumların ve konuşmacı akşamlarının programını şekillendirdim. Aynı yıllar, eğlence sektöründe blockchain üzerine kendi araştırmama ve 2022'de yayımlanan kitap bölümüme dönüştü."],
+        ["Başkan Yardımcısı & Operasyon Lideri", ", Atatürkçü Düşünce Kulübü, Bilgi Üniversitesi (2021-2024). İstanbul'daki öğrenciler için 10'dan fazla forum ve konferans yürüttüm; en büyüğü 4.000'den fazla kişilik canlı paneldi."],
       ],
       publication: "Yayın",
       pub: "Bölüm XI, “Blockchain ve Eğlence Sektörü”. Kitap: ",
@@ -135,7 +145,15 @@ const COPY = {
       pubMeta: "Bağımsız araştırmacı olarak yazıldı, Mehmet Tolga Çakan adıyla yayımlandı · ISBN 978-625-433-825-0 · ORCID 0000-0001-7444-9079",
       programmes: "Ödüller, programlar & sertifikalar",
       prog: [
-        ["En İyi Bitirme Projesi Ödülü", ", Endüstri Mühendisliği Bölümü, İstanbul Bilgi Üniversitesi (2026), beş kişilik ekiple yürüttüğümüz \u201cImprovement of Processes, Quality and Worker Well-Being in Sock Manufacturing: Case of \u00d6RS Textile\u201d çalışmasıyla. 2,68 milyon çiftin Pareto analizi fire ve ıskartanın %87,8'ini üç nedene bağladı; önleyici bakım modeli 40 haftada %57,7 daha düşük maliyet verdi. MTM ile yeniden tasarlanan etiketleme istasyonunda modellenen çevrim süresi %42,9 kısaldı; Blender ve Python ile kurduğumuz dijital ikizde modellenen yeni yerleşim, alt kat depolama hacmini iki katından fazlasına çıkarıyor (+%112, 2,3 kat iplik çuvalı kapasitesi). Kalp atış hızı, RULA ve NIOSH çalışmaları önerilen ergonomik yeniden tasarıma dayanak oldu. Dönemin en iyi beş projesi arasına seçildi; ayrıca CSRP 2026\u2019da sunuldu."],
+        ["En İyi Bitirme Projesi Ödülü", ", Endüstri Mühendisliği Bölümü, İstanbul Bilgi Üniversitesi (2026), \u201cImprovement of Processes, Quality and Worker Well-Being in Sock Manufacturing: Case of \u00d6RS Textile\u201d çalışmasıyla. Beş kişilik ekibimizle 2,68 milyon çift üretip bunun 120.794'ünü fireye veren bir özel çorap üreticisini ele aldık. Firenin nedenlerini bulduk, en büyük ikisine çözüm getirdik, etiketleme istasyonunu ve iki depo katını yeniden kurduk; kalite, izlenebilirlik ve ergonomiyi ölçülebilir hale getirdik. Dönemin en iyi beş projesi arasına seçildi; ayrıca CSRP 2026\u2019da sunuldu.", null, [
+          ["Fire", "2,68 milyon çiftin Pareto analizi: iğne kırılması (%44,4), iplik nemi (%26,7) ve makine arızaları firenin %87,8'ini oluşturuyordu"],
+          ["Bakım", "Run-to-failure'dan preventive maintenance'a: 40 haftalık iğne maliyeti 34.372 $ \u2192 14.538 $ (\u2212%57,7)"],
+          ["Nem", "İplik nem ölçer: 76.711 TL yatırıma karşı yılda 692.558 TL fire tasarrufu, yaklaşık 40 günde geri ödeme"],
+          ["Etiketleme", "MTM (PMTS) ile yeniden tasarlanan istasyon: parça başı 13,55 sn \u2192 7,74 sn (\u2212%42,9), saatte yaklaşık %75 daha fazla çıktı"],
+          ["Depo", "İki kat, ABC yerleşimiyle Blender ve Python dijital ikizinde yeniden planlandı: depolama hacmi üst katta +%27,6, alt katta +%112; iplik çuvalı kapasitesi 804 \u2192 1.830"],
+          ["Kalite", "ISO 2859-1 tabanlı giriş kalite kontrol web uygulaması (React, TypeScript) ve QR ile koli izlenebilirliği"],
+          ["Ergonomi", "Kalp atış hızı, RULA ve NIOSH çalışmaları (kaldırma indeksi 5,9'a kadar) üzerine rotasyon planı ve kaldırma yardımcısı"],
+        ]],
         ["Yapay Zekâ Mühendisliği Stajı", ", FlyRank AI (2026). Uzaktan, proje temelli bir program: değerlendirilen beş ödev ve bir bitirme projesi; ders çözmek yerine gerçek iş çıkarmak üzerine kurulu."],
         ["AI Fluency: Framework & Foundations", ", Anthropic Education (Temmuz 2026)", "https://verify.skilljar.com/c/xvnv3q5pttvf"],
         ["Claude 101", ", Anthropic Education (Temmuz 2026)", "https://verify.skilljar.com/c/j8cq55wxfnwn"],
@@ -386,6 +404,13 @@ a.chip { display: inline-flex; align-items: center; text-decoration: none; }
   content: '·'; position: absolute; left: 3px; color: var(--ink-faint);
 }
 .list li b { font-weight: 400; color: var(--ink); }
+
+/* measured results under a list item, e.g. the award-winning project */
+.facts { margin: 10px 0 4px; display: grid; gap: 0; border-top: 1px solid var(--rule); }
+.facts div { display: grid; grid-template-columns: minmax(0, 150px) 1fr; gap: 14px; padding: 7px 0; border-bottom: 1px solid var(--rule); }
+.facts dt { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent); padding-top: 2px; }
+.facts dd { margin: 0; font-size: 14.5px; }
+@media (max-width: 560px) { .facts div { grid-template-columns: 1fr; gap: 1px; } }
 
 .verify {
   font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: .08em;
@@ -894,7 +919,7 @@ function Background({ t }) {
   const b = t.bg;
   const list = (items, base) => (
     <ul className="list rise" style={{ "--i": base }}>
-      {items.map(([lead, rest, href], n) => (
+      {items.map(([lead, rest, href, points], n) => (
         <li key={n}>
           <b>{lead}</b>{rest}
           {href && (
@@ -902,6 +927,13 @@ function Background({ t }) {
               {" "}
               <a className="verify" href={href} target="_blank" rel="noreferrer">{t.verify}</a>
             </>
+          )}
+          {points && (
+            <dl className="facts">
+              {points.map(([k, v]) => (
+                <div key={k}><dt>{k}</dt><dd>{v}</dd></div>
+              ))}
+            </dl>
           )}
         </li>
       ))}
