@@ -18,22 +18,21 @@ const COPY = {
       "I work across a fair amount of ground: engineering, product, design, operations, research. I have worked with teams here and abroad, in Turkey, Estonia and Czechia, and I am at my most useful when a problem is still vague and somebody has to turn it into something people can actually use.",
       "Away from all that: drums, and making songs.",
     ],
-    expIntro: "Today I lead product and operations at TAB Marketing, a business I started with two friends. Before that, while still studying, I had worked on a Toyota assembly line and at a crypto exchange, a digital agency and an AI platform. Each taught a different part of the same job: how work really flows, how a product team decides what matters, how a thing gets sold, and how to put AI to work without hand-waving.",
+    expIntro: "Before I graduated I had worked in Toyota's assembly logistics, at a crypto exchange and a sports marketing agency, and in a project-based AI engineering programme. Each taught a different part of the same job: how work really flows, how a product team decides what matters, how a thing gets sold, and how to put AI to work without hand-waving.",
     jobs: [
-      { when: "2026-now", what: "Co-founder, Product & Operations, TAB Marketing", note: "Launched seven NFC, QR and web product lines, now in use at 15+ cafés, restaurants and hotels across Istanbul and Sakarya. I turn owner interviews and competitor research into what each product has to do, then take it through design, supplier production and setup on site, and build client websites where they are needed." },
-      { when: "Mar-Jul 2025", what: "Intern, De Marke Agency", note: "Ran the on-site organisation at international tournaments, and worked on the agency's digital marketing." },
-      { when: "Jan-Feb 2025", what: "Product Intern, BTCTurk Technology", note: "Where I learned product management properly. Benchmarked competing exchanges' features and user flows, ran market research and user testing, and shared what I found through the internal dashboards and structured reports the team worked from." },
-      { when: "Jun-Jul 2024", what: "Engineering Intern, Toyota Motor Manufacturing Turkey", note: "Applied Kaizen, 5S and root cause analysis to assembly-line logistics and wrote standard work instructions. Designed a process improvement project and presented it to Toyota's senior management. On-site, Sakarya." },
+      { when: "Mar-Jul 2025", what: "Intern, Sports Marketing, De Marke Agency", note: "A sports marketing agency. I built the monthly social media reports for Sosyal Lig, a football manager game with 115K Instagram followers, covering what worked on each platform and what to try next. I also benchmarked how the NBA and EuroLeague talk to fans against Basketbol Süper Ligi, proposed a content plan for BSL, and pitched fan activations for Carlsberg's UEFA sponsorship." },
+      { when: "Jan-Feb 2025", what: "Product Intern, BTCTurk Technology", note: "On the product management team. We benchmarked BtcTurk against the largest exchanges in Turkey and abroad; my part included a screen-by-screen teardown of Binance in Figma, from the order screen and futures to the Web3 wallet, and turning the gaps into recommendations for the team. I also worked on dashboards and market-trend reports, inside a Scrum team running on Jira and Confluence." },
+      { when: "Jun-Jul 2024", what: "Engineering Intern, Toyota Motor Manufacturing Turkey", note: "In assembly logistics at the Sakarya plant, learning the flow on the gemba: dock receiving, imported-parts ordering, Devan, SPS line feeding and the M&I parts flow. With two fellow interns I treated the internship itself as a Kaizen case: we measured a 21-point efficiency gap (61% against an ideal 82%), traced it to four root causes with a 4M fishbone, and proposed a standard programme flow, an İSF standard work form and a TPS handbook covering JIT, Jidoka, 5S and the Dojo skills. We presented it to management." },
     ],
     skills: [
-      ["Product", "Customer discovery · competitive benchmarking · market research · user testing · requirements and scoping · roadmapping · dashboards and reporting"],
-      ["Operations", "Lean (Kaizen, 5S) · root cause analysis · standard work · ergonomics · waste reduction · supplier and production coordination · event operations and budgeting"],
-      ["Data & tools", "Excel (VBA) · SQL · Python · JavaScript · TypeScript · React · Next.js · Git · Figma"],
+      ["Product", "Customer discovery · competitive benchmarking · market research · requirements and scoping · dashboards and reporting · Agile (Scrum)"],
+      ["Operations", "Lean and TPS (Kaizen, 5S, JIT, Jidoka) · root cause analysis (4M fishbone) · Pareto and ABC analysis · MTM · RULA · NIOSH · preventive maintenance · warehouse layout · supplier and production coordination · event operations"],
+      ["Data & tools", "Excel (VBA) · SQL · Python · JavaScript · TypeScript · React · Next.js · Blender · Figma · Jira · Confluence"],
       ["AI in practice", "LLM-assisted workflows · prompt design and iteration"],
-      ["Domain", "Crypto exchanges and DeFi · token economics · published blockchain research · NFC and QR systems in hospitality"],
+      ["Domain", "Crypto exchanges and DeFi · published blockchain research · NFC and QR systems in hospitality"],
       ["Languages", "Turkish (native) · English (professional working proficiency)"],
     ],
-    workIntro: "Most of it runs through TAB Marketing, the NFC and QR business I run with two friends: review cards, QR menus, hotel key cards and feedback cards for cafés, restaurants and hotels. Each is made for a particular business, from the brief through design and production to the site behind it.",
+    workIntro: "Most of it runs through TAB Marketing, a small NFC and QR venture I started with two friends in 2026. We have designed and delivered more than 250 custom cards and stands, from review cards and QR menus to hotel key cards and feedback cards, for 15+ cafés, restaurants and hotels in Istanbul and Sakarya, and found every one of those clients ourselves. I turn what an owner needs into a design, get it made with our suppliers, set it up on site, and build the website behind it where there is one.",
     tabLink: "See the website",
     sites: "Sites built through TAB",
     own: "Own projects",
@@ -65,7 +64,7 @@ const COPY = {
       pubMeta: "Written as an independent researcher, published as Mehmet Tolga Çakan · ISBN 978-625-433-825-0 · ORCID 0000-0001-7444-9079",
       programmes: "Awards, programmes & certificates",
       prog: [
-        ["Best Senior Design Project Award", ", Department of Industrial Engineering, Istanbul Bilgi University (2026), for \u201cImprovement of Precision, Quality and Worker Well-Being in Sock Manufacturing: Case of \u00d6RS Textile\u201d. An ergonomic and process redesign on a live production line that cut material waste and scrap and more than doubled line efficiency. Selected among the top five projects of its term; also presented at CSRP 2026."],
+        ["Best Senior Design Project Award", ", Department of Industrial Engineering, Istanbul Bilgi University (2026), for \u201cImprovement of Processes, Quality and Worker Well-Being in Sock Manufacturing: Case of \u00d6RS Textile\u201d, in a team of five. Pareto analysis of 2.68M pairs traced 87.8% of scrap to three causes, and a preventive maintenance model came out 57.7% cheaper over 40 weeks. A labelling station redesigned with MTM cut modelled cycle time by 42.9%, and a new layout, modelled in a Blender and Python digital twin of the warehouse, would more than double lower-floor storage volume (+112%, 2.3\u00d7 yarn-bag capacity). Heart-rate, RULA and NIOSH studies backed a proposed ergonomic redesign. Selected among the top five projects of its term; also presented at CSRP 2026."],
         ["AI Engineering Internship", ", FlyRank AI (2026). A remote, project-based programme: five reviewed assignments and a capstone, built around shipping real work rather than coursework."],
         ["AI Fluency: Framework & Foundations", ", Anthropic Education (July 2026)", "https://verify.skilljar.com/c/xvnv3q5pttvf"],
         ["Claude 101", ", Anthropic Education (July 2026)", "https://verify.skilljar.com/c/j8cq55wxfnwn"],
@@ -84,28 +83,27 @@ const COPY = {
   tr: {
     nav: { about: "Hakkımda", experience: "Deneyim", skills: "Yetkinlikler", work: "İşler", background: "Geçmiş", contact: "İletişim" },
     place: "İstanbul, Türkiye",
-    roles: ["Endüstri mühendisi", "Süreç iyileştirme", "Geliştirici", "Blockchain araştırmacısı", "Davulcu & söz yazarı"],
+    roles: ["Endüstri mühendisi", "Süreç iyileştirme", "Geliştirici", "Blockchain araştırmacısı", "Davulcu & şarkı yazarı"],
     about: [
       "İstanbul Bilgi Üniversitesi'nde endüstri mühendisliği okudum, Haziran 2026'da mezun oldum. En sevdiğim şey bir sistemin nerede çöktüğünü bulup onu düzeltmek; bu bir fabrika sahası da olabilir, bir ürünün içi de, kimsenin açmak istemediği bir tablo da.",
       "Epeyce geniş bir alanda çalışıyorum: mühendislik, ürün, tasarım, operasyon, araştırma. Türkiye'de ve yurt dışında, Estonya ve Çekya'da ekiplerle çalıştım. En işe yaradığım an, bir problem hâlâ bulanıkken ve birinin onu insanların gerçekten kullanabileceği bir şeye çevirmesi gerektiği andır.",
       "Bunların dışında: davul çalmak ve şarkı yazmak.",
     ],
-    expIntro: "Bugün iki arkadaşımla kurduğum TAB Marketing'de ürün ve operasyonu yönetiyorum. Ondan önce, daha okurken, bir Toyota montaj hattında, bir kripto borsasında, bir dijital ajansta ve bir yapay zekâ platformunda çalışmıştım. Her biri bana aynı işin farklı bir parçasını öğretti: işin gerçekte nasıl aktığını, bir ürün ekibinin neye öncelik verdiğini, bir şeyin nasıl satıldığını ve yapay zekânın laf kalabalığı olmadan nasıl işe koşulacağını.",
+    expIntro: "Mezun olmadan önce Toyota'nın montaj lojistiğinde, bir kripto borsasında, bir spor pazarlama ajansında ve proje temelli bir yapay zekâ mühendisliği programında çalışmıştım. Her biri bana aynı işin farklı bir parçasını öğretti: işin gerçekte nasıl aktığını, bir ürün ekibinin neye öncelik verdiğini, bir şeyin nasıl satıldığını ve yapay zekânın laf kalabalığı olmadan nasıl işe koşulacağını.",
     jobs: [
-      { when: "2026-bugün", what: "Kurucu Ortak, Ürün & Operasyon, TAB Marketing", note: "Yedi NFC, QR ve web ürün grubunu hayata geçirdim; bugün İstanbul ve Sakarya'da 15'ten fazla kafe, restoran ve otel bunları kullanıyor. İşletme sahipleriyle görüşmeleri ve rakip analizini ürün gereksinimlerine çeviriyorum; her ürünü tasarımdan tedarikçiyle üretime ve sahada kuruluma kadar götürüyor, gerektiğinde müşteri sitelerini de geliştiriyorum." },
-      { when: "Mar-Tem 2025", what: "Stajyer, De Marke Ajans", note: "Uluslararası turnuvalarda saha organizasyonunu yürüttüm; ajansın dijital pazarlama işlerinde de çalıştım." },
-      { when: "Oca-Şub 2025", what: "Ürün Stajyeri, BTCTurk Teknoloji", note: "Ürün yönetimini asıl burada öğrendim. Rakip borsaların özellikleri ve kullanıcı akışları üzerine benchmarking yaptım, market research ve user testing yürüttüm; bulguları ekibin çalıştığı iç dashboard'lar ve yapılandırılmış raporlarla aktardım." },
-      { when: "Haz-Tem 2024", what: "Mühendislik Stajyeri, Toyota Motor Manufacturing Türkiye", note: "Montaj hattı lojistiğinde Kaizen, 5S ve root cause analysis uyguladım, standard work talimatları yazdım. Bir süreç iyileştirme projesi tasarlayıp Toyota üst yönetimine sundum. Sahada, Sakarya." },
+      { when: "Mar-Tem 2025", what: "Stajyer, Spor Pazarlama, De Marke Ajans", note: "Bir spor pazarlama ajansı. Instagram'da 115 bin takipçisi olan futbol menajerlik oyunu Sosyal Lig'in aylık sosyal medya raporlarını hazırladım; her platformda neyin işe yaradığını ve sırada neyin denenmesi gerektiğini yazdım. NBA ve EuroLeague'in taraftarla nasıl konuştuğunu Basketbol Süper Ligi ile karşılaştırıp BSL için bir içerik planı önerdim, Carlsberg'ün UEFA sponsorluğu için taraftar aktivasyonu fikirleri sundum." },
+      { when: "Oca-Şub 2025", what: "Ürün Stajyeri, BTCTurk Teknoloji", note: "Ürün yönetimi ekibindeydim. BtcTurk'ü Türkiye'deki ve dünyadaki en büyük borsalarla karşılaştırdık; ben Binance'i Figma'da emir ekranından futures'a, Web3 cüzdana kadar ekran ekran inceledim ve bulduğum eksikleri ekibe öneri olarak sundum. Jira ve Confluence ile çalışan bir Scrum ekibinin içinde dashboard'lar ve piyasa trend raporları üzerinde de çalıştım." },
+      { when: "Haz-Tem 2024", what: "Mühendislik Stajyeri, Toyota Motor Manufacturing Türkiye", note: "Sakarya fabrikasında montaj lojistiğindeydim; akışı gemba'da öğrendim: dock kabulü, ithal parça siparişi, Devan, SPS hat besleme ve M&I parça akışı. İki stajyer arkadaşımla stajın kendisini bir Kaizen vakası olarak ele aldık: 21 puanlık verim farkını ölçtük (ideal %82'ye karşı %61), 4M balık kılçığıyla dört kök nedene indik; standart bir program akışı, İSF standart iş formu ve JIT, Jidoka, 5S ile Dojo becerilerini anlatan bir TPS el kitapçığı önerdik. Çalışmayı yönetime sunduk." },
     ],
     skills: [
-      ["Ürün", "Customer discovery · benchmarking · market research · user testing · requirements ve scoping · roadmapping · dashboard ve raporlama"],
-      ["Operasyon", "Lean (Kaizen, 5S) · root cause analysis · standard work · ergonomi · waste reduction · tedarikçi ve üretim koordinasyonu · etkinlik operasyonu ve bütçe yönetimi"],
-      ["Veri & araçlar", "Excel (VBA) · SQL · Python · JavaScript · TypeScript · React · Next.js · Git · Figma"],
+      ["Ürün", "Customer discovery · benchmarking · market research · requirements ve scoping · dashboard ve raporlama · Agile (Scrum)"],
+      ["Operasyon", "Lean ve TPS (Kaizen, 5S, JIT, Jidoka) · root cause analysis (4M balık kılçığı) · Pareto ve ABC analizi · MTM · RULA · NIOSH · önleyici bakım · depo yerleşimi · tedarikçi ve üretim koordinasyonu · etkinlik operasyonu"],
+      ["Veri & araçlar", "Excel (VBA) · SQL · Python · JavaScript · TypeScript · React · Next.js · Blender · Figma · Jira · Confluence"],
       ["Pratikte yapay zekâ", "LLM destekli workflow'lar · prompt design ve iterasyon"],
-      ["Alan bilgisi", "Kripto borsaları ve DeFi · token economics · yayımlanmış blockchain araştırması · konaklama ve yeme-içmede NFC ve QR sistemleri"],
+      ["Alan bilgisi", "Kripto borsaları ve DeFi · yayımlanmış blockchain araştırması · konaklama ve yeme-içmede NFC ve QR sistemleri"],
       ["Diller", "Türkçe (ana dil) · İngilizce (profesyonel çalışma yetkinliği)"],
     ],
-    workIntro: "İşlerin çoğu, iki arkadaşımla yürüttüğüm NFC ve QR işi TAB Marketing üzerinden gidiyor: kafeler, restoranlar ve oteller için yorum kartları, QR menüler, otel oda kartları ve geri bildirim kartları. Her biri belirli bir işletme için, brief'ten tasarıma, üretimden arkasındaki siteye kadar.",
+    workIntro: "İşlerin çoğu, 2026'da iki arkadaşımla kurduğum küçük NFC ve QR girişimi TAB Marketing üzerinden gidiyor. İstanbul ve Sakarya'da 15'ten fazla kafe, restoran ve otel için yorum kartlarından QR menülere, otel oda kartlarından geri bildirim kartlarına 250'den fazla özel kart ve stant tasarlayıp teslim ettik; bu müşterilerin hepsini kendimiz bulduk. İşletmenin ihtiyacını tasarıma çeviriyor, tedarikçilerimizle ürettiriyor, sahada kuruyor ve gerekiyorsa arkasındaki siteyi yapıyorum.",
     tabLink: "Siteye git",
     sites: "TAB kapsamında yaptığım siteler",
     own: "Kendi projelerim",
@@ -137,15 +135,15 @@ const COPY = {
       pubMeta: "Bağımsız araştırmacı olarak yazıldı, Mehmet Tolga Çakan adıyla yayımlandı · ISBN 978-625-433-825-0 · ORCID 0000-0001-7444-9079",
       programmes: "Ödüller, programlar & sertifikalar",
       prog: [
-        ["En İyi Bitirme Projesi Ödülü", ", Endüstri Mühendisliği Bölümü, İstanbul Bilgi Üniversitesi (2026), \u201cImprovement of Precision, Quality and Worker Well-Being in Sock Manufacturing: Case of \u00d6RS Textile\u201d çalışmasıyla. Çalışan bir üretim hattında ergonomi ve süreç yeniden tasarımı; malzeme firesi ve ıskarta azaldı, hat verimliliği iki katının üzerine çıktı. Dönemin en iyi beş projesi arasına seçildi; ayrıca CSRP 2026\u2019da sunuldu."],
+        ["En İyi Bitirme Projesi Ödülü", ", Endüstri Mühendisliği Bölümü, İstanbul Bilgi Üniversitesi (2026), beş kişilik ekiple yürüttüğümüz \u201cImprovement of Processes, Quality and Worker Well-Being in Sock Manufacturing: Case of \u00d6RS Textile\u201d çalışmasıyla. 2,68 milyon çiftin Pareto analizi fire ve ıskartanın %87,8'ini üç nedene bağladı; önleyici bakım modeli 40 haftada %57,7 daha düşük maliyet verdi. MTM ile yeniden tasarlanan etiketleme istasyonunda modellenen çevrim süresi %42,9 kısaldı; Blender ve Python ile kurduğumuz dijital ikizde modellenen yeni yerleşim, alt kat depolama hacmini iki katından fazlasına çıkarıyor (+%112, 2,3 kat iplik çuvalı kapasitesi). Kalp atış hızı, RULA ve NIOSH çalışmaları önerilen ergonomik yeniden tasarıma dayanak oldu. Dönemin en iyi beş projesi arasına seçildi; ayrıca CSRP 2026\u2019da sunuldu."],
         ["Yapay Zekâ Mühendisliği Stajı", ", FlyRank AI (2026). Uzaktan, proje temelli bir program: değerlendirilen beş ödev ve bir bitirme projesi; ders çözmek yerine gerçek iş çıkarmak üzerine kurulu."],
-        ["AI Fluency: Framework & Foundations", ", Anthropic Education (July 2026)", "https://verify.skilljar.com/c/xvnv3q5pttvf"],
-        ["Claude 101", ", Anthropic Education (July 2026)", "https://verify.skilljar.com/c/j8cq55wxfnwn"],
+        ["AI Fluency: Framework & Foundations", ", Anthropic Education (Temmuz 2026)", "https://verify.skilljar.com/c/xvnv3q5pttvf"],
+        ["Claude 101", ", Anthropic Education (Temmuz 2026)", "https://verify.skilljar.com/c/j8cq55wxfnwn"],
       ],
       music: "Müzik",
       musicText: "",
       band: "son sek'",
-      musicRest: " grubunda davul çalıyor, şarkıları yazıyorum. Bir albüm, iki single ve birkaç canlı sahne.",
+      musicRest: " grubunda davul çalıyor, şarkı yazıyorum. Bir albüm, iki single ve birkaç canlı sahne.",
     },
     contactText: "İstanbul'da yaşıyorum, yeni projelere ve rollere açığım.",
     cv: "CV ↓",
@@ -153,6 +151,16 @@ const COPY = {
     setIn: "Newsreader ile dizildi",
   },
 };
+
+const TAB_URL = "https://tab-marketing-site.vercel.app/#top";
+
+/** Running text in which every "TAB Marketing" links to its site. */
+function withTab(text) {
+  const parts = text.split("TAB Marketing");
+  return parts.flatMap((part, n) => n === 0 ? [part] : [
+    <a key={n} className="link link-inline" href={TAB_URL} target="_blank" rel="noreferrer">TAB Marketing</a>, part,
+  ]);
+}
 
 const SECTION_IDS = ["about", "experience", "skills", "work", "background", "contact"];
 
@@ -395,6 +403,7 @@ a.chip { display: inline-flex; align-items: center; text-decoration: none; }
 }
 .link:hover { color: var(--accent); border-color: var(--accent); gap: 10px; }
 .link-mono { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; }
+.link-inline { display: inline; font-size: inherit; }
 
 /* work: sites that sit under TAB */
 .under {
@@ -697,6 +706,7 @@ function CommandMenu({ open, onClose, onTheme, onLang, t, lang }) {
     { k: "lang", label: lang === "en" ? "Türkçe'ye geç" : "Switch to English", hint: lang === "tr" ? "Dil" : "Language", run: onLang },
     { k: "theme", label: lang === "tr" ? "Paleti değiştir" : "Switch palette", hint: lang === "tr" ? "Görünüm" : "View", run: onTheme },
     { k: "cv", label: lang === "tr" ? "CV indir (PDF)" : "Download CV (PDF)", hint: lang === "tr" ? "Dosya" : "File", run: () => { window.location.href = "/tolga-cakan-cv.pdf"; } },
+    { k: "tab", label: lang === "tr" ? "TAB Marketing sitesi" : "TAB Marketing site", hint: "Link", run: () => { window.open(TAB_URL, "_blank", "noreferrer"); } },
     { k: "mail", label: lang === "tr" ? "E-posta yaz" : "Write an email", hint: lang === "tr" ? "İletişim" : "Contact", run: () => { window.location.href = "mailto:" + EMAIL; } },
     { k: "print", label: lang === "tr" ? "Sayfayı yazdır" : "Print this page", hint: lang === "tr" ? "Sayfa" : "Page", run: () => window.print() },
   ];
@@ -806,7 +816,7 @@ function Experience({ t }) {
     <section className="sec" id="experience">
       <div className="wrap">
         <SecHead num="02" title={t.nav.experience} id="experience" />
-        <p className="p rise">{t.expIntro}</p>
+        <p className="p rise">{withTab(t.expIntro)}</p>
         {t.jobs.map((r, n) => (
           <div className="entry rise" key={r.what} style={{ "--i": n + 2 }}>
             <span className="entry-when">{r.when}</span>
@@ -842,9 +852,9 @@ function Work({ t }) {
     <section className="sec" id="work">
       <div className="wrap">
         <SecHead num="04" title={t.nav.work} id="work" />
-        <p className="p rise" style={{ "--i": 1 }}>{t.workIntro}</p>
+        <p className="p rise" style={{ "--i": 1 }}>{withTab(t.workIntro)}</p>
         <p className="strip-note rise" style={{ "--i": 2 }}>
-          <a className="link link-mono" href="https://tab-marketing-site.vercel.app/#top" target="_blank" rel="noreferrer">
+          <a className="link link-mono" href={TAB_URL} target="_blank" rel="noreferrer">
             {t.tabLink} <span>→</span>
           </a>
         </p>
