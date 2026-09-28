@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tolga Çakan · CV</title>
+<!-- Source for public/tolga-cakan-cv.pdf. Render with: sh scripts/cv-pdf.sh -->
+<style>
+/* Full font files, not Google's split subsets: a subset boundary inside a word
+   (ğ, ş live in latin-ext) breaks the word apart in the PDF's text layer. */
+@font-face { font-family: 'Newsreader'; src: url(fonts/Newsreader.ttf); font-weight: 200 800; font-style: normal; }
+@font-face { font-family: 'Newsreader'; src: url(fonts/Newsreader-Italic.ttf); font-weight: 200 800; font-style: italic; }
+@font-face { font-family: 'JetBrains Mono'; src: url(fonts/JetBrainsMono.ttf); font-weight: 100 800; }
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #fff; }
+body {
+  width: 210mm; padding: 10mm 13mm 8mm;
+  font-family: 'Newsreader', Georgia, serif; font-size: 8.3pt; line-height: 1.3;
+  color: #1c1b18;
+  font-variant-ligatures: none; /* keep fi/fl as plain letters for ATS keyword search */
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+a { color: inherit; text-decoration: none; }
+.mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+
+/* head */
+h1 { font-size: 19pt; font-weight: 400; letter-spacing: -.01em; margin: 0; line-height: 1.1; }
+.title { font-family: 'JetBrains Mono', monospace; font-size: 8.8pt; color: #1d3c5a; margin: 5pt 0 7pt; }
+.portfolio { font-family: 'JetBrains Mono', monospace; font-size: 7.2pt; color: #8d887e; margin: 0 0 7pt; }
+.portfolio a { font-size: 9.4pt; color: #1d3c5a; border-bottom: .8pt solid #1d3c5a; padding-bottom: 1pt; margin-left: 5pt; }
+.contact {
+  display: flex; flex-wrap: wrap; gap: 0 13pt; padding-bottom: 5pt; border-bottom: 1pt solid #1c1b18;
+  font-family: 'JetBrains Mono', monospace; font-size: 7.6pt; color: #56534c;
+}
+
+/* sections */
+h2 {
+  font-family: 'JetBrains Mono', monospace; font-size: 7.7pt; font-weight: 500; letter-spacing: .04em;
+  text-transform: uppercase; color: #6f6a60;
+  margin: 7pt 0 3.5pt; padding-bottom: 2pt; border-bottom: .6pt solid #dcd7cc;
+}
+p { margin: 0; }
+.soft { color: #56534c; }
+.summary { text-align: justify; }
+
+/* dated entries */
+.entry { display: grid; grid-template-columns: 101pt 1fr; margin-bottom: 3.5pt; }
+.when { font-family: 'JetBrains Mono', monospace; font-size: 7.3pt; color: #8d887e; padding-top: 2pt; }
+.what { font-size: 9pt; }
+.what .sub { font-family: 'JetBrains Mono', monospace; font-size: 7.2pt; color: #8d887e; margin-left: 2pt; }
+ul.b { margin: 1pt 0 0; padding: 0; list-style: none; }
+/* no positioned markers: positioned boxes paint last and scramble the PDF text order */
+ul.b li, ul.l li { padding-left: 8pt; text-indent: -8pt; color: #56534c; }
+ul.b li::before, ul.l li::before { content: '·'; display: inline-block; width: 8pt; text-indent: 0; padding-left: 1pt; color: #8d887e; }
+
+/* skills */
+.skills { margin: 0; display: grid; grid-template-columns: 101pt 1fr; row-gap: 2.5pt; }
+.skills dt { font-family: 'JetBrains Mono', monospace; font-size: 7.6pt; padding-top: 1pt; }
+.skills dd { margin: 0; color: #56534c; }
+
+/* two columns at the foot */
+.cols { display: grid; grid-template-columns: 1fr 1fr; column-gap: 16pt; }
+ul.l { margin: 0; padding: 0; list-style: none; }
+ul.l li { margin-bottom: 1.5pt; }
+ul.l b { font-weight: 400; color: #1c1b18; }
+.link { color: #1d3c5a; border-bottom: .6pt solid #9fb0c2; }
+</style>
+</head>
+<body>
+
+<h1>Tolga Çakan</h1>
+<p class="title">Industrial Engineer · Process Improvement &amp; Digital Products</p>
+<p class="portfolio">PORTFOLIO<a href="https://tolgacakan.vercel.app">tolgacakan.vercel.app</a></p>
+<div class="contact">
+  <span>Istanbul, Turkey</span>
+  <a href="mailto:tolgacakan@gmail.com">tolgacakan@gmail.com</a>
+  <a href="tel:+905422620042">+90 542 262 00 42</a>
+  <a href="https://github.com/tolgacakan14">github.com/tolgacakan14</a>
+  <a href="https://orcid.org/0000-0001-7444-9079">ORCID 0000-0001-7444-9079</a>
+</div>
+
+<h2>Profile</h2>
+<p class="summary">Industrial engineer (Istanbul Bilgi University, 2026) who turns loosely defined problems into working products and leaner processes. Co-founder of TAB Marketing, where I take NFC, QR and web products from customer discovery through supplier production to rollout for 15+ hospitality businesses. Before that: product work at BTCTurk, Kaizen on a Toyota assembly line, and an award-winning senior design project that more than doubled a textile line's efficiency. Now looking to bring this to a product or operations team.</p>
+
+<h2>Experience</h2>
+<div class="entry"><span class="when">2026-present</span><div>
+  <p class="what">Co-founder, Product &amp; Operations, TAB Marketing<span class="sub"> 3-person startup · Istanbul &amp; Sakarya</span></p>
+  <ul class="b">
+    <li>Launched seven NFC, QR and web product lines, now in use at 15+ cafés, restaurants and hotels.</li>
+    <li>Turned owner interviews and competitor research into requirements, then took each product through design, supplier production and on-site setup.</li>
+    <li>Built client websites, including francoserdivan.com, a live menu the café edits itself in Google Sheets.</li>
+  </ul></div></div>
+<div class="entry"><span class="when">Mar-Jul 2025</span><div>
+  <p class="what">Intern, De Marke Agency</p>
+  <ul class="b">
+    <li>Ran on-site organisation at international tournaments and worked on the agency's digital marketing.</li>
+  </ul></div></div>
+<div class="entry"><span class="when">Jan-Feb 2025</span><div>
+  <p class="what">Product Intern, BTCTurk Technology</p>
+  <ul class="b">
+    <li>Benchmarked competing exchanges' features and user flows to inform product decisions.</li>
+    <li>Ran market research and user testing; shared findings via internal dashboards and structured reports.</li>
+  </ul></div></div>
+<div class="entry"><span class="when">Jun-Jul 2024</span><div>
+  <p class="what">Engineering Intern, Toyota Motor Manufacturing Turkey<span class="sub"> Sakarya</span></p>
+  <ul class="b">
+    <li>Applied Kaizen, 5S and root cause analysis to assembly-line logistics; wrote standard work instructions.</li>
+    <li>Designed a process improvement project and presented it to Toyota's senior management.</li>
+  </ul></div></div>
+
+<h2>Projects</h2>
+<div class="entry"><span class="when">innerclock.vercel.app</span><div>
+  <p class="what">Krone, web game<span class="sub"> React · TypeScript</span></p>
+  <p class="soft">Mini-games, multiplayer rooms, daily challenges and leaderboards.</p></div></div>
+<div class="entry"><span class="when">prototype</span><div>
+  <p class="what">FeedDetox<span class="sub"> Next.js</span></p>
+  <p class="soft">Reads what a social feed has learned about a user and generates content packs to steer it elsewhere.</p></div></div>
+
+<h2>Skills</h2>
+<dl class="skills">
+<dt>Product</dt><dd>Customer discovery · competitive benchmarking · market research · user testing · requirements and scoping · roadmapping · dashboards and reporting</dd>
+<dt>Operations</dt><dd>Lean (Kaizen, 5S) · root cause analysis · standard work · ergonomics · waste reduction · supplier and production coordination · event operations and budgeting</dd>
+<dt>Data &amp; tools</dt><dd>Excel (VBA) · SQL · Python · JavaScript · TypeScript · React · Next.js · Git · Figma</dd>
+<dt>AI</dt><dd>LLM-assisted workflows · prompt design and iteration</dd>
+<dt>Domain</dt><dd>Crypto exchanges and DeFi (published research) · NFC and QR systems in hospitality</dd>
+<dt>Languages</dt><dd>Turkish (native) · English (professional working proficiency)</dd>
+</dl>
+
+<div class="cols">
+  <div>
+    <h2>Education</h2>
+    <ul class="l">
+      <li><b>Istanbul Bilgi University</b>, BSc Industrial Engineering. Graduated June 2026</li>
+      <li><b>Fen Lisesi</b>, Sakarya, Turkey</li>
+    </ul>
+    <h2>Awards, programmes &amp; certificates</h2>
+    <ul class="l">
+      <li><b>Best Senior Design Project Award</b>, Industrial Engineering, Istanbul Bilgi University (2026), for "Improvement of Precision, Quality and Worker Well-Being in Sock Manufacturing: Case of ÖRS Textile". Ergonomic and process redesign on a live production line that cut material waste and scrap and more than doubled line efficiency. Top five of its term; presented at CSRP 2026</li>
+      <li><b>AI Engineering Internship</b>, FlyRank AI (2026). Remote and project-based: five reviewed assignments and a capstone</li>
+      <li><b>AI Fluency: Framework &amp; Foundations</b>, Anthropic Education (Jul 2026) · <a class="link" href="https://verify.skilljar.com/c/xvnv3q5pttvf">verify</a></li>
+      <li><b>Claude 101</b>, Anthropic Education (Jul 2026) · <a class="link" href="https://verify.skilljar.com/c/j8cq55wxfnwn">verify</a></li>
+    </ul>
+  </div>
+  <div>
+    <h2>Publication</h2>
+    <ul class="l">
+      <li>Chapter XI, "Blockchain ve Eğlence Sektörü", in <i>Blockchain Teknolojileri ve Sektörel Etkileri</i>. Nobel Bilimsel Eserler, 2022, as independent researcher. ISBN 978-625-433-825-0</li>
+    </ul>
+    <h2>Leadership &amp; involvement</h2>
+    <ul class="l">
+      <li><b>Vice President &amp; Operations Lead</b>, Atatürkçü Düşünce Kulübü, Bilgi University (2021-2024). Led planning and delivery of 10+ large-scale forums and conferences for students across Istanbul, the largest a live panel of 4,000+ attendees. Owned speakers, sponsors, budgets, venues and on-site teams</li>
+      <li><b>Editorial Director</b>, Bilgi Blockchain Club (2021-2024). Commissioned and edited the club's publications and forum programme</li>
+      <li><b>He For She</b>, Erasmus+ Youth Exchange, Saaremaa, Estonia (December 2023). Youthpass certified</li>
+      <li><b>European Summer School</b>, Blockchain to Financial Markets. Prague, 2025</li>
+      <li><b>Drums &amp; songwriting</b>, <i>son sek'</i>. One album, two singles, live shows (<a class="link" href="https://open.spotify.com/intl-tr/artist/1ILN8doPYd0l4l9ME6Rtce">Spotify</a>)</li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>
