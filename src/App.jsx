@@ -32,7 +32,7 @@ const COPY = {
       ["Domain", "Crypto exchanges and DeFi · published blockchain research · NFC and QR systems in hospitality"],
       ["Languages", "Turkish (native) · English (professional working proficiency)"],
     ],
-    workIntro: "Most of it runs through TAB Marketing, the marketing and customer-experience studio I started with two friends in 2026. We help cafés, restaurants and hotels manage how guests find them, rate them and talk to them: NFC and QR review stands, private feedback cards that send complaints straight to the owner instead of to Google, QR and digital menus, brand-matched print and visuals, websites, and the PR work around them. Clients include Pehlivan Et Lokantası, İtalyan İşi, BREAK, Soft Coffee Lounge, Elbis Hotel and Cabir Deluxe. We found every one of them ourselves and have delivered more than 250 custom pieces across Istanbul, Sakarya and beyond. I run design, supplier production and on-site setup, and I build our websites.",
+    workIntro: "Most of it runs through TAB Marketing, the marketing and customer-experience studio I started with two friends in 2026. We help cafés, restaurants and hotels manage how guests find them, rate them and talk to them: NFC and QR review stands, feedback cards that get guest complaints to the owner the moment they happen, QR and digital menus, brand-matched print and visuals, websites, and the PR work around them. Clients include Pehlivan Et Lokantası, İtalyan İşi, BREAK, Soft Coffee Lounge, Elbis Hotel and Cabir Deluxe. We found every one of them ourselves and have delivered more than 250 custom pieces across Istanbul, Sakarya and beyond. I run design, supplier production and on-site setup, and I build our websites.",
     tabLink: "See the website",
     sites: "Sites built through TAB",
     own: "Own projects",
@@ -50,7 +50,7 @@ const COPY = {
       edu: [["Istanbul Bilgi University", ", BSc Industrial Engineering. Graduated June 2026"], ["Serdivan Fen Lisesi", " (science high school), Sakarya, Turkey"]],
       international: "International",
       intl: [
-        ["He For She", ", Erasmus+ Youth Exchange in Saaremaa, Estonia (December 2023). I spent a week with an international group on gender equality and how it tracks with a country's development. Hosted by Artemis Women's Power MTÜ; Youthpass certified."],
+        ["HeForShe", ", Erasmus+ Youth Exchange in Saaremaa, Estonia (December 2023). I spent a week with an international group on gender equality and how it tracks with a country's development. Hosted by Artemis Women's Power MTÜ; Youthpass certified."],
         ["European Summer School", ", Blockchain to Financial Markets, Prague, Czechia (2025). Over a week, I studied where distributed ledgers meet market infrastructure: settlement, tokenised assets and the regulation around them."],
       ],
       involvement: "Involvement",
@@ -112,7 +112,7 @@ const COPY = {
       ["Alan bilgisi", "Kripto borsaları ve DeFi · yayımlanmış blockchain araştırması · konaklama ve yeme içme sektöründe NFC ve QR sistemleri"],
       ["Diller", "Türkçe (ana dili) · İngilizce (profesyonel çalışma yetkinliği)"],
     ],
-    workIntro: "İşlerin çoğu, 2026'da iki arkadaşımla kurduğum pazarlama ve müşteri deneyimi stüdyosu TAB Marketing üzerinden yürüyor. Kafe, restoran ve otellerin, misafirlerin onları nasıl bulduğunu, puanladığını ve onlarla nasıl iletişim kurduğunu yönetmesine yardımcı oluyoruz: NFC ve QR yorum standları, şikâyeti Google yerine doğrudan işletme sahibine ileten özel geri bildirim kartları, QR ve dijital menüler, markaya uygun baskı ve görseller, web siteleri ve bunların etrafındaki PR çalışmaları. Pehlivan Et Lokantası, İtalyan İşi, BREAK, Soft Coffee Lounge, Elbis Hotel ve Cabir Deluxe gibi işletmelerle çalışıyoruz. Müşterilerin hepsini kendimiz bulduk; İstanbul, Sakarya ve başka şehirlerde 250'den fazla özel tasarım ürün teslim ettik. Tasarımı, tedarikçilerle üretimi ve sahadaki kurulumu ben yürütüyorum; web sitelerimizi de ben geliştiriyorum.",
+    workIntro: "İşlerin çoğu, 2026'da iki arkadaşımla kurduğum pazarlama ve müşteri deneyimi stüdyosu TAB Marketing üzerinden yürüyor. Kafe, restoran ve otellerin, misafirlerin onları nasıl bulduğunu, puanladığını ve onlarla nasıl iletişim kurduğunu yönetmesine yardımcı oluyoruz: NFC ve QR yorum standları, misafir şikâyetlerini işletme sahibine anında ileten geri bildirim kartları, QR ve dijital menüler, markaya uygun baskı ve görseller, web siteleri ve bunların etrafındaki PR çalışmaları. Pehlivan Et Lokantası, İtalyan İşi, BREAK, Soft Coffee Lounge, Elbis Hotel ve Cabir Deluxe gibi işletmelerle çalışıyoruz. Müşterilerin hepsini kendimiz bulduk; İstanbul, Sakarya ve başka şehirlerde 250'den fazla özel tasarım ürün teslim ettik. Tasarımı, tedarikçilerle üretimi ve sahadaki kurulumu ben yürütüyorum; web sitelerimizi de ben geliştiriyorum.",
     tabLink: "Siteye git",
     sites: "TAB kapsamında yaptığım siteler",
     own: "Kendi projelerim",
@@ -130,7 +130,7 @@ const COPY = {
       edu: [["İstanbul Bilgi Üniversitesi", ", Endüstri Mühendisliği (Lisans). Haziran 2026 mezunu"], ["Serdivan Fen Lisesi", ", Sakarya"]],
       international: "Uluslararası",
       intl: [
-        ["He For She", ", Erasmus+ Youth Exchange, Saaremaa, Estonya (Aralık 2023). Uluslararası bir grupla bir hafta boyunca toplumsal cinsiyet eşitliğini ve bunun bir ülkenin gelişmişliğiyle ilişkisini ele aldık. Artemis Women's Power MTÜ'nün ev sahipliğinde; Youthpass sertifikalı."],
+        ["HeForShe", ", Erasmus+ Youth Exchange, Saaremaa, Estonya (Aralık 2023). Uluslararası bir grupla bir hafta boyunca toplumsal cinsiyet eşitliğini ve bunun bir ülkenin gelişmişliğiyle ilişkisini ele aldık. Artemis Women's Power MTÜ'nün ev sahipliğinde; Youthpass sertifikalı."],
         ["European Summer School", ", Blockchain to Financial Markets. Prag, Çekya (2025). Distributed ledger teknolojilerinin piyasa altyapısıyla kesiştiği yer üzerine bir hafta çalıştım: settlement, tokenized assets ve bunları çevreleyen regülasyon."],
       ],
       involvement: "Kulüpler & topluluk",
@@ -148,7 +148,7 @@ const COPY = {
       prog: [
         ["En İyi Bitirme Projesi Ödülü", ", Endüstri Mühendisliği Bölümü, İstanbul Bilgi Üniversitesi (2026), \u201cImprovement of Processes, Quality and Worker Well-Being in Sock Manufacturing: Case of \u00d6RS Textile\u201d çalışmasıyla. Beş kişilik ekibimizle, siparişe özel çorap üreten ÖRS Tekstil'in içinde çalıştık: üretimin neden bu kadarının fireye gittiğini bulduk, en büyük nedenleri çözdük, etiketleme istasyonunu ve depoyu yeniden düzenledik. Bu süreçte gerçek bir fabrikada dikkatli ölçümün ne kadar ileri götürdüğünü öğrendim: aşağıdaki her değişiklik sahada ölçülen bir sayıyla başladı. Dönemin en iyi beş projesi arasına seçildi; ayrıca CSRP 2026'da sunuldu.", null, [
           ["Fire", "Pareto analizi firenin büyük kısmını (%87,8) üç nedene bağladı: iğne kırılması, iplik nemi ve makine arızaları"],
-          ["Bakım", "İğne bakımı run-to-failure'dan preventive maintenance'a geçti; maliyeti yarıdan fazla düştü"],
+          ["Bakım", "İğne bakımı run-to-failure'dan preventive maintenance'a geçti; maliyet yarıdan fazla azaldı"],
           ["Nem", "İkinci büyük nedene karşı bir iplik nemölçeri; kendini yaklaşık 40 günde amorti etti"],
           ["Etiketleme", "MTM ile yeniden tasarlanan istasyonda parça başı süre %43 kısaldı"],
           ["Depo", "İki kat, Blender ve Python ile kurulan dijital ikizde ABC analizine göre yeniden yerleştirildi; alt katın depolama hacmi iki katından fazlasına çıktı"],
