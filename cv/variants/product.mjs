@@ -4,7 +4,7 @@ export default {
   slug: "product",
   label: { en: "Product & Technology", tr: "Ürün ve Teknoloji" },
   title: "Industrial Engineer · Product, Data & AI Prototyping",
-  profile: "Industrial engineer (Istanbul Bilgi University, 2026) who learned product in BTCTurk Technology's Scrum team and builds with React, TypeScript and LLM tools. Starts from a user's problem, benchmarks what exists and builds the smallest version that works: guest-feedback tools now used by 15+ venues and a playable multiplayer party game. Seeking an APM or product analyst role.",
+  profile: "Industrial engineer (Istanbul Bilgi University, 2026) who learned product in BTCTurk Technology's Scrum team and builds with React, TypeScript and LLM tools. Starts from a user's problem, benchmarks what exists and builds the smallest version that works, from a crypto app teardown to a playable multiplayer party game. Seeking an APM or product analyst role.",
   links: ["linkedin", "github"],
   experience: ["demarke", "btcturk", "toyota"],
   projects: ["tab", "ors", "krone", "feeddetox"],

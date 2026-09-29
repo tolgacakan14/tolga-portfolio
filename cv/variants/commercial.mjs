@@ -4,7 +4,7 @@ export default {
   slug: "commercial",
   label: { en: "Commercial & Business Analysis", tr: "Ticari ve İş Analizi" },
   title: "Industrial Engineer · Commercial & Business Analysis",
-  profile: "Industrial engineer (Istanbul Bilgi University, 2026) who turns market, cost and performance data into clear recommendations. Benchmarked a crypto exchange against global rivals, fed ideas into a Carlsberg UEFA sponsorship pitch and built a savings case for a textile plant. Co-founded a venue-services team that wins and runs its own hospitality accounts. Seeking a trade marketing, category or business analyst role.",
+  profile: "Industrial engineer (Istanbul Bilgi University, 2026) who turns market, cost and performance data into clear recommendations. Benchmarked a crypto exchange against global rivals, fed ideas into a Carlsberg UEFA sponsorship pitch and built a savings case for a textile plant worth 692.6K TL a year. Seeking a trade marketing, category or business analyst role.",
   links: ["linkedin"],
   experience: ["demarke", "btcturk", "toyota"],
   projects: ["tab", "ors"],

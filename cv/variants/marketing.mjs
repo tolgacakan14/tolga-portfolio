@@ -4,7 +4,7 @@ export default {
   slug: "marketing",
   label: { en: "Marketing, Brand & Sports", tr: "Pazarlama, Marka ve Spor" },
   title: "Industrial Engineer · Brand, Product & Sports Marketing",
-  profile: "Industrial engineer (Istanbul Bilgi University, 2026) drawn to sport, music and brands. Worked in PR on site at two UEFA tournaments and contributed activation ideas to a Carlsberg pitch. Co-founded TAB, winning 15+ venue clients unaided and leading the design of 250+ review stands, cards and menus. Drummer and songwriter in *son sek'*, with an album and live shows to date. Seeking a brand or product marketing role.",
+  profile: "Industrial engineer (Istanbul Bilgi University, 2026) drawn to sport, music and brands. Worked in PR on site at two UEFA tournaments, contributed activation ideas to a Carlsberg pitch and turned a football game's social data into monthly content plans. Drummer and songwriter in *son sek'*, with an album and live shows to date. Seeking a brand or product marketing role.",
   links: ["linkedin"],
   experience: ["demarke", "btcturk", "toyota"],
   projects: ["tab", "ors", "krone"],
