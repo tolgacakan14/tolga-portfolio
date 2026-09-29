@@ -1,0 +1,59 @@
+/* Full font files, not Google's split subsets: a subset boundary inside a word
+   (ğ, ş live in latin-ext) breaks the word apart in the PDF's text layer. */
+@font-face { font-family: 'Newsreader'; src: url(fonts/Newsreader.ttf); font-weight: 200 800; font-style: normal; }
+@font-face { font-family: 'Newsreader'; src: url(fonts/Newsreader-Italic.ttf); font-weight: 200 800; font-style: italic; }
+@font-face { font-family: 'JetBrains Mono'; src: url(fonts/JetBrainsMono.ttf); font-weight: 100 800; }
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #fff; }
+body {
+  width: 210mm; padding: 10mm 13mm 8mm;
+  font-family: 'Newsreader', Georgia, serif; font-size: 8.2pt; line-height: 1.27;
+  color: #1c1b18;
+  font-variant-ligatures: none; /* keep fi/fl as plain letters for ATS keyword search */
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+a { color: inherit; text-decoration: none; }
+.mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+
+/* head */
+h1 { font-size: 19pt; font-weight: 400; letter-spacing: -.01em; margin: 0; line-height: 1.1; }
+.title { font-family: 'JetBrains Mono', monospace; font-size: 8.8pt; color: #1d3c5a; margin: 5pt 0 7pt; }
+.portfolio { font-family: 'JetBrains Mono', monospace; font-size: 7.2pt; color: #8d887e; margin: 0 0 7pt; }
+.portfolio a { font-size: 9.4pt; color: #1d3c5a; border-bottom: .8pt solid #1d3c5a; padding-bottom: 1pt; margin-left: 5pt; }
+.contact {
+  display: flex; flex-wrap: wrap; gap: 0 13pt; padding-bottom: 5pt; border-bottom: 1pt solid #1c1b18;
+  font-family: 'JetBrains Mono', monospace; font-size: 7.6pt; color: #56534c;
+}
+
+/* sections */
+h2 {
+  font-family: 'JetBrains Mono', monospace; font-size: 7.7pt; font-weight: 500; letter-spacing: .04em;
+  text-transform: uppercase; color: #6f6a60;
+  margin: 7pt 0 3.5pt; padding-bottom: 2pt; border-bottom: .6pt solid #dcd7cc;
+}
+p { margin: 0; }
+.soft { color: #56534c; }
+.summary { text-align: justify; }
+
+/* dated entries */
+.entry { display: grid; grid-template-columns: 76pt 1fr; margin-bottom: 3.5pt; }
+.when { font-family: 'JetBrains Mono', monospace; font-size: 7.3pt; color: #8d887e; padding-top: 2pt; }
+.what { font-size: 9pt; }
+.what .sub { font-family: 'JetBrains Mono', monospace; font-size: 7.2pt; color: #8d887e; margin-left: 2pt; }
+ul.b { margin: 1pt 0 0; padding: 0; list-style: none; }
+/* no positioned markers: positioned boxes paint last and scramble the PDF text order */
+ul.b li, ul.l li { padding-left: 8pt; text-indent: -8pt; color: #56534c; }
+ul.b li::before, ul.l li::before { content: '·'; display: inline-block; width: 8pt; text-indent: 0; padding-left: 1pt; color: #8d887e; }
+
+/* skills */
+.skills { margin: 0; display: grid; grid-template-columns: 76pt 1fr; row-gap: 2.5pt; }
+.skills dt { font-family: 'JetBrains Mono', monospace; font-size: 7.6pt; padding-top: 1pt; }
+.skills dd { margin: 0; color: #56534c; }
+
+/* two columns at the foot */
+.cols { display: grid; grid-template-columns: 1fr 1fr; column-gap: 16pt; }
+ul.l { margin: 0; padding: 0; list-style: none; }
+ul.l li { margin-bottom: 1.5pt; }
+ul.l b { font-weight: 400; color: #1c1b18; }
+.link { color: #1d3c5a; border-bottom: .6pt solid #9fb0c2; }

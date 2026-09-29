@@ -12,27 +12,26 @@ const COPY = {
   en: {
     nav: { about: "About", experience: "Experience", skills: "Skills", work: "Work", background: "Background", contact: "Contact" },
     place: "Istanbul, Turkey",
-    roles: ["Industrial engineer", "Process improvement", "Builder", "Blockchain researcher", "Drummer & songwriter"],
+    roles: ["Industrial engineer", "Process & operations", "Product", "Marketing & PR", "Web product builder"],
     about: [
       "I studied industrial engineering at Istanbul Bilgi University and graduated in June 2026. What I like most is finding where a system breaks and then fixing it, whether that turns out to be a factory floor, a product or a spreadsheet nobody wants to open.",
-      "My work spans engineering, product, design, operations and research. I have worked with teams in Turkey, Estonia and Czechia, and I am most useful when a problem is still vague and somebody has to turn it into something people can actually use.",
+      "My work spans engineering, product, design, operations and research, and I have worked alongside people from across Europe on programmes in Estonia and Czechia. I am most useful when a problem is still vague and somebody has to turn it into something people can actually use.",
       "Away from all that: drums and making songs.",
     ],
     expIntro: "Before I graduated I had worked in Toyota's assembly logistics, at a crypto exchange and a sports marketing agency, and in a project-based AI engineering programme. Each taught a different part of the same job: how work really flows, how a product team decides what matters, how something gets sold and how to put AI to work without hand-waving.",
     jobs: [
-      { when: "Mar–Jul 2025", what: "Sports Marketing Intern, De Marke Agency", note: "At De Marke I learned sports marketing where the stakes are highest: UEFA-level sponsorship for a global brand, and international football tournaments where content has to be made live, on the day. I worked in the on-site organisation at these tournaments, which showed me how much planning sits behind a few minutes of live content. For Carlsberg's UEFA sponsorship I contributed activation ideas, such as a \u201cVAR Room by Carlsberg\u201d and fan commentary from local pubs. I also wrote the monthly social media report for Sosyal Lig, a football fantasy game with about 115K Instagram followers, and benchmarked the Basketbol Süper Ligi's Instagram against the NBA and EuroLeague to build its content plan." },
+      { when: "Mar–Jul 2025", what: "Sports Marketing Intern, De Marke Agency", note: "At De Marke I learned sports marketing where the stakes are highest: UEFA-level sponsorship for a global brand, and international football tournaments where content has to be made live, on the day. I worked in the PR team on site at the UEFA Nations League Finals and UEFA Women's EURO 2025, which showed me how much planning sits behind a few minutes of live content. For Carlsberg's UEFA sponsorship I contributed activation ideas, such as a \u201cVAR Room by Carlsberg\u201d and fan commentary from local pubs. I also wrote the monthly social media report for Sosyal Lig, a football fantasy game with about 115K Instagram followers, and benchmarked the Basketbol Süper Ligi's Instagram against the NBA and EuroLeague to build its content plan." },
       { when: "Jan–Feb 2025", what: "Product Intern, BTCTurk Technology", note: "At BTCTurk Technology I spent four weeks in the Product Management team of one of Turkey's largest crypto exchanges, and learned how a product team really runs: standups, sprint planning, reviews and retros, with the backlog, user stories and roadmap kept in Jira and Confluence. My main work was a competitive benchmark of BtcTurk against leading Turkish and global exchanges, including a screen-by-screen teardown of Binance in Figma. The gaps it showed, from self-custody wallets to DeFi and airdrops, became recommendations I presented to the product team. I also looked into why margin trading isn't offered in Turkey, built dashboards and market-trend reports, and worked with IT on an inventory of the company's apps and tools." },
       { when: "Jun–Jul 2024", what: "Engineering Intern, Toyota Motor Manufacturing Turkey", note: "At Toyota's Sakarya plant, where the Corolla and C-HR are built, I learned the Toyota Production System where it happens: on the gemba. In Assembly Logistics I followed parts from dock receiving through imported-parts ordering, Devan and SPS (set parts supply) line feeding, and saw JIT, Jidoka, Kaizen, Kanban and standard work in daily practice. With two fellow interns I turned those tools on our own internship programme: we measured its efficiency at 61% against an 82% ideal and used a 4M fishbone to trace the gap to its root causes. We proposed a standard programme flow and a standard work form (İSF, İş Standart Formu), wrote a TPS handbook for future interns, and presented it all to management." },
     ],
     skills: [
       ["Product", "Customer discovery · competitive benchmarking · market research · requirements and scoping · dashboards and reporting · Agile (Scrum)"],
       ["Operations", "Lean and TPS (Kaizen, 5S, JIT, Jidoka) · root cause analysis (4M fishbone) · Pareto and ABC analysis · MTM · RULA · NIOSH · preventive maintenance · warehouse layout · supplier and production coordination · event operations"],
-      ["Data & tools", "Excel (VBA) · SQL · Python · JavaScript · TypeScript · React · Next.js · Blender · Figma · Jira · Confluence"],
-      ["AI in practice", "LLM-assisted workflows · prompt design and iteration"],
+      ["Data & tools", "Excel (VBA) · SQL · Python · JavaScript · TypeScript · React · Next.js · Blender · Figma · Jira · Confluence · LLM-assisted workflows · prompt design"],
       ["Domain", "Crypto exchanges and DeFi · published blockchain research · NFC and QR systems in hospitality"],
-      ["Languages", "Turkish (native) · English (professional working proficiency)"],
+      ["Languages", "Turkish (native) · English (professional)"],
     ],
-    workIntro: "Most of it runs through TAB Marketing, the marketing and customer-experience studio I started with two friends in 2026. We help cafés, restaurants and hotels manage how guests find them, rate them and talk to them: NFC and QR review stands, feedback cards that get guest complaints to the owner the moment they happen, QR and digital menus, brand-matched print and visuals, websites, and the PR work around them. Clients include Pehlivan Et Lokantası, İtalyan İşi, BREAK, Soft Coffee Lounge, Elbis Hotel and Cabir Deluxe. We found every one of them ourselves and have delivered more than 250 custom pieces across Istanbul, Sakarya and beyond. I run design, supplier production and on-site setup, and I build our websites.",
+    workIntro: "TAB Marketing started because I kept seeing the same gap in the cafés, restaurants and hotels around me: owners had no simple way to hear from their guests or to be found by new ones. So in 2026 I put together a small team with two friends to offer a solution-focused, CRM-style service, and we take it on project by project as work comes in. We design NFC and QR review stands, feedback cards that get guest complaints to the owner the moment they happen, QR and digital menus, brand-matched print and visuals, websites, and the PR work around them. Clients include Pehlivan Et Lokantası, İtalyan İşi, BREAK, Soft Coffee Lounge, Elbis Hotel and Cabir Deluxe; we found every one of them ourselves and have delivered more than 250 custom pieces across Istanbul, Sakarya and beyond. I lead design, supplier production and on-site setup, and I build the websites.",
     tabLink: "See the website",
     sites: "Sites built through TAB",
     own: "Own projects",
@@ -41,13 +40,13 @@ const COPY = {
       { title: "Diş Hekimi Melis Çakan", note: "I built a calm, mobile-first site for a dental practice in Sakarya: six treatment pages, a symptom picker that points patients to the right one, FAQ, WhatsApp booking and structured data for search.", href: "https://dishekimimeliscakan.com", label: "dishekimimeliscakan.com" },
     ],
     projects: [
-      { title: "Krone", note: "I built a mobile party game with nine mini-games, from reflex and colour tests to golf and a maze of arrows. Friends join a room with a code, everyone starts on the same server-timed 3-2-1, and scores go to a shared board. A Daily Challenge uses the date as a random seed, so every player in the world gets the same five games that day. I shipped the first version in six days. React, TypeScript, Supabase.", href: "https://innerclock.vercel.app", label: "innerclock.vercel.app" },
+      { title: "Krone", tag: "UNRELEASED · FULLY PLAYABLE", note: "I built a mobile party game with nine mini-games, from reflex and colour tests to golf and a maze of arrows. Friends join a room with a code, everyone starts on the same server-timed 3-2-1, and scores go to a shared board. A Daily Challenge uses the date as a random seed, so every player in the world gets the same five games that day. I shipped the first version in six days. React, TypeScript, Supabase.", href: "https://innerclock.vercel.app", label: "innerclock.vercel.app" },
       { title: "Feed Detox", note: "Feed Detox lets you type what you want to see online and get a pack of creators, searches and mute keywords for X, Instagram, TikTok and YouTube. It pulls real results from the YouTube API and web search, ranks them for relevance and noise, and shares the pack as a link. I built it bilingual (EN/TR) in Next.js." },
       { title: "NICOTINE", tag: "IN PROGRESS", note: "I am building a storefront for an Istanbul streetwear label: a figure that dresses layer by layer as you scroll, drops and an archive, and a points club that rewards returning buyers. Next.js, GSAP." },
     ],
     bg: {
       education: "Education",
-      edu: [["Istanbul Bilgi University", ", BSc Industrial Engineering. Graduated June 2026"], ["Serdivan Fen Lisesi", " (science high school), Sakarya, Turkey"]],
+      edu: [["Istanbul Bilgi University", ", BSc Industrial Engineering. Graduated June 2026"], ["Serdivan Fen Lisesi", " (science high school), Sakarya, Turkey"], ["Military service", ": deferred until 2029"]],
       international: "International",
       intl: [
         ["HeForShe", ", Erasmus+ Youth Exchange in Saaremaa, Estonia (December 2023). I spent a week with an international group on gender equality and how it tracks with a country's development. Hosted by Artemis Women's Power MTÜ; Youthpass certified."],
@@ -76,7 +75,7 @@ const COPY = {
         ]],
         ["AI Engineering Internship", ", FlyRank AI (2026). A remote, project-based programme built around shipping real work rather than coursework; I completed five reviewed assignments and a capstone."],
         ["AI Fluency: Framework & Foundations", ", Anthropic Education (July 2026)", "https://verify.skilljar.com/c/xvnv3q5pttvf"],
-        ["Claude 101", ", Anthropic Education (July 2026)", "https://verify.skilljar.com/c/j8cq55wxfnwn"],
+        ["AI Fluency for Builders", ", Anthropic Education (2026)"],
       ],
       music: "Music",
       musicText: "I play drums and write songs in ",
@@ -84,6 +83,16 @@ const COPY = {
       musicRest: ": one album, two singles and a handful of live shows so far.",
     },
     contactText: "I am based in Istanbul and open to new projects and roles.",
+    cvs: {
+      heading: "Download a CV",
+      note: "The same record, written four ways. Pick the one closest to the role.",
+      items: [
+        { slug: "operations", label: "Operations & Process Improvement" },
+        { slug: "product", label: "Product & Technology" },
+        { slug: "marketing", label: "Marketing, Brand & Sports" },
+        { slug: "commercial", label: "Commercial & Business Analysis" },
+      ],
+    },
     cv: "CV ↓",
     verify: "verify ↗",
     setIn: "Set in Newsreader",
@@ -92,27 +101,26 @@ const COPY = {
   tr: {
     nav: { about: "Hakkımda", experience: "Deneyim", skills: "Yetkinlikler", work: "İşler", background: "Geçmiş", contact: "İletişim" },
     place: "İstanbul, Türkiye",
-    roles: ["Endüstri mühendisi", "Süreç iyileştirme", "Geliştirici", "Blockchain araştırmacısı", "Davulcu & şarkı yazarı"],
+    roles: ["Endüstri mühendisi", "Süreç ve operasyon", "Ürün", "Pazarlama ve PR", "Web ürünleri geliştiren"],
     about: [
       "İstanbul Bilgi Üniversitesi'nde endüstri mühendisliği okudum, Haziran 2026'da mezun oldum. En sevdiğim şey bir sistemin nerede aksadığını bulup düzeltmek; bu bir üretim sahası da olabilir, bir ürün de, kimsenin açmak istemediği bir tablo da.",
-      "Oldukça geniş bir alanda çalışıyorum: mühendislik, ürün, tasarım, operasyon, araştırma. Türkiye'de ve yurt dışında, Estonya ve Çekya'da ekiplerle çalıştım. En çok, bir problem henüz belirsizken ve birinin onu insanların gerçekten kullanabileceği bir şeye dönüştürmesi gerekirken işe yarıyorum.",
+      "Mühendislik, ürün, tasarım, operasyon ve araştırma arasında çalışıyorum; Estonya ve Çekya'daki programlarda Avrupa'nın dört bir yanından insanlarla birlikte çalıştım. En çok, bir problem henüz belirsizken ve birinin onu insanların gerçekten kullanabileceği bir şeye dönüştürmesi gerekirken işe yarıyorum.",
       "Bunların dışında: davul çalmak ve şarkı yazmak.",
     ],
     expIntro: "Mezun olmadan önce Toyota'nın montaj lojistiğinde, bir kripto borsasında, bir spor pazarlama ajansında ve proje temelli bir yapay zekâ mühendisliği programında çalışmıştım. Her biri bana aynı işin farklı bir parçasını öğretti: işin gerçekte nasıl aktığını, bir ürün ekibinin neye öncelik verdiğini, bir şeyin nasıl satıldığını ve yapay zekânın laf kalabalığı olmadan nasıl işe koşulacağını.",
     jobs: [
-      { when: "Mar–Tem 2025", what: "Spor Pazarlama Stajyeri, De Marke Ajansı", note: "Spor pazarlamasını en üst seviyede öğrendim: küresel bir markanın UEFA sponsorluğu ve içeriğin o gün, canlı üretilmesi gereken uluslararası futbol turnuvaları. Bu turnuvalarda saha organizasyonunda çalıştım; birkaç dakikalık canlı içeriğin arkasında ne kadar planlama olduğunu orada gördüm. Carlsberg'in UEFA sponsorluğu için \u201cVAR Room by Carlsberg\u201d ve mahalle pub'larından taraftar spikerliği gibi aktivasyon fikirleriyle katkı sundum. Ayrıca yaklaşık 115 bin Instagram takipçili futbol menajerlik oyunu Sosyal Lig'in aylık sosyal medya raporunu hazırladım ve Basketbol Süper Ligi'nin Instagram'ını NBA ve EuroLeague ile kıyaslayarak içerik planını oluşturdum." },
+      { when: "Mar–Tem 2025", what: "Spor Pazarlama Stajyeri, De Marke Ajansı", note: "Spor pazarlamasını en üst seviyede öğrendim: küresel bir markanın UEFA sponsorluğu ve içeriğin o gün, canlı üretilmesi gereken uluslararası futbol turnuvaları. UEFA Nations League Finals ve UEFA Women's EURO 2025'te sahada PR ekibinde çalıştım; birkaç dakikalık canlı içeriğin arkasında ne kadar planlama olduğunu orada gördüm. Carlsberg'in UEFA sponsorluğu için \u201cVAR Room by Carlsberg\u201d ve mahalle pub'larından taraftar spikerliği gibi aktivasyon fikirleriyle katkı sundum. Ayrıca yaklaşık 115 bin Instagram takipçili futbol menajerlik oyunu Sosyal Lig'in aylık sosyal medya raporunu hazırladım ve Basketbol Süper Ligi'nin Instagram'ını NBA ve EuroLeague ile kıyaslayarak içerik planını oluşturdum." },
       { when: "Oca–Şub 2025", what: "Ürün Stajyeri, BTCTurk Teknoloji", note: "BTCTurk Teknoloji'de, Türkiye'nin en büyük kripto borsalarından birinin Product Management ekibinde dört hafta geçirdim ve bir ürün ekibinin gerçekte nasıl çalıştığını öğrendim: standup'lar, sprint planning, review ve retro toplantıları; Jira ve Confluence'ta backlog, user story ve roadmap. Asıl işim, BtcTurk'ü önde gelen yerli ve küresel borsalarla karşılaştıran bir benchmarking çalışmasıydı; Binance'in Figma'da ekran ekran incelenmesi de buna dâhildi. Ortaya çıkan eksikleri (self-custody cüzdan, DeFi, airdrop) önerilere dönüştürüp ürün ekibine sundum. Bunun yanında margin trading'in Türkiye'de neden sunulmadığını inceledim, dashboard'lar ve piyasa trend raporları hazırladım, IT ekibiyle uygulama ve araç envanterini analiz ettim." },
       { when: "Haz–Tem 2024", what: "Mühendislik Stajyeri, Toyota Otomotiv Sanayi Türkiye", note: "Toyota Otomotiv Sanayi Türkiye'nin, Corolla ve C-HR'ın üretildiği Sakarya fabrikasında Toyota Üretim Sistemi'ni (TPS) yerinde, gemba'da öğrendim. Assembly Logistics'te parçaların yolunu dock receiving'den ithal parça siparişine, Devan'dan SPS ile hat beslemeye kadar izledim; JIT, Jidoka, Kaizen, Kanban ve standart işin günlük pratikte nasıl işlediğini gördüm. İki stajyer arkadaşımla bu araçları kendi staj programımıza uyguladık: verimliliği ideal olan %82'ye karşı %61 olarak ölçtük ve 4M fishbone ile root cause analysis yaparak farkın kök nedenlerini belirledik. Standart bir program akışı ve İş Standart Formu (İSF) önerdik, gelecek stajyerler için bir TPS el kitabı yazdık ve hepsini yönetime sunduk." },
     ],
     skills: [
       ["Ürün", "Customer discovery · benchmarking · market research · requirements ve scoping · dashboard ve raporlama · Agile (Scrum)"],
       ["Operasyon", "Lean ve TPS (Kaizen, 5S, JIT, Jidoka) · root cause analysis (4M balık kılçığı) · Pareto ve ABC analizi · MTM · RULA · NIOSH · preventive maintenance · depo yerleşimi · tedarikçi ve üretim koordinasyonu · etkinlik operasyonları"],
-      ["Veri & araçlar", "Excel (VBA) · SQL · Python · JavaScript · TypeScript · React · Next.js · Blender · Figma · Jira · Confluence"],
-      ["Pratikte yapay zekâ", "LLM destekli workflow'lar · prompt design ve iterasyon"],
+      ["Veri & araçlar", "Excel (VBA) · SQL · Python · JavaScript · TypeScript · React · Next.js · Blender · Figma · Jira · Confluence · LLM destekli workflow'lar · prompt design"],
       ["Alan bilgisi", "Kripto borsaları ve DeFi · yayımlanmış blockchain araştırması · konaklama ve yeme içme sektöründe NFC ve QR sistemleri"],
-      ["Diller", "Türkçe (ana dili) · İngilizce (profesyonel çalışma yetkinliği)"],
+      ["Diller", "Türkçe (ana dili) · İngilizce (profesyonel)"],
     ],
-    workIntro: "İşlerin çoğu, 2026'da iki arkadaşımla kurduğum pazarlama ve müşteri deneyimi stüdyosu TAB Marketing üzerinden yürüyor. Kafe, restoran ve otellerin, misafirlerin onları nasıl bulduğunu, puanladığını ve onlarla nasıl iletişim kurduğunu yönetmesine yardımcı oluyoruz: NFC ve QR yorum standları, misafir şikâyetlerini işletme sahibine anında ileten geri bildirim kartları, QR ve dijital menüler, markaya uygun baskı ve görseller, web siteleri ve bunların etrafındaki PR çalışmaları. Pehlivan Et Lokantası, İtalyan İşi, BREAK, Soft Coffee Lounge, Elbis Hotel ve Cabir Deluxe gibi işletmelerle çalışıyoruz. Müşterilerin hepsini kendimiz bulduk; İstanbul, Sakarya ve başka şehirlerde 250'den fazla özel tasarım ürün teslim ettik. Tasarımı, tedarikçilerle üretimi ve sahadaki kurulumu ben yürütüyorum; web sitelerimizi de ben geliştiriyorum.",
+    workIntro: "TAB Marketing, çevremdeki kafe, restoran ve otellerde hep aynı eksiği görmemle başladı: işletme sahiplerinin misafirlerini dinlemek ve yeni müşteriler tarafından bulunmak için basit bir yolu yoktu. 2026'da iki arkadaşımla çözüm odaklı, CRM benzeri bir hizmet sunan küçük bir ekip kurdum; işleri proje bazında, iş geldikçe yürütüyoruz. NFC ve QR yorum standları, misafir şikâyetlerini işletme sahibine anında ileten geri bildirim kartları, QR ve dijital menüler, markaya uygun baskı ve görseller, web siteleri ve bunların etrafındaki PR çalışmalarını tasarlıyoruz. Pehlivan Et Lokantası, İtalyan İşi, BREAK, Soft Coffee Lounge, Elbis Hotel ve Cabir Deluxe gibi işletmelerle çalıştık; müşterilerin hepsini kendimiz bulduk ve İstanbul, Sakarya ve başka şehirlerde 250'den fazla özel tasarım ürün teslim ettik. Tasarımı, tedarikçilerle üretimi ve sahadaki kurulumu ben yürütüyorum; web sitelerini de ben geliştiriyorum.",
     tabLink: "Siteye git",
     sites: "TAB kapsamında yaptığım siteler",
     own: "Kendi projelerim",
@@ -121,13 +129,13 @@ const COPY = {
       { title: "Diş Hekimi Melis Çakan", note: "Sakarya'daki bir diş kliniği için sakin, mobile-first bir site yaptım: altı tedavi sayfası, hastayı doğru sayfaya yönlendiren bir belirti seçici, SSS, WhatsApp'tan randevu ve arama motorları için yapılandırılmış veri.", href: "https://dishekimimeliscakan.com", label: "dishekimimeliscakan.com" },
     ],
     projects: [
-      { title: "Krone", note: "Dokuz mini oyundan oluşan mobil bir parti oyunu yaptım: refleks ve renk testlerinden golfe, ok labirentine kadar. Arkadaşlar kodla aynı odaya giriyor, herkes sunucu zamanlı aynı 3-2-1 geri sayımıyla başlıyor, skorlar ortak tabloya düşüyor. Günlük Meydan Okuma'da tarih, rastgele sayı üretecine seed olarak veriliyor; böylece dünyadaki herkes o gün aynı beş oyunu oynuyor. İlk sürümü altı günde çıkardım. React, TypeScript, Supabase.", href: "https://innerclock.vercel.app", label: "innerclock.vercel.app" },
+      { title: "Krone", tag: "YAYINLANMADI · TAM OYNANABİLİR", note: "Dokuz mini oyundan oluşan mobil bir parti oyunu yaptım: refleks ve renk testlerinden golfe, ok labirentine kadar. Arkadaşlar kodla aynı odaya giriyor, herkes sunucu zamanlı aynı 3-2-1 geri sayımıyla başlıyor, skorlar ortak tabloya düşüyor. Günlük Meydan Okuma'da tarih, rastgele sayı üretecine seed olarak veriliyor; böylece dünyadaki herkes o gün aynı beş oyunu oynuyor. İlk sürümü altı günde çıkardım. React, TypeScript, Supabase.", href: "https://innerclock.vercel.app", label: "innerclock.vercel.app" },
       { title: "Feed Detox", note: "Feed Detox'u yaptım: internette ne görmek istediğini yazıyorsun, uygulama da X, Instagram, TikTok ve YouTube için takip edilecek hesapları, aramaları ve susturulacak kelimeleri bir paket hâlinde çıkarıyor. Sonuçları YouTube API'si ve web aramasından canlı çekip alaka ve gürültüye göre sıralıyor, paketi bir linkle paylaşmanı sağlıyor. Türkçe ve İngilizce. Next.js." },
       { title: "NICOTINE", tag: "GELİŞTİRİLİYOR", note: "İstanbul'daki bir streetwear markası için bir vitrin geliştiriyorum: scroll ettikçe bir figür katman katman giyiniyor; drop'lar, arşiv ve geri gelen alıcıyı ödüllendiren puanlı bir kulüp. Next.js, GSAP." },
     ],
     bg: {
       education: "Eğitim",
-      edu: [["İstanbul Bilgi Üniversitesi", ", Endüstri Mühendisliği (Lisans). Haziran 2026 mezunu"], ["Serdivan Fen Lisesi", ", Sakarya"]],
+      edu: [["İstanbul Bilgi Üniversitesi", ", Endüstri Mühendisliği (Lisans). Haziran 2026 mezunu"], ["Serdivan Fen Lisesi", ", Sakarya"], ["Askerlik", ": 2029'a kadar tecilli"]],
       international: "Uluslararası",
       intl: [
         ["HeForShe", ", Erasmus+ Youth Exchange, Saaremaa, Estonya (Aralık 2023). Uluslararası bir grupla bir hafta boyunca toplumsal cinsiyet eşitliğini ve bunun bir ülkenin gelişmişliğiyle ilişkisini ele aldık. Artemis Women's Power MTÜ'nün ev sahipliğinde; Youthpass sertifikalı."],
@@ -157,7 +165,7 @@ const COPY = {
         ]],
         ["Yapay Zekâ Mühendisliği Stajı", ", FlyRank AI (2026). Uzaktan, proje temelli bu programda değerlendirmeden geçen beş ödevi ve bir bitirme projesini tamamladım. Program, ders çözmek yerine gerçek iş çıkarmak üzerine kurulu."],
         ["AI Fluency: Framework & Foundations", ", Anthropic Education (Temmuz 2026)", "https://verify.skilljar.com/c/xvnv3q5pttvf"],
-        ["Claude 101", ", Anthropic Education (Temmuz 2026)", "https://verify.skilljar.com/c/j8cq55wxfnwn"],
+        ["AI Fluency for Builders", ", Anthropic Education (2026)"],
       ],
       music: "Müzik",
       musicText: "",
@@ -165,6 +173,16 @@ const COPY = {
       musicRest: " grubunda davul çalıyor, şarkı yazıyorum. Şimdiye kadar bir albüm, iki single ve birkaç canlı performansımız oldu.",
     },
     contactText: "İstanbul'da yaşıyorum, yeni projelere ve rollere açığım.",
+    cvs: {
+      heading: "CV indir",
+      note: "Aynı geçmiş, dört farklı rol türü için dört ayrı yazımla. İlana en yakın olanı seçin.",
+      items: [
+        { slug: "operations", label: "Operasyon ve Süreç İyileştirme" },
+        { slug: "product", label: "Ürün ve Teknoloji" },
+        { slug: "marketing", label: "Pazarlama, Marka ve Spor" },
+        { slug: "commercial", label: "Ticari ve İş Analizi" },
+      ],
+    },
     cv: "CV ↓",
     verify: "doğrula ↗",
     setIn: "Newsreader ile dizildi",
@@ -180,6 +198,8 @@ function withTab(text) {
     <a key={n} className="link link-inline" href={TAB_URL} target="_blank" rel="noreferrer">TAB Marketing</a>, part,
   ]);
 }
+
+const cvHref = (slug) => "/cv/tolga-cakan-cv-" + slug + ".pdf";
 
 const SECTION_IDS = ["about", "experience", "skills", "work", "background", "contact"];
 
@@ -474,6 +494,18 @@ a.chip { display: inline-flex; align-items: center; text-decoration: none; }
   color: var(--ink-faint);
 }
 
+/* CV picker: one PDF per kind of role */
+.cv-block { margin-top: 30px; }
+.cv-picks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 14px; }
+.cv-pick {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+  padding: 13px 14px; border: 1px solid var(--rule); font-size: 15px; color: var(--ink);
+  transition: border-color .25s ease, color .25s ease, background .25s ease;
+}
+.cv-pick .mono { font-size: 10px; letter-spacing: .08em; color: var(--ink-faint); white-space: nowrap; }
+.cv-pick:hover { border-color: var(--accent); color: var(--accent); background: color-mix(in srgb, var(--paper-2) 60%, transparent); }
+@media (max-width: 560px) { .cv-picks { grid-template-columns: 1fr; } }
+
 /* contact lines */
 .contact-link {
   color: var(--ink-soft); border-bottom: 1px solid transparent;
@@ -731,7 +763,7 @@ function CommandMenu({ open, onClose, onTheme, onLang, t, lang }) {
     ...SECTION_IDS.slice(1).map((id) => ({ k: id, label: t.nav[id], hint: lang === "tr" ? "Bölüm" : "Section", run: () => go(id) })),
     { k: "lang", label: lang === "en" ? "Türkçe'ye geç" : "Switch to English", hint: lang === "tr" ? "Dil" : "Language", run: onLang },
     { k: "theme", label: lang === "tr" ? "Paleti değiştir" : "Switch palette", hint: lang === "tr" ? "Görünüm" : "View", run: onTheme },
-    { k: "cv", label: lang === "tr" ? "CV indir (PDF)" : "Download CV (PDF)", hint: lang === "tr" ? "Dosya" : "File", run: () => { window.location.href = "/tolga-cakan-cv.pdf"; } },
+    ...t.cvs.items.map((c) => ({ k: "cv-" + c.slug, label: "CV · " + c.label, hint: "PDF", run: () => { window.location.href = cvHref(c.slug); } })),
     { k: "tab", label: lang === "tr" ? "TAB Marketing sitesi" : "TAB Marketing site", hint: "Link", run: () => { window.open(TAB_URL, "_blank", "noreferrer"); } },
     { k: "mail", label: lang === "tr" ? "E-posta yaz" : "Write an email", hint: lang === "tr" ? "İletişim" : "Contact", run: () => { window.location.href = "mailto:" + EMAIL; } },
     { k: "print", label: lang === "tr" ? "Sayfayı yazdır" : "Print this page", hint: lang === "tr" ? "Sayfa" : "Page", run: () => window.print() },
@@ -830,7 +862,7 @@ function LeftPane({ active, theme, onTheme, onMenu, onLang, t, lang }) {
           <button type="button" className="chip" onClick={onTheme} aria-label="Switch palette">
             {theme === "night" ? (lang === "tr" ? "Gündüz" : "Day") : (lang === "tr" ? "Gece" : "Night")}
           </button>
-          <a className="chip" href="/tolga-cakan-cv.pdf" download>{t.cv}</a>
+          <a className="chip" href="#cv" onClick={(e) => { e.preventDefault(); go("cv"); }}>{t.cv}</a>
         </div>
       </div>
     </aside>
@@ -991,6 +1023,17 @@ function Contact({ t }) {
           <ContactLine href={"mailto:" + EMAIL}>{EMAIL}</ContactLine>
           <ContactLine href={PHONE_HREF}>{PHONE_DISPLAY}</ContactLine>
           <a href="https://github.com/tolgacakan14" target="_blank" rel="noreferrer">github.com/tolgacakan14</a>
+        </div>
+        <div className="cv-block rise" id="cv" style={{ "--i": 3 }}>
+          <h3 className="h3">{t.cvs.heading}</h3>
+          <p className="p">{t.cvs.note}</p>
+          <div className="cv-picks">
+            {t.cvs.items.map((c) => (
+              <a key={c.slug} className="cv-pick" href={cvHref(c.slug)} download>
+                <span>{c.label}</span><span className="mono">PDF ↓</span>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </section>

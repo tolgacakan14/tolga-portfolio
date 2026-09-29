@@ -6,13 +6,17 @@ npm run dev
 
 Opens at http://localhost:5173
 
-## CV PDF
-The downloadable CV is written in `cv/cv.html` (fonts in `cv/fonts`) and
-rendered to `public/tolga-cakan-cv.pdf` with headless Chrome:
+## CV PDFs
+There are four CVs, one per kind of role (operations, product, marketing,
+commercial). The facts they share live in `cv/content.mjs`; each variant in
+`cv/variants/` sets its own title, profile, order, bullets and skills.
+`cv/build.mjs` writes one HTML page per variant to `cv/build/`, and
 
     sh scripts/cv-pdf.sh
 
-The script fails if the CV no longer fits on one A4 page.
+prints them to `public/cv/tolga-cakan-cv-<variant>.pdf` with headless Chrome
+(the first variant is also copied to `public/tolga-cakan-cv.pdf`). The script
+fails if any CV no longer fits on one A4 page.
 
 ## Deploy to Vercel
 Push this folder to a GitHub repo, then import it in Vercel.
