@@ -27,8 +27,11 @@ function entry({ when, what, sub, points, line }) {
 
 const list = (items) => `<ul class="l">\n${items.map(([lead, rest]) => `      <li><b>${inline(lead)}</b>${inline(rest)}</li>`).join("\n")}\n    </ul>`;
 
+const pick = (map, keys) => keys.map((k) => map[k]);
+
 function page(v) {
   const c = common;
+  const pub = v.publication || c.defaults.publication;
   const links = c.links.filter((l) => v.links.includes(l.key));
   const exp = v.experience.map((key) => entry({ ...c.experience[key], points: v.points[key] }));
   const proj = v.projects.map((key) => {
@@ -48,8 +51,8 @@ function page(v) {
 
 <h1>${esc(c.name)}</h1>
 <p class="title">${inline(v.title)}</p>
-<p class="portfolio">PORTFOLIO<a href="${c.portfolio.href}">${esc(c.portfolio.label)}</a></p>
 <div class="contact">
+  <a class="port" href="${c.portfolio.href}">${esc(c.portfolio.label)}</a>
   <span>${esc(c.place)}</span>
   <a href="mailto:${c.email}">${esc(c.email)}</a>
   <a href="${c.phone.href}">${esc(c.phone.label)}</a>
@@ -75,13 +78,13 @@ ${skills}
     <h2>Education</h2>
     ${list(c.education)}
     <h2>Awards, programmes &amp; certificates</h2>
-    ${list(c.awards.filter(([, , onlyIfNot]) => !onlyIfNot || !v.experience.includes(onlyIfNot)))}
+    ${list(pick(c.awards, v.awards || c.defaults.awards))}
   </div>
   <div>
-    <h2>Publication</h2>
-    ${list(c.publication)}
     <h2>Leadership &amp; involvement</h2>
-    ${list(c.leadership)}
+    ${list(pick(c.leadership, v.leadership || c.defaults.leadership))}
+${pub === "none" ? "" : `    <h2>Publication</h2>
+    ${list([c.publication[pub]])}`}
   </div>
 </div>
 

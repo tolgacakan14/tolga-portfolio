@@ -1,51 +1,48 @@
-// Commercial, trade marketing, category, business and strategy analysis
-// (applied to: Red Bull Trade Marketing Analyst, corporate sales).
+// Commercial, trade marketing, category, key account, business and strategy
+// analysis (applied to: Red Bull Trade Marketing Analyst, corporate sales).
 export default {
   slug: "commercial",
   label: { en: "Commercial & Business Analysis", tr: "Ticari ve İş Analizi" },
   title: "Industrial Engineer · Commercial & Business Analysis",
-  profile: "Industrial engineer (Istanbul Bilgi University, 2026) who turns market, cost and customer data into recommendations people act on, from competitor benchmarks and KPI reports to ROI cases on the factory floor. Co-founded a venue-services team that has won 15+ hospitality clients, all self-sourced, each handled from first contact to in-venue setup. Looking for a trade marketing, category or business analyst role.",
+  profile: "Industrial engineer (Istanbul Bilgi University, 2026) who turns market, cost and performance data into clear recommendations. Benchmarked a crypto exchange against global rivals, fed ideas into a Carlsberg UEFA sponsorship pitch and built a savings case for a textile plant. Co-founded a venue-services team that wins and runs its own hospitality accounts. Seeking a trade marketing, category or business analyst role.",
   links: ["linkedin"],
   experience: ["demarke", "btcturk", "toyota"],
-  projects: ["ors", "tab", "krone", "feeddetox"],
+  projects: ["tab", "ors"],
   points: {
     demarke: [
-      "Worked on site at two UEFA tournaments; added fan-activation ideas to a Carlsberg sponsorship pitch.",
-      "Wrote the monthly KPI report on a 115K-follower football game's socials, with next-month actions.",
-      "Benchmarked BSL's Instagram against NBA and EuroLeague and proposed a new content plan.",
+      "Worked in the PR team on site at the UEFA Nations League Finals and UEFA Women's EURO 2025.",
+      "Contributed ideas such as a 'VAR Room by Carlsberg' to the agency's UEFA sponsorship pitch.",
+      "Wrote the monthly KPI report and plan for a fantasy football game (115K Instagram followers).",
     ],
     btcturk: [
-      "Worked in Product Management's Scrum cycle; benchmarked BtcTurk against Turkish and global rivals.",
-      "Mapped Binance screen by screen; turned self-custody, DeFi and airdrop gaps into recommendations.",
+      "Benchmarked the BtcTurk app against leading Turkish and global exchanges in Product Management.",
+      "Mapped Binance screen by screen in Figma; turned self-custody, DeFi and airdrop gaps into proposals.",
       "Built dashboards and market-trend reports; analysed why regulation bars margin trading in Turkey.",
     ],
     toyota: [
       "Learned TPS on the gemba (JIT, Kaizen, Kanban), following parts from dock to line-side supply.",
-      "Co-ran a Kaizen study: programme at 61% efficiency vs an 82% ideal; presented fixes to management.",
-    ],
-    ors: [
-      "Traced most scrap to 3 causes (Pareto); cut needle cost by over half with preventive maintenance.",
-      "Costed a yarn moisture meter against the second-largest scrap cause; it paid back in about 40 days.",
-      "Cut labelling time 43% with MTM; re-slotted the warehouse by ABC analysis in a Python digital twin.",
+      "Co-ran a Kaizen study of the intern programme with two fellow interns; presented it to management.",
     ],
     tab: [
+      "Started a venue-services team with two friends after seeing guests had no easy way to be heard.",
       "Win and run 15+ café, restaurant and hotel accounts, all self-sourced, from first contact to setup.",
-      "Deliver 250+ custom in-venue pieces: NFC/QR review stands, feedback cards, menus and brand visuals.",
-      "Lead design, supplier production and client websites, such as a Google Sheets-driven menu site.",
+      "Deliver 250+ custom in-venue pieces, from NFC/QR review stands to feedback cards, menus and print.",
+      "Run supplier production and on-site installation; build client sites such as francoserdivan.com.",
     ],
-    krone: [
-      "Shipped a 9-game mobile party app with live multiplayer rooms and a global daily challenge.",
-    ],
-    feeddetox: [
-      "Built a Next.js app that turns interests into platform-specific follow lists via the YouTube API.",
+    ors: [
+      "Traced most scrap to three causes with Pareto, then more than halved needle costs.",
+      "Co-built the business case for a yarn moisture meter saving 692.6K TL a year.",
+      "Cut labelling time per piece 43% with MTM; re-slotted the warehouse by ABC in a digital twin.",
     ],
   },
   skills: [
-    ["Commercial & client", "Sponsorship and fan activation · B2B client acquisition · account management · in-venue (POS-style) materials · social media KPIs"],
-    ["Analysis & insight", "Market and competitor analysis · KPI reporting and dashboards · guest feedback systems · Pareto and ABC analysis · insights into recommendations"],
-    ["Data & tools", "Excel (advanced, VBA) · Power BI · SQL · Python · Figma · Canva · Jira · Confluence"],
-    ["Process & cost", "Cost and ROI analysis · preventive maintenance · Lean and TPS (Kaizen, 5S, JIT) · MTM · warehouse slotting · root cause analysis"],
-    ["Collaboration", "Planning and prioritisation (Scrum) · stakeholder presentations to management and clients · supplier coordination · LLM-assisted workflows"],
+    ["Commercial", "B2B client acquisition · account management · in-venue execution · point-of-sale materials · supplier coordination"],
+    ["Analysis", "Market and competitor analysis · KPI reporting and dashboards · cost and ROI analysis · Pareto and ABC analysis · root cause analysis"],
+    ["Data & tools", "Excel (advanced, VBA) · Power BI · SQL · Python · Figma · Canva · Jira · Confluence · Scrum · LLM-assisted workflows"],
+    ["Operations", "Lean and TPS (Kaizen, JIT, Kanban) · MTM time study · preventive maintenance · warehouse slotting"],
     ["Languages", "Turkish (native) · English (professional)"],
   ],
+  awards: ["award", "flyrank", "aiff"],
+  leadership: ["adk", "editorial", "international", "music"],
+  publication: "short",
 };

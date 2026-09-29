@@ -1,52 +1,54 @@
-// Product management, product operations, AI-assisted building, tech
-// (applied to: Synaps, Lenovo; fits APM and product ops roles).
+// Product management, product analyst, product ops and AI-builder roles
+// (applied to: Synaps, Lenovo; fits fintech and e-commerce product teams).
 export default {
   slug: "product",
   label: { en: "Product & Technology", tr: "Ürün ve Teknoloji" },
-  title: "Industrial Engineer · Product Management & AI-Assisted Prototyping",
-  profile: "Industrial engineer (Istanbul Bilgi University, 2026) trained in a fintech product team, with a habit of shipping. Turns vague problems into scoped, prioritised work, then builds it end to end with React, TypeScript, Next.js and LLM workflows, from a playable multiplayer game to sites used by real venues. At ease between engineers, designers and clients. Looking for an APM or product role.",
+  title: "Industrial Engineer · Product, Data & AI Prototyping",
+  profile: "Industrial engineer (Istanbul Bilgi University, 2026) who learned product in BTCTurk Technology's Scrum team and builds with React, TypeScript and LLM tools. Starts from a user's problem, benchmarks what exists and builds the smallest version that works: guest-feedback tools now used by 15+ venues and a playable multiplayer party game. Seeking an APM or product analyst role.",
   links: ["linkedin", "github"],
-  experience: ["flyrank", "demarke", "btcturk", "toyota"],
-  projects: ["tab", "krone", "feeddetox", "ors"],
+  experience: ["demarke", "btcturk", "toyota"],
+  projects: ["tab", "ors", "krone", "feeddetox"],
   points: {
-    flyrank: [
-      "Completed five reviewed AI engineering assignments and a capstone in a remote, project-based track.",
-    ],
     demarke: [
-      "Tracked monthly KPIs for a 115K-follower football game's socials; wrote next-month recommendations.",
+      "Wrote monthly KPI reports and content recommendations for a football fantasy game (115K followers).",
+      "Benchmarked BSL's Instagram against NBA and EuroLeague; proposed a Reels-led content plan.",
     ],
     btcturk: [
-      "Worked in Product Management's Scrum cycle: backlog, user stories, roadmap and prioritisation.",
-      "Benchmarked BtcTurk against Turkish and global exchanges, incl. a screen-by-screen Binance teardown.",
-      "Presented self-custody, DeFi and airdrop gaps as recommendations; analysed Turkey's margin rules.",
-      "Built dashboards and crypto market-trend reports for the product team.",
+      "Learned how a product team runs in Scrum: backlog, user stories with acceptance criteria, Jira.",
+      "Tore down Binance's app screen by screen in Figma across seven areas to map gaps in BtcTurk's app.",
+      "Turned self-custody, DeFi and airdrop gaps into recommendations presented to the product team.",
+      "Analysed the regulation that keeps margin trading out of Turkey; wrote crypto market-trend reports.",
     ],
     toyota: [
-      "Learned TPS on the gemba; with two interns, measured the programme at 61% efficiency vs 82% ideal.",
+      "Learned TPS on the gemba in Assembly Logistics: JIT, Jidoka, Kaizen, Kanban and standard work.",
+      "Co-ran a Kaizen study of the intern programme with two fellow interns; proposed a standard flow.",
     ],
     tab: [
-      "Run a small CRM-style team, co-founded after seeing venues had no simple way to hear from guests.",
-      "Deliver NFC/QR review stands and real-time feedback cards to 15+ venues; all clients self-sourced.",
-      "Build client sites, e.g. francoserdivan.com: Sheets-driven menu, taste quiz and gelato builder.",
-    ],
-    krone: [
-      "Built a 9-game mobile party app with live Supabase rooms and server-synced countdowns.",
-      "Prototyped a playable version in 6 days, then added a global daily challenge for return play.",
-    ],
-    feeddetox: [
-      "Developed a bilingual Next.js app turning interests into follow lists via the YouTube API and search.",
+      "Spotted that venues had no simple way to hear from guests or be found; co-founded TAB to fix it.",
+      "Won 15+ self-sourced venue clients for review stands and cards that route complaints in real time.",
+      "Build client sites end to end, including francoserdivan.com: a Sheets-driven menu with a taste quiz.",
     ],
     ors: [
-      "Traced most scrap to 3 causes with Pareto; preventive needle maintenance more than halved its cost.",
-      "Coded an ISO 2859-1 incoming-QC web app in React/TypeScript, plus QR carton traceability.",
+      "Ranked scrap causes with Pareto (three drove 87.8%); the team's fixes were adopted at ÖRS.",
+      "Coded an ISO 2859-1 incoming quality control web app in React/TypeScript with QR traceability.",
+    ],
+    krone: [
+      "Built a mobile party game of nine mini-games with live Supabase rooms and server-synced timers.",
+      "Prototyped the first version in six days, then added a global daily challenge as a retention loop.",
+    ],
+    feeddetox: [
+      "Built an app that turns stated interests into follow lists via the YouTube API and web search.",
     ],
   },
   skills: [
-    ["Product", "Scrum/Agile · backlog and user stories · roadmap and prioritisation · competitive analysis · customer discovery · requirements and scoping · KPI tracking · Jira · Confluence"],
-    ["Build", "React · TypeScript · Next.js · JavaScript · Supabase · Git/GitHub · Vercel · Figma · rapid prototyping"],
-    ["AI", "Generative AI / LLM workflows · prompt engineering and iteration · AI-assisted coding · AI engineering programme (FlyRank AI)"],
-    ["Data", "SQL · Python · Excel (VBA) · Power BI · dashboards and reporting · Pareto and ABC analysis"],
-    ["Operations thinking", "Lean and TPS (Kaizen, JIT, Jidoka) · root cause analysis · MTM · preventive maintenance · Blender/Python digital twin · fintech and crypto (published blockchain research)"],
+    ["Product", "Scrum ceremonies · backlog and user stories · acceptance criteria · roadmap prioritisation · Jira · Confluence"],
+    ["Analysis", "Competitive benchmarking · app teardowns (Figma) · KPI reporting · Pareto and root cause · SQL · Excel (VBA) · Power BI · Python"],
+    ["Build", "React · TypeScript · Next.js · JavaScript · Supabase · Git/GitHub · Vercel · rapid prototyping"],
+    ["AI", "LLM-assisted prototyping and coding · prompt design and iteration · API integration (YouTube, Supabase)"],
+    ["Domains", "Fintech and crypto (published blockchain research) · hospitality · sports media · lean and TPS"],
     ["Languages", "Turkish (native) · English (professional)"],
   ],
+  awards: ["award", "flyrank", "aiff", "aifb"],
+  leadership: ["editorial", "international", "adk", "music"],
+  publication: "full",
 };

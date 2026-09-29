@@ -10,7 +10,7 @@ export const common = {
   phone: { label: "+90 542 262 00 42", href: "tel:+905422620042" },
   portfolio: { label: "tolgacakan.vercel.app", href: "https://tolgacakan.vercel.app" },
   links: [
-    // LinkedIn is left out until its address is known
+    { key: "linkedin", label: "linkedin.com/in/mehmettolgacakan", href: "https://www.linkedin.com/in/mehmettolgacakan" },
     { key: "github", label: "github.com/tolgacakan14", href: "https://github.com/tolgacakan14" },
   ],
 
@@ -24,33 +24,41 @@ export const common = {
   projects: {
     ors: { when: "2025–2026", what: "Industry project, ÖRS Textile", sub: "senior design · team of 5 · Best Senior Design Project Award" },
     tab: { when: "2026–present", what: "Co-founder, TAB Marketing", sub: "[tab-marketing-site.vercel.app](https://tab-marketing-site.vercel.app)" },
-    krone: { when: "2026", what: "Krone", sub: "[innerclock.vercel.app](https://innerclock.vercel.app) · unreleased, fully playable" },
+    krone: { when: "2026", what: "Krone", sub: "[innerclock.vercel.app](https://innerclock.vercel.app) · personal project, fully playable" },
     feeddetox: { when: "2026", what: "Feed Detox", sub: "Next.js · EN/TR" },
   },
 
   education: [
     ["Istanbul Bilgi University", ", BSc Industrial Engineering (2026)"],
     ["Serdivan Fen Lisesi", " (science high school), Sakarya"],
-    ["Military service", ": deferred until 2029"],
   ],
 
-  awards: [
-    ["Best Senior Design Project Award", ", Industrial Engineering, Istanbul Bilgi University (2026), for the ÖRS Textile project. Top five of its term; presented at CSRP 2026"],
-    ["AI Engineering Internship", ", FlyRank AI (2026). Remote and project-based: five reviewed assignments and a capstone", "flyrank"],
-    ["AI Fluency: Framework & Foundations", ", Anthropic Education (Jul 2026) · [verify](https://verify.skilljar.com/c/xvnv3q5pttvf)"],
-    ["AI Fluency for Builders", ", Anthropic Education (2026)"],
-  ],
+  // keyed so each variant can choose and order them
+  awards: {
+    award: ["Best Senior Design Project Award", ", Istanbul Bilgi University (2026), ÖRS Textile project; top five of term, presented at CSRP 2026"],
+    flyrank: ["FlyRank AI Internship", " (Jul–Aug 2026). Remote, unpaid educational programme: five reviewed assignments and an accepted capstone"],
+    aiff: ["[AI Fluency: Framework & Foundations](https://verify.skilljar.com/c/xvnv3q5pttvf)", ", Anthropic (Jul 2026)"],
+    aifb: ["AI Fluency for Builders", ", Anthropic (2026)"],
+  },
 
-  publication: [
-    ["Chapter XI", ", “Blockchain ve Eğlence Sektörü”, in *Blockchain Teknolojileri ve Sektörel Etkileri*. Nobel Bilimsel Eserler, 2022, as an independent researcher"],
-  ],
+  publication: {
+    full: ["Chapter XI", ", “Blockchain ve Eğlence Sektörü”, in *Blockchain Teknolojileri ve Sektörel Etkileri*. Nobel Akademik Yayıncılık, 2022, as an independent researcher"],
+    short: ["Book chapter", ", “Blockchain ve Eğlence Sektörü”, Nobel Akademik Yayıncılık, 2022"],
+  },
 
-  leadership: [
-    ["Editorial Director", ", Bilgi Blockchain Club (2021–2024). Commissioned and edited the club's publications and shaped its forum and speaker programme"],
-    ["International:", " European Summer School, Blockchain to Financial Markets, Prague (2025) · HeForShe Erasmus+ Youth Exchange, Estonia (Dec 2023)"],
-    ["Vice President & Operations Lead", ", Atatürkçü Düşünce Kulübü (2021–2024). Ran 10+ forums; largest panel drew 4,000+"],
-    ["Drums & songwriting", ", *son sek'*. One album, two singles, live shows ([Spotify](https://open.spotify.com/intl-tr/artist/1ILN8doPYd0l4l9ME6Rtce))"],
-  ],
+  leadership: {
+    editorial: ["Editorial Director", ", Bilgi Blockchain Club (2021–2024). Commissioned and edited the club's publications and shaped its forum and speaker programme"],
+    international: ["International:", " European Summer School, Blockchain to Financial Markets, Prague (2025) · HeForShe Erasmus+ Youth Exchange, Estonia (Dec 2023)"],
+    adk: ["Vice President & Operations Lead", ", Atatürkçü Düşünce Kulübü (2021–2024). Ran 10+ forums; largest panel drew 4,000+"],
+    music: ["Drums & songwriting", ", *son sek'*. One album, two singles, live shows ([Spotify](https://open.spotify.com/intl-tr/artist/1ILN8doPYd0l4l9ME6Rtce))"],
+  },
+
+  // used when a variant does not set its own order
+  defaults: {
+    awards: ["award", "flyrank", "aiff", "aifb"],
+    leadership: ["editorial", "international", "adk", "music"],
+    publication: "full",
+  },
 };
 
 import operations from "./variants/operations.mjs";

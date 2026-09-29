@@ -18,20 +18,59 @@ const COPY = {
       "My work spans engineering, product, design, operations and research, and I have worked alongside people from across Europe on programmes in Estonia and Czechia. I am most useful when a problem is still vague and somebody has to turn it into something people can actually use.",
       "Away from all that: drums and making songs.",
     ],
-    expIntro: "Before I graduated I had worked in Toyota's assembly logistics, at a crypto exchange and a sports marketing agency, and in a project-based AI engineering programme. Each taught a different part of the same job: how work really flows, how a product team decides what matters, how something gets sold and how to put AI to work without hand-waving.",
+    expIntro: "Before I graduated I had worked in Toyota's assembly logistics, at a crypto exchange and at a sports marketing agency. Each taught a different part of the same job: how work really flows, how a product team decides what matters and how something gets sold.",
     jobs: [
       { when: "Mar–Jul 2025", what: "Sports Marketing Intern, De Marke Agency", note: "At De Marke I learned sports marketing where the stakes are highest: UEFA-level sponsorship for a global brand, and international football tournaments where content has to be made live, on the day. I worked in the PR team on site at the UEFA Nations League Finals and UEFA Women's EURO 2025, which showed me how much planning sits behind a few minutes of live content. For Carlsberg's UEFA sponsorship I contributed activation ideas, such as a \u201cVAR Room by Carlsberg\u201d and fan commentary from local pubs. I also wrote the monthly social media report for Sosyal Lig, a football fantasy game with about 115K Instagram followers, and benchmarked the Basketbol Süper Ligi's Instagram against the NBA and EuroLeague to build its content plan." },
       { when: "Jan–Feb 2025", what: "Product Intern, BTCTurk Technology", note: "At BTCTurk Technology I spent four weeks in the Product Management team of one of Turkey's largest crypto exchanges, and learned how a product team really runs: standups, sprint planning, reviews and retros, with the backlog, user stories and roadmap kept in Jira and Confluence. My main work was a competitive benchmark of BtcTurk against leading Turkish and global exchanges, including a screen-by-screen teardown of Binance in Figma. The gaps it showed, from self-custody wallets to DeFi and airdrops, became recommendations I presented to the product team. I also looked into why margin trading isn't offered in Turkey, built dashboards and market-trend reports, and worked with IT on an inventory of the company's apps and tools." },
       { when: "Jun–Jul 2024", what: "Engineering Intern, Toyota Motor Manufacturing Turkey", note: "At Toyota's Sakarya plant, where the Corolla and C-HR are built, I learned the Toyota Production System where it happens: on the gemba. In Assembly Logistics I followed parts from dock receiving through imported-parts ordering, Devan and SPS (set parts supply) line feeding, and saw JIT, Jidoka, Kaizen, Kanban and standard work in daily practice. With two fellow interns I turned those tools on our own internship programme: we measured its efficiency at 61% against an 82% ideal and used a 4M fishbone to trace the gap to its root causes. We proposed a standard programme flow and a standard work form (İSF, İş Standart Formu), wrote a TPS handbook for future interns, and presented it all to management." },
     ],
     skills: [
-      ["Product", "Customer discovery · competitive benchmarking · market research · requirements and scoping · dashboards and reporting · Agile (Scrum)"],
+      ["Product", "Competitive benchmarking and app teardowns · market research · backlog and user stories · roadmap prioritisation · dashboards and reporting · Scrum"],
       ["Operations", "Lean and TPS (Kaizen, 5S, JIT, Jidoka) · root cause analysis (4M fishbone) · Pareto and ABC analysis · MTM · RULA · NIOSH · preventive maintenance · warehouse layout · supplier and production coordination · event operations"],
       ["Data & tools", "Excel (VBA) · SQL · Python · JavaScript · TypeScript · React · Next.js · Blender · Figma · Jira · Confluence · LLM-assisted workflows · prompt design"],
       ["Domain", "Crypto exchanges and DeFi · published blockchain research · NFC and QR systems in hospitality"],
       ["Languages", "Turkish (native) · English (professional)"],
     ],
-    workIntro: "TAB Marketing started because I kept seeing the same gap in the cafés, restaurants and hotels around me: owners had no simple way to hear from their guests or to be found by new ones. So in 2026 I put together a small team with two friends to offer a solution-focused, CRM-style service, and we take it on project by project as work comes in. We design NFC and QR review stands, feedback cards that get guest complaints to the owner the moment they happen, QR and digital menus, brand-matched print and visuals, websites, and the PR work around them. Clients include Pehlivan Et Lokantası, İtalyan İşi, BREAK, Soft Coffee Lounge, Elbis Hotel and Cabir Deluxe; we found every one of them ourselves and have delivered more than 250 custom pieces across Istanbul, Sakarya and beyond. I lead design, supplier production and on-site setup, and I build the websites.",
+    ors: {
+      heading: "Industry project",
+      title: "ÖRS Textile · senior design project",
+      meta: "2025–2026 · team of five · Best Senior Design Project Award",
+      intro: "With a team of five, I worked inside ÖRS Textile, a custom sock maker, to find out why so much of its output ended up as scrap, fix the biggest causes, and reorganise its labelling station and warehouse. We divided the work and shared it, and the plant put our changes into practice. What I took from it: in a real factory, careful measurement goes further than any clever idea. Every change below started as a number on the floor.",
+      facts: [
+        ["Scrap", "Pareto analysis traced most of the scrap (87.8%) to three causes: needle breakage, yarn moisture and machine faults"],
+        ["Maintenance", "Needle care moved from run-to-failure to preventive maintenance, cutting its cost by more than half"],
+        ["Moisture", "A yarn moisture meter against the second-largest cause, paying for itself in about 40 days"],
+        ["Labelling", "The station redesigned with MTM, each piece now 43% faster"],
+        ["Warehouse", "Both floors redesigned in a Blender and Python digital twin with ABC slotting; lower-floor storage more than doubled"],
+        ["Quality", "An ISO 2859-1 incoming quality control app and QR carton traceability"],
+        ["Ergonomics", "Heart-rate, RULA and NIOSH studies behind a worker rotation plan and a lifting aid"],
+      ],
+      paretoTitle: "Where the scrap came from",
+      paretoNote: "120,794 scrapped pairs by cause. Point at a bar.",
+      causes: [
+        ["Needle breakage", 53687, "Moved to preventive maintenance: cost more than halved"],
+        ["Yarn moisture", 32212, "Moisture meter at yarn intake: paid back in about 40 days"],
+        ["Machine faults", 20132, "Third of the three causes behind 87.8% of the scrap"],
+        ["Yarn stains", 8053, "A smaller cause, kept on watch"],
+        ["Machine settings", 6710, "A smaller cause, kept on watch"],
+      ],
+      pairs: "pairs",
+      open: "Open the A3 report",
+      poster: "View the poster",
+      close: "Close",
+      a3Title: "ÖRS Textile · A3 report",
+      a3Team: "Team of five · supervised by Prof. Dr. Fatma Canan Çilingir and Dr. Ergun Arı · Istanbul Bilgi University, 2026",
+      a3: [
+        ["Background", "ÖRS Textile makes custom socks for Europe and North America. In the period we studied it produced 2.68 million pairs and scrapped 4.5% of them: 120,794 pairs."],
+        ["Current condition", "Three causes made up 87.8% of the scrap. Labelling was slow and manual, both warehouse floors were cramped, and warehouse work was the heaviest job on site."],
+        ["Target", "Cut scrap at its source, speed up labelling, free up warehouse space and make lifting safer."],
+        ["Root causes", "Needles were replaced only after they broke. Yarn moisture was never measured at intake. The labelling station wasted motion. Storage had no slotting logic. Loads of 18–23 kg were lifted against a recommended limit under 5 kg."],
+        ["Countermeasures", "Preventive maintenance for needles; a yarn moisture meter; a labelling station redesigned with MTM; an ABC-slotted layout tested in a Blender and Python digital twin; an ISO 2859-1 incoming quality control app with QR carton traceability; a worker rotation plan and a lifting aid."],
+        ["Results", "Needle maintenance cost down 57.7%. The moisture meter paid for itself in about 40 days. Labelling 43% faster per piece. Lower-floor storage volume up 112%."],
+        ["Next", "Keep the Pareto running month by month and take on the next causes."],
+      ],
+    },
+    workIntro: "TAB Marketing started because I kept seeing the same gap in the cafés, restaurants and hotels around me: owners had no simple way to hear from their guests or to be found by new ones. So in 2026 I put together a small team with two friends to offer a solution-focused, CRM-style service, and we take it on project by project as work comes in. We design NFC and QR review stands, feedback cards that get guest complaints to the owner the moment they happen, QR and digital menus, brand-matched print and visuals, websites, and the PR work around them. Clients include Pehlivan Et Lokantası, İtalyan İşi, BREAK, Soft Coffee Lounge, Elbis Hotel and Cabir Deluxe; we found every one of them ourselves and have delivered more than 250 custom pieces to over 15 venues across Istanbul, Sakarya and beyond. I lead design, supplier production and on-site setup, and I build the websites.",
     tabLink: "See the website",
     sites: "Sites built through TAB",
     own: "Own projects",
@@ -40,7 +79,7 @@ const COPY = {
       { title: "Diş Hekimi Melis Çakan", note: "I built a calm, mobile-first site for a dental practice in Sakarya: six treatment pages, a symptom picker that points patients to the right one, FAQ, WhatsApp booking and structured data for search.", href: "https://dishekimimeliscakan.com", label: "dishekimimeliscakan.com" },
     ],
     projects: [
-      { title: "Krone", tag: "UNRELEASED · FULLY PLAYABLE", note: "I built a mobile party game with nine mini-games, from reflex and colour tests to golf and a maze of arrows. Friends join a room with a code, everyone starts on the same server-timed 3-2-1, and scores go to a shared board. A Daily Challenge uses the date as a random seed, so every player in the world gets the same five games that day. I shipped the first version in six days. React, TypeScript, Supabase.", href: "https://innerclock.vercel.app", label: "innerclock.vercel.app" },
+      { title: "Krone", tag: "PERSONAL PROJECT · PLAYABLE", note: "I built a mobile party game with nine mini-games, from reflex and colour tests to golf and a maze of arrows. Friends join a room with a code, everyone starts on the same server-timed 3-2-1, and scores go to a shared board. A Daily Challenge uses the date as a random seed, so every player in the world gets the same five games that day. I built it to play with my friends; the first version took six days. React, TypeScript, Supabase.", href: "https://innerclock.vercel.app", label: "Play Krone" },
       { title: "Feed Detox", note: "Feed Detox lets you type what you want to see online and get a pack of creators, searches and mute keywords for X, Instagram, TikTok and YouTube. It pulls real results from the YouTube API and web search, ranks them for relevance and noise, and shares the pack as a link. I built it bilingual (EN/TR) in Next.js." },
       { title: "NICOTINE", tag: "IN PROGRESS", note: "I am building a storefront for an Istanbul streetwear label: a figure that dresses layer by layer as you scroll, drops and an archive, and a points club that rewards returning buyers. Next.js, GSAP." },
     ],
@@ -60,20 +99,12 @@ const COPY = {
       publication: "Publication",
       pub: "Chapter XI, \u201cBlockchain ve E\u011flence Sekt\u00f6r\u00fc\u201d (Blockchain and the Entertainment Industry), in ",
       pubBook: "Blockchain Teknolojileri ve Sektörel Etkileri",
-      pubLink: "Nobel, 2022",
+      pubLink: "Nobel Akademik Yayıncılık, 2022",
       pubMeta: "I wrote it as an independent researcher; published as Mehmet Tolga Çakan · ISBN 978-625-433-825-0 · ORCID 0000-0001-7444-9079",
       programmes: "Awards, programmes & certificates",
       prog: [
-        ["Best Senior Design Project Award", ", Department of Industrial Engineering, Istanbul Bilgi University (2026), for \u201cImprovement of Processes, Quality and Worker Well-Being in Sock Manufacturing: Case of \u00d6RS Textile\u201d. With a team of five, we worked inside ÖRS Textile, a custom sock maker, to find out why so much of its output ended up as scrap, fix the biggest causes, and reorganise its labelling station and warehouse. Along the way I learned how far careful measurement goes in a real factory: every change below started as a number on the floor. Selected among the top five projects of its term; also presented at CSRP 2026.", null, [
-          ["Scrap", "Pareto analysis traced most of the scrap (87.8%) to three causes: needle breakage, yarn moisture and machine faults"],
-          ["Maintenance", "Needle care moved from run-to-failure to preventive maintenance, cutting its cost by more than half"],
-          ["Moisture", "A yarn moisture meter against the second-largest cause, paying for itself in about 40 days"],
-          ["Labelling", "The station redesigned with MTM, each piece now 43% faster"],
-          ["Warehouse", "Both floors redesigned in a Blender and Python digital twin with ABC slotting; lower-floor storage more than doubled"],
-          ["Quality", "An ISO 2859-1 incoming quality control app and QR carton traceability"],
-          ["Ergonomics", "Heart-rate, RULA and NIOSH studies behind a worker rotation plan and a lifting aid"],
-        ]],
-        ["AI Engineering Internship", ", FlyRank AI (2026). A remote, project-based programme built around shipping real work rather than coursework; I completed five reviewed assignments and a capstone."],
+        ["Best Senior Design Project Award", ", Department of Industrial Engineering, Istanbul Bilgi University (2026), for the ÖRS Textile project described under Work. Selected among the top five projects of its term; also presented at CSRP 2026."],
+        ["FlyRank AI Internship", " (July–August 2026). A remote, unpaid educational programme built around shipping real work rather than coursework; I completed five reviewed assignments and a capstone accepted by the FlyRank team."],
         ["AI Fluency: Framework & Foundations", ", Anthropic Education (July 2026)", "https://verify.skilljar.com/c/xvnv3q5pttvf"],
         ["AI Fluency for Builders", ", Anthropic Education (2026)"],
       ],
@@ -93,9 +124,10 @@ const COPY = {
         { slug: "commercial", label: "Commercial & Business Analysis" },
       ],
     },
-    cv: "CV ↓",
+    cv: "Download CV ↓",
     verify: "verify ↗",
     setIn: "Set in Newsreader",
+    updated: "Updated September 2026",
   },
 
   tr: {
@@ -107,20 +139,59 @@ const COPY = {
       "Mühendislik, ürün, tasarım, operasyon ve araştırma arasında çalışıyorum; Estonya ve Çekya'daki programlarda Avrupa'nın dört bir yanından insanlarla birlikte çalıştım. En çok, bir problem henüz belirsizken ve birinin onu insanların gerçekten kullanabileceği bir şeye dönüştürmesi gerekirken işe yarıyorum.",
       "Bunların dışında: davul çalmak ve şarkı yazmak.",
     ],
-    expIntro: "Mezun olmadan önce Toyota'nın montaj lojistiğinde, bir kripto borsasında, bir spor pazarlama ajansında ve proje temelli bir yapay zekâ mühendisliği programında çalışmıştım. Her biri bana aynı işin farklı bir parçasını öğretti: işin gerçekte nasıl aktığını, bir ürün ekibinin neye öncelik verdiğini, bir şeyin nasıl satıldığını ve yapay zekânın laf kalabalığı olmadan nasıl işe koşulacağını.",
+    expIntro: "Mezun olmadan önce Toyota'nın montaj lojistiğinde, bir kripto borsasında ve bir spor pazarlama ajansında çalışmıştım. Her biri bana aynı işin farklı bir parçasını öğretti: işin gerçekte nasıl aktığını, bir ürün ekibinin neye öncelik verdiğini ve bir şeyin nasıl satıldığını.",
     jobs: [
       { when: "Mar–Tem 2025", what: "Spor Pazarlama Stajyeri, De Marke Ajansı", note: "Spor pazarlamasını en üst seviyede öğrendim: küresel bir markanın UEFA sponsorluğu ve içeriğin o gün, canlı üretilmesi gereken uluslararası futbol turnuvaları. UEFA Nations League Finals ve UEFA Women's EURO 2025'te sahada PR ekibinde çalıştım; birkaç dakikalık canlı içeriğin arkasında ne kadar planlama olduğunu orada gördüm. Carlsberg'in UEFA sponsorluğu için \u201cVAR Room by Carlsberg\u201d ve mahalle pub'larından taraftar spikerliği gibi aktivasyon fikirleriyle katkı sundum. Ayrıca yaklaşık 115 bin Instagram takipçili futbol menajerlik oyunu Sosyal Lig'in aylık sosyal medya raporunu hazırladım ve Basketbol Süper Ligi'nin Instagram'ını NBA ve EuroLeague ile kıyaslayarak içerik planını oluşturdum." },
       { when: "Oca–Şub 2025", what: "Ürün Stajyeri, BTCTurk Teknoloji", note: "BTCTurk Teknoloji'de, Türkiye'nin en büyük kripto borsalarından birinin Product Management ekibinde dört hafta geçirdim ve bir ürün ekibinin gerçekte nasıl çalıştığını öğrendim: standup'lar, sprint planning, review ve retro toplantıları; Jira ve Confluence'ta backlog, user story ve roadmap. Asıl işim, BtcTurk'ü önde gelen yerli ve küresel borsalarla karşılaştıran bir benchmarking çalışmasıydı; Binance'in Figma'da ekran ekran incelenmesi de buna dâhildi. Ortaya çıkan eksikleri (self-custody cüzdan, DeFi, airdrop) önerilere dönüştürüp ürün ekibine sundum. Bunun yanında margin trading'in Türkiye'de neden sunulmadığını inceledim, dashboard'lar ve piyasa trend raporları hazırladım, IT ekibiyle uygulama ve araç envanterini analiz ettim." },
       { when: "Haz–Tem 2024", what: "Mühendislik Stajyeri, Toyota Otomotiv Sanayi Türkiye", note: "Toyota Otomotiv Sanayi Türkiye'nin, Corolla ve C-HR'ın üretildiği Sakarya fabrikasında Toyota Üretim Sistemi'ni (TPS) yerinde, gemba'da öğrendim. Assembly Logistics'te parçaların yolunu dock receiving'den ithal parça siparişine, Devan'dan SPS ile hat beslemeye kadar izledim; JIT, Jidoka, Kaizen, Kanban ve standart işin günlük pratikte nasıl işlediğini gördüm. İki stajyer arkadaşımla bu araçları kendi staj programımıza uyguladık: verimliliği ideal olan %82'ye karşı %61 olarak ölçtük ve 4M fishbone ile root cause analysis yaparak farkın kök nedenlerini belirledik. Standart bir program akışı ve İş Standart Formu (İSF) önerdik, gelecek stajyerler için bir TPS el kitabı yazdık ve hepsini yönetime sunduk." },
     ],
     skills: [
-      ["Ürün", "Customer discovery · benchmarking · market research · requirements ve scoping · dashboard ve raporlama · Agile (Scrum)"],
+      ["Ürün", "Benchmarking ve uygulama incelemeleri · market research · backlog ve user story · roadmap önceliklendirme · dashboard ve raporlama · Scrum"],
       ["Operasyon", "Lean ve TPS (Kaizen, 5S, JIT, Jidoka) · root cause analysis (4M balık kılçığı) · Pareto ve ABC analizi · MTM · RULA · NIOSH · preventive maintenance · depo yerleşimi · tedarikçi ve üretim koordinasyonu · etkinlik operasyonları"],
       ["Veri & araçlar", "Excel (VBA) · SQL · Python · JavaScript · TypeScript · React · Next.js · Blender · Figma · Jira · Confluence · LLM destekli workflow'lar · prompt design"],
       ["Alan bilgisi", "Kripto borsaları ve DeFi · yayımlanmış blockchain araştırması · konaklama ve yeme içme sektöründe NFC ve QR sistemleri"],
       ["Diller", "Türkçe (ana dili) · İngilizce (profesyonel)"],
     ],
-    workIntro: "TAB Marketing, çevremdeki kafe, restoran ve otellerde hep aynı eksiği görmemle başladı: işletme sahiplerinin misafirlerini dinlemek ve yeni müşteriler tarafından bulunmak için basit bir yolu yoktu. 2026'da iki arkadaşımla çözüm odaklı, CRM benzeri bir hizmet sunan küçük bir ekip kurdum; işleri proje bazında, iş geldikçe yürütüyoruz. NFC ve QR yorum standları, misafir şikâyetlerini işletme sahibine anında ileten geri bildirim kartları, QR ve dijital menüler, markaya uygun baskı ve görseller, web siteleri ve bunların etrafındaki PR çalışmalarını tasarlıyoruz. Pehlivan Et Lokantası, İtalyan İşi, BREAK, Soft Coffee Lounge, Elbis Hotel ve Cabir Deluxe gibi işletmelerle çalıştık; müşterilerin hepsini kendimiz bulduk ve İstanbul, Sakarya ve başka şehirlerde 250'den fazla özel tasarım ürün teslim ettik. Tasarımı, tedarikçilerle üretimi ve sahadaki kurulumu ben yürütüyorum; web sitelerini de ben geliştiriyorum.",
+    ors: {
+      heading: "Endüstri projesi",
+      title: "ÖRS Tekstil · bitirme projesi",
+      meta: "2025–2026 · beş kişilik ekip · En İyi Bitirme Projesi Ödülü",
+      intro: "Beş kişilik ekibimle, siparişe özel çorap üreten ÖRS Tekstil'in içinde çalıştım: üretimin neden bu kadarının fireye gittiğini bulduk, en büyük nedenleri çözdük, etiketleme istasyonunu ve depoyu yeniden düzenledik. İşi aramızda bölüp paylaştık; fabrika da değişikliklerimizi uygulamaya aldı. Bundan aldığım ders şu: gerçek bir fabrikada dikkatli ölçüm, en parlak fikirden daha ileri götürüyor. Aşağıdaki her değişiklik sahada ölçülen bir sayıyla başladı.",
+      facts: [
+        ["Fire", "Pareto analizi firenin büyük kısmını (%87,8) üç nedene bağladı: iğne kırılması, iplik nemi ve makine arızaları"],
+        ["Bakım", "İğne bakımı run-to-failure'dan preventive maintenance'a geçti; maliyet yarıdan fazla azaldı"],
+        ["Nem", "İkinci büyük nedene karşı bir iplik nemölçeri; kendini yaklaşık 40 günde amorti etti"],
+        ["Etiketleme", "MTM ile yeniden tasarlanan istasyonda parça başı süre %43 kısaldı"],
+        ["Depo", "İki kat, Blender ve Python ile kurulan dijital ikizde ABC analizine göre yeniden yerleştirildi; alt katın depolama hacmi iki katından fazlasına çıktı"],
+        ["Kalite", "ISO 2859-1 tabanlı giriş kalite kontrol uygulaması ve QR ile koli izlenebilirliği"],
+        ["Ergonomi", "Kalp atış hızı, RULA ve NIOSH çalışmalarına dayanan bir rotasyon planı ve kaldırma yardımcısı"],
+      ],
+      paretoTitle: "Fire nereden geliyordu",
+      paretoNote: "Nedene göre 120.794 çift fire. Bir çubuğun üzerine gelin.",
+      causes: [
+        ["İğne kırılması", 53687, "Preventive maintenance'a geçildi: maliyet yarıdan fazla azaldı"],
+        ["İplik nemi", 32212, "İplik girişinde nemölçer: yaklaşık 40 günde amorti etti"],
+        ["Makine arızası", 20132, "Firenin %87,8'ini oluşturan üç nedenin üçüncüsü"],
+        ["İplik lekesi", 8053, "Daha küçük bir neden, takipte"],
+        ["Makine ayarı", 6710, "Daha küçük bir neden, takipte"],
+      ],
+      pairs: "çift",
+      open: "A3 raporunu aç",
+      poster: "Posteri gör",
+      close: "Kapat",
+      a3Title: "ÖRS Tekstil · A3 raporu",
+      a3Team: "Beş kişilik ekip · danışmanlar Prof. Dr. Fatma Canan Çilingir ve Dr. Ergun Arı · İstanbul Bilgi Üniversitesi, 2026",
+      a3: [
+        ["Arka plan", "ÖRS Tekstil, Avrupa ve Kuzey Amerika için siparişe özel çorap üretiyor. İncelediğimiz dönemde 2,68 milyon çift üretti ve bunun %4,5'i, yani 120.794 çift fireye gitti."],
+        ["Mevcut durum", "Firenin %87,8'i üç nedenden geliyordu. Etiketleme yavaş ve elle yapılıyordu, iki depo katı da sıkışıktı; depo işi sahadaki en ağır işti."],
+        ["Hedef", "Fireyi kaynağında azaltmak, etiketlemeyi hızlandırmak, depoda yer açmak ve kaldırma işini güvenli hâle getirmek."],
+        ["Kök nedenler", "İğneler ancak kırıldıktan sonra değiştiriliyordu. İplik nemi girişte hiç ölçülmüyordu. Etiketleme istasyonunda gereksiz hareket vardı. Depolamada bir yerleşim mantığı yoktu. Önerilen sınır 5 kg'ın altındayken 18–23 kg'lık yükler kaldırılıyordu."],
+        ["Önlemler", "İğneler için preventive maintenance; iplik nemölçeri; MTM ile yeniden tasarlanan etiketleme istasyonu; Blender ve Python dijital ikizinde test edilen ABC yerleşimi; QR koli izlenebilirliğiyle ISO 2859-1 giriş kalite kontrol uygulaması; rotasyon planı ve kaldırma yardımcısı."],
+        ["Sonuçlar", "İğne bakım maliyeti %57,7 azaldı. Nemölçer kendini yaklaşık 40 günde amorti etti. Etiketleme parça başı %43 hızlandı. Alt katın depolama hacmi %112 arttı."],
+        ["Sırada", "Pareto'yu her ay sürdürmek ve sıradaki nedenleri ele almak."],
+      ],
+    },
+    workIntro: "TAB Marketing, çevremdeki kafe, restoran ve otellerde hep aynı eksiği görmemle başladı: işletme sahiplerinin misafirlerini dinlemek ve yeni müşteriler tarafından bulunmak için basit bir yolu yoktu. 2026'da iki arkadaşımla çözüm odaklı, CRM benzeri bir hizmet sunan küçük bir ekip kurdum; işleri proje bazında, iş geldikçe yürütüyoruz. NFC ve QR yorum standları, misafir şikâyetlerini işletme sahibine anında ileten geri bildirim kartları, QR ve dijital menüler, markaya uygun baskı ve görseller, web siteleri ve bunların etrafındaki PR çalışmalarını tasarlıyoruz. Pehlivan Et Lokantası, İtalyan İşi, BREAK, Soft Coffee Lounge, Elbis Hotel ve Cabir Deluxe gibi işletmelerle çalıştık; müşterilerin hepsini kendimiz bulduk ve İstanbul, Sakarya ve başka şehirlerde 15'ten fazla işletmeye 250'den fazla özel tasarım ürün teslim ettik. Tasarımı, tedarikçilerle üretimi ve sahadaki kurulumu ben yürütüyorum; web sitelerini de ben geliştiriyorum.",
     tabLink: "Siteye git",
     sites: "TAB kapsamında yaptığım siteler",
     own: "Kendi projelerim",
@@ -129,7 +200,7 @@ const COPY = {
       { title: "Diş Hekimi Melis Çakan", note: "Sakarya'daki bir diş kliniği için sakin, mobile-first bir site yaptım: altı tedavi sayfası, hastayı doğru sayfaya yönlendiren bir belirti seçici, SSS, WhatsApp'tan randevu ve arama motorları için yapılandırılmış veri.", href: "https://dishekimimeliscakan.com", label: "dishekimimeliscakan.com" },
     ],
     projects: [
-      { title: "Krone", tag: "YAYINLANMADI · TAM OYNANABİLİR", note: "Dokuz mini oyundan oluşan mobil bir parti oyunu yaptım: refleks ve renk testlerinden golfe, ok labirentine kadar. Arkadaşlar kodla aynı odaya giriyor, herkes sunucu zamanlı aynı 3-2-1 geri sayımıyla başlıyor, skorlar ortak tabloya düşüyor. Günlük Meydan Okuma'da tarih, rastgele sayı üretecine seed olarak veriliyor; böylece dünyadaki herkes o gün aynı beş oyunu oynuyor. İlk sürümü altı günde çıkardım. React, TypeScript, Supabase.", href: "https://innerclock.vercel.app", label: "innerclock.vercel.app" },
+      { title: "Krone", tag: "KİŞİSEL PROJE · OYNANABİLİR", note: "Dokuz mini oyundan oluşan mobil bir parti oyunu yaptım: refleks ve renk testlerinden golfe, ok labirentine kadar. Arkadaşlar kodla aynı odaya giriyor, herkes sunucu zamanlı aynı 3-2-1 geri sayımıyla başlıyor, skorlar ortak tabloya düşüyor. Günlük Meydan Okuma'da tarih, rastgele sayı üretecine seed olarak veriliyor; böylece dünyadaki herkes o gün aynı beş oyunu oynuyor. Arkadaşlarımla oynamak için yaptım; ilk sürüm altı gün sürdü. React, TypeScript, Supabase.", href: "https://innerclock.vercel.app", label: "Krone'u oyna" },
       { title: "Feed Detox", note: "Feed Detox'u yaptım: internette ne görmek istediğini yazıyorsun, uygulama da X, Instagram, TikTok ve YouTube için takip edilecek hesapları, aramaları ve susturulacak kelimeleri bir paket hâlinde çıkarıyor. Sonuçları YouTube API'si ve web aramasından canlı çekip alaka ve gürültüye göre sıralıyor, paketi bir linkle paylaşmanı sağlıyor. Türkçe ve İngilizce. Next.js." },
       { title: "NICOTINE", tag: "GELİŞTİRİLİYOR", note: "İstanbul'daki bir streetwear markası için bir vitrin geliştiriyorum: scroll ettikçe bir figür katman katman giyiniyor; drop'lar, arşiv ve geri gelen alıcıyı ödüllendiren puanlı bir kulüp. Next.js, GSAP." },
     ],
@@ -150,20 +221,12 @@ const COPY = {
       pub: "XI. Bölüm: “Blockchain ve Eğlence Sektörü”, ",
       pubAfter: " içinde",
       pubBook: "Blockchain Teknolojileri ve Sektörel Etkileri",
-      pubLink: "Nobel, 2022",
+      pubLink: "Nobel Akademik Yayıncılık, 2022",
       pubMeta: "Bağımsız araştırmacı olarak yazdım; Mehmet Tolga Çakan adıyla yayımlandı · ISBN 978-625-433-825-0 · ORCID 0000-0001-7444-9079",
       programmes: "Ödüller, programlar & sertifikalar",
       prog: [
-        ["En İyi Bitirme Projesi Ödülü", ", Endüstri Mühendisliği Bölümü, İstanbul Bilgi Üniversitesi (2026), \u201cImprovement of Processes, Quality and Worker Well-Being in Sock Manufacturing: Case of \u00d6RS Textile\u201d çalışmasıyla. Beş kişilik ekibimizle, siparişe özel çorap üreten ÖRS Tekstil'in içinde çalıştık: üretimin neden bu kadarının fireye gittiğini bulduk, en büyük nedenleri çözdük, etiketleme istasyonunu ve depoyu yeniden düzenledik. Bu süreçte gerçek bir fabrikada dikkatli ölçümün ne kadar ileri götürdüğünü öğrendim: aşağıdaki her değişiklik sahada ölçülen bir sayıyla başladı. Dönemin en iyi beş projesi arasına seçildi; ayrıca CSRP 2026'da sunuldu.", null, [
-          ["Fire", "Pareto analizi firenin büyük kısmını (%87,8) üç nedene bağladı: iğne kırılması, iplik nemi ve makine arızaları"],
-          ["Bakım", "İğne bakımı run-to-failure'dan preventive maintenance'a geçti; maliyet yarıdan fazla azaldı"],
-          ["Nem", "İkinci büyük nedene karşı bir iplik nemölçeri; kendini yaklaşık 40 günde amorti etti"],
-          ["Etiketleme", "MTM ile yeniden tasarlanan istasyonda parça başı süre %43 kısaldı"],
-          ["Depo", "İki kat, Blender ve Python ile kurulan dijital ikizde ABC analizine göre yeniden yerleştirildi; alt katın depolama hacmi iki katından fazlasına çıktı"],
-          ["Kalite", "ISO 2859-1 tabanlı giriş kalite kontrol uygulaması ve QR ile koli izlenebilirliği"],
-          ["Ergonomi", "Kalp atış hızı, RULA ve NIOSH çalışmalarına dayanan bir rotasyon planı ve kaldırma yardımcısı"],
-        ]],
-        ["Yapay Zekâ Mühendisliği Stajı", ", FlyRank AI (2026). Uzaktan, proje temelli bu programda değerlendirmeden geçen beş ödevi ve bir bitirme projesini tamamladım. Program, ders çözmek yerine gerçek iş çıkarmak üzerine kurulu."],
+        ["En İyi Bitirme Projesi Ödülü", ", Endüstri Mühendisliği Bölümü, İstanbul Bilgi Üniversitesi (2026), İşler bölümünde anlatılan ÖRS Tekstil projesiyle. Dönemin en iyi beş projesi arasına seçildi; ayrıca CSRP 2026'da sunuldu."],
+        ["FlyRank AI Internship", " (Temmuz–Ağustos 2026). Ders çözmek yerine gerçek iş çıkarmaya dayanan, uzaktan ve ücretsiz bir eğitim programı; değerlendirmeden geçen beş ödevi ve FlyRank ekibince kabul edilen bir bitirme projesini tamamladım."],
         ["AI Fluency: Framework & Foundations", ", Anthropic Education (Temmuz 2026)", "https://verify.skilljar.com/c/xvnv3q5pttvf"],
         ["AI Fluency for Builders", ", Anthropic Education (2026)"],
       ],
@@ -175,7 +238,7 @@ const COPY = {
     contactText: "İstanbul'da yaşıyorum, yeni projelere ve rollere açığım.",
     cvs: {
       heading: "CV indir",
-      note: "Aynı geçmiş, dört farklı rol türü için dört ayrı yazımla. İlana en yakın olanı seçin.",
+      note: "Aynı geçmiş, dört farklı rol için dört ayrı CV (İngilizce). İlana en uygun olanı seçin.",
       items: [
         { slug: "operations", label: "Operasyon ve Süreç İyileştirme" },
         { slug: "product", label: "Ürün ve Teknoloji" },
@@ -183,9 +246,10 @@ const COPY = {
         { slug: "commercial", label: "Ticari ve İş Analizi" },
       ],
     },
-    cv: "CV ↓",
+    cv: "CV indir ↓",
     verify: "doğrula ↗",
-    setIn: "Newsreader ile dizildi",
+    setIn: "Yazı tipi: Newsreader",
+    updated: "Güncelleme: Eylül 2026",
   },
 };
 
@@ -206,16 +270,16 @@ const SECTION_IDS = ["about", "experience", "skills", "work", "background", "con
 const PHONE_DISPLAY = "+90 542 262 00 42";
 const PHONE_HREF = "tel:+905422620042";
 const EMAIL = "tolgacakan@gmail.com";
+const LINKEDIN = "https://www.linkedin.com/in/mehmettolgacakan";
 
 const STYLES = `
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=JetBrains+Mono:wght@400;500&display=swap');
 
 .cv {
   --paper: #fcfbf8;
   --paper-2: #f5f2eb;
   --ink: #171613;
   --ink-soft: #56534c;
-  --ink-faint: #8d887e;
+  --ink-faint: #6f6a60;
   --rule: #e2ddd2;
   --accent: #1d3c5a;
   color-scheme: light;
@@ -233,7 +297,7 @@ const STYLES = `
   --paper-2: #1b1a15;
   --ink: #ebe7dc;
   --ink-soft: #a09a8d;
-  --ink-faint: #6b665c;
+  --ink-faint: #8a8478;
   --rule: #2b2921;
   --accent: #8fb8dd;
   color-scheme: dark;
@@ -494,6 +558,45 @@ a.chip { display: inline-flex; align-items: center; text-decoration: none; }
   color: var(--ink-faint);
 }
 
+/* ÖRS project: results, Pareto and the A3 view */
+.ors { margin: 6px 0 10px; }
+.ors-meta { font-size: 11px; color: var(--ink-faint); letter-spacing: .03em; margin: 0 0 14px; }
+.ors-actions { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; margin: 16px 0 0; }
+.pareto { margin: 22px 0 0; }
+.pareto svg { width: 100%; height: auto; display: block; }
+.pareto-bar rect { fill: color-mix(in srgb, var(--ink-faint) 45%, transparent); transition: fill .2s ease; cursor: pointer; }
+.pareto-bar[data-on="true"] rect, .pareto-bar:hover rect { fill: var(--accent); }
+.pareto-bar text { font: 10px 'JetBrains Mono', monospace; fill: var(--ink-soft); }
+.pareto-bar:focus { outline: none; }
+.pareto-bar:focus-visible rect { stroke: var(--accent); stroke-width: 1; }
+.pareto-line { fill: none; stroke: var(--accent); stroke-width: 1.2; }
+.pareto-dot { fill: var(--paper); stroke: var(--accent); stroke-width: 1.2; }
+.pareto-read { font-size: 14.5px; color: var(--ink-soft); margin: 8px 0 0; min-height: 1.6em; }
+.pareto-read b { font-weight: 500; color: var(--ink); }
+.chip-cv { color: var(--accent); border-color: var(--accent); }
+.chip-cv:hover { background: color-mix(in srgb, var(--accent) 8%, transparent); color: var(--accent); }
+.a3-bg {
+  position: fixed; inset: 0; z-index: 70; display: grid; place-items: center; padding: 3vh 3vw;
+  background: color-mix(in srgb, var(--paper) 70%, transparent);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); animation: fade .18s ease;
+}
+.a3 {
+  width: min(1100px, 100%); max-height: 94vh; overflow-y: auto; background: var(--paper);
+  border: 1px solid var(--ink-faint); box-shadow: 0 30px 60px -34px rgba(0,0,0,.4); padding: 22px 24px;
+}
+.a3-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; border-bottom: 1px solid var(--rule); padding-bottom: 12px; }
+.a3-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; margin-top: 4px; }
+.a3-cell { padding: 14px 16px 14px 0; border-bottom: 1px solid var(--rule); }
+.a3-k { font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin: 0 0 6px; }
+.a3-v { font-size: 14.5px; line-height: 1.55; margin: 0; }
+.a3-poster { grid-row: span 3; grid-column: 3; }
+.a3-poster img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); }
+.a3-team { font-size: 11px; color: var(--ink-faint); margin: 12px 0 0; }
+@media (max-width: 760px) {
+  .a3-grid { grid-template-columns: 1fr; }
+  .a3-poster { grid-row: auto; grid-column: auto; }
+}
+
 /* CV picker: one PDF per kind of role */
 .cv-block { margin-top: 30px; }
 .cv-picks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 14px; }
@@ -678,10 +781,13 @@ function RoleTicker({ roles }) {
   }, [roles]);
 
   return (
+    <>
+    {!still && <span className="sr">{roles.join(", ")}</span>}
     <p className="role-slot" aria-hidden={still ? undefined : "true"}>
       {still ? roles.join(" · ") : text}
       {!still && <span className="caret" />}
     </p>
+    </>
   );
 }
 
@@ -763,7 +869,7 @@ function CommandMenu({ open, onClose, onTheme, onLang, t, lang }) {
     ...SECTION_IDS.slice(1).map((id) => ({ k: id, label: t.nav[id], hint: lang === "tr" ? "Bölüm" : "Section", run: () => go(id) })),
     { k: "lang", label: lang === "en" ? "Türkçe'ye geç" : "Switch to English", hint: lang === "tr" ? "Dil" : "Language", run: onLang },
     { k: "theme", label: lang === "tr" ? "Paleti değiştir" : "Switch palette", hint: lang === "tr" ? "Görünüm" : "View", run: onTheme },
-    ...t.cvs.items.map((c) => ({ k: "cv-" + c.slug, label: "CV · " + c.label, hint: "PDF", run: () => { window.location.href = cvHref(c.slug); } })),
+    ...t.cvs.items.map((c) => ({ k: "cv-" + c.slug, label: (lang === "tr" ? "İşe alım · " : "Hiring · ") + c.label, hint: "CV", run: () => { window.open(cvHref(c.slug), "_blank", "noreferrer"); } })),
     { k: "tab", label: lang === "tr" ? "TAB Marketing sitesi" : "TAB Marketing site", hint: "Link", run: () => { window.open(TAB_URL, "_blank", "noreferrer"); } },
     { k: "mail", label: lang === "tr" ? "E-posta yaz" : "Write an email", hint: lang === "tr" ? "İletişim" : "Contact", run: () => { window.location.href = "mailto:" + EMAIL; } },
     { k: "print", label: lang === "tr" ? "Sayfayı yazdır" : "Print this page", hint: lang === "tr" ? "Sayfa" : "Page", run: () => window.print() },
@@ -785,7 +891,7 @@ function CommandMenu({ open, onClose, onTheme, onLang, t, lang }) {
 
   return (
     <div className="cmd-bg" onClick={onClose} role="presentation">
-      <div className="cmd" onClick={(e) => e.stopPropagation()} role="dialog" aria-label="Menu">
+      <div className="cmd" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label="Menu">
         <input ref={ref} value={q} placeholder={lang === "tr" ? "git…" : "jump to…"} onKeyDown={onKey}
           onChange={(e) => { setQ(e.target.value); setSel(0); }} />
         <ul>
@@ -824,7 +930,7 @@ function LeftPane({ active, theme, onTheme, onMenu, onLang, t, lang }) {
     <aside className="pane-left" id="about">
       <div className="id-row rise">
         <div className="portrait">
-          <img src="/tolga.png" alt="Tolga Çakan" width="560" height="560" />
+          <img src="/tolga.webp" alt="Tolga Çakan" width="92" height="92" />
         </div>
         <div>
           <p className="tag">{t.place}</p>
@@ -852,9 +958,11 @@ function LeftPane({ active, theme, onTheme, onMenu, onLang, t, lang }) {
         <div className="meta mono">
           <ContactLine href={"mailto:" + EMAIL}>{EMAIL}</ContactLine>
           <ContactLine href={PHONE_HREF}>{PHONE_DISPLAY}</ContactLine>
+          <a href={LINKEDIN} target="_blank" rel="noreferrer">linkedin.com/in/mehmettolgacakan</a>
           <a href="https://github.com/tolgacakan14" target="_blank" rel="noreferrer">github.com/tolgacakan14</a>
         </div>
         <div className="tools">
+          <a className="chip chip-cv" href="#cv" onClick={(e) => { e.preventDefault(); go("cv"); }}>{t.cv}</a>
           <button type="button" className="chip" onClick={onMenu} aria-label="Menu">⌘K</button>
           <button type="button" className="chip" onClick={onLang} aria-label="Change language">
             {lang === "en" ? "TR" : "EN"}
@@ -862,7 +970,6 @@ function LeftPane({ active, theme, onTheme, onMenu, onLang, t, lang }) {
           <button type="button" className="chip" onClick={onTheme} aria-label="Switch palette">
             {theme === "night" ? (lang === "tr" ? "Gündüz" : "Day") : (lang === "tr" ? "Gece" : "Night")}
           </button>
-          <a className="chip" href="#cv" onClick={(e) => { e.preventDefault(); go("cv"); }}>{t.cv}</a>
         </div>
       </div>
     </aside>
@@ -905,11 +1012,106 @@ function Skills({ t }) {
   );
 }
 
+/** Pareto of the ÖRS scrap causes: bars by pairs, cumulative share as a line. */
+function Pareto({ o }) {
+  const [on, setOn] = useState(0);
+  const total = o.causes.reduce((a, [, n]) => a + n, 0);
+  const max = o.causes[0][1];
+  const W = 560, H = 200, pad = 28, bw = (W - pad * 2) / o.causes.length;
+  let run = 0;
+  const pts = o.causes.map(([, n], i) => {
+    run += n;
+    return [pad + bw * i + bw / 2, H - pad - (run / total) * (H - pad * 2)];
+  });
+  const fmt = (n) => n.toLocaleString(o.pairs === "çift" ? "tr-TR" : "en-GB");
+  return (
+    <figure className="pareto rise">
+      <figcaption className="h3">{o.paretoTitle}</figcaption>
+      <svg viewBox={"0 0 " + W + " " + H} role="img" aria-label={o.paretoTitle}>
+        {o.causes.map(([label, n], i) => {
+          const h = (n / max) * (H - pad * 2) * 0.62;
+          return (
+            <g key={label} onMouseEnter={() => setOn(i)} onFocus={() => setOn(i)} onClick={() => setOn(i)} tabIndex={0} className="pareto-bar" data-on={i === on ? "true" : "false"}>
+              <rect x={pad + bw * i + 8} y={H - pad - h} width={bw - 16} height={h} />
+              <text x={pad + bw * i + bw / 2} y={H - 10} textAnchor="middle">{label}</text>
+            </g>
+          );
+        })}
+        <polyline points={pts.map((p) => p.join(",")).join(" ")} className="pareto-line" />
+        {pts.map(([x, y], i) => <circle key={i} cx={x} cy={y} r="2.5" className="pareto-dot" />)}
+      </svg>
+      <p className="pareto-read">
+        <b>{o.causes[on][0]}</b> · {fmt(o.causes[on][1])} {o.pairs} ({Math.round((o.causes[on][1] / total) * 1000) / 10}%) · {o.causes[on][2]}
+      </p>
+      <p className="strip-note">{o.paretoNote}</p>
+    </figure>
+  );
+}
+
+/** The award-winning factory project, with its results and an A3 view. */
+function OrsBlock({ o }) {
+  const [open, setOpen] = useState(false);
+  const closeRef = useRef(null);
+  const openRef = useRef(null);
+  useEffect(() => {
+    if (!open) return undefined;
+    closeRef.current?.focus();
+    const onKey = (e) => { if (e.key === "Escape") setOpen(false); };
+    window.addEventListener("keydown", onKey);
+    return () => { window.removeEventListener("keydown", onKey); openRef.current?.focus(); };
+  }, [open]);
+  return (
+    <div className="ors">
+      <h3 className="h3 rise">{o.heading}</h3>
+      <p className="row-title rise">{o.title}</p>
+      <p className="mono ors-meta rise">{o.meta}</p>
+      <p className="p rise">{o.intro}</p>
+      <dl className="facts rise">
+        {o.facts.map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}
+      </dl>
+      <Pareto o={o} />
+      <p className="ors-actions rise">
+        <button type="button" className="chip chip-cv" ref={openRef} onClick={() => setOpen(true)}>{o.open} ↗</button>
+        <a className="link link-mono" href="/ors/poster.webp" target="_blank" rel="noreferrer">{o.poster} <span>→</span></a>
+      </p>
+      {open && (
+        <div className="a3-bg" onClick={() => setOpen(false)} role="presentation">
+          <div className="a3" role="dialog" aria-modal="true" aria-label={o.a3Title} onClick={(e) => e.stopPropagation()}>
+            <header className="a3-head">
+              <div>
+                <p className="h3" style={{ margin: 0 }}>A3</p>
+                <p className="row-title">{o.a3Title}</p>
+              </div>
+              <button type="button" className="chip" ref={closeRef} onClick={() => setOpen(false)}>{o.close} ✕</button>
+            </header>
+            <div className="a3-grid">
+              {o.a3.map(([k, v], i) => (
+                <section key={k} className="a3-cell">
+                  <p className="mono a3-k">{String(i + 1).padStart(2, "0")} · {k}</p>
+                  <p className="a3-v">{v}</p>
+                </section>
+              ))}
+              <section className="a3-cell a3-poster">
+                <a href="/ors/poster.webp" target="_blank" rel="noreferrer">
+                  <img src="/ors/poster.webp" alt={o.poster} loading="lazy" />
+                </a>
+              </section>
+            </div>
+            <p className="mono a3-team">{o.a3Team}</p>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function Work({ t }) {
   return (
     <section className="sec" id="work">
       <div className="wrap">
         <SecHead num="04" title={t.nav.work} id="work" />
+        <OrsBlock o={t.ors} />
+        <h3 className="h3 rise" style={{ marginTop: 40 }}>TAB Marketing</h3>
         <p className="p rise" style={{ "--i": 1 }}>{withTab(t.workIntro)}</p>
         <p className="strip-note rise" style={{ "--i": 2 }}>
           <a className="link link-mono" href={TAB_URL} target="_blank" rel="noreferrer">
@@ -1022,6 +1224,7 @@ function Contact({ t }) {
         <div className="meta mono rise" style={{ "--i": 2 }}>
           <ContactLine href={"mailto:" + EMAIL}>{EMAIL}</ContactLine>
           <ContactLine href={PHONE_HREF}>{PHONE_DISPLAY}</ContactLine>
+          <a href={LINKEDIN} target="_blank" rel="noreferrer">linkedin.com/in/mehmettolgacakan</a>
           <a href="https://github.com/tolgacakan14" target="_blank" rel="noreferrer">github.com/tolgacakan14</a>
         </div>
         <div className="cv-block rise" id="cv" style={{ "--i": 3 }}>
@@ -1068,7 +1271,21 @@ export default function CV() {
   }, []);
 
   // keep <html lang> honest for screen readers and search engines
-  useEffect(() => { document.documentElement.lang = lang; }, [lang]);
+  useEffect(() => {
+    document.documentElement.lang = lang;
+    document.title = lang === "tr"
+      ? "Tolga Çakan — Endüstri mühendisi: operasyon, ürün ve pazarlama"
+      : "Tolga Çakan — Industrial engineer: operations, product and marketing";
+    document.querySelector('meta[name="description"]')?.setAttribute("content", lang === "tr"
+      ? "İstanbul'da endüstri mühendisliği mezunu. Toyota, BTCTurk ve UEFA turnuvaları stajları, ödüllü bir fabrika iyileştirme projesi ve kendi küçük girişimi."
+      : "Industrial engineering graduate in Istanbul. Toyota, BTCTurk and UEFA tournament internships, an award-winning factory improvement project, and a small venture of his own.");
+  }, [lang]);
+
+  // a note for whoever opens the console
+  useEffect(() => {
+    console.log("%cHello, curious one.", "font: 15px Georgia, serif");
+    console.log("This site is React and Vite; the four CVs are built from one source by cv/build.mjs. Say hi: tolgacakan@gmail.com");
+  }, []);
 
   // paint the page background behind the app, so overscroll matches the theme
   useEffect(() => {
@@ -1146,7 +1363,7 @@ export default function CV() {
 
           <footer className="foot">
             <span>© {new Date().getFullYear()} Tolga Çakan</span>
-            <span>{t.setIn}</span>
+            <span>{t.updated} · {t.setIn}</span>
           </footer>
         </main>
       </div>
