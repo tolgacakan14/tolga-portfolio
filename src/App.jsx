@@ -14,9 +14,9 @@ const COPY = {
     place: "Istanbul, Turkey",
     roles: ["Industrial engineer", "Process & operations", "Product", "Marketing & PR", "Blockchain researcher", "Web product builder"],
     about: [
-      "I studied industrial engineering at Istanbul Bilgi University and graduated in June 2026. I like finding where a system breaks and fixing it, whether that is a factory floor, a product or a spreadsheet nobody wants to open.",
-      "My work spans engineering, product, design, operations and research, including programmes in Estonia and Czechia with people from across Europe. I am most useful when a problem is still vague and someone has to turn it into something people can use.",
-      "Away from all that: drums and making songs.",
+      "I'm an industrial engineer (Istanbul Bilgi University, 2026) who works where operations, product and people meet. I find where a system loses time, money or trust, measure it, and fix it.",
+      "I learned lean on Toyota's shop floor, product in BTCTurk Technology's Scrum team and sports marketing on site at UEFA tournaments. My team's factory project at ÖRS Textile won the department's Best Senior Design Project Award.",
+      "I also build things: client websites and a small side venture with friends, a multiplayer game, and a published book chapter on blockchain. Away from the desk, I play drums and write songs in son sek'.",
     ],
     expIntro: "Before graduating I did three internships. Each taught a different part of the same job: how work really flows, how a product team decides what matters and how something gets sold.",
     jobs: [
@@ -148,9 +148,9 @@ const COPY = {
     place: "İstanbul, Türkiye",
     roles: ["Endüstri mühendisi", "Süreç ve operasyon", "Ürün", "Pazarlama ve PR", "Blockchain araştırmacısı", "Web ürünleri geliştiren"],
     about: [
-      "İstanbul Bilgi Üniversitesi'nde endüstri mühendisliği okudum, Haziran 2026'da mezun oldum. Bir sistemin nerede aksadığını bulup düzeltmeyi seviyorum; bu bir üretim sahası da olabilir, bir ürün de, kimsenin açmak istemediği bir tablo da.",
-      "Mühendislik, ürün, tasarım, operasyon ve araştırma arasında çalışıyorum; Estonya ve Çekya'daki programlarda Avrupa'nın dört bir yanından insanlarla çalıştım. En çok, belirsiz bir problemi insanların kullanabileceği bir şeye dönüştürmek gerektiğinde işe yarıyorum.",
-      "Bunların dışında: davul çalmak ve şarkı yazmak.",
+      "İstanbul Bilgi Üniversitesi'nden (2026) endüstri mühendisiyim; operasyonun, ürünün ve insanların kesiştiği yerde çalışıyorum. Bir sistemin nerede zaman, para ya da güven kaybettiğini bulur, ölçer ve düzeltirim.",
+      "Yalın üretimi Toyota'nın sahasında, ürün yönetimini BTCTurk Teknoloji'nin Scrum ekibinde, spor pazarlamasını UEFA turnuvalarında sahada öğrendim. ÖRS Tekstil'de ekibimle yaptığımız fabrika projesi bölümün En İyi Bitirme Projesi Ödülü'nü aldı.",
+      "Bir şeyler de üretiyorum: arkadaşlarımla kurduğum küçük bir yan girişim ve müşteri siteleri, çok oyunculu bir oyun ve blockchain üzerine yayımlanmış bir kitap bölümü. Masadan kalkınca son sek' grubunda davul çalıyor, şarkı yazıyorum.",
     ],
     expIntro: "Mezun olmadan önce üç staj yaptım. Her biri bana aynı işin farklı bir parçasını öğretti: işin gerçekte nasıl aktığını, bir ürün ekibinin neye öncelik verdiğini ve bir şeyin nasıl satıldığını.",
     jobs: [
