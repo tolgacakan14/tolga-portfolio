@@ -4,22 +4,22 @@ export default {
   slug: "operations",
   label: { en: "Operations & Process Improvement", tr: "Operasyon ve Süreç İyileştirme" },
   title: "Industrial Engineering Graduate · Lean, Quality & Continuous Improvement",
-  profile: "Industrial engineering graduate of Istanbul Bilgi University (June 2026). Learned the Toyota Production System on the gemba and, in a team of five, won the department's best senior design award for lean and quality fixes at a sock maker. Adapted to three internships in three settings and picks up new tools fast. Seeking a lean, quality or supply-chain graduate programme to run Kaizen on a real line.",
+  profile: "Industrial engineering graduate of Istanbul Bilgi University (June 2026). Learned the Toyota Production System on the gemba and, in a team of five, won the department's Best Senior Design Project Award for lean and quality fixes at a sock maker. Adapts fast: three internships in three settings, and quick with new tools. Seeking a lean, quality or supply-chain graduate programme to practise Kaizen on a real line.",
   links: ["linkedin"],
   experience: ["demarke", "btcturk", "toyota"],
   projects: ["ors", "tab", "krone"],
   points: {
     demarke: [
-      "Worked in the PR team on site at two UEFA tournaments; wrote the monthly social media KPI report.",
+      "Worked in PR on site at two UEFA tournaments; wrote KPI reports for large social media accounts.",
     ],
     btcturk: [
-      "Built dashboards and market reports in a Scrum product team; benchmarked rival exchanges.",
+      "Built dashboards and market reports in a Scrum product team; benchmarked the app against peers.",
     ],
     toyota: [
       "Joined Assembly Logistics for Corolla and C-HR, learning JIT, Jidoka, 5S and Kanban on the gemba.",
       "Followed parts from dock receiving through devanning to set-parts supply (SPS) at the line.",
-      "Co-ran a Kaizen study with two fellow interns: programme time use was 61% vs an 82% target.",
-      "Traced root causes with a 4M fishbone; proposed standard work sheets and a TPS handbook.",
+      "Developed a Kaizen idea with two fellow interns into a project: programme efficiency 61% vs 82% ideal.",
+      "Traced causes by 4M fishbone; proposed a standard work form, wrote a TPS handbook; presented both.",
     ],
     ors: [
       "Traced 87.8% of scrap to three causes with Pareto: needle breakage, yarn moisture, machine faults.",
@@ -31,17 +31,17 @@ export default {
       "Assessed ergonomics with heart rate, RULA and NIOSH; planned worker rotation and a lifting aid.",
     ],
     tab: [
-      "Set up a guest-feedback service after spotting a gap; run design and on-site setup for 250+ pieces.",
+      "Co-founded TAB with two friends; lead design and on-site setup of 250+ in-venue pieces.",
     ],
     krone: [
-      "Built a playable mobile party game (React, TypeScript, Supabase); first version in six days.",
+      "Built a mobile party game of nine mini-games; friends join one room by code and share a scoreboard.",
     ],
   },
   skills: [
     ["Lean & TPS", "Kaizen · 5S · JIT · Jidoka · standard work · Kanban · takt · Andon · genchi genbutsu"],
     ["Problem-solving", "Root cause analysis · 4M fishbone · Pareto analysis · cost–benefit and payback"],
     ["Quality", "ISO 2859-1 incoming quality control · preventive maintenance · QR traceability"],
-    ["Flow & layout", "Material flow (devanning, set-parts supply) · ABC slotting · warehouse layout · MTM · RULA and NIOSH ergonomics"],
+    ["Flow & layout", "Material flow (devanning, SPS) · ABC slotting · warehouse layout · MTM · RULA and NIOSH ergonomics"],
     ["Data & tools", "Excel (VBA) · Python · SQL · Power BI · Blender (digital twin) · React/TypeScript"],
     ["Languages", "Turkish (native) · English (professional)"],
   ],

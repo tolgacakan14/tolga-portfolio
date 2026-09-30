@@ -12,15 +12,17 @@ export default {
     demarke: [
       "Worked in the PR team on site at the UEFA Nations League Finals and UEFA Women's EURO 2025.",
       "Contributed activation ideas (VAR Room, Unity Jersey) to the Carlsberg UEFA project.",
-      "Wrote Sosyal Lig's (fantasy football) monthly social report for 115K Instagram followers.",
-      "Benchmarked the Basketball Super League's Instagram against NBA and EuroLeague; proposed a plan.",
+      "Wrote monthly KPI reports and plans for large social media accounts (up to 115K followers).",
+      "Compared Turkey's Basketball Super League on Instagram with NBA and EuroLeague; proposed a plan.",
     ],
     btcturk: [
-      "Ran a screen-by-screen Binance teardown in Figma across seven areas, from markets to airdrops.",
+      "Learned how a product team runs in Scrum: backlog, user stories, roadmap and prioritisation.",
+      "Benchmarked the BtcTurk app screen by screen against leading exchanges across seven areas.",
       "Turned self-custody, DeFi and airdrop gaps into recommendations presented to the product team.",
     ],
     toyota: [
-      "Learned TPS; co-ran a Kaizen study of the intern programme with two fellow interns.",
+      "Learned the Toyota Production System on the gemba: JIT, Kanban and parts flow to the line.",
+      "Developed a Kaizen idea with two fellow interns into a project and presented it to management.",
     ],
     ors: [
       "Won the department's Best Senior Design Project Award in a team of five; presented at CSRP 2026.",
@@ -31,14 +33,14 @@ export default {
       "Handle PR and build client sites, such as francoserdivan.com with a taste quiz and gelato builder.",
     ],
     krone: [
-      "Built a playable party game of nine mini-games, with live rooms and a global daily challenge.",
+      "Built a mobile party game of nine mini-games; friends join one room by code and share a scoreboard.",
     ],
   },
   skills: [
-    ["Marketing", "Competitor benchmarking · KPI reporting · client presentations · content planning"],
+    ["Marketing", "Market and competitor benchmarking · app reviews · KPI reporting · insight-led recommendations"],
     ["Brand & PR", "Brand communication · sponsorship activation ideas · on-site PR · events · client acquisition"],
     ["Content", "Social media reporting and KPIs · content planning · sports content benchmarking · EN/TR"],
-    ["Creative tools", "Photoshop · Premiere Pro · Canva · Figma · print and brand visuals · websites (React, Next.js)"],
+    ["Creative tools", "Photoshop · Premiere Pro · Canva · print and brand visuals · websites (React, Next.js)"],
     ["Data & workflow", "Excel · Power BI · SQL · Python · Jira · Confluence · Scrum · LLM-assisted workflows"],
     ["Languages", "Turkish (native) · English (professional)"],
   ],
