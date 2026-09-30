@@ -4,7 +4,7 @@ export default {
   slug: "marketing",
   label: { en: "Marketing & Brand", tr: "Pazarlama ve Marka" },
   title: "Industrial Engineering Graduate · Brand & Product Marketing",
-  profile: "Industrial engineering graduate (Istanbul Bilgi University, June 2026). Worked in sports marketing and PR on site at two UEFA tournaments. Picks up new settings and tools fast: three internships in three industries, and web products built with AI tools. Drummer and songwriter in *son sek'*. Keen to learn, take on real work and add value in brand, product or sports marketing.",
+  profile: "Industrial engineering graduate (Istanbul Bilgi University, June 2026). Worked in sports marketing and PR on site at two UEFA tournaments. Picks up new settings and tools fast: three internships in three industries, and web products built with AI tools. Seeking a brand or product marketing role that connects research with creative work.",
   links: ["linkedin"],
   experience: ["demarke", "btcturk", "toyota"],
   projects: ["ors", "tab", "krone"],
@@ -12,8 +12,8 @@ export default {
     demarke: [
       "Worked in the PR team on site at the UEFA Nations League Finals and UEFA Women's EURO 2025.",
       "Contributed activation ideas (VAR Room, Unity Jersey) to the Carlsberg UEFA project.",
-      "Wrote Sosyal Lig's monthly social report (115K Instagram followers), turning KPIs into next steps.",
-      "Benchmarked BSL's Instagram against NBA and EuroLeague; proposed a content plan of Reels and posts.",
+      "Wrote Sosyal Lig's (fantasy football) monthly social report for 115K Instagram followers.",
+      "Benchmarked the Basketball Super League's Instagram against NBA and EuroLeague; proposed a plan.",
     ],
     btcturk: [
       "Ran a screen-by-screen Binance teardown in Figma across seven areas, from markets to airdrops.",
@@ -23,9 +23,7 @@ export default {
       "Learned TPS; co-ran a Kaizen study of the intern programme with two fellow interns.",
     ],
     ors: [
-      "Traced most scrap to three causes with Pareto; preventive care more than halved needle costs.",
-      "Co-built the business case for a yarn moisture meter that paid for itself in about 40 days.",
-      "Co-built an ISO 2859-1 quality control web app with QR carton traceability.",
+      "Won the department's Best Senior Design Project Award in a team of five; presented at CSRP 2026.",
     ],
     tab: [
       "Spotted that venues had no simple way to hear from guests; co-founded TAB with two friends.",
@@ -37,7 +35,7 @@ export default {
     ],
   },
   skills: [
-    ["Marketing", "Competitive benchmarking · audience insight · product positioning · storytelling, presentations"],
+    ["Marketing", "Competitor benchmarking · KPI reporting · client presentations · content planning"],
     ["Brand & PR", "Brand communication · sponsorship activation ideas · on-site PR · events · client acquisition"],
     ["Content", "Social media reporting and KPIs · content planning · sports content benchmarking · EN/TR"],
     ["Creative tools", "Photoshop · Premiere Pro · Canva · Figma · print and brand visuals · websites (React, Next.js)"],

@@ -3,14 +3,14 @@ export default {
   slug: "general",
   label: { en: "General (all roles)", tr: "Genel (tüm roller)" },
   title: "Industrial Engineering Graduate · Operations, Product & Data",
-  profile: "Industrial engineering graduate (Istanbul Bilgi University, June 2026). Completed three internships in three settings: a Toyota plant, a fintech product team and a sports marketing agency. Quick to adopt new tools, from React to AI, and part of the team behind an award-winning senior design project. Keen to learn fast, take on real work and add value in operations, product, marketing or commercial roles.",
+  profile: "Industrial engineering graduate (Istanbul Bilgi University, June 2026). Completed three internships in three settings: a Toyota plant, a fintech product team and a sports marketing agency. Quick to adopt new tools, from React to AI, and part of the team behind an award-winning senior design project. Seeking an operations, product or business analysis graduate role to learn fast and take on real work.",
   links: ["linkedin", "github"],
   experience: ["demarke", "btcturk", "toyota"],
   projects: ["ors", "tab", "krone"],
   points: {
     demarke: [
       "Worked in the PR team on site at the UEFA Nations League Finals and UEFA Women's EURO 2025.",
-      "Contributed activation ideas (VAR Room, Unity Jersey) to the Carlsberg UEFA project.",
+      "Benchmarked the Basketball Super League's Instagram against NBA and EuroLeague; proposed a plan.",
       "Wrote the monthly KPI report and plan for a fantasy football game (115K Instagram followers).",
     ],
     btcturk: [

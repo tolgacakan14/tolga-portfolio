@@ -26,7 +26,7 @@ export const common = {
     ors: { when: "2025–2026", what: "Senior design project, ÖRS Textile", sub: "team of 5 · award-winning" },
     tab: { when: "2026–present", what: "Co-founder, TAB Marketing", sub: "[tab-marketing-site.vercel.app](https://tab-marketing-site.vercel.app)" },
     krone: { when: "2026", what: "Krone", sub: "[innerclock.vercel.app](https://innerclock.vercel.app) · personal project, fully playable" },
-    feeddetox: { when: "2026", what: "Feed Detox", sub: "Next.js · EN/TR" },
+    feeddetox: { when: "2026", what: "Feed Detox", sub: "Next.js · EN/TR · personal project, working prototype" },
   },
 
   degree: { when: "Jun 2026", what: "BSc Industrial Engineering, Istanbul Bilgi University", line: "Serdivan Fen Lisesi (science high school), Sakarya" },
@@ -47,7 +47,7 @@ export const common = {
   leadership: {
     editorial: ["Editorial Director", ", Bilgi Blockchain Club (2021–2024): commissioned and edited its publications and forum programme"],
     international: ["International:", " European Summer School, Blockchain to Financial Markets, Prague (2025) · HeForShe Erasmus+ Youth Exchange, Estonia (Dec 2023)"],
-    adk: ["Vice President & Operations Lead", ", Atatürkçü Düşünce Kulübü (2021–2024): ran 10+ forums; largest panel drew 4,000+"],
+    adk: ["Vice President & Operations Lead", ", BilgiADK (2021–2024): ran 10+ forums; largest panel drew 4,000+"],
     music: ["Drums & songwriting", ", *son sek'*. One album, two singles, live shows ([Spotify](https://open.spotify.com/intl-tr/artist/1ILN8doPYd0l4l9ME6Rtce))"],
   },
 
