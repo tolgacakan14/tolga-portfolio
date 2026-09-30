@@ -47,7 +47,7 @@ export const common = {
   leadership: {
     editorial: ["Editorial Director", ", Bilgi Blockchain Club (2021–2024): commissioned and edited its publications and forum programme"],
     international: ["International:", " European Summer School, Blockchain to Financial Markets, Prague (2025) · HeForShe Erasmus+ Youth Exchange, Estonia (Dec 2023)"],
-    adk: ["Vice President & Operations Lead", ", BilgiADK (2021–2024): ran 10+ forums; largest panel drew 4,000+"],
+    adk: ["Vice President & Social Media Lead", ", BilgiADK (2021–2024): ran 10+ forums; largest panel drew 4,000+"],
     music: ["Drums & songwriting", ", *son sek'*. One album, two singles, live shows ([Spotify](https://open.spotify.com/intl-tr/artist/1ILN8doPYd0l4l9ME6Rtce))"],
   },
 

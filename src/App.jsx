@@ -98,7 +98,7 @@ const COPY = {
     ],
     bg: {
       education: "Education",
-      edu: [["Istanbul Bilgi University", ", BSc Industrial Engineering. Graduated June 2026"], ["Serdivan Fen Lisesi", " (science high school), Sakarya, Turkey. Graduated 2020"], ["Military service", ": deferred until 2029"]],
+      edu: [["Istanbul Bilgi University", ", BSc Industrial Engineering. Graduated June 2026"], ["Serdivan Fen Lisesi", " (science high school), Sakarya, Turkey. Graduated 2020"]],
       international: "International",
       intl: [
         ["HeForShe", ", Erasmus+ Youth Exchange in Saaremaa, Estonia (December 2023). I spent a week with an international group on gender equality and how it tracks with a country's development. Hosted by Artemis Women's Power MTÜ; Youthpass certified."],
@@ -107,7 +107,7 @@ const COPY = {
       involvement: "Involvement",
       inv: [
         ["Editorial Director", ", Bilgi Blockchain Club (2021–2024). I ran the club's editorial side, commissioning and editing what it published and shaping its forums and speaker evenings. That work led to my own research on blockchain in the entertainment industry, published as a book chapter in 2022."],
-        ["Vice President & Operations Lead", ", BilgiADK, Bilgi University student club (2021–2024). I ran more than 10 forums and conferences for students across Istanbul; the largest, a live panel, drew more than 4,000 people."],
+        ["Vice President & Social Media Lead", ", BilgiADK, Bilgi University student club (2021–2024). I ran more than 10 forums and conferences for students across Istanbul; the largest, a live panel, drew more than 4,000 people."],
       ],
       publication: "Publication",
       pub: "Chapter XI, \u201cBlockchain ve E\u011flence Sekt\u00f6r\u00fc\u201d (Blockchain and the Entertainment Industry), in ",
@@ -234,7 +234,7 @@ const COPY = {
     ],
     bg: {
       education: "Eğitim",
-      edu: [["İstanbul Bilgi Üniversitesi", ", Endüstri Mühendisliği (Lisans). Haziran 2026 mezunu"], ["Serdivan Fen Lisesi", ", Sakarya. 2020 mezunu"], ["Askerlik", ": 2029'a kadar tecilli"]],
+      edu: [["İstanbul Bilgi Üniversitesi", ", Endüstri Mühendisliği (Lisans). Haziran 2026 mezunu"], ["Serdivan Fen Lisesi", ", Sakarya. 2020 mezunu"]],
       international: "Uluslararası",
       intl: [
         ["HeForShe", ", Erasmus+ Youth Exchange, Saaremaa, Estonya (Aralık 2023). Uluslararası bir grupla bir hafta boyunca toplumsal cinsiyet eşitliğini ve bunun bir ülkenin gelişmişliğiyle ilişkisini ele aldık. Artemis Women's Power MTÜ'nün ev sahipliğinde; Youthpass sertifikalı."],
@@ -243,7 +243,7 @@ const COPY = {
       involvement: "Kulüpler & topluluk",
       inv: [
         ["Yayın Yönetmeni", ", Bilgi Blockchain Kulübü (2021–2024). Kulübün yayın tarafını yürüttüm: yayımlanan içerikleri belirleyip düzenledim, forumların ve konuşmacı akşamlarının programını şekillendirdim. Bu çalışma beni eğlence sektöründe blockchain üzerine kendi araştırmama götürdü; araştırma 2022'de kitap bölümü olarak yayımlandı."],
-        ["Başkan Yardımcısı & Operasyon Lideri", ", BilgiADK, Bilgi Üniversitesi öğrenci kulübü (2021–2024). İstanbul'daki öğrenciler için 10'dan fazla forum ve konferans düzenledim; en büyüğü 4.000'den fazla kişilik canlı paneldi."],
+        ["Başkan Yardımcısı ve Sosyal Medya Sorumlusu", ", BilgiADK, Bilgi Üniversitesi öğrenci kulübü (2021–2024). İstanbul'daki öğrenciler için 10'dan fazla forum ve konferans düzenledim; en büyüğü 4.000'den fazla kişilik canlı paneldi."],
       ],
       publication: "Yayın",
       pub: "XI. Bölüm: “Blockchain ve Eğlence Sektörü”, ",

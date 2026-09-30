@@ -26,12 +26,12 @@ export default {
     ],
     ors: [
       "Firenin %87,8'ini Pareto ile üç nedene bağladık; iğne bakım maliyetini yarıdan fazla azalttık.",
-      "Kendini 40 günde amorti eden, yılda 692,6 bin TL fireyi önleyen nemölçeri devreye aldık.",
+      "Yaklaşık %800 getirili, kendini 40 günde amorti eden iplik nemölçerini devreye aldık.",
       "MTM ile etiketlemede parça başı süreyi %43 kısalttık; depoyu dijital ikizde ABC ile düzenledik.",
       "QR izlenebilirlikli ISO 2859-1 giriş kalite kontrol uygulamasını (React/TypeScript) birlikte yazdık.",
     ],
     tab: [
-      "İşletmelerin misafirini dinlemesi zordu; bu boşluğu iki arkadaşımla NFC/QR çözümleriyle kapatıyoruz.",
+      "Mekânların misafirini dinleyecek basit bir yolu yoktu; iki arkadaşımla NFC/QR çözümleri sunuyoruz.",
       "Kendi bulduğumuz 15+ işletmede tasarım, üretim ve kurulumu yürütüyor, web sitelerini geliştiriyorum.",
     ],
     krone: [
@@ -73,7 +73,7 @@ export default {
     leadership: {
       editorial: ["Yayın Yönetmeni", ", Bilgi Blockchain Kulübü (2021–2024): yayınları ve forum programını belirleyip düzenledim"],
       international: ["Uluslararası:", " European Summer School, Blockchain to Financial Markets, Prag (2025) · HeForShe Erasmus+, Estonya (2023)"],
-      adk: ["Başkan Yardımcısı ve Operasyon Lideri", ", BilgiADK (2021–2024): 10'dan fazla forum; en büyük panel 4.000+ kişi"],
+      adk: ["Başkan Yardımcısı ve Sosyal Medya Sorumlusu", ", BilgiADK (2021–2024): 10'dan fazla forum; en büyük panel 4.000+ kişi"],
       music: ["Davul ve şarkı yazarlığı", ", *son sek'* grubu: bir albüm, iki single, canlı performanslar ([Spotify](https://open.spotify.com/intl-tr/artist/1ILN8doPYd0l4l9ME6Rtce))"],
     },
   },

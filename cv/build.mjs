@@ -51,13 +51,10 @@ function page(v) {
   const pub = v.publication || c.defaults.publication;
   const links = c.links.filter((l) => v.links.includes(l.key));
   const exp = v.experience.map((key) => entry({ ...c.experience[key], points: v.points[key] }));
-  // new graduate order: Education (with the ÖRS project) comes before Experience
-  const projOf = (key) => {
-    const p = c.projects[key];
-    return entry(v.points[key] ? { ...p, points: v.points[key] } : p);
-  };
-  const ors = v.projects.includes("ors") ? projOf("ors") : "";
-  const proj = v.projects.filter((k) => k !== "ors").map((key) => {
+  // Order (researched: Prospects, Bright Network, Kariyer.net): Profile, Experience,
+  // Projects with the industry-based senior design project first, then Education.
+  const order = ["ors", ...v.projects.filter((k) => k !== "ors")].filter((k) => v.projects.includes(k));
+  const proj = order.map((key) => {
     const p = c.projects[key];
     return entry(v.points[key] ? { ...p, points: v.points[key] } : p);
   });
@@ -84,15 +81,14 @@ ${links.map((l) => `  <a href="${l.href}">${esc(l.label)}</a>`).join("\n")}
 <h2>${h.profile}</h2>
 <p class="summary">${inline(v.profile)}</p>
 
-<h2>${h.education}</h2>
-${entry(c.degree)}
-${ors}
-
 <h2>${h.experience}</h2>
 ${exp.join("\n")}
 
 <h2>${h.projects}</h2>
 ${proj.join("\n")}
+
+<h2>${h.education}</h2>
+${entry(c.degree)}
 
 <h2>${h.skills}</h2>
 <dl class="skills">

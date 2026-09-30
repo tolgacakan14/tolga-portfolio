@@ -25,7 +25,7 @@ export default {
     ],
     ors: [
       "Traced most scrap to three causes with Pareto; preventive care more than halved needle costs.",
-      "Co-built the business case for a yarn moisture meter saving 692.6K TL a year.",
+      "Co-built the business case for a yarn moisture meter: about 800% ROI, paid back in about 40 days.",
       "Cut labelling time per piece 43% with MTM; re-slotted the warehouse by ABC in a digital twin.",
     ],
     tab: [
