@@ -29,8 +29,25 @@ const list = (items) => `<ul class="l">\n${items.map(([lead, rest]) => `      <l
 
 const pick = (map, keys) => keys.map((k) => map[k]);
 
+const HEAD = {
+  en: { profile: "Profile", education: "Education", experience: "Experience", projects: "Projects", skills: "Skills",
+    awards: "Awards, programmes &amp; certificates", publication: "Publication", leadership: "Leadership &amp; involvement" },
+  tr: { profile: "Profil", education: "Eğitim", experience: "Deneyim", projects: "Projeler", skills: "Yetkinlikler",
+    awards: "Ödüller, programlar ve sertifikalar", publication: "Yayın", leadership: "Liderlik ve topluluk" },
+};
+
+// a variant in another language brings its own wording of the shared data in `text`
+function withText(common, text = {}) {
+  const out = { ...common, ...text };
+  for (const k of ["experience", "projects", "awards", "publication", "leadership"]) {
+    out[k] = { ...common[k], ...(text[k] || {}) };
+  }
+  return out;
+}
+
 function page(v) {
-  const c = common;
+  const c = withText(common, v.text);
+  const h = HEAD[v.lang || "en"];
   const pub = v.publication || c.defaults.publication;
   const links = c.links.filter((l) => v.links.includes(l.key));
   const exp = v.experience.map((key) => entry({ ...c.experience[key], points: v.points[key] }));
@@ -46,7 +63,7 @@ function page(v) {
   });
   const skills = v.skills.map(([k, val]) => `<dt>${esc(k)}</dt><dd>${inline(val)}</dd>`).join("\n");
   return `<!doctype html>
-<html lang="en">
+<html lang="${v.lang || "en"}">
 <head>
 <meta charset="utf-8">
 <title>Tolga Çakan · CV · ${esc(v.label.en)}</title>
@@ -55,7 +72,7 @@ function page(v) {
 </head>
 <body>
 
-<div class="namebar"><h1>${esc(c.name)}</h1><span class="place">${esc(c.place)}</span></div>
+<div class="namebar">${v.photo ? `<img class="photo" src="../../public/tolga.png" alt="">` : ""}<h1>${esc(c.name)}</h1><span class="place">${esc(c.place)} · ${esc(c.born)}</span></div>
 <p class="title">${inline(v.title)}</p>
 <div class="contact">
   <a class="port" href="${c.portfolio.href}">${esc(c.portfolio.label)}</a>
@@ -64,33 +81,33 @@ function page(v) {
 ${links.map((l) => `  <a href="${l.href}">${esc(l.label)}</a>`).join("\n")}
 </div>
 
-<h2>Profile</h2>
+<h2>${h.profile}</h2>
 <p class="summary">${inline(v.profile)}</p>
 
-<h2>Education</h2>
+<h2>${h.education}</h2>
 ${entry(c.degree)}
 ${ors}
 
-<h2>Experience</h2>
+<h2>${h.experience}</h2>
 ${exp.join("\n")}
 
-<h2>${esc(v.projectsHeading || "Projects")}</h2>
+<h2>${h.projects}</h2>
 ${proj.join("\n")}
 
-<h2>Skills</h2>
+<h2>${h.skills}</h2>
 <dl class="skills">
 ${skills}
 </dl>
 
 <div class="cols">
   <div>
-    <h2>Awards, programmes &amp; certificates</h2>
+    <h2>${h.awards}</h2>
     ${list(pick(c.awards, v.awards || c.defaults.awards))}
-${pub === "none" ? "" : `    <h2>Publication</h2>
+${pub === "none" ? "" : `    <h2>${h.publication}</h2>
     ${list([c.publication[pub]])}`}
   </div>
   <div>
-    <h2>Leadership &amp; involvement</h2>
+    <h2>${h.leadership}</h2>
     ${list(pick(c.leadership, v.leadership || c.defaults.leadership))}
   </div>
 </div>

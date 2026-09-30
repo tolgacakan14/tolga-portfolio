@@ -4,7 +4,7 @@ export default {
   slug: "product",
   label: { en: "Product & Technology", tr: "Ürün ve Teknoloji" },
   title: "Industrial Engineering Graduate · Product, Data & AI Prototyping",
-  profile: "Sakarya-born industrial engineering graduate of Istanbul Bilgi University (June 2026) who learns by building. Picks up new technology fast: builds web apps with React, TypeScript and AI tools, from a multiplayer party game to a live menu site. Three internships, one in a crypto exchange's product team, and an award-winning senior design project. Keen to learn fast and add value as an APM or product analyst.",
+  profile: "Industrial engineering graduate of Istanbul Bilgi University (June 2026) who learns by building. Picks up new technology fast: builds web apps with React, TypeScript and AI tools, from a multiplayer party game to a live menu site. Three internships, one in a crypto exchange's product team, and an award-winning senior design project. Keen to learn fast and add value as an APM or product analyst.",
   links: ["linkedin", "github"],
   experience: ["demarke", "btcturk", "toyota"],
   projects: ["ors", "tab", "krone", "feeddetox"],

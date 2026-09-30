@@ -6,6 +6,7 @@
 export const common = {
   name: "Tolga Çakan",
   place: "Istanbul, Turkey",
+  born: "Born 2002",
   email: "tolgacakan@gmail.com",
   phone: { label: "+90 542 262 00 42", href: "tel:+905422620042" },
   portfolio: { label: "tolgacakan.vercel.app", href: "https://tolgacakan.vercel.app" },
@@ -63,6 +64,7 @@ import operations from "./variants/operations.mjs";
 import product from "./variants/product.mjs";
 import marketing from "./variants/marketing.mjs";
 import commercial from "./variants/commercial.mjs";
+import turkce from "./variants/turkce.mjs";
 
 // the first one is also published as the default /tolga-cakan-cv.pdf
-export const variants = [general, operations, product, marketing, commercial];
+export const variants = [general, operations, product, marketing, commercial, turkce];

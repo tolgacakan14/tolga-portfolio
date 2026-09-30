@@ -2,9 +2,9 @@
 // (applied to: Apple Product Marketing Manager, Disney retail, UEFA).
 export default {
   slug: "marketing",
-  label: { en: "Marketing, Brand & Sports", tr: "Pazarlama, Marka ve Spor" },
-  title: "Industrial Engineering Graduate · Brand, Product & Sports Marketing",
-  profile: "Sakarya-born industrial engineering graduate (Istanbul Bilgi University, June 2026). Worked in sports marketing and PR on site at two UEFA tournaments. Picks up new settings and tools fast: three internships in three industries, and web products built with AI tools. Drummer and songwriter in *son sek'*. Keen to learn, take on real work and add value in brand, product or sports marketing.",
+  label: { en: "Marketing & Brand", tr: "Pazarlama ve Marka" },
+  title: "Industrial Engineering Graduate · Brand & Product Marketing",
+  profile: "Industrial engineering graduate (Istanbul Bilgi University, June 2026). Worked in sports marketing and PR on site at two UEFA tournaments. Picks up new settings and tools fast: three internships in three industries, and web products built with AI tools. Drummer and songwriter in *son sek'*. Keen to learn, take on real work and add value in brand, product or sports marketing.",
   links: ["linkedin"],
   experience: ["demarke", "btcturk", "toyota"],
   projects: ["ors", "tab", "krone"],

@@ -36,7 +36,9 @@ h2 {
 p { margin: 0; }
 .soft { color: #56534c; }
 .summary { text-align: left; }
-.namebar { display: flex; justify-content: space-between; align-items: baseline; }
+.namebar { display: flex; justify-content: space-between; align-items: center; gap: 10pt; }
+.namebar h1 { flex: 1; }
+.photo { width: 17mm; height: 17mm; border-radius: 50%; object-fit: cover; }
 .namebar .place { font-family: 'JetBrains Mono', monospace; font-size: 7.6pt; color: #56534c; }
 
 /* dated entries */

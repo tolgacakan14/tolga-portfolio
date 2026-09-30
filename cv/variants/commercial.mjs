@@ -4,7 +4,7 @@ export default {
   slug: "commercial",
   label: { en: "Commercial & Business Analysis", tr: "Ticari ve İş Analizi" },
   title: "Industrial Engineering Graduate · Commercial & Business Analysis",
-  profile: "Sakarya-born industrial engineering graduate (Istanbul Bilgi University, June 2026), curious about why some brands win in the market and at the point of sale. Analytical and versatile: three internships in marketing, product and manufacturing, and a team senior design project that won the department award. Now looking to learn fast, take on real work and add value in trade marketing, category or business analysis.",
+  profile: "Industrial engineering graduate (Istanbul Bilgi University, June 2026), curious about why some brands win in the market and at the point of sale. Analytical and versatile: three internships in marketing, product and manufacturing, and a team senior design project that won the department award. Now looking to learn fast, take on real work and add value in trade marketing, category or business analysis.",
   links: ["linkedin"],
   experience: ["demarke", "btcturk", "toyota"],
   projects: ["ors", "tab"],

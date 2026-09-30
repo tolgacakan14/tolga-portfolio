@@ -3,7 +3,7 @@ export default {
   slug: "general",
   label: { en: "General (all roles)", tr: "Genel (tüm roller)" },
   title: "Industrial Engineering Graduate · Operations, Product & Data",
-  profile: "Sakarya-born industrial engineering graduate (Istanbul Bilgi University, June 2026). Completed three internships in three settings: a Toyota plant, a fintech product team and a sports marketing agency. Quick to adopt new tools, from React to AI, and part of the team behind an award-winning senior design project. Keen to learn fast, take on real work and add value in operations, product, marketing or commercial roles.",
+  profile: "Industrial engineering graduate (Istanbul Bilgi University, June 2026). Completed three internships in three settings: a Toyota plant, a fintech product team and a sports marketing agency. Quick to adopt new tools, from React to AI, and part of the team behind an award-winning senior design project. Keen to learn fast, take on real work and add value in operations, product, marketing or commercial roles.",
   links: ["linkedin", "github"],
   experience: ["demarke", "btcturk", "toyota"],
   projects: ["ors", "tab", "krone"],

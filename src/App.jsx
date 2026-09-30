@@ -129,16 +129,17 @@ const COPY = {
     contactText: "I am based in Istanbul and open to new projects and roles.",
     cvs: {
       heading: "Download a CV",
-      note: "One general CV and four written for specific kinds of role. Pick the one closest to the ad.",
+      note: "One general CV, four written for specific kinds of role, and a Turkish CV. Pick the one closest to the ad.",
       items: [
         { slug: "general", label: "General (all roles)" },
         { slug: "operations", label: "Operations & Process Improvement" },
         { slug: "product", label: "Product & Technology" },
-        { slug: "marketing", label: "Marketing, Brand & Sports" },
+        { slug: "marketing", label: "Marketing & Brand" },
         { slug: "commercial", label: "Commercial & Business Analysis" },
+        { slug: "turkce", label: "Turkish CV (Türkçe, with photo)" },
       ],
     },
-    cv: "Choose a CV (5 versions) ↓",
+    cv: "Choose a CV (6 versions) ↓",
     verify: "verify ↗",
     setIn: "Set in Newsreader",
     updated: "Updated September 2026",
@@ -265,16 +266,17 @@ const COPY = {
     contactText: "İstanbul'da yaşıyorum, yeni projelere ve rollere açığım.",
     cvs: {
       heading: "CV indir",
-      note: "Bir genel CV ve belirli rol türleri için yazılmış dört CV (İngilizce). İlana en uygun olanı seçin.",
+      note: "Bir genel CV, belirli rol türleri için dört CV (İngilizce) ve bir Türkçe CV. İlana en uygun olanı seçin.",
       items: [
         { slug: "general", label: "Genel (tüm roller)" },
         { slug: "operations", label: "Operasyon ve Süreç İyileştirme" },
         { slug: "product", label: "Ürün ve Teknoloji" },
-        { slug: "marketing", label: "Pazarlama, Marka ve Spor" },
+        { slug: "marketing", label: "Pazarlama ve Marka" },
         { slug: "commercial", label: "Ticari ve İş Analizi" },
+        { slug: "turkce", label: "Türkçe CV (fotoğraflı)" },
       ],
     },
-    cv: "CV seç (5 sürüm) ↓",
+    cv: "CV seç (6 sürüm) ↓",
     verify: "doğrula ↗",
     setIn: "Yazı tipi: Newsreader",
     updated: "Güncelleme: Eylül 2026",
@@ -665,7 +667,7 @@ a.chip { display: inline-flex; align-items: center; text-decoration: none; }
 }
 .cv-pick .mono { font-size: 10px; letter-spacing: .08em; color: var(--ink-faint); white-space: nowrap; }
 .cv-pick:hover { border-color: var(--accent); color: var(--accent); background: color-mix(in srgb, var(--paper-2) 60%, transparent); }
-.cv-pick:first-child { grid-column: 1 / -1; }
+.cv-pick:first-child, .cv-pick:last-child { grid-column: 1 / -1; }
 @media (max-width: 560px) { .cv-picks { grid-template-columns: 1fr; } }
 
 /* contact lines */
