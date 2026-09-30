@@ -22,7 +22,7 @@ export const common = {
   },
 
   projects: {
-    ors: { when: "2025–2026", what: "Industry project, ÖRS Textile", sub: "senior design · team of 5 · Best Senior Design Project Award" },
+    ors: { when: "2025–2026", what: "Industry project, ÖRS Textile", sub: "senior design · team of 5 · award-winning" },
     tab: { when: "2026–present", what: "Co-founder, TAB Marketing", sub: "[tab-marketing-site.vercel.app](https://tab-marketing-site.vercel.app)" },
     krone: { when: "2026", what: "Krone", sub: "[innerclock.vercel.app](https://innerclock.vercel.app) · personal project, fully playable" },
     feeddetox: { when: "2026", what: "Feed Detox", sub: "Next.js · EN/TR" },
@@ -35,8 +35,8 @@ export const common = {
 
   // keyed so each variant can choose and order them
   awards: {
-    award: ["Best Senior Design Project Award", ", Istanbul Bilgi University (2026), ÖRS Textile project; top five of term, presented at CSRP 2026"],
-    flyrank: ["FlyRank AI Internship", " (Jul–Aug 2026). Remote, unpaid educational programme: five reviewed assignments and an accepted capstone"],
+    award: ["Best Senior Design Project Award", ", Department of Industrial Engineering, Istanbul Bilgi University (2026). Selected from the top five projects of the term; presented at CSRP 2026"],
+    flyrank: ["FlyRank AI", ", AI engineering programme (Jul–Aug 2026): five reviewed assignments and a capstone"],
     aiff: ["[AI Fluency: Framework & Foundations](https://verify.skilljar.com/c/xvnv3q5pttvf)", ", Anthropic (Jul 2026)"],
     aifb: ["AI Fluency for Builders", ", Anthropic (2026)"],
   },

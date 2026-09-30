@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
 
 /* ------------------------------------------------------------------ *
@@ -10,7 +10,7 @@ const LANGS = ["en", "tr"];
 
 const COPY = {
   en: {
-    nav: { about: "About", experience: "Experience", skills: "Skills", work: "Work", background: "Background", contact: "Contact" },
+    nav: { about: "About", experience: "Experience", project: "Project", skills: "Skills", work: "Work", background: "Background", contact: "Contact" },
     place: "Istanbul, Turkey",
     roles: ["Industrial engineer", "Process & operations", "Product", "Marketing & PR", "Blockchain researcher", "Web product builder"],
     about: [
@@ -20,9 +20,9 @@ const COPY = {
     ],
     expIntro: "Before graduating I did three internships. Each taught a different part of the same job: how work really flows, how a product team decides what matters and how something gets sold.",
     jobs: [
-      { when: "Mar–Jul 2025", what: "Sports Marketing Intern, De Marke Agency", note: "At De Marke I learned sports marketing at the top level: a global brand's UEFA sponsorship, and tournaments where content is made live. With the PR team on site at the UEFA Nations League Finals and UEFA Women's EURO 2025, I saw how much planning sits behind a few minutes of live content. For Carlsberg's UEFA sponsorship I contributed activation ideas, such as a “VAR Room by Carlsberg” and fan commentary from local pubs. I also wrote the monthly social media report for the fantasy football game Sosyal Lig (about 115K Instagram followers). For the Basketbol Süper Ligi, I built a content plan from an Instagram benchmark against the NBA and EuroLeague." },
-      { when: "Jan–Feb 2025", what: "Product Intern, BTCTurk Technology", note: "At BTCTurk Technology, one of Turkey's largest crypto exchanges, I spent four weeks in Product Management. I learned how a product team runs: standups, sprint planning, reviews and retros, with backlog, user stories and roadmap in Jira and Confluence. My main work was benchmarking BtcTurk against leading Turkish and global exchanges, including a screen-by-screen Figma teardown of Binance. Its gaps, from self-custody wallets to DeFi and airdrops, became recommendations I presented to the product team. I also researched why margin trading isn't offered in Turkey, built dashboards and market-trend reports, and helped IT inventory the company's apps and tools." },
-      { when: "Jun–Jul 2024", what: "Engineering Intern, Toyota Motor Manufacturing Turkey", note: "At Toyota's Sakarya plant, where the Corolla and C-HR are built, I learned the Toyota Production System on the gemba. In Assembly Logistics I followed parts from dock receiving and imported-parts ordering to Devan and SPS (set parts supply) line feeding. I saw JIT, Jidoka, Kaizen, Kanban and standard work in daily practice. With two fellow interns I turned those tools on our own internship programme. We measured its efficiency at 61% against an 82% ideal and traced the gap with a 4M fishbone. We proposed a standard programme flow and a standard work form (İSF), wrote a TPS handbook for future interns and presented it to management." },
+      { when: "Mar–Jul 2025", what: "Sports Marketing Intern, De Marke Agency", lead: "At a sports marketing agency, I learned how a global sponsor's UEFA plans and live tournament content come together.", points: ["Worked in the PR team on site at the UEFA Nations League Finals and UEFA Women's EURO 2025.", "Contributed activation ideas to the Carlsberg UEFA project, such as “VAR Room by Carlsberg” and fan commentary from local pubs.", "Wrote Sosyal Lig's monthly social media report (115K Instagram followers); built a BSL content plan from an NBA/EuroLeague Instagram benchmark."] },
+      { when: "Jan–Feb 2025", what: "Product Intern, BTCTurk Technology", lead: "In the Product Management team of one of Turkey's largest crypto exchanges, I learned how a product team runs Scrum, from sprint planning to retros.", points: ["Worked with the backlog, user stories with acceptance criteria and the roadmap in Jira and Confluence.", "Benchmarked BtcTurk against leading Turkish and global exchanges, with a seven-area Binance teardown in Figma; presented gaps as recommendations.", "Built dashboards and crypto market-trend reports, analysed margin-trading regulation in Turkey and helped IT inventory company apps and tools."] },
+      { when: "Jun–Jul 2024", what: "Engineering Intern, Toyota Motor Manufacturing Turkey", lead: "At the Sakarya plant (Corolla, C-HR), I learned the Toyota Production System on the gemba: JIT, Jidoka, Kaizen, Kanban and standard work.", points: ["Followed the Assembly Logistics flow from dock receiving and imported-parts ordering to Devan and SPS (set parts supply) line feeding.", "Co-ran a Kaizen study of the internship programme with two fellow interns: 61% efficiency vs 82% ideal, gap traced by 4M fishbone.", "Proposed a standard programme flow and İSF standard work form; wrote a TPS handbook for future interns; presented them to management."] },
     ],
     skills: [
       ["Product", "Competitive benchmarking and app teardowns · market research · backlog and user stories · roadmap prioritisation · dashboards and reporting · Scrum"],
@@ -40,6 +40,7 @@ const COPY = {
         ["Scrap", "Pareto analysis traced most of the scrap (87.8%) to three causes: needle breakage, yarn moisture and machine faults"],
         ["Maintenance", "Needle care moved from run-to-failure to preventive maintenance, cutting its cost by more than half"],
         ["Moisture", "A yarn moisture meter against the second-largest cause, paying for itself in about 40 days"],
+        ["Savings", "The scrap the moisture meter prevents is worth about 692.6K TL a year"],
         ["Labelling", "The station redesigned with MTM, each piece now 43% faster"],
         ["Warehouse", "Both floors redesigned in a Blender and Python digital twin with ABC slotting; lower-floor storage more than doubled"],
         ["Quality", "An ISO 2859-1 incoming quality control app and QR carton traceability"],
@@ -70,7 +71,20 @@ const COPY = {
         ["Next", "Keep the Pareto running month by month and take on the next causes."],
       ],
     },
-    workIntro: "I started TAB Marketing in 2026 with two friends. The cafés, restaurants and hotels around me shared one gap: no simple way to hear from their guests or to be found by new ones. We work project by project, as a solution-focused, CRM-style service. We make NFC and QR review stands, feedback cards that get guest complaints to the owner instantly, QR and digital menus, brand-matched print, websites and the PR around them. We found every client ourselves, among them Pehlivan Et Lokantası, İtalyan İşi, BREAK, Soft Coffee Lounge, Elbis Hotel and Cabir Deluxe, and have delivered more than 250 custom pieces to over 15 venues across Istanbul, Sakarya and beyond. I lead design, supplier production and on-site setup, and build the websites.",
+    workIntro: "TAB Marketing is a side venture I started with two friends after seeing venues had no easy way to hear from guests. Project by project, we make NFC/QR review stands, feedback cards, menus, websites and PR: 250+ custom pieces for 15+ self-sourced venues. I lead design, suppliers and on-site setup, and build the sites.",
+    tabHeading: "Side venture · TAB Marketing (2026–)",
+    tabClients: "Clients include Pehlivan Et Lokantası, İtalyan İşi, BREAK, Soft Coffee Lounge, Elbis Hotel and Cabir Deluxe.",
+    hire: {
+      label: "Hiring for",
+      all: "All roles",
+      cvFor: "Download the CV for this role",
+      roles: {
+        operations: { name: "Operations", intro: "I bring lean operations thinking: TPS on Toyota's gemba, and an ÖRS scrap study with a team of five that more than halved needle-care costs." },
+        product: { name: "Product", intro: "I learned how product teams run at BTCTurk Technology, benchmark competitors screen by screen and build working apps like Krone and Feed Detox." },
+        marketing: { name: "Marketing", intro: "I bring sports marketing from De Marke: on-site PR at two UEFA tournaments, activation ideas for the Carlsberg UEFA project and monthly social media reporting." },
+        commercial: { name: "Commercial", intro: "I turn analysis into cases people act on: at ÖRS, with my team, a moisture meter that paid back in about 40 days; for my side venture, 15+ venues won." },
+      },
+    },
     tabLink: "See the website",
     sites: "Sites built through TAB",
     own: "Own projects",
@@ -102,7 +116,7 @@ const COPY = {
       pubMeta: "I wrote it as an independent researcher; published as Mehmet Tolga Çakan · ISBN 978-625-433-825-0 · ORCID 0000-0001-7444-9079",
       programmes: "Awards, programmes & certificates",
       prog: [
-        ["Best Senior Design Project Award", ", Department of Industrial Engineering, Istanbul Bilgi University (2026), for the ÖRS Textile project under Work. Selected among the top five projects of its term; also presented at CSRP 2026."],
+        ["Best Senior Design Project Award", ", Department of Industrial Engineering, Istanbul Bilgi University (2026), for the ÖRS Textile project in the Project section. Selected among the top five projects of its term; also presented at CSRP 2026."],
         ["FlyRank AI Internship", " (July–August 2026). A remote, unpaid educational programme built around shipping real work, not coursework. I completed five reviewed assignments and a capstone accepted by the FlyRank team."],
         ["AI Fluency: Framework & Foundations", ", Anthropic Education (July 2026)", "https://verify.skilljar.com/c/xvnv3q5pttvf"],
         ["AI Fluency for Builders", ", Anthropic Education (2026)"],
@@ -123,14 +137,14 @@ const COPY = {
         { slug: "commercial", label: "Commercial & Business Analysis" },
       ],
     },
-    cv: "Download CV ↓",
+    cv: "Choose a CV (4 versions) ↓",
     verify: "verify ↗",
     setIn: "Set in Newsreader",
     updated: "Updated September 2026",
   },
 
   tr: {
-    nav: { about: "Hakkımda", experience: "Deneyim", skills: "Yetkinlikler", work: "İşler", background: "Geçmiş", contact: "İletişim" },
+    nav: { about: "Hakkımda", experience: "Deneyim", project: "Proje", skills: "Yetkinlikler", work: "İşler", background: "Geçmiş", contact: "İletişim" },
     place: "İstanbul, Türkiye",
     roles: ["Endüstri mühendisi", "Süreç ve operasyon", "Ürün", "Pazarlama ve PR", "Blockchain araştırmacısı", "Web ürünleri geliştiren"],
     about: [
@@ -140,9 +154,9 @@ const COPY = {
     ],
     expIntro: "Mezun olmadan önce üç staj yaptım. Her biri bana aynı işin farklı bir parçasını öğretti: işin gerçekte nasıl aktığını, bir ürün ekibinin neye öncelik verdiğini ve bir şeyin nasıl satıldığını.",
     jobs: [
-      { when: "Mar–Tem 2025", what: "Spor Pazarlama Stajyeri, De Marke Ajansı", note: "De Marke'de spor pazarlamasını en üst seviyede öğrendim: küresel bir markanın UEFA sponsorluğu ve içeriğin canlı üretildiği turnuvalar. UEFA Nations League Finals ve UEFA Women's EURO 2025'te sahada PR ekibindeydim; birkaç dakikalık canlı içeriğin arkasındaki planlamayı orada gördüm. Carlsberg'in UEFA sponsorluğu için “VAR Room by Carlsberg” ve mahalle pub'larından taraftar spikerliği gibi aktivasyon fikirleri sundum. Ayrıca futbol menajerlik oyunu Sosyal Lig'in (yaklaşık 115 bin Instagram takipçisi) aylık sosyal medya raporunu hazırladım; Basketbol Süper Ligi'nin içerik planını, Instagram'ını NBA ve EuroLeague ile kıyaslayarak oluşturdum." },
-      { when: "Oca–Şub 2025", what: "Ürün Stajyeri, BTCTurk Teknoloji", note: "BTCTurk Teknoloji'de, Türkiye'nin en büyük kripto borsalarından birinin Product Management ekibinde dört hafta geçirdim. Bir ürün ekibinin nasıl çalıştığını öğrendim: standup'lar, sprint planning, review ve retro; Jira ve Confluence'ta backlog, user story ve roadmap. Asıl işim BtcTurk'ü önde gelen yerli ve küresel borsalarla kıyaslayan bir benchmarking'di; Binance'i Figma'da ekran ekran inceledim. Ortaya çıkan eksikleri (self-custody cüzdan, DeFi, airdrop) önerilere dönüştürüp ürün ekibine sundum. Ayrıca margin trading'in Türkiye'de neden sunulmadığını araştırdım, dashboard'lar ve piyasa trend raporları hazırladım, IT ekibiyle uygulama ve araç envanterini çıkardım." },
-      { when: "Haz–Tem 2024", what: "Mühendislik Stajyeri, Toyota Otomotiv Sanayi Türkiye", note: "Toyota Otomotiv Sanayi Türkiye'nin, Corolla ve C-HR'ın üretildiği Sakarya fabrikasında Toyota Üretim Sistemi'ni (TPS) yerinde, gemba'da öğrendim. Assembly Logistics'te parçaları dock receiving ve ithal parça siparişinden Devan'a ve SPS ile hat beslemeye kadar izledim; JIT, Jidoka, Kaizen, Kanban ve standart işi günlük pratikte gördüm. İki stajyer arkadaşımla bu araçları kendi staj programımıza uyguladık. Verimliliği ideal %82'ye karşı %61 ölçtük, farkın kök nedenlerini 4M fishbone ile bulduk. Standart bir program akışı ve İş Standart Formu (İSF) önerdik, gelecek stajyerler için bir TPS el kitabı yazdık ve hepsini yönetime sunduk." },
+      { when: "Mar–Tem 2025", what: "Spor Pazarlama Stajyeri, De Marke Ajansı", lead: "Bir spor pazarlama ajansında, küresel bir sponsorun UEFA planlarının ve canlı turnuva içeriğinin nasıl bir araya geldiğini öğrendim.", points: ["UEFA Nations League Finals ve UEFA Women's EURO 2025'te sahada PR ekibinde çalıştım.", "Carlsberg UEFA projesine “VAR Room by Carlsberg” ve pub'larda taraftar spikerliği gibi aktivasyon fikirleriyle katkıda bulundum.", "Sosyal Lig'in aylık sosyal medya raporunu hazırladım (115 bin Instagram takipçisi); NBA/EuroLeague Instagram benchmark'ıyla BSL için içerik planı oluşturdum."] },
+      { when: "Oca–Şub 2025", what: "Ürün Stajyeri, BTCTurk Teknoloji", lead: "Türkiye'nin en büyük kripto borsalarından birinin Product Management ekibinde, bir ürün ekibinin sprint planning'den retro'ya Scrum'la nasıl çalıştığını öğrendim.", points: ["Jira ve Confluence'ta backlog, acceptance criteria içeren user story'ler ve roadmap üzerinde çalıştım.", "BtcTurk'ü önde gelen yerli ve küresel borsalarla kıyasladım; Binance'i Figma'da yedi alanda inceledim, eksikleri önerilere dönüştürüp sundum.", "Dashboard'lar ve kripto piyasa trend raporları hazırladım, margin trading'in Türkiye'deki yasal çerçevesini analiz ettim, IT ile araç envanterini çıkardım."] },
+      { when: "Haz–Tem 2024", what: "Mühendislik Stajyeri, Toyota Otomotiv Sanayi Türkiye", lead: "Corolla ve C-HR'ın üretildiği Sakarya fabrikasında Toyota Üretim Sistemi'ni (TPS) gemba'da öğrendim: JIT, Jidoka, Kaizen, Kanban ve standart iş.", points: ["Assembly Logistics'te parça akışını dock receiving ve ithal parça siparişinden Devan'a, SPS ile hat beslemeye kadar izledim.", "İki stajyer arkadaşımla staj programı üzerine Kaizen çalışması yürüttük: ideal %82'ye karşı %61 verimlilik; farkı 4M fishbone ile çözümledik.", "Standart program akışı ve İş Standart Formu (İSF) önerdik, gelecek stajyerler için TPS el kitabı yazdık ve yönetime sunduk."] },
     ],
     skills: [
       ["Ürün", "Benchmarking ve uygulama incelemeleri · market research · backlog ve user story · roadmap önceliklendirme · dashboard ve raporlama · Scrum"],
@@ -160,6 +174,7 @@ const COPY = {
         ["Fire", "Pareto analizi firenin büyük kısmını (%87,8) üç nedene bağladı: iğne kırılması, iplik nemi ve makine arızaları"],
         ["Bakım", "İğne bakımı run-to-failure'dan preventive maintenance'a geçti; maliyet yarıdan fazla azaldı"],
         ["Nem", "İkinci büyük nedene karşı bir iplik nemölçeri; kendini yaklaşık 40 günde amorti etti"],
+        ["Tasarruf", "Nemölçerin önlediği fire yılda yaklaşık 692,6 bin TL değerinde"],
         ["Etiketleme", "MTM ile yeniden tasarlanan istasyonda parça başı süre %43 kısaldı"],
         ["Depo", "İki kat, Blender ve Python ile kurulan dijital ikizde ABC analizine göre yeniden yerleştirildi; alt katın depolama hacmi iki katından fazlasına çıktı"],
         ["Kalite", "ISO 2859-1 tabanlı giriş kalite kontrol uygulaması ve QR ile koli izlenebilirliği"],
@@ -190,7 +205,20 @@ const COPY = {
         ["Sırada", "Pareto'yu her ay sürdürmek ve sıradaki nedenleri ele almak."],
       ],
     },
-    workIntro: "TAB Marketing'i 2026'da iki arkadaşımla kurdum. Çevremdeki kafe, restoran ve otellerde hep aynı eksik vardı: misafirlerini dinlemenin ve yeni müşterilerce bulunmanın basit bir yolu yoktu. Çözüm odaklı, CRM benzeri bu hizmeti proje bazında yürütüyoruz. NFC ve QR yorum standları, misafir şikâyetlerini işletme sahibine anında ileten geri bildirim kartları, QR ve dijital menüler, markaya uygun baskılar, web siteleri ve bunların PR'ını hazırlıyoruz. Pehlivan Et Lokantası, İtalyan İşi, BREAK, Soft Coffee Lounge, Elbis Hotel ve Cabir Deluxe dâhil tüm müşterilerimizi kendimiz bulduk. İstanbul, Sakarya ve başka şehirlerde 15'ten fazla işletmeye 250'den fazla özel tasarım ürün teslim ettik. Tasarımı, tedarikçilerle üretimi ve sahadaki kurulumu ben yürütüyor, web sitelerini ben geliştiriyorum.",
+    workIntro: "TAB Marketing, iki arkadaşımla kurduğum bir yan girişim; işletmelerin misafirlerini dinlemenin kolay bir yolu olmadığını görünce başladık. Proje bazında NFC/QR yorum standları, geri bildirim kartları, menüler, web siteleri ve PR hazırlıyoruz: kendi bulduğumuz 15'ten fazla işletmeye 250'den fazla özel ürün. Tasarımı, tedarikçileri ve kurulumu ben yürütüyor, siteleri ben geliştiriyorum.",
+    tabHeading: "Yan girişim · TAB Marketing (2026–)",
+    tabClients: "Müşterilerimizden bazıları: Pehlivan Et Lokantası, İtalyan İşi, BREAK, Soft Coffee Lounge, Elbis Hotel ve Cabir Deluxe.",
+    hire: {
+      label: "Hangi rol için?",
+      all: "Tüm roller",
+      cvFor: "Bu rolün CV'sini indir",
+      roles: {
+        operations: { name: "Operasyon", intro: "Yalın operasyon bakışı getiriyorum: Toyota'da gemba'da TPS ve ÖRS'te beş kişilik ekiple, iğne bakım maliyetini yarıdan fazla düşüren fire çalışması." },
+        product: { name: "Ürün", intro: "Ürün ekiplerinin nasıl çalıştığını BTCTurk Teknoloji'de öğrendim; rakipleri ekran ekran kıyaslıyor, Krone ve Feed Detox gibi çalışan uygulamalar geliştiriyorum." },
+        marketing: { name: "Pazarlama", intro: "De Marke'den spor pazarlaması deneyimi getiriyorum: iki UEFA turnuvasında sahada PR, Carlsberg UEFA projesi için aktivasyon fikirleri ve aylık sosyal medya raporlaması." },
+        commercial: { name: "Ticari roller", intro: "Analizi, karar aldıran iş gerekçelerine çeviriyorum: ÖRS'te ekibimle, yaklaşık 40 günde kendini amorti eden nemölçer; yan girişimim için kazandığım 15'ten fazla işletme." },
+      },
+    },
     tabLink: "Siteye git",
     sites: "TAB kapsamında yaptığım siteler",
     own: "Kendi projelerim",
@@ -223,7 +251,7 @@ const COPY = {
       pubMeta: "Bağımsız araştırmacı olarak yazdım; Mehmet Tolga Çakan adıyla yayımlandı · ISBN 978-625-433-825-0 · ORCID 0000-0001-7444-9079",
       programmes: "Ödüller, programlar & sertifikalar",
       prog: [
-        ["En İyi Bitirme Projesi Ödülü", ", Endüstri Mühendisliği Bölümü, İstanbul Bilgi Üniversitesi (2026), İşler bölümündeki ÖRS Tekstil projesiyle. Dönemin en iyi beş projesi arasına seçildi; CSRP 2026'da da sunuldu."],
+        ["En İyi Bitirme Projesi Ödülü", ", Endüstri Mühendisliği Bölümü, İstanbul Bilgi Üniversitesi (2026), Proje bölümündeki ÖRS Tekstil projesiyle. Dönemin en iyi beş projesi arasına seçildi; CSRP 2026'da da sunuldu."],
         ["FlyRank AI Internship", " (Temmuz–Ağustos 2026). Ders çözmek yerine gerçek iş çıkarmaya dayanan, uzaktan ve ücretsiz bir eğitim programı. Değerlendirmeden geçen beş ödevi ve FlyRank ekibince kabul edilen bir bitirme projesini tamamladım."],
         ["AI Fluency: Framework & Foundations", ", Anthropic Education (Temmuz 2026)", "https://verify.skilljar.com/c/xvnv3q5pttvf"],
         ["AI Fluency for Builders", ", Anthropic Education (2026)"],
@@ -244,7 +272,7 @@ const COPY = {
         { slug: "commercial", label: "Ticari ve İş Analizi" },
       ],
     },
-    cv: "CV indir ↓",
+    cv: "CV seç (4 sürüm) ↓",
     verify: "doğrula ↗",
     setIn: "Yazı tipi: Newsreader",
     updated: "Güncelleme: Eylül 2026",
@@ -263,7 +291,20 @@ function withTab(text) {
 
 const cvHref = (slug) => "/cv/tolga-cakan-cv-" + slug + ".pdf";
 
-const SECTION_IDS = ["about", "experience", "skills", "work", "background", "contact"];
+const ROLES = ["operations", "product", "marketing", "commercial"];
+
+// Experience and the ÖRS project always come first; the rest follows the role.
+const ORDER = {
+  all: ["experience", "project", "work", "skills", "background", "contact"],
+  operations: ["experience", "project", "skills", "work", "background", "contact"],
+  product: ["experience", "project", "work", "skills", "background", "contact"],
+  marketing: ["experience", "project", "work", "background", "skills", "contact"],
+  commercial: ["experience", "project", "work", "skills", "background", "contact"],
+};
+// jobs are listed De Marke, BTCTurk, Toyota; a role puts its closest one first
+const JOB_ORDER = { all: [0, 1, 2], operations: [2, 1, 0], product: [1, 2, 0], marketing: [0, 1, 2], commercial: [0, 1, 2] };
+// skill rows are Product, Operations, Data & tools, Domain, Languages
+const SKILL_ORDER = { all: [0, 1, 2, 3, 4], operations: [1, 2, 0, 3, 4], product: [0, 2, 3, 1, 4], marketing: [0, 3, 2, 1, 4], commercial: [0, 2, 1, 3, 4] };
 
 const PHONE_DISPLAY = "+90 542 262 00 42";
 const PHONE_HREF = "tel:+905422620042";
@@ -556,6 +597,18 @@ a.chip { display: inline-flex; align-items: center; text-decoration: none; }
   color: var(--ink-faint);
 }
 
+/* hiring-for switch */
+.hire { padding: 22px 0 6px; }
+.hire-row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.hire-label { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); margin-right: 6px; }
+.hire .chip[aria-pressed="true"] { color: var(--paper); background: var(--accent); border-color: var(--accent); }
+.hire-intro { font-size: 15px; color: var(--ink-soft); margin: 12px 0 0; max-width: 62ch; }
+.entry-lead { font-size: 15px; color: var(--ink); margin: 2px 0 6px; }
+.entry-points { list-style: none; margin: 0; padding: 0; }
+.entry-points li { font-size: 14.5px; color: var(--ink-soft); padding: 2px 0 2px 14px; position: relative; }
+.entry-points li::before { content: '·'; position: absolute; left: 2px; color: var(--ink-faint); }
+.cv-pick[data-on="true"] { border-color: var(--accent); color: var(--accent); }
+
 /* ÖRS project: results, Pareto and the A3 view */
 .ors { margin: 6px 0 10px; }
 .ors-meta { font-size: 11px; color: var(--ink-faint); letter-spacing: .03em; margin: 0 0 14px; }
@@ -564,7 +617,12 @@ a.chip { display: inline-flex; align-items: center; text-decoration: none; }
 .pareto svg { width: 100%; height: auto; display: block; }
 .pareto-bar rect { fill: color-mix(in srgb, var(--ink-faint) 45%, transparent); transition: fill .2s ease; cursor: pointer; }
 .pareto-bar[data-on="true"] rect, .pareto-bar:hover rect { fill: var(--accent); }
-.pareto-bar text { font: 10px 'JetBrains Mono', monospace; fill: var(--ink-soft); }
+.pareto-axis { font: 10px 'JetBrains Mono', monospace; fill: var(--ink-faint); }
+.pareto-mark { font: 11px 'JetBrains Mono', monospace; fill: var(--accent); }
+.pareto-80 { stroke: var(--ink-faint); stroke-dasharray: 3 3; stroke-width: .8; }
+.pareto-labels { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; margin-top: 4px; }
+.pareto-labels button { background: none; border: 0; padding: 2px 0; cursor: pointer; font: 11px/1.3 'JetBrains Mono', monospace; color: var(--ink-soft); text-align: center; }
+.pareto-labels button[data-on="true"] { color: var(--accent); }
 .pareto-bar:focus { outline: none; }
 .pareto-bar:focus-visible rect { stroke: var(--accent); stroke-width: 1; }
 .pareto-line { fill: none; stroke: var(--accent); stroke-width: 1.2; }
@@ -858,13 +916,13 @@ function SecHead({ num, title, id }) {
   );
 }
 
-function CommandMenu({ open, onClose, onTheme, onLang, t, lang }) {
+function CommandMenu({ open, onClose, onTheme, onLang, t, lang, ids }) {
   const [q, setQ] = useState("");
   const [sel, setSel] = useState(0);
   const ref = useRef(null);
 
   const items = [
-    ...SECTION_IDS.slice(1).map((id) => ({ k: id, label: t.nav[id], hint: lang === "tr" ? "Bölüm" : "Section", run: () => go(id) })),
+    ...ids.slice(1).map((id) => ({ k: id, label: t.nav[id], hint: lang === "tr" ? "Bölüm" : "Section", run: () => go(id) })),
     { k: "lang", label: lang === "en" ? "Türkçe'ye geç" : "Switch to English", hint: lang === "tr" ? "Dil" : "Language", run: onLang },
     { k: "theme", label: lang === "tr" ? "Paleti değiştir" : "Switch palette", hint: lang === "tr" ? "Görünüm" : "View", run: onTheme },
     ...t.cvs.items.map((c) => ({ k: "cv-" + c.slug, label: (lang === "tr" ? "İşe alım · " : "Hiring · ") + c.label, hint: "CV", run: () => { window.open(cvHref(c.slug), "_blank", "noreferrer"); } })),
@@ -908,6 +966,28 @@ function CommandMenu({ open, onClose, onTheme, onLang, t, lang }) {
   );
 }
 
+/** "Hiring for" switch: reorders the page, swaps the intro and points at the matching CV. */
+function HireSwitch({ t, role, setRole }) {
+  const h = t.hire;
+  return (
+    <div className="hire rise on">
+      <div className="hire-row" role="group" aria-label={h.label}>
+        <span className="mono hire-label">{h.label}</span>
+        <button type="button" className="chip" aria-pressed={!role} onClick={() => setRole(null)}>{h.all}</button>
+        {ROLES.map((k) => (
+          <button type="button" key={k} className="chip" aria-pressed={role === k} onClick={() => setRole(k)}>{h.roles[k].name}</button>
+        ))}
+      </div>
+      {role && (
+        <p className="hire-intro" aria-live="polite">
+          {h.roles[role].intro}{" "}
+          <a className="link link-mono" href={cvHref(role)} target="_blank" rel="noreferrer">{h.cvFor} <span>↓</span></a>
+        </p>
+      )}
+    </div>
+  );
+}
+
 function ProgressRail({ progress, label }) {
   const pct = Math.round(progress * 100);
   return (
@@ -923,7 +1003,7 @@ function ProgressRail({ progress, label }) {
   );
 }
 
-function LeftPane({ active, theme, onTheme, onMenu, onLang, t, lang }) {
+function LeftPane({ active, theme, onTheme, onMenu, onLang, t, lang, ids, role }) {
   return (
     <aside className="pane-left" id="about">
       <div className="id-row rise">
@@ -942,8 +1022,8 @@ function LeftPane({ active, theme, onTheme, onMenu, onLang, t, lang }) {
       </div>
 
       <nav className="pane-nav rise" style={{ "--i": 2 }}>
-        {SECTION_IDS.slice(1).map((id, n) => (
-          <a key={id} href={"#" + id} data-on={SECTION_IDS[active] === id ? "true" : "false"}
+        {ids.slice(1).map((id, n) => (
+          <a key={id} href={"#" + id} data-on={ids[active] === id ? "true" : "false"}
             onClick={(e) => { e.preventDefault(); go(id); }}>
             <span className="pane-nav-num">{String(n + 2).padStart(2, "0")}</span>
             <span>{t.nav[id]}</span>
@@ -960,7 +1040,9 @@ function LeftPane({ active, theme, onTheme, onMenu, onLang, t, lang }) {
           <a href="https://github.com/tolgacakan14" target="_blank" rel="noreferrer">github.com/tolgacakan14</a>
         </div>
         <div className="tools">
-          <a className="chip chip-cv" href="#cv" onClick={(e) => { e.preventDefault(); go("cv"); }}>{t.cv}</a>
+          {role
+            ? <a className="chip chip-cv" href={cvHref(role)} target="_blank" rel="noreferrer">{t.hire.cvFor} ↓</a>
+            : <a className="chip chip-cv" href="#cv" onClick={(e) => { e.preventDefault(); go("cv"); }}>{t.cv}</a>}
           <button type="button" className="chip" onClick={onMenu} aria-label="Menu">⌘K</button>
           <button type="button" className="chip" onClick={onLang} aria-label="Change language">
             {lang === "en" ? "TR" : "EN"}
@@ -974,32 +1056,38 @@ function LeftPane({ active, theme, onTheme, onMenu, onLang, t, lang }) {
   );
 }
 
-function Experience({ t }) {
+function Experience({ t, num, role }) {
   return (
     <section className="sec" id="experience">
       <div className="wrap">
-        <SecHead num="02" title={t.nav.experience} id="experience" />
+        <SecHead num={num} title={t.nav.experience} id="experience" />
         <p className="p rise">{withTab(t.expIntro)}</p>
-        {t.jobs.map((r, n) => (
-          <div className="entry rise" key={r.what} style={{ "--i": n + 2 }}>
-            <span className="entry-when">{r.when}</span>
-            <div>
-              <p className="entry-what">{r.what}</p>
-              <p className="entry-note">{r.note}</p>
+        {JOB_ORDER[role || "all"].map((k, n) => {
+          const r = t.jobs[k];
+          return (
+            <div className="entry rise" key={r.what} style={{ "--i": n + 2 }}>
+              <span className="entry-when">{r.when}</span>
+              <div>
+                <p className="entry-what">{r.what}</p>
+                <p className="entry-lead">{r.lead}</p>
+                <ul className="entry-points">
+                  {r.points.map((pt) => <li key={pt}>{pt}</li>)}
+                </ul>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
 }
 
-function Skills({ t }) {
+function Skills({ t, num, role }) {
   return (
     <section className="sec" id="skills">
       <div className="wrap">
-        <SecHead num="03" title={t.nav.skills} id="skills" />
-        {t.skills.map(([key, val], n) => (
+        <SecHead num={num} title={t.nav.skills} id="skills" />
+        {SKILL_ORDER[role || "all"].map((k) => t.skills[k]).map(([key, val], n) => (
           <div className="entry rise" key={key} style={{ "--i": n + 1 }}>
             <span className="entry-when">{key}</span>
             <p className="entry-note">{val}</p>
@@ -1010,36 +1098,50 @@ function Skills({ t }) {
   );
 }
 
-/** Pareto of the ÖRS scrap causes: bars by pairs, cumulative share as a line. */
+/** Pareto of the ÖRS scrap causes: bars by pairs, cumulative share as a line
+ * against a right-hand % axis, with the usual 80% guide. */
 function Pareto({ o }) {
   const [on, setOn] = useState(0);
   const total = o.causes.reduce((a, [, n]) => a + n, 0);
   const max = o.causes[0][1];
-  const W = 560, H = 200, pad = 28, bw = (W - pad * 2) / o.causes.length;
+  const W = 560, H = 190, L = 8, R = 40, T = 12, B = 8;
+  const bw = (W - L - R) / o.causes.length;
+  const y = (share) => T + (1 - share) * (H - T - B);
   let run = 0;
-  const pts = o.causes.map(([, n], i) => {
-    run += n;
-    return [pad + bw * i + bw / 2, H - pad - (run / total) * (H - pad * 2)];
-  });
-  const fmt = (n) => n.toLocaleString(o.pairs === "çift" ? "tr-TR" : "en-GB");
+  const pts = o.causes.map(([, n], i) => { run += n; return [L + bw * i + bw / 2, y(run / total), run / total]; });
+  const tr = o.pairs === "çift";
+  const fmt = (n) => n.toLocaleString(tr ? "tr-TR" : "en-GB");
+  const pct = (x) => (tr ? "%" + (Math.round(x * 1000) / 10).toLocaleString("tr-TR") : Math.round(x * 1000) / 10 + "%");
   return (
     <figure className="pareto rise">
       <figcaption className="h3">{o.paretoTitle}</figcaption>
       <svg viewBox={"0 0 " + W + " " + H} role="img" aria-label={o.paretoTitle}>
+        {[0, 0.5, 1].map((v) => (
+          <text key={v} x={W - R + 6} y={y(v) + 3} className="pareto-axis">{pct(v)}</text>
+        ))}
+        <line x1={L} x2={W - R} y1={y(0.8)} y2={y(0.8)} className="pareto-80" />
+        <text x={W - R + 6} y={y(0.8) + 3} className="pareto-axis">{pct(0.8)}</text>
         {o.causes.map(([label, n], i) => {
-          const h = (n / max) * (H - pad * 2) * 0.62;
+          const h = (n / max) * (H - T - B) * 0.62;
           return (
-            <g key={label} onMouseEnter={() => setOn(i)} onFocus={() => setOn(i)} onClick={() => setOn(i)} tabIndex={0} className="pareto-bar" data-on={i === on ? "true" : "false"}>
-              <rect x={pad + bw * i + 8} y={H - pad - h} width={bw - 16} height={h} />
-              <text x={pad + bw * i + bw / 2} y={H - 10} textAnchor="middle">{label}</text>
+            <g key={label} onMouseEnter={() => setOn(i)} onFocus={() => setOn(i)} onClick={() => setOn(i)}
+              tabIndex={0} role="button" aria-label={label + ", " + fmt(n) + " " + o.pairs + ", " + pct(n / total)}
+              className="pareto-bar" data-on={i === on ? "true" : "false"}>
+              <rect x={L + bw * i + 8} y={H - B - h} width={bw - 16} height={h} />
             </g>
           );
         })}
-        <polyline points={pts.map((p) => p.join(",")).join(" ")} className="pareto-line" />
-        {pts.map(([x, y], i) => <circle key={i} cx={x} cy={y} r="2.5" className="pareto-dot" />)}
+        <polyline points={pts.map(([x, yy]) => x + "," + yy).join(" ")} className="pareto-line" />
+        {pts.map(([x, yy], i) => <circle key={i} cx={x} cy={yy} r="2.5" className="pareto-dot" />)}
+        <text x={pts[2][0]} y={pts[2][1] - 8} textAnchor="middle" className="pareto-mark">{pct(pts[2][2])}</text>
       </svg>
-      <p className="pareto-read">
-        <b>{o.causes[on][0]}</b> · {fmt(o.causes[on][1])} {o.pairs} ({Math.round((o.causes[on][1] / total) * 1000) / 10}%) · {o.causes[on][2]}
+      <div className="pareto-labels" style={{ paddingRight: (R / W) * 100 + "%" }}>
+        {o.causes.map(([label], i) => (
+          <button type="button" key={label} data-on={i === on ? "true" : "false"} onClick={() => setOn(i)}>{label}</button>
+        ))}
+      </div>
+      <p className="pareto-read" aria-live="polite">
+        <b>{o.causes[on][0]}</b> · {fmt(o.causes[on][1])} {o.pairs} ({pct(o.causes[on][1] / total)}) · {o.causes[on][2]}
       </p>
       <p className="strip-note">{o.paretoNote}</p>
     </figure>
@@ -1054,7 +1156,17 @@ function OrsBlock({ o }) {
   useEffect(() => {
     if (!open) return undefined;
     closeRef.current?.focus();
-    const onKey = (e) => { if (e.key === "Escape") setOpen(false); };
+    const onKey = (e) => {
+      if (e.key === "Escape") setOpen(false);
+      if (e.key === "Tab") {
+        const box = document.querySelector(".a3");
+        const f = box ? [...box.querySelectorAll("a[href], button")] : [];
+        if (!f.length) return;
+        const first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    };
     window.addEventListener("keydown", onKey);
     return () => { window.removeEventListener("keydown", onKey); openRef.current?.focus(); };
   }, [open]);
@@ -1103,14 +1215,25 @@ function OrsBlock({ o }) {
   );
 }
 
-function Work({ t }) {
+function Project({ t, num }) {
+  return (
+    <section className="sec" id="project">
+      <div className="wrap">
+        <SecHead num={num} title={t.nav.project} id="project" />
+        <OrsBlock o={t.ors} />
+      </div>
+    </section>
+  );
+}
+
+function Work({ t, num }) {
   return (
     <section className="sec" id="work">
       <div className="wrap">
-        <SecHead num="04" title={t.nav.work} id="work" />
-        <OrsBlock o={t.ors} />
-        <h3 className="h3 rise" style={{ marginTop: 40 }}>TAB Marketing</h3>
+        <SecHead num={num} title={t.nav.work} id="work" />
+        <h3 className="h3 rise">{t.tabHeading.split("TAB Marketing").flatMap((x, n) => (n ? [<span key={n} lang="en">TAB Marketing</span>, x] : [x]))}</h3>
         <p className="p rise" style={{ "--i": 1 }}>{withTab(t.workIntro)}</p>
+        <p className="strip-note rise" style={{ "--i": 1 }}>{t.tabClients}</p>
         <p className="strip-note rise" style={{ "--i": 2 }}>
           <a className="link link-mono" href={TAB_URL} target="_blank" rel="noreferrer">
             {t.tabLink} <span>→</span>
@@ -1148,7 +1271,7 @@ function Work({ t }) {
   );
 }
 
-function Background({ t }) {
+function Background({ t, num }) {
   const b = t.bg;
   const list = (items, base) => (
     <ul className="list rise" style={{ "--i": base }}>
@@ -1175,7 +1298,7 @@ function Background({ t }) {
   return (
     <section className="sec" id="background">
       <div className="wrap">
-        <SecHead num="05" title={t.nav.background} id="background" />
+        <SecHead num={num} title={t.nav.background} id="background" />
 
         <h3 className="h3 rise">{b.education}</h3>
         {list(b.edu, 1)}
@@ -1213,11 +1336,11 @@ function Background({ t }) {
   );
 }
 
-function Contact({ t }) {
+function Contact({ t, num, role }) {
   return (
     <section className="sec" id="contact">
       <div className="wrap">
-        <SecHead num="06" title={t.nav.contact} id="contact" />
+        <SecHead num={num} title={t.nav.contact} id="contact" />
         <p className="p rise" style={{ "--i": 1 }}>{t.contactText}</p>
         <div className="meta mono rise" style={{ "--i": 2 }}>
           <ContactLine href={"mailto:" + EMAIL}>{EMAIL}</ContactLine>
@@ -1230,7 +1353,7 @@ function Contact({ t }) {
           <p className="p">{t.cvs.note}</p>
           <div className="cv-picks">
             {t.cvs.items.map((c) => (
-              <a key={c.slug} className="cv-pick" href={cvHref(c.slug)} download>
+              <a key={c.slug} className="cv-pick" href={cvHref(c.slug)} target="_blank" rel="noreferrer" data-on={c.slug === role ? "true" : "false"}>
                 <span>{c.label}</span><span className="mono">PDF ↓</span>
               </a>
             ))}
@@ -1245,10 +1368,30 @@ export default function CV() {
   const [theme, setTheme] = useState("paper");
   const [lang, setLang] = useState("en");
   const [menu, setMenu] = useState(false);
-  const { i, p } = useScrollState(SECTION_IDS);
+  const [role, setRoleState] = useState(null);
+  const ids = useMemo(() => ["about", ...ORDER[role || "all"]], [role]);
+  const { i, p } = useScrollState(ids);
   const t = COPY[lang];
+  const num = (id) => String(ids.indexOf(id) + 1).padStart(2, "0");
 
-  useRise(lang);
+  // role: ?for= wins, then a stored choice
+  useEffect(() => {
+    const asked = new URLSearchParams(window.location.search).get("for");
+    if (ROLES.includes(asked)) { setRoleState(asked); return; }
+    let saved = null;
+    try { saved = window.localStorage.getItem("cv-role"); } catch (err) { /* blocked */ }
+    if (ROLES.includes(saved)) setRoleState(saved);
+  }, []);
+
+  const setRole = useCallback((next) => {
+    setRoleState(next);
+    try { next ? window.localStorage.setItem("cv-role", next) : window.localStorage.removeItem("cv-role"); } catch (err) { /* ignore */ }
+    const url = new URL(window.location.href);
+    if (next) url.searchParams.set("for", next); else url.searchParams.delete("for");
+    window.history.replaceState(null, "", url.pathname + url.search + url.hash);
+  }, []);
+
+  useRise(lang + role);
 
   // palette: stored choice, else the reader's system setting
   useEffect(() => {
@@ -1260,6 +1403,7 @@ export default function CV() {
 
   // language: ?lang= wins, then a stored choice, then the browser's
   useEffect(() => {
+    if (window.location.pathname.startsWith("/tr")) { setLang("tr"); return; }
     const asked = new URLSearchParams(window.location.search).get("lang");
     if (LANGS.includes(asked)) { setLang(asked); return; }
     let saved = null;
@@ -1309,8 +1453,8 @@ export default function CV() {
       const next = x === "en" ? "tr" : "en";
       try { window.localStorage.setItem("cv-lang", next); } catch (err) { /* ignore */ }
       const url = new URL(window.location.href);
-      if (next === "en") url.searchParams.delete("lang");
-      else url.searchParams.set("lang", next);
+      url.searchParams.delete("lang");
+      url.pathname = next === "tr" ? "/tr/" : "/";
       window.history.replaceState(null, "", url.pathname + url.search + url.hash);
       return next;
     });
@@ -1327,12 +1471,12 @@ export default function CV() {
 
   // the address bar follows the section in view
   useEffect(() => {
-    const id = SECTION_IDS[i];
+    const id = ids[i];
     if (!id) return;
     const url = new URL(window.location.href);
     url.hash = i === 0 ? "" : id;
     window.history.replaceState(null, "", url.pathname + url.search + url.hash);
-  }, [i]);
+  }, [i, ids]);
 
   // arriving on a #hash lands on that section
   useEffect(() => {
@@ -1348,16 +1492,21 @@ export default function CV() {
       <SnapCursor />
 
       <div className="split">
-        <LeftPane active={i} theme={theme} lang={lang} t={t}
+        <LeftPane active={i} theme={theme} lang={lang} t={t} ids={ids} role={role}
           onTheme={flip} onLang={flipLang} onMenu={() => setMenu(true)} />
 
         <main className="pane-right">
-          <ProgressRail progress={p} label={t.nav[SECTION_IDS[i]] ?? t.nav.about} />
-          <Experience t={t} />
-          <Skills t={t} />
-          <Work t={t} />
-          <Background t={t} />
-          <Contact t={t} />
+          <ProgressRail progress={p} label={t.nav[ids[i]] ?? t.nav.about} />
+          <HireSwitch t={t} role={role} setRole={setRole} />
+          {ORDER[role || "all"].map((id) => {
+            const props = { t, num: num(id), role };
+            if (id === "experience") return <Experience key={id} {...props} />;
+            if (id === "project") return <Project key={id} {...props} />;
+            if (id === "skills") return <Skills key={id} {...props} />;
+            if (id === "work") return <Work key={id} {...props} />;
+            if (id === "background") return <Background key={id} {...props} />;
+            return <Contact key={id} {...props} />;
+          })}
 
           <footer className="foot">
             <span>© {new Date().getFullYear()} Tolga Çakan</span>
@@ -1366,7 +1515,7 @@ export default function CV() {
         </main>
       </div>
 
-      <CommandMenu open={menu} onClose={() => setMenu(false)} onTheme={flip} onLang={flipLang} t={t} lang={lang} />
+      <CommandMenu open={menu} onClose={() => setMenu(false)} onTheme={flip} onLang={flipLang} t={t} lang={lang} ids={ids} />
       <Analytics />
     </div>
   );

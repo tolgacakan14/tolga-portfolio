@@ -10,14 +10,14 @@ export default {
   projects: ["tab", "ors", "krone", "feeddetox"],
   points: {
     demarke: [
-      "Wrote monthly KPI reports and content recommendations for a football fantasy game (115K followers).",
+      "Wrote monthly KPI reports for a fantasy football game (115K Instagram followers).",
       "Benchmarked BSL's Instagram against NBA and EuroLeague; proposed a Reels-led content plan.",
     ],
     btcturk: [
       "Learned how a product team runs in Scrum: backlog, user stories with acceptance criteria, Jira.",
       "Tore down Binance's app screen by screen in Figma across seven areas to map gaps in BtcTurk's app.",
       "Turned self-custody, DeFi and airdrop gaps into recommendations presented to the product team.",
-      "Analysed the regulation that keeps margin trading out of Turkey; wrote crypto market-trend reports.",
+      "Built dashboards and market-trend reports; analysed why regulation bars margin trading in Turkey.",
     ],
     toyota: [
       "Learned TPS on the gemba in Assembly Logistics: JIT, Jidoka, Kaizen, Kanban and standard work.",
@@ -34,7 +34,7 @@ export default {
     ],
     krone: [
       "Built a mobile party game of nine mini-games with live Supabase rooms and server-synced timers.",
-      "Prototyped the first version in six days, then added a global daily challenge as a retention loop.",
+      "Prototyped the first version in six days, then added a global daily challenge to bring players back.",
     ],
     feeddetox: [
       "Built an app that turns stated interests into follow lists via the YouTube API and web search.",
@@ -50,5 +50,5 @@ export default {
   ],
   awards: ["award", "flyrank", "aiff", "aifb"],
   leadership: ["editorial", "international", "adk", "music"],
-  publication: "full",
+  publication: "short",
 };

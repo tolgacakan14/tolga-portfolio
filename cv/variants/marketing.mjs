@@ -4,15 +4,15 @@ export default {
   slug: "marketing",
   label: { en: "Marketing, Brand & Sports", tr: "Pazarlama, Marka ve Spor" },
   title: "Industrial Engineer · Brand, Product & Sports Marketing",
-  profile: "Industrial engineer (Istanbul Bilgi University, 2026) drawn to sport, music and brands. Worked in PR on site at two UEFA tournaments, contributed activation ideas to a Carlsberg pitch and turned a football game's social data into monthly content plans. Drummer and songwriter in *son sek'*, with an album and live shows to date. Seeking a brand or product marketing role.",
+  profile: "Industrial engineer (Istanbul Bilgi University, 2026) drawn to sport, music and brands. Worked in PR on site at two UEFA tournaments, contributed activation ideas to the Carlsberg UEFA project and turned a football game's social data into monthly content plans. Drummer and songwriter in *son sek'*, with an album and live shows to date. Seeking a brand or product marketing role.",
   links: ["linkedin"],
   experience: ["demarke", "btcturk", "toyota"],
   projects: ["tab", "ors", "krone"],
   points: {
     demarke: [
       "Worked in the PR team on site at the UEFA Nations League Finals and UEFA Women's EURO 2025.",
-      "Contributed activation ideas (VAR Room, Unity Jersey) to a Carlsberg UEFA sponsorship pitch.",
-      "Wrote Sosyal Lig's monthly social report (115K Instagram), turning KPIs into next month's plan.",
+      "Contributed activation ideas (VAR Room, Unity Jersey) to the Carlsberg UEFA project.",
+      "Wrote Sosyal Lig's monthly social report (115K Instagram followers), turning KPIs into a plan.",
       "Benchmarked BSL's Instagram against NBA and EuroLeague and proposed a Reels-led content plan.",
     ],
     btcturk: [
@@ -26,8 +26,7 @@ export default {
     tab: [
       "Spotted that venues had no simple way to hear from guests or be found; co-founded TAB to fix it.",
       "Grew the client base to 15+ cafés, restaurants and hotels in Istanbul and Sakarya, all self-sourced.",
-      "Lead design, supplier production and on-site setup of 250+ review stands, cards and menus.",
-      "Design feedback cards that route guest complaints straight to owners in real time.",
+      "Lead design and setup of 250+ review stands, menus and cards that route complaints to owners.",
       "Handle PR and build client sites, including francoserdivan.com with a taste quiz and gelato builder.",
     ],
     ors: [

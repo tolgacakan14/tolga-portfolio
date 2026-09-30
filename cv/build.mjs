@@ -49,11 +49,10 @@ function page(v) {
 </head>
 <body>
 
-<h1>${esc(c.name)}</h1>
+<div class="namebar"><h1>${esc(c.name)}</h1><span class="place">${esc(c.place)}</span></div>
 <p class="title">${inline(v.title)}</p>
 <div class="contact">
   <a class="port" href="${c.portfolio.href}">${esc(c.portfolio.label)}</a>
-  <span>${esc(c.place)}</span>
   <a href="mailto:${c.email}">${esc(c.email)}</a>
   <a href="${c.phone.href}">${esc(c.phone.label)}</a>
 ${links.map((l) => `  <a href="${l.href}">${esc(l.label)}</a>`).join("\n")}
