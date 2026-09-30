@@ -29,7 +29,7 @@ export const common = {
     feeddetox: { when: "2026", what: "Feed Detox", sub: "Next.js · EN/TR · personal project, working prototype" },
   },
 
-  degree: { when: "Jun 2026", what: "BSc Industrial Engineering, Istanbul Bilgi University", line: "Serdivan Fen Lisesi (science high school), Sakarya" },
+  degree: { when: "Jun 2026", what: "BSc Industrial Engineering, Istanbul Bilgi University", line: "Serdivan Fen Lisesi (science high school), Sakarya, 2020" },
 
   // keyed so each variant can choose and order them
   awards: {

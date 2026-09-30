@@ -62,7 +62,7 @@ export default {
       tab: { when: "2026–", what: "Kurucu ortak, TAB Marketing", sub: "[tab-marketing-site.vercel.app](https://tab-marketing-site.vercel.app)" },
       krone: { when: "2026", what: "Krone", sub: "[innerclock.vercel.app](https://innerclock.vercel.app) · kişisel proje, oynanabilir" },
     },
-    degree: { when: "Haz 2026", what: "Endüstri Mühendisliği (Lisans), İstanbul Bilgi Üniversitesi", line: "Serdivan Fen Lisesi, Sakarya" },
+    degree: { when: "Haz 2026", what: "Endüstri Mühendisliği (Lisans), İstanbul Bilgi Üniversitesi", line: "Serdivan Fen Lisesi, Sakarya (2020)" },
     awards: {
       award: ["En İyi Bitirme Projesi Ödülü", ", İstanbul Bilgi Üniversitesi (2026): dönemin en iyi beş projesi arasından; CSRP 2026'da sunuldu"],
       flyrank: ["FlyRank AI", ", yapay zekâ mühendisliği programı (Tem–Ağu 2026): değerlendirilen beş ödev ve bir bitirme projesi"],
