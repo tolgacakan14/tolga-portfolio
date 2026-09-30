@@ -14,9 +14,9 @@ const COPY = {
     place: "Istanbul, Turkey",
     roles: ["Industrial engineer", "Process & operations", "Product", "Marketing & PR", "Blockchain researcher", "Web product builder"],
     about: [
-      "I'm an industrial engineer (Istanbul Bilgi University, 2026) who works where operations, product and people meet. I find where a system loses time, money or trust, measure it, and fix it.",
-      "I learned lean on Toyota's shop floor, product in BTCTurk Technology's Scrum team and sports marketing on site at UEFA tournaments. My team's factory project at ÖRS Textile won the department's Best Senior Design Project Award.",
-      "I also build things: client websites and a small side venture with friends, a multiplayer game, and a published book chapter on blockchain. Away from the desk, I play drums and write songs in son sek'.",
+      "I was born in Sakarya in 2002 and graduated in industrial engineering from Istanbul Bilgi University in June 2026. I'm at the start of my career, looking for a place to learn fast, take on real work and grow.",
+      "I'm versatile and quick to pick up new tools, from lean methods on a factory floor to product software and AI. Internships at Toyota, BTCTurk Technology and De Marke, and an award-winning senior design project, taught me to measure a problem before solving it.",
+      "I want to be effective and add value wherever I work. Outside work I build small web products, run a side venture with friends and play drums in son sek'.",
     ],
     expIntro: "Before graduating I did three internships. Each taught a different part of the same job: how work really flows, how a product team decides what matters and how something gets sold.",
     jobs: [
@@ -129,15 +129,16 @@ const COPY = {
     contactText: "I am based in Istanbul and open to new projects and roles.",
     cvs: {
       heading: "Download a CV",
-      note: "The same record, written four ways. Pick the one closest to the role.",
+      note: "One general CV and four written for specific kinds of role. Pick the one closest to the ad.",
       items: [
+        { slug: "general", label: "General (all roles)" },
         { slug: "operations", label: "Operations & Process Improvement" },
         { slug: "product", label: "Product & Technology" },
         { slug: "marketing", label: "Marketing, Brand & Sports" },
         { slug: "commercial", label: "Commercial & Business Analysis" },
       ],
     },
-    cv: "Choose a CV (4 versions) ↓",
+    cv: "Choose a CV (5 versions) ↓",
     verify: "verify ↗",
     setIn: "Set in Newsreader",
     updated: "Updated September 2026",
@@ -148,9 +149,9 @@ const COPY = {
     place: "İstanbul, Türkiye",
     roles: ["Endüstri mühendisi", "Süreç ve operasyon", "Ürün", "Pazarlama ve PR", "Blockchain araştırmacısı", "Web ürünleri geliştiren"],
     about: [
-      "İstanbul Bilgi Üniversitesi'nden (2026) endüstri mühendisiyim; operasyonun, ürünün ve insanların kesiştiği yerde çalışıyorum. Bir sistemin nerede zaman, para ya da güven kaybettiğini bulur, ölçer ve düzeltirim.",
-      "Yalın üretimi Toyota'nın sahasında, ürün yönetimini BTCTurk Teknoloji'nin Scrum ekibinde, spor pazarlamasını UEFA turnuvalarında sahada öğrendim. ÖRS Tekstil'de ekibimle yaptığımız fabrika projesi bölümün En İyi Bitirme Projesi Ödülü'nü aldı.",
-      "Bir şeyler de üretiyorum: arkadaşlarımla kurduğum küçük bir yan girişim ve müşteri siteleri, çok oyunculu bir oyun ve blockchain üzerine yayımlanmış bir kitap bölümü. Masadan kalkınca son sek' grubunda davul çalıyor, şarkı yazıyorum.",
+      "2002'de Sakarya'da doğdum, Haziran 2026'da İstanbul Bilgi Üniversitesi Endüstri Mühendisliği'nden mezun oldum. Kariyerimin başındayım; hızlı öğrenebileceğim, gerçek işler üstlenip gelişebileceğim bir yer arıyorum.",
+      "Çok yönlüyüm ve yeni araçlara çabuk uyum sağlarım: fabrika sahasındaki yalın yöntemlerden ürün yazılımlarına ve yapay zekâya kadar. Toyota, BTCTurk Teknoloji ve De Marke stajlarım ile ödüllü bitirme projem bana bir problemi çözmeden önce ölçmeyi öğretti.",
+      "Çalıştığım her yerde etkin olmak ve değer üretmek istiyorum. İş dışında küçük web ürünleri geliştiriyor, arkadaşlarımla bir yan girişim yürütüyor ve son sek' grubunda davul çalıyorum.",
     ],
     expIntro: "Mezun olmadan önce üç staj yaptım. Her biri bana aynı işin farklı bir parçasını öğretti: işin gerçekte nasıl aktığını, bir ürün ekibinin neye öncelik verdiğini ve bir şeyin nasıl satıldığını.",
     jobs: [
@@ -264,15 +265,16 @@ const COPY = {
     contactText: "İstanbul'da yaşıyorum, yeni projelere ve rollere açığım.",
     cvs: {
       heading: "CV indir",
-      note: "Aynı geçmiş, dört farklı rol için dört ayrı CV (İngilizce). İlana en uygun olanı seçin.",
+      note: "Bir genel CV ve belirli rol türleri için yazılmış dört CV (İngilizce). İlana en uygun olanı seçin.",
       items: [
+        { slug: "general", label: "Genel (tüm roller)" },
         { slug: "operations", label: "Operasyon ve Süreç İyileştirme" },
         { slug: "product", label: "Ürün ve Teknoloji" },
         { slug: "marketing", label: "Pazarlama, Marka ve Spor" },
         { slug: "commercial", label: "Ticari ve İş Analizi" },
       ],
     },
-    cv: "CV seç (4 sürüm) ↓",
+    cv: "CV seç (5 sürüm) ↓",
     verify: "doğrula ↗",
     setIn: "Yazı tipi: Newsreader",
     updated: "Güncelleme: Eylül 2026",
@@ -663,6 +665,7 @@ a.chip { display: inline-flex; align-items: center; text-decoration: none; }
 }
 .cv-pick .mono { font-size: 10px; letter-spacing: .08em; color: var(--ink-faint); white-space: nowrap; }
 .cv-pick:hover { border-color: var(--accent); color: var(--accent); background: color-mix(in srgb, var(--paper-2) 60%, transparent); }
+.cv-pick:first-child { grid-column: 1 / -1; }
 @media (max-width: 560px) { .cv-picks { grid-template-columns: 1fr; } }
 
 /* contact lines */
@@ -1353,7 +1356,7 @@ function Contact({ t, num, role }) {
           <p className="p">{t.cvs.note}</p>
           <div className="cv-picks">
             {t.cvs.items.map((c) => (
-              <a key={c.slug} className="cv-pick" href={cvHref(c.slug)} target="_blank" rel="noreferrer" data-on={c.slug === role ? "true" : "false"}>
+              <a key={c.slug} className="cv-pick" href={cvHref(c.slug)} target="_blank" rel="noreferrer" data-on={c.slug === (role || "general") ? "true" : "false"}>
                 <span>{c.label}</span><span className="mono">PDF ↓</span>
               </a>
             ))}

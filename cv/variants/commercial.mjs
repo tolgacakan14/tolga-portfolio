@@ -1,13 +1,13 @@
-// Commercial, trade marketing, category, key account, business and strategy
-// analysis (applied to: Red Bull Trade Marketing Analyst, corporate sales).
+// Commercial, trade marketing, category, key account, business analysis
+// (applied to: Red Bull Trade Marketing Analyst, corporate sales).
 export default {
   slug: "commercial",
   label: { en: "Commercial & Business Analysis", tr: "Ticari ve İş Analizi" },
-  title: "Industrial Engineer · Commercial & Business Analysis",
-  profile: "Industrial engineer (Istanbul Bilgi University, 2026) who turns market, cost and performance data into clear recommendations. Benchmarked a crypto exchange against global rivals, fed ideas into the Carlsberg UEFA project and built a savings case for a textile plant worth 692.6K TL a year. Seeking a trade marketing, category or business analyst role.",
+  title: "Industrial Engineering Graduate · Commercial & Business Analysis",
+  profile: "Sakarya-born industrial engineering graduate (Istanbul Bilgi University, June 2026), curious about why some brands win in the market and at the point of sale. Analytical and versatile: three internships in marketing, product and manufacturing, and a team senior design project that won the department award. Now looking to learn fast, take on real work and add value in trade marketing, category or business analysis.",
   links: ["linkedin"],
   experience: ["demarke", "btcturk", "toyota"],
-  projects: ["tab", "ors"],
+  projects: ["ors", "tab"],
   points: {
     demarke: [
       "Worked in the PR team on site at the UEFA Nations League Finals and UEFA Women's EURO 2025.",
@@ -15,7 +15,7 @@ export default {
       "Wrote the monthly KPI report and plan for a fantasy football game (115K Instagram followers).",
     ],
     btcturk: [
-      "Benchmarked the BtcTurk app against leading Turkish and global exchanges in Product Management.",
+      "Benchmarked the BtcTurk app against leading Turkish and global exchanges for the product team.",
       "Mapped Binance screen by screen in Figma; turned self-custody, DeFi and airdrop gaps into proposals.",
       "Built dashboards and market-trend reports; analysed why regulation bars margin trading in Turkey.",
     ],
@@ -23,26 +23,26 @@ export default {
       "Learned TPS on the gemba (JIT, Kaizen, Kanban), following parts from dock to line-side supply.",
       "Co-ran a Kaizen study of the intern programme with two fellow interns; presented it to management.",
     ],
-    tab: [
-      "Started a venue-services team with two friends after seeing guests had no easy way to be heard.",
-      "Win and run 15+ café, restaurant and hotel accounts, all self-sourced, from first contact to setup.",
-      "Deliver 250+ custom in-venue pieces, from NFC/QR review stands to feedback cards, menus and print.",
-      "Run supplier production and on-site installation; build client sites such as francoserdivan.com.",
-    ],
     ors: [
-      "Traced most scrap to three causes with Pareto, then more than halved needle costs.",
+      "Traced most scrap to three causes with Pareto; preventive care more than halved needle costs.",
       "Co-built the business case for a yarn moisture meter saving 692.6K TL a year.",
       "Cut labelling time per piece 43% with MTM; re-slotted the warehouse by ABC in a digital twin.",
     ],
+    tab: [
+      "Spotted that venues had no simple way to hear from guests; set up a service team with two friends.",
+      "Win and run 15+ on-trade (HoReCa) accounts, all self-sourced, from first contact to installation.",
+      "Deliver 250+ custom in-venue pieces, from NFC/QR review stands to feedback cards, menus and print.",
+      "Run supplier production and on-site installation; build client sites such as francoserdivan.com.",
+    ],
   },
   skills: [
-    ["Commercial", "B2B client acquisition · account management · in-venue execution · point-of-sale materials · supplier coordination"],
-    ["Analysis", "Market and competitor analysis · KPI reporting and dashboards · cost and ROI analysis · Pareto and ABC analysis · root cause analysis"],
-    ["Data & tools", "Excel (advanced, VBA) · Power BI · SQL · Python · Figma · Canva · Jira · Confluence · Scrum · LLM-assisted workflows"],
+    ["Commercial", "B2B client acquisition · on-trade (HoReCa) accounts · in-venue execution · POS materials · suppliers"],
+    ["Analysis", "Market and competitor analysis · KPI dashboards · business cases and ROI · Pareto · root cause"],
+    ["Data & tools", "Excel (VBA) · Power BI · SQL · Python · Figma · Canva · Jira · Confluence · Scrum · LLM tools"],
     ["Operations", "Lean and TPS (Kaizen, JIT, Kanban) · MTM time study · preventive maintenance · warehouse slotting"],
     ["Languages", "Turkish (native) · English (professional)"],
   ],
-  awards: ["award", "flyrank", "aiff"],
-  leadership: ["adk", "editorial", "international", "music"],
+  awards: ["award", "flyrank", "aiff", "aifb"],
+  leadership: ["editorial", "international", "adk", "music"],
   publication: "short",
 };

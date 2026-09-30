@@ -34,7 +34,13 @@ function page(v) {
   const pub = v.publication || c.defaults.publication;
   const links = c.links.filter((l) => v.links.includes(l.key));
   const exp = v.experience.map((key) => entry({ ...c.experience[key], points: v.points[key] }));
-  const proj = v.projects.map((key) => {
+  // new graduate order: Education (with the ÖRS project) comes before Experience
+  const projOf = (key) => {
+    const p = c.projects[key];
+    return entry(v.points[key] ? { ...p, points: v.points[key] } : p);
+  };
+  const ors = v.projects.includes("ors") ? projOf("ors") : "";
+  const proj = v.projects.filter((k) => k !== "ors").map((key) => {
     const p = c.projects[key];
     return entry(v.points[key] ? { ...p, points: v.points[key] } : p);
   });
@@ -61,6 +67,10 @@ ${links.map((l) => `  <a href="${l.href}">${esc(l.label)}</a>`).join("\n")}
 <h2>Profile</h2>
 <p class="summary">${inline(v.profile)}</p>
 
+<h2>Education</h2>
+${entry(c.degree)}
+${ors}
+
 <h2>Experience</h2>
 ${exp.join("\n")}
 
@@ -74,16 +84,14 @@ ${skills}
 
 <div class="cols">
   <div>
-    <h2>Education</h2>
-    ${list(c.education)}
     <h2>Awards, programmes &amp; certificates</h2>
     ${list(pick(c.awards, v.awards || c.defaults.awards))}
+${pub === "none" ? "" : `    <h2>Publication</h2>
+    ${list([c.publication[pub]])}`}
   </div>
   <div>
     <h2>Leadership &amp; involvement</h2>
     ${list(pick(c.leadership, v.leadership || c.defaults.leadership))}
-${pub === "none" ? "" : `    <h2>Publication</h2>
-    ${list([c.publication[pub]])}`}
   </div>
 </div>
 

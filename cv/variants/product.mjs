@@ -3,15 +3,18 @@
 export default {
   slug: "product",
   label: { en: "Product & Technology", tr: "Ürün ve Teknoloji" },
-  title: "Industrial Engineer · Product, Data & AI Prototyping",
-  profile: "Industrial engineer (Istanbul Bilgi University, 2026) who learned product in BTCTurk Technology's Scrum team and builds with React, TypeScript and LLM tools. Starts from a user's problem, benchmarks what exists and builds the smallest version that works, from a crypto app teardown to a playable multiplayer party game. Seeking an APM or product analyst role.",
+  title: "Industrial Engineering Graduate · Product, Data & AI Prototyping",
+  profile: "Sakarya-born industrial engineering graduate of Istanbul Bilgi University (June 2026) who learns by building. Picks up new technology fast: builds web apps with React, TypeScript and AI tools, from a multiplayer party game to a live menu site. Three internships, one in a crypto exchange's product team, and an award-winning senior design project. Keen to learn fast and add value as an APM or product analyst.",
   links: ["linkedin", "github"],
   experience: ["demarke", "btcturk", "toyota"],
-  projects: ["tab", "ors", "krone", "feeddetox"],
+  projects: ["ors", "tab", "krone", "feeddetox"],
   points: {
+    ors: [
+      "Ranked scrap causes with Pareto (three drove 87.8%); the team's fixes were adopted at ÖRS.",
+      "Co-built an ISO 2859-1 incoming quality control web app in React/TypeScript with QR traceability.",
+    ],
     demarke: [
       "Wrote monthly KPI reports for a fantasy football game (115K Instagram followers).",
-      "Benchmarked BSL's Instagram against NBA and EuroLeague; proposed a Reels-led content plan.",
     ],
     btcturk: [
       "Learned how a product team runs in Scrum: backlog, user stories with acceptance criteria, Jira.",
@@ -24,27 +27,21 @@ export default {
       "Co-ran a Kaizen study of the intern programme with two fellow interns; proposed a standard flow.",
     ],
     tab: [
-      "Spotted that venues had no simple way to hear from guests or be found; co-founded TAB to fix it.",
-      "Won 15+ self-sourced venue clients for review stands and cards that route complaints in real time.",
-      "Build client sites end to end, including francoserdivan.com: a Sheets-driven menu with a taste quiz.",
-    ],
-    ors: [
-      "Ranked scrap causes with Pareto (three drove 87.8%); the team's fixes were adopted at ÖRS.",
-      "Coded an ISO 2859-1 incoming quality control web app in React/TypeScript with QR traceability.",
+      "Spotted that venues had no simple way to hear from guests; co-founded TAB with two friends.",
+      "Build client sites end to end, such as francoserdivan.com: a Sheets-driven menu with a taste quiz.",
     ],
     krone: [
-      "Built a mobile party game of nine mini-games with live Supabase rooms and server-synced timers.",
-      "Prototyped the first version in six days, then added a global daily challenge to bring players back.",
+      "Built a party game of nine mini-games with live Supabase rooms; first version took six days.",
     ],
     feeddetox: [
       "Built an app that turns stated interests into follow lists via the YouTube API and web search.",
     ],
   },
   skills: [
-    ["Product", "Scrum ceremonies · backlog and user stories · acceptance criteria · roadmap prioritisation · Jira · Confluence"],
-    ["Analysis", "Competitive benchmarking · app teardowns (Figma) · KPI reporting · Pareto and root cause · SQL · Excel (VBA) · Power BI · Python"],
+    ["Product", "Scrum · backlog and user stories · acceptance criteria · roadmap · Jira · Confluence"],
+    ["Analysis", "Benchmarking · app teardowns (Figma) · KPI dashboards · root cause · SQL · Excel · Power BI"],
     ["Build", "React · TypeScript · Next.js · JavaScript · Supabase · Git/GitHub · Vercel · rapid prototyping"],
-    ["AI", "LLM-assisted prototyping and coding · prompt design and iteration · API integration (YouTube, Supabase)"],
+    ["AI", "LLM-assisted prototyping and coding · prompt design · API integration (YouTube, Supabase)"],
     ["Domains", "Fintech and crypto (published blockchain research) · hospitality · sports media · lean and TPS"],
     ["Languages", "Turkish (native) · English (professional)"],
   ],

@@ -22,22 +22,19 @@ export const common = {
   },
 
   projects: {
-    ors: { when: "2025–2026", what: "Industry project, ÖRS Textile", sub: "senior design · team of 5 · award-winning" },
+    ors: { when: "2025–2026", what: "Senior design project, ÖRS Textile", sub: "team of 5 · award-winning" },
     tab: { when: "2026–present", what: "Co-founder, TAB Marketing", sub: "[tab-marketing-site.vercel.app](https://tab-marketing-site.vercel.app)" },
     krone: { when: "2026", what: "Krone", sub: "[innerclock.vercel.app](https://innerclock.vercel.app) · personal project, fully playable" },
     feeddetox: { when: "2026", what: "Feed Detox", sub: "Next.js · EN/TR" },
   },
 
-  education: [
-    ["Istanbul Bilgi University", ", BSc Industrial Engineering (2026)"],
-    ["Serdivan Fen Lisesi", " (science high school), Sakarya"],
-  ],
+  degree: { when: "Jun 2026", what: "BSc Industrial Engineering, Istanbul Bilgi University", line: "Serdivan Fen Lisesi (science high school), Sakarya" },
 
   // keyed so each variant can choose and order them
   awards: {
-    award: ["Best Senior Design Project Award", ", Department of Industrial Engineering, Istanbul Bilgi University (2026). Selected from the top five projects of the term; presented at CSRP 2026"],
+    award: ["Best Senior Design Project Award", ", Istanbul Bilgi University (2026): chosen from the top five of the term; presented at CSRP 2026"],
     flyrank: ["FlyRank AI", ", AI engineering programme (Jul–Aug 2026): five reviewed assignments and a capstone"],
-    aiff: ["[AI Fluency: Framework & Foundations](https://verify.skilljar.com/c/xvnv3q5pttvf)", ", Anthropic (Jul 2026)"],
+    aiff: ["[AI Fluency: Framework & Foundations](https://verify.skilljar.com/c/xvnv3q5pttvf)", ", Anthropic (Jul 2026)"],
     aifb: ["AI Fluency for Builders", ", Anthropic (2026)"],
   },
 
@@ -47,9 +44,9 @@ export const common = {
   },
 
   leadership: {
-    editorial: ["Editorial Director", ", Bilgi Blockchain Club (2021–2024). Commissioned and edited the club's publications and shaped its forum and speaker programme"],
+    editorial: ["Editorial Director", ", Bilgi Blockchain Club (2021–2024): commissioned and edited its publications and forum programme"],
     international: ["International:", " European Summer School, Blockchain to Financial Markets, Prague (2025) · HeForShe Erasmus+ Youth Exchange, Estonia (Dec 2023)"],
-    adk: ["Vice President & Operations Lead", ", Atatürkçü Düşünce Kulübü (2021–2024). Ran 10+ forums; largest panel drew 4,000+"],
+    adk: ["Vice President & Operations Lead", ", Atatürkçü Düşünce Kulübü (2021–2024): ran 10+ forums; largest panel drew 4,000+"],
     music: ["Drums & songwriting", ", *son sek'*. One album, two singles, live shows ([Spotify](https://open.spotify.com/intl-tr/artist/1ILN8doPYd0l4l9ME6Rtce))"],
   },
 
@@ -61,10 +58,11 @@ export const common = {
   },
 };
 
+import general from "./variants/general.mjs";
 import operations from "./variants/operations.mjs";
 import product from "./variants/product.mjs";
 import marketing from "./variants/marketing.mjs";
 import commercial from "./variants/commercial.mjs";
 
 // the first one is also published as the default /tolga-cakan-cv.pdf
-export const variants = [operations, product, marketing, commercial];
+export const variants = [general, operations, product, marketing, commercial];
