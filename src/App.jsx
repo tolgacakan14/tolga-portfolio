@@ -101,8 +101,8 @@ const COPY = {
       edu: [["Istanbul Bilgi University", ", BSc Industrial Engineering. Graduated June 2026"], ["Serdivan Fen Lisesi", " (science high school), Sakarya, Turkey. Graduated 2020"]],
       international: "International",
       intl: [
-        ["HeForShe", ", Erasmus+ Youth Exchange in Saaremaa, Estonia (December 2023). I spent a week with an international group on gender equality and how it tracks with a country's development. Hosted by Artemis Women's Power MTÜ; Youthpass certified."],
-        ["European Summer School", ", Blockchain to Financial Markets, Prague, Czechia (2025), at the French Institute. Over a week, I studied where distributed ledgers meet market infrastructure: settlement, tokenised assets and the regulation around them. I built a project on the topic and presented it to students and researchers from many countries; certificate received."],
+        ["HeForShe", ", Erasmus+ Youth Exchange in Saaremaa, Estonia (December 2023). I worked with an international group on gender equality and how it tracks with a country's development. Hosted by Artemis Women's Power MTÜ; Youthpass certified."],
+        ["European Summer School", ", Blockchain to Financial Markets, Prague, Czechia (2025), at the French Institute. I studied where distributed ledgers meet market infrastructure: settlement, tokenised assets and the regulation around them. I built a project on the topic and presented it to students and researchers from many countries; certificate received."],
       ],
       involvement: "Involvement",
       inv: [
@@ -237,8 +237,8 @@ const COPY = {
       edu: [["İstanbul Bilgi Üniversitesi", ", Endüstri Mühendisliği (Lisans). Haziran 2026 mezunu"], ["Serdivan Fen Lisesi", ", Sakarya. 2020 mezunu"]],
       international: "Uluslararası",
       intl: [
-        ["HeForShe", ", Erasmus+ Youth Exchange, Saaremaa, Estonya (Aralık 2023). Uluslararası bir grupla bir hafta boyunca toplumsal cinsiyet eşitliğini ve bunun bir ülkenin gelişmişliğiyle ilişkisini ele aldık. Artemis Women's Power MTÜ'nün ev sahipliğinde; Youthpass sertifikalı."],
-        ["European Summer School", ", Blockchain to Financial Markets. Prag, Çekya (2025), Fransız Enstitüsü. Distributed ledger teknolojilerinin piyasa altyapısıyla kesiştiği yer üzerine bir hafta çalıştım: settlement, tokenized assets ve bunları çevreleyen regülasyon. Konuyla ilgili bir proje hazırlayıp birçok ülkeden öğrenci ve araştırmacıya sundum; sertifika aldım."],
+        ["HeForShe", ", Erasmus+ Youth Exchange, Saaremaa, Estonya (Aralık 2023). Uluslararası bir grupla toplumsal cinsiyet eşitliğini ve bunun bir ülkenin gelişmişliğiyle ilişkisini ele aldık. Artemis Women's Power MTÜ'nün ev sahipliğinde; Youthpass sertifikalı."],
+        ["European Summer School", ", Blockchain to Financial Markets. Prag, Çekya (2025), Fransız Enstitüsü. Distributed ledger teknolojilerinin piyasa altyapısıyla kesiştiği yer üzerine çalıştım: settlement, tokenized assets ve bunları çevreleyen regülasyon. Konuyla ilgili bir proje hazırlayıp birçok ülkeden öğrenci ve araştırmacıya sundum; sertifika aldım."],
       ],
       involvement: "Kulüpler & topluluk",
       inv: [
