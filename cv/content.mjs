@@ -17,7 +17,7 @@ export const common = {
 
   experience: {
     flyrank: { when: "Jul–Aug 2026", what: "AI Engineering Intern, FlyRank AI", sub: "remote" },
-    demarke: { when: "Mar–Jul 2025", what: "Sports Marketing Intern, De Marke Agency" },
+    demarke: { when: "Mar–Jul 2025", what: "Marketing Intern, De Marke Agency" },
     btcturk: { when: "Jan–Feb 2025", what: "Product Intern, BTCTurk Technology" },
     toyota: { when: "Jun–Jul 2024", what: "Engineering Intern, Toyota Motor Manufacturing Turkey", sub: "Sakarya" },
   },

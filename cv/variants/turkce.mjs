@@ -53,7 +53,7 @@ export default {
     place: "İstanbul",
     born: "Doğum yılı: 2002 · Askerlik: 2029'a kadar tecilli",
     experience: {
-      demarke: { when: "Mar–Tem 2025", what: "Spor Pazarlama Stajyeri, De Marke Ajansı" },
+      demarke: { when: "Mar–Tem 2025", what: "Pazarlama Stajyeri, De Marke Ajansı" },
       btcturk: { when: "Oca–Şub 2025", what: "Ürün Stajyeri, BTCTurk Teknoloji" },
       toyota: { when: "Haz–Tem 2024", what: "Mühendislik Stajyeri, Toyota Otomotiv Sanayi Türkiye", sub: "Sakarya" },
     },
