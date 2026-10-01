@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/cv/:file*", "destination": "/tolga-cakan-cv.pdf", "permanent": false }
+  ]
+}

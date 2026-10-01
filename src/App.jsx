@@ -139,7 +139,7 @@ const COPY = {
         { slug: "turkce", label: "Turkish CV (Türkçe, with photo)" },
       ],
     },
-    cv: "Choose a CV (6 versions) ↓",
+    cv: "Download CV ↓",
     verify: "verify ↗",
     setIn: "Set in Newsreader",
     updated: "Updated September 2026",
@@ -276,7 +276,7 @@ const COPY = {
         { slug: "turkce", label: "Türkçe CV (fotoğraflı)" },
       ],
     },
-    cv: "CV seç (6 sürüm) ↓",
+    cv: "CV'yi indir ↓",
     verify: "doğrula ↗",
     setIn: "Yazı tipi: Newsreader",
     updated: "Güncelleme: Eylül 2026",
@@ -293,6 +293,10 @@ function withTab(text) {
   ]);
 }
 
+// Role CVs are archived: visitors see one CV (the general one) and no role switch.
+// Set to true to bring back the switch and the CV picker.
+const SHOW_ROLE_CVS = false;
+const CV_HREF = "/tolga-cakan-cv.pdf";
 const cvHref = (slug) => "/cv/tolga-cakan-cv-" + slug + ".pdf";
 
 const ROLES = ["operations", "product", "marketing", "commercial"];
@@ -659,6 +663,7 @@ a.chip { display: inline-flex; align-items: center; text-decoration: none; }
 
 /* CV picker: one PDF per kind of role */
 .cv-block { margin-top: 30px; }
+.cv-one { display: inline-flex; margin-top: 4px; }
 .cv-picks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 14px; }
 .cv-pick {
   display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
@@ -930,7 +935,8 @@ function CommandMenu({ open, onClose, onTheme, onLang, t, lang, ids }) {
     ...ids.slice(1).map((id) => ({ k: id, label: t.nav[id], hint: lang === "tr" ? "Bölüm" : "Section", run: () => go(id) })),
     { k: "lang", label: lang === "en" ? "Türkçe'ye geç" : "Switch to English", hint: lang === "tr" ? "Dil" : "Language", run: onLang },
     { k: "theme", label: lang === "tr" ? "Paleti değiştir" : "Switch palette", hint: lang === "tr" ? "Görünüm" : "View", run: onTheme },
-    ...t.cvs.items.map((c) => ({ k: "cv-" + c.slug, label: (lang === "tr" ? "İşe alım · " : "Hiring · ") + c.label, hint: "CV", run: () => { window.open(cvHref(c.slug), "_blank", "noreferrer"); } })),
+    ...(SHOW_ROLE_CVS ? [] : [{ k: "cv", label: lang === "tr" ? "CV indir (PDF)" : "Download CV (PDF)", hint: "CV", run: () => { window.location.href = CV_HREF; } }]),
+    ...(SHOW_ROLE_CVS ? t.cvs.items : []).map((c) => ({ k: "cv-" + c.slug, label: (lang === "tr" ? "İşe alım · " : "Hiring · ") + c.label, hint: "CV", run: () => { window.open(cvHref(c.slug), "_blank", "noreferrer"); } })),
     { k: "tab", label: lang === "tr" ? "TAB Marketing sitesi" : "TAB Marketing site", hint: "Link", run: () => { window.open(TAB_URL, "_blank", "noreferrer"); } },
     { k: "mail", label: lang === "tr" ? "E-posta yaz" : "Write an email", hint: lang === "tr" ? "İletişim" : "Contact", run: () => { window.location.href = "mailto:" + EMAIL; } },
     { k: "print", label: lang === "tr" ? "Sayfayı yazdır" : "Print this page", hint: lang === "tr" ? "Sayfa" : "Page", run: () => window.print() },
@@ -1024,6 +1030,7 @@ function LeftPane({ active, theme, onTheme, onMenu, onLang, t, lang, ids, role }
 
       <div className="rise" style={{ "--i": 1 }}>
         {t.about.map((para, n) => <p className="p" key={n}>{para}</p>)}
+        {!SHOW_ROLE_CVS && <a className="chip chip-cv cv-one" href={CV_HREF} download>{t.cv}</a>}
       </div>
 
       <nav className="pane-nav rise" style={{ "--i": 2 }}>
@@ -1045,9 +1052,9 @@ function LeftPane({ active, theme, onTheme, onMenu, onLang, t, lang, ids, role }
           <a href="https://github.com/tolgacakan14" target="_blank" rel="noreferrer">github.com/tolgacakan14</a>
         </div>
         <div className="tools">
-          {role
+          {SHOW_ROLE_CVS && (role
             ? <a className="chip chip-cv" href={cvHref(role)} target="_blank" rel="noreferrer">{t.hire.cvFor} ↓</a>
-            : <a className="chip chip-cv" href="#cv" onClick={(e) => { e.preventDefault(); go("cv"); }}>{t.cv}</a>}
+            : <a className="chip chip-cv" href="#cv" onClick={(e) => { e.preventDefault(); go("cv"); }}>{t.cv}</a>)}
           <button type="button" className="chip" onClick={onMenu} aria-label="Menu">⌘K</button>
           <button type="button" className="chip" onClick={onLang} aria-label="Change language">
             {lang === "en" ? "TR" : "EN"}
@@ -1353,7 +1360,7 @@ function Contact({ t, num, role }) {
           <a href={LINKEDIN} target="_blank" rel="noreferrer">linkedin.com/in/mehmettolgacakan</a>
           <a href="https://github.com/tolgacakan14" target="_blank" rel="noreferrer">github.com/tolgacakan14</a>
         </div>
-        <div className="cv-block rise" id="cv" style={{ "--i": 3 }}>
+        {SHOW_ROLE_CVS && <div className="cv-block rise" id="cv" style={{ "--i": 3 }}>
           <h3 className="h3">{t.cvs.heading}</h3>
           <p className="p">{t.cvs.note}</p>
           <div className="cv-picks">
@@ -1363,7 +1370,7 @@ function Contact({ t, num, role }) {
               </a>
             ))}
           </div>
-        </div>
+        </div>}
       </div>
     </section>
   );
@@ -1381,6 +1388,10 @@ export default function CV() {
 
   // role: ?for= wins, then a stored choice
   useEffect(() => {
+    if (!SHOW_ROLE_CVS) {
+      try { window.localStorage.removeItem("cv-role"); } catch (err) { /* ignore */ }
+      return;
+    }
     const asked = new URLSearchParams(window.location.search).get("for");
     if (ROLES.includes(asked)) { setRoleState(asked); return; }
     let saved = null;
@@ -1502,7 +1513,7 @@ export default function CV() {
 
         <main className="pane-right">
           <ProgressRail progress={p} label={t.nav[ids[i]] ?? t.nav.about} />
-          <HireSwitch t={t} role={role} setRole={setRole} />
+          {SHOW_ROLE_CVS && <HireSwitch t={t} role={role} setRole={setRole} />}
           {ORDER[role || "all"].map((id) => {
             const props = { t, num: num(id), role };
             if (id === "experience") return <Experience key={id} {...props} />;

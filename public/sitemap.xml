@@ -16,10 +16,5 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://tolgacakan.vercel.app/" />
     <xhtml:link rel="alternate" hreflang="tr" href="https://tolgacakan.vercel.app/tr/" />
   </url>
-  <url><loc>https://tolgacakan.vercel.app/cv/tolga-cakan-cv-general.pdf</loc><lastmod>2026-09-30</lastmod><priority>0.6</priority></url>
-  <url><loc>https://tolgacakan.vercel.app/cv/tolga-cakan-cv-operations.pdf</loc><lastmod>2026-09-30</lastmod><priority>0.6</priority></url>
-  <url><loc>https://tolgacakan.vercel.app/cv/tolga-cakan-cv-product.pdf</loc><lastmod>2026-09-30</lastmod><priority>0.6</priority></url>
-  <url><loc>https://tolgacakan.vercel.app/cv/tolga-cakan-cv-marketing.pdf</loc><lastmod>2026-09-30</lastmod><priority>0.6</priority></url>
-  <url><loc>https://tolgacakan.vercel.app/cv/tolga-cakan-cv-commercial.pdf</loc><lastmod>2026-09-30</lastmod><priority>0.6</priority></url>
-  <url><loc>https://tolgacakan.vercel.app/cv/tolga-cakan-cv-turkce.pdf</loc><lastmod>2026-09-30</lastmod><priority>0.6</priority></url>
+  <url><loc>https://tolgacakan.vercel.app/tolga-cakan-cv.pdf</loc><lastmod>2026-09-30</lastmod><priority>0.6</priority></url>
 </urlset>
