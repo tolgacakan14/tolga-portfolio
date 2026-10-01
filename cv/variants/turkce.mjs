@@ -72,7 +72,7 @@ export default {
     publication: { short: ["Kitap bölümü", ", “Blockchain ve Eğlence Sektörü”, *Blockchain Teknolojileri ve Sektörel Etkileri*, Nobel Akademik Yayıncılık, 2022"] },
     leadership: {
       editorial: ["Yayın Yönetmeni", ", Bilgi Blockchain Kulübü (2021–2024): yayınların editörlüğünü yaptım"],
-      prague: ["European Summer School, Prag", " (2025): *Blockchain to Financial Markets*; settlement, tokenization ve regülasyon üzerine bir hafta"],
+      prague: ["European Summer School, Prag", " (2025, sertifikalı): Fransız Enstitüsü'nde *Blockchain to Financial Markets*; uluslararası öğrenci ve araştırmacılara proje sundum"],
       estonia: ["HeForShe Erasmus+ Gençlik Değişimi, Estonya", " (Ara 2023): uluslararası bir grupla cinsiyet eşitliği üzerine; Youthpass sertifikalı"],
       adk: ["Başkan Yardımcısı ve Sosyal Medya Sorumlusu", ", BilgiADK (2021–2024): 10'dan fazla forum düzenledik; en büyük panele 4.000'i aşkın kişi katıldı"],
       music: ["Davul ve şarkı yazarlığı", ", *son sek'* grubu: bir albüm, iki single, canlı performanslar ([Spotify](https://open.spotify.com/intl-tr/artist/1ILN8doPYd0l4l9ME6Rtce))"],
