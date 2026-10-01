@@ -46,7 +46,8 @@ export const common = {
 
   leadership: {
     editorial: ["Editorial Director", ", Bilgi Blockchain Club (2021–2024): commissioned and edited publications; shaped the forum programme"],
-    international: ["International:", " European Summer School, Blockchain to Financial Markets, Prague (2025) · HeForShe Erasmus+ Youth Exchange, Estonia (Dec 2023)"],
+    prague: ["European Summer School, Prague", " (2025): *Blockchain to Financial Markets*, a week on settlement, tokenised assets and regulation"],
+    estonia: ["HeForShe Erasmus+ Youth Exchange, Estonia", " (Dec 2023): a week on gender equality with an international group; Youthpass certified"],
     adk: ["Vice President & Social Media Lead", ", BilgiADK (2021–2024): ran 10+ forums; largest panel drew 4,000+"],
     music: ["Drums & songwriting", ", *son sek'*: one album, two singles and live shows ([Spotify](https://open.spotify.com/intl-tr/artist/1ILN8doPYd0l4l9ME6Rtce))"],
   },
@@ -54,7 +55,7 @@ export const common = {
   // used when a variant does not set its own order
   defaults: {
     awards: ["award", "flyrank", "aiff", "aifb"],
-    leadership: ["editorial", "international", "adk", "music"],
+    leadership: ["prague", "estonia", "editorial", "adk", "music"],
     publication: "full",
   },
 };

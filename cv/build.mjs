@@ -31,9 +31,9 @@ const pick = (map, keys) => keys.map((k) => map[k]);
 
 const HEAD = {
   en: { profile: "Profile", education: "Education", experience: "Experience", projects: "Projects", skills: "Skills",
-    awards: "Awards, programmes &amp; certificates", publication: "Publication", leadership: "Leadership &amp; involvement" },
+    awards: "Awards, programmes &amp; certificates", publication: "Publication", leadership: "International &amp; leadership" },
   tr: { profile: "Profil", education: "Eğitim", experience: "Deneyim", projects: "Projeler", skills: "Yetkinlikler",
-    awards: "Ödüller, programlar ve sertifikalar", publication: "Yayın", leadership: "Liderlik ve topluluk" },
+    awards: "Ödüller, programlar ve sertifikalar", publication: "Yayın", leadership: "Uluslararası deneyim ve liderlik" },
 };
 
 // a variant in another language brings its own wording of the shared data in `text`

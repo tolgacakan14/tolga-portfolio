@@ -45,6 +45,6 @@ export default {
     ["Languages", "Turkish (native) · English (professional)"],
   ],
   awards: ["award", "aiff", "aifb", "flyrank"],
-  leadership: ["music", "adk", "international", "editorial"],
+  leadership: ["prague", "estonia", "music", "adk", "editorial"],
   publication: "short",
 };
