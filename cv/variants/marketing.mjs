@@ -4,7 +4,7 @@ export default {
   slug: "marketing",
   label: { en: "Marketing & Brand", tr: "Pazarlama ve Marka" },
   title: "Industrial Engineering Graduate · Brand & Product Marketing",
-  profile: "Industrial engineering graduate (Istanbul Bilgi University, June 2026). Worked in PR on site at two UEFA tournaments and contributed activation ideas to the Carlsberg UEFA project. Picks up new settings and tools fast: three internships in three industries, and web products built with AI tools. Seeking a brand or product marketing role that connects research with creative work.",
+  profile: "Industrial engineering graduate (Istanbul Bilgi University, June 2026). Worked in PR on site at two UEFA tournaments and contributed activation ideas to the Carlsberg UEFA project. Three internships in three industries; follows new technology closely and learns it fast, building web products with AI tools. Seeking a brand or product marketing role that connects research with creative work.",
   links: ["linkedin"],
   experience: ["demarke", "btcturk", "toyota"],
   projects: ["ors", "tab", "krone"],

@@ -5,7 +5,7 @@ export default {
   photo: true,
   label: { en: "Turkish (Türkçe)", tr: "Türkçe CV" },
   title: "Endüstri Mühendisliği Mezunu · Operasyon, Ürün ve Veri",
-  profile: "Haziran 2026'da İstanbul Bilgi Üniversitesi Endüstri Mühendisliği'nden mezun oldum. Toyota fabrikasında, bir fintech ürün ekibinde ve bir spor pazarlama ajansında üç farklı staj yaptım. Çok yönlüyüm; kendi web ürünlerimi geliştirerek yeni araçları hızla öğreniyorum ve ödüllü bir bitirme projesinin ekibinde yer aldım. Operasyon, ürün, pazarlama veya ticari rollerde sorumluluk alarak öğrenmek ve değer katmak istiyorum.",
+  profile: "Haziran 2026'da İstanbul Bilgi Üniversitesi Endüstri Mühendisliği'nden mezun oldum. Toyota fabrikasında, bir fintech ürün ekibinde ve bir spor pazarlama ajansında üç farklı staj yaptım. Çok yönlüyüm; yeni teknolojileri yakından takip ediyor ve hızla öğreniyorum, kendi web ürünlerimi yapay zekâ araçlarıyla geliştiriyorum. Ödüllü bir bitirme projesinin ekibinde yer aldım. Operasyon, ürün, pazarlama veya ticari rollerde sorumluluk alarak öğrenmek ve değer katmak istiyorum.",
   links: ["linkedin", "github"],
   experience: ["demarke", "btcturk", "toyota"],
   projects: ["ors", "tab", "krone"],

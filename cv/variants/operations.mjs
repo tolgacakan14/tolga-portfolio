@@ -4,7 +4,7 @@ export default {
   slug: "operations",
   label: { en: "Operations & Process Improvement", tr: "Operasyon ve Süreç İyileştirme" },
   title: "Industrial Engineering Graduate · Lean, Quality & Continuous Improvement",
-  profile: "Industrial engineering graduate of Istanbul Bilgi University (June 2026). Learned the Toyota Production System on the gemba and, in a team of five, won the department's Best Senior Design Project Award for lean and quality fixes at a sock maker. Adapts fast: three internships in three settings, and quick with new tools. Seeking a lean, quality or supply-chain graduate programme to practise Kaizen on a real line.",
+  profile: "Industrial engineering graduate of Istanbul Bilgi University (June 2026). Learned the Toyota Production System on the gemba and, in a team of five, won the department's Best Senior Design Project Award for lean and quality fixes at a sock maker. Adapts fast across three internships; follows new technology closely and learns it fast. Seeking a lean, quality or supply-chain graduate programme to practise Kaizen on a real line.",
   links: ["linkedin"],
   experience: ["demarke", "btcturk", "toyota"],
   projects: ["ors", "tab", "krone"],
